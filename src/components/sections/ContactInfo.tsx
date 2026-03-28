@@ -4,163 +4,84 @@ import type { ContactPerson } from "@/content/types";
 
 interface ContactInfoProps {
   person: ContactPerson;
-  /** Italic context line shown below the top bar. Changes per page. */
   contextMessage?: string;
 }
 
 export function ContactInfo({
   person,
-  contextMessage = "Ready to optimize your processes?",
+  contextMessage,
 }: ContactInfoProps) {
   return (
-    <div className="min-w-[280px] overflow-hidden rounded-xl border border-dark/10 bg-white shadow-md">
-      {/* ── Top accent bar ── */}
-      <div className="flex items-center gap-2 bg-[#1a3d6b] px-5 py-2.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#c8a951]" aria-hidden="true" />
-        <span className="font-ui text-[10px] font-semibold uppercase tracking-[2px] text-white/65">
-          Contact us
-        </span>
-      </div>
+    <div className="rounded-lg border border-dark/5 bg-white p-8">
+      <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/40">
+        Contact us
+      </p>
 
-      {/* ── Body ── */}
-      <div className="px-5 pb-5 pt-6">
-        {/* Context line */}
-        <p className="mb-5 border-b border-dark/5 pb-4 text-[13px] font-medium italic leading-relaxed text-primary-blue">
+      {contextMessage && (
+        <p className="mt-3 text-sm italic text-primary-blue">
           &ldquo;{contextMessage}&rdquo;
         </p>
+      )}
 
-        {/* Person card */}
-        <div className="mb-4 flex items-center gap-3">
-          <div className="relative shrink-0">
-            <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-[#c8a951]">
-              <Image
-                src={person.photo}
-                alt={person.name}
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            {/* Online dot */}
-            <span
-              className="absolute bottom-0.5 right-0.5 h-[11px] w-[11px] rounded-full border-2 border-white bg-green-500"
-              aria-hidden="true"
-            />
-          </div>
-          <div className="min-w-0 flex-1">
-            <p className="text-sm font-bold leading-tight text-dark">{person.name}</p>
-            <p className="text-[11.5px] leading-snug text-dark/50">{person.role}</p>
-            <span className="mt-1 inline-block rounded bg-[#1a3d6b]/[.07] px-2 py-0.5 font-ui text-[9.5px] font-bold uppercase tracking-wider text-[#1a3d6b]">
-              Your first contact
-            </span>
-          </div>
-        </div>
-
-        {/* Contact lines */}
-        <div className="mb-4 flex flex-col gap-2.5">
-          {/* Phone numbers with country labels */}
-          {person.phones.map((phone, i) => {
-            const country = i === 0 ? "Denmark" : "Poland";
-            return (
-              <a
-                key={phone.href}
-                href={phone.href}
-                className="flex items-center gap-2.5 transition-opacity hover:opacity-75"
-              >
-                <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-lg bg-gray-bg">
-                  <svg
-                    width="13"
-                    height="13"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#1a3d6b"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.23 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-                  </svg>
-                </span>
-                <span className="flex flex-col gap-px">
-                  <span className="font-ui text-[9.5px] font-semibold uppercase tracking-wider text-dark/40">
-                    {country}
-                  </span>
-                  <span className="text-[13px] font-medium text-dark">{phone.label}</span>
-                </span>
-              </a>
-            );
-          })}
-
-          {/* Email */}
-          <a
-            href={person.email.href}
-            className="flex items-center gap-2.5 transition-opacity hover:opacity-75"
-          >
-            <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-lg bg-gray-bg">
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#1a3d6b"
-                strokeWidth="2"
-                strokeLinecap="round"
-                aria-hidden="true"
-              >
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="M2 7l10 7 10-7" />
-              </svg>
-            </span>
-            <span className="flex flex-col gap-px">
-              <span className="font-ui text-[9.5px] font-semibold uppercase tracking-wider text-dark/40">
-                E-mail
-              </span>
-              <span className="text-[13px] font-medium text-dark">{person.email.label}</span>
-            </span>
-          </a>
-        </div>
-
-        {/* CTA button */}
-        <Link
-          href="/contact"
-          className="mb-3 block w-full rounded-lg bg-[#1a3d6b] px-3 py-3 text-center text-[13px] font-semibold tracking-wide text-white transition-all hover:bg-[#1e4d85] hover:-translate-y-px"
-        >
-          Book a Free Consultation &rarr;
-        </Link>
-
-        {/* Availability */}
-        <div className="flex items-center justify-center gap-1.5 text-[11px] text-dark/40">
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" aria-hidden="true" />
-          Available {person.availability}
-        </div>
+      <div className="relative mx-auto mt-5 h-36 w-36 overflow-hidden rounded-full">
+        <Image
+          src={person.photo}
+          alt={person.name}
+          fill
+          className="object-cover object-top"
+        />
       </div>
 
-      {/* ── Job seekers note ── */}
-      <div className="flex items-start gap-2 border-t border-dark/5 bg-gray-bg px-5 py-3">
-        <svg
-          width="13"
-          height="13"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          className="mt-0.5 shrink-0 text-dark/30"
-          aria-hidden="true"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <line x1="12" y1="8" x2="12" y2="12" />
-          <line x1="12" y1="16" x2="12.01" y2="16" />
-        </svg>
-        <p className="text-[11.5px] leading-relaxed text-dark/40">
-          Looking for a job? &rarr;{" "}
-          <a
-            href="mailto:recruitment@pomerico.com"
-            className="font-medium text-primary-blue hover:underline"
-          >
-            recruitment@pomerico.com
-          </a>
-        </p>
+      <div className="mt-4 text-center">
+        <h3 className="font-heading text-sm font-bold text-dark">
+          {person.name}
+        </h3>
+        <p className="text-xs text-dark/60">{person.role}</p>
+        <p className="text-[11px] text-dark/40">{person.availability}</p>
       </div>
+
+      <div className="mt-5 flex flex-col gap-2.5 border-t border-dark/5 pt-5">
+        {person.phones.map((phone) => (
+          <a
+            key={phone.href}
+            href={phone.href}
+            className="flex items-center gap-3 truncate text-xs text-dark/70 transition-colors hover:text-primary-blue"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0 text-primary-blue" aria-hidden="true">
+              <path d="M14.5 11.35v2a1.33 1.33 0 01-1.45 1.33 13.2 13.2 0 01-5.76-2.05 13 13 0 01-4-4A13.2 13.2 0 011.24 2.8 1.33 1.33 0 012.56 1.35h2a1.33 1.33 0 011.33 1.15 8.56 8.56 0 00.47 1.87 1.33 1.33 0 01-.3 1.41l-.85.85a10.67 10.67 0 004 4l.85-.85a1.33 1.33 0 011.41-.3 8.56 8.56 0 001.87.47 1.33 1.33 0 011.15 1.35z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            {phone.label}
+          </a>
+        ))}
+        <a
+          href={person.email.href}
+          className="flex items-center gap-3 truncate text-xs text-dark/70 transition-colors hover:text-primary-blue"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0 text-primary-blue" aria-hidden="true">
+            <path d="M2.67 2.67h10.66c.74 0 1.34.6 1.34 1.33v8c0 .73-.6 1.33-1.34 1.33H2.67c-.74 0-1.34-.6-1.34-1.33V4c0-.73.6-1.33 1.34-1.33z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M14.67 4L8 8.67 1.33 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          {person.email.label}
+        </a>
+        <a
+          href={person.linkedin.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 truncate text-xs text-dark/70 transition-colors hover:text-primary-blue"
+        >
+          <svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor" className="shrink-0 text-primary-blue" aria-hidden="true">
+            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <Link
+        href="/contact"
+        className="mt-5 block w-full rounded bg-primary-red px-4 py-2.5 text-center font-ui text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-primary-red/90"
+      >
+        Book a Free Consultation
+      </Link>
     </div>
   );
 }
