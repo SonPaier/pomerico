@@ -25,7 +25,7 @@ function FooterColumn({
           <li key={link.href}>
             <Link
               href={link.href}
-              className="font-ui text-sm text-dark/60 transition-colors hover:text-dark"
+              className="font-ui text-sm text-dark/70 transition-colors hover:text-dark"
             >
               {link.label}
             </Link>
@@ -82,7 +82,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Pomerico on LinkedIn"
-            className="text-dark/40 transition-colors hover:text-dark"
+            className="text-dark/60 transition-colors hover:text-dark"
           >
             <svg
               width="24"

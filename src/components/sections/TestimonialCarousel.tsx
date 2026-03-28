@@ -73,13 +73,17 @@ export function TestimonialCarousel({
               <button
                 key={i}
                 onClick={() => scrollTo(i)}
-                className={`h-2 rounded-full transition-all ${
-                  i === selectedIndex
-                    ? "w-8 bg-primary-red"
-                    : "w-2 bg-dark/20"
-                }`}
+                className="flex h-6 w-6 items-center justify-center"
                 aria-label={`Go to testimonial ${i + 1}`}
-              />
+              >
+                <span
+                  className={`block rounded-full transition-all ${
+                    i === selectedIndex
+                      ? "h-2 w-8 bg-primary-red"
+                      : "h-2 w-2 bg-dark/20"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         )}

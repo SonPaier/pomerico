@@ -42,7 +42,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-primary-blue/40" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24">
           <div className="max-w-2xl">
-            <p className="mb-4 flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+            <p className="mb-4 flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="inline-block h-5 w-1 rounded bg-primary-red" />
               Strategic HR &amp; BPO Excellence
             </p>
@@ -96,7 +96,7 @@ export default function Home() {
       {/* Client logos */}
       <section className="py-10">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-6 text-center font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/40">
+          <h2 className="mb-6 text-center font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/60">
             Trusted by Global Industry Leaders
           </h2>
           <ImageCarousel images={clientLogos} />
@@ -164,7 +164,7 @@ export default function Home() {
             <h2 className="font-heading mt-4 text-3xl font-bold text-primary-blue lg:text-5xl">
               Why do most clients stay with us long-term?
             </h2>
-            <p className="mt-4 text-base text-dark/60">
+            <p className="mt-4 text-base text-dark/70">
               We provide the operational foundation for global enterprises to scale without friction, blending technical excellence with strategic foresight.
             </p>
           </div>
@@ -186,7 +186,7 @@ export default function Home() {
                   {card.heading}
                   <span className="ml-1 inline-block h-2 w-2 rounded-full bg-primary-red" />
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-dark/60">
+                <p className="mt-2 text-sm leading-relaxed text-dark/70">
                   {card.description}
                 </p>
               </div>

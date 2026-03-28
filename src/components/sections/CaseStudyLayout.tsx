@@ -99,7 +99,7 @@ export function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
             </h1>
 
             {data.metaDescription && (
-              <p className="max-w-2xl text-lg leading-relaxed text-white/70 lg:text-xl">
+              <p className="max-w-2xl text-lg leading-relaxed text-white/80 lg:text-xl">
                 {data.metaDescription}
               </p>
             )}

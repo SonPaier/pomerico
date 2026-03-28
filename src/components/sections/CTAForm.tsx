@@ -55,7 +55,7 @@ export function CTAForm() {
   }
 
   const inputClass =
-    "w-full rounded border border-dark/10 bg-gray-bg px-4 py-3 text-sm text-dark placeholder:text-dark/30 focus:border-primary-blue focus:outline-none";
+    "w-full rounded border border-dark/10 bg-gray-bg px-4 py-3 text-sm text-dark placeholder:text-dark/70 focus:border-primary-blue focus:outline-none";
 
   return (
     <form
@@ -65,7 +65,7 @@ export function CTAForm() {
       <h3 className="font-heading text-2xl font-bold text-primary-blue">
         Book your free consultation
       </h3>
-      <p className="mt-1 text-sm text-dark/50">
+      <p className="mt-1 text-sm text-dark/70">
         Fill out the form below and our strategy team will reach out within 24
         hours.
       </p>
@@ -80,7 +80,7 @@ export function CTAForm() {
         {/* Row 1: Name + Email */}
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label htmlFor="ctaform-name" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/50">
+            <label htmlFor="ctaform-name" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
               Full Name
             </label>
             <input
@@ -93,7 +93,7 @@ export function CTAForm() {
             />
           </div>
           <div>
-            <label htmlFor="ctaform-email" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/50">
+            <label htmlFor="ctaform-email" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
               Email Address
             </label>
             <input
@@ -110,7 +110,7 @@ export function CTAForm() {
         {/* Row 2: Phone + Topic */}
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label htmlFor="ctaform-phone" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/50">
+            <label htmlFor="ctaform-phone" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
               Phone Number
             </label>
             <input
@@ -124,7 +124,7 @@ export function CTAForm() {
             />
           </div>
           <div>
-            <label htmlFor="ctaform-topic" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/50">
+            <label htmlFor="ctaform-topic" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
               Topic of Interest
             </label>
             <select id="ctaform-topic" name="topic" className={inputClass}>
@@ -139,7 +139,7 @@ export function CTAForm() {
 
         {/* Row 3: Message */}
         <div>
-          <label htmlFor="ctaform-brief" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/50">
+          <label htmlFor="ctaform-brief" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
             Project Brief
           </label>
           <textarea
@@ -153,8 +153,8 @@ export function CTAForm() {
 
         {/* File upload */}
         <div className="rounded border-2 border-dashed border-dark/10 bg-gray-bg px-4 py-3">
-          <label className="flex cursor-pointer items-center gap-3 text-sm text-dark/50">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="shrink-0 text-dark/30" aria-hidden="true">
+          <label className="flex cursor-pointer items-center gap-3 text-sm text-dark/70">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="shrink-0 text-dark/50" aria-hidden="true">
               <path d="M17.5 12.5V15.83a1.67 1.67 0 01-1.67 1.67H4.17a1.67 1.67 0 01-1.67-1.67V12.5M14.17 6.67L10 2.5M10 2.5L5.83 6.67M10 2.5v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <span>
@@ -166,7 +166,7 @@ export function CTAForm() {
         </div>
 
         {/* GDPR */}
-        <label htmlFor="ctaform-consent" className="flex items-start gap-2 text-xs text-dark/50">
+        <label htmlFor="ctaform-consent" className="flex items-start gap-2 text-xs text-dark/70">
           <input
             id="ctaform-consent"
             type="checkbox"

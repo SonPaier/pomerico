@@ -108,13 +108,13 @@ export function BlogPostTemplate({
             {/* Sidebar */}
             <aside className="lg:col-span-1">
               <div className="sticky top-24 rounded-lg bg-gray-bg p-6">
-                <p className="mb-2 text-xs font-semibold uppercase text-dark/50">
+                <p className="mb-2 text-xs font-semibold uppercase text-dark/70">
                   Details
                 </p>
                 <hr className="mb-4 border-gray-200" />
                 <p className="text-sm text-dark/70">Date: {post.date}</p>
 
-                <p className="mb-2 mt-6 text-xs font-semibold uppercase text-dark/50">
+                <p className="mb-2 mt-6 text-xs font-semibold uppercase text-dark/70">
                   Author
                 </p>
                 <Image

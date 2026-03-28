@@ -132,7 +132,7 @@ export default function AboutUsPage() {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-1 shrink-0 text-dark/30 transition-colors hover:text-[#0A66C2]"
+                      className="mt-1 shrink-0 text-dark/50 transition-colors hover:text-[#0A66C2]"
                       aria-label={`${member.name} on LinkedIn`}
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

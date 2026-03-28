@@ -27,7 +27,7 @@ export function SectionHeader({
       {subtitle ? (
         <div className="hidden max-w-[200px] text-right lg:block">
           <div className="mb-3 ml-auto h-1 w-8 bg-primary-red" />
-          <p className="text-sm text-dark/50">{subtitle}</p>
+          <p className="text-sm text-dark/70">{subtitle}</p>
         </div>
       ) : (
         <div className="hidden lg:block">

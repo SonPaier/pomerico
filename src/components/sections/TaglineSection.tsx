@@ -27,7 +27,7 @@ export function TaglineSection({
           {heading}
         </h2>
         {description && (
-          <p className="mt-4 text-lg text-white/70">{description}</p>
+          <p className="mt-4 text-lg text-white/80">{description}</p>
         )}
         {ctaLabel && ctaHref && (
           <Link

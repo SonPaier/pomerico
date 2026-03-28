@@ -35,7 +35,7 @@ export function TestimonialCard({ testimonial: t }: TestimonialCardProps) {
           <cite className="not-italic">
             <span className="block font-semibold text-dark">{t.author}</span>
             {t.role && (
-              <span className="block text-sm text-dark/50">
+              <span className="block text-sm text-dark/70">
                 {t.role}
                 {t.company && `, ${t.company}`}
               </span>
@@ -43,7 +43,7 @@ export function TestimonialCard({ testimonial: t }: TestimonialCardProps) {
           </cite>
         </div>
         {t.company && (
-          <span className="hidden rounded border border-dark/10 px-4 py-1.5 font-ui text-xs font-semibold uppercase tracking-wider text-dark/40 sm:block">
+          <span className="hidden rounded border border-dark/10 px-4 py-1.5 font-ui text-xs font-semibold uppercase tracking-wider text-dark/60 sm:block">
             {t.company}
           </span>
         )}

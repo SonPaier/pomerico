@@ -27,7 +27,7 @@ export function DecisionCards({ cards }: DecisionCardsProps) {
             className={`mb-2 inline-block rounded px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider ${
               card.highlighted
                 ? "bg-dark text-primary-red"
-                : "bg-dark/5 text-dark/60"
+                : "bg-dark/5 text-dark/70"
             }`}
           >
             {card.model}
@@ -35,7 +35,7 @@ export function DecisionCards({ cards }: DecisionCardsProps) {
           <p className="mb-1.5 text-sm font-bold leading-snug text-dark">
             {card.quote}
           </p>
-          <p className="text-xs leading-relaxed text-dark/60">
+          <p className="text-xs leading-relaxed text-dark/70">
             {card.description}
           </p>
         </div>

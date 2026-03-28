@@ -38,7 +38,7 @@ export function CaseStudyGrid({
               >
                 <div>
                   <div className="mb-4 flex items-center justify-between">
-                    <span className="inline-block rounded-full border border-dark/10 px-3 py-1 font-ui text-[10px] font-semibold uppercase tracking-wider text-dark/50">
+                    <span className="inline-block rounded-full border border-dark/10 px-3 py-1 font-ui text-[10px] font-semibold uppercase tracking-wider text-dark/70">
                       {tag}
                     </span>
                     {cs.image && (
@@ -55,7 +55,7 @@ export function CaseStudyGrid({
                     {cs.title}
                   </h3>
                   {isLarge && cs.summary && (
-                    <p className="mt-4 text-sm leading-relaxed text-dark/50">
+                    <p className="mt-4 text-sm leading-relaxed text-dark/70">
                       {cs.summary}
                     </p>
                   )}
@@ -71,7 +71,7 @@ export function CaseStudyGrid({
 
         {/* Bottom bar */}
         <div className="mt-14 flex items-center justify-between border-t border-dark/10 pt-8">
-          <p className="text-sm italic text-dark/30">
+          <p className="text-sm italic text-dark/50">
             High-precision solutions for the modern corporate landscape.
           </p>
           <Link

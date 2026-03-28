@@ -13,7 +13,7 @@ export function ContactInfo({
 }: ContactInfoProps) {
   return (
     <div className="rounded-lg border border-dark/5 bg-white p-8">
-      <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/40">
+      <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/60">
         Contact us
       </p>
 
@@ -36,8 +36,8 @@ export function ContactInfo({
         <h3 className="font-heading text-sm font-bold text-dark">
           {person.name}
         </h3>
-        <p className="text-xs text-dark/60">{person.role}</p>
-        <p className="text-[11px] text-dark/40">{person.availability}</p>
+        <p className="text-xs text-dark/70">{person.role}</p>
+        <p className="text-[11px] text-dark/60">{person.availability}</p>
       </div>
 
       <div className="mt-5 flex flex-col gap-2.5 border-t border-dark/5 pt-5">

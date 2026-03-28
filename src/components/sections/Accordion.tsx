@@ -18,7 +18,7 @@ function AccordionItem({
 }) {
   const borderColor = variant === "dark" ? "border-white/20" : "border-gray-200";
   const questionColor = variant === "dark" ? "text-white" : "text-dark";
-  const answerColor = variant === "dark" ? "text-white/70" : "text-dark/70";
+  const answerColor = variant === "dark" ? "text-white/80" : "text-dark/70";
 
   return (
     <div className={`border-b ${borderColor}`}>

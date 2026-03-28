@@ -59,7 +59,7 @@ function AnimatedCounter({
   const numberColor =
     variant === "dark" ? "text-white" : "text-primary-red";
   const titleColor =
-    variant === "dark" ? "text-white/70" : "text-dark/70";
+    variant === "dark" ? "text-white/80" : "text-dark/70";
 
   return (
     <div ref={ref} className="flex flex-col items-center text-center">

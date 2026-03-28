@@ -33,7 +33,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       >
         <div className="mx-auto max-w-7xl px-6 py-3"
       >
-        <ol className="flex flex-wrap items-center gap-1 font-ui text-base text-dark/50">
+        <ol className="flex flex-wrap items-center gap-1 font-ui text-base text-dark/70">
           {items.map((item, i) => (
             <li key={i} className="flex items-center gap-1">
               {i > 0 && (
@@ -43,7 +43,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                   viewBox="0 0 12 12"
                   fill="none"
                   aria-hidden="true"
-                  className="text-dark/30"
+                  className="text-dark/50"
                 >
                   <path
                     d="M4.5 2.5L7.5 6L4.5 9.5"

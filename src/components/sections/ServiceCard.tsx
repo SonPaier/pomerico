@@ -20,7 +20,7 @@ export function ServiceCard({ data }: ServiceCardProps) {
       <h3 className="font-heading mb-2 text-base font-bold text-dark">
         {data.heading}
       </h3>
-      <p className="flex-1 text-sm leading-relaxed text-dark/60">
+      <p className="flex-1 text-sm leading-relaxed text-dark/70">
         {data.description}
       </p>
       {data.href && (

@@ -66,7 +66,7 @@ export function ComparisonTable({
             <table className="w-full min-w-[700px] border-collapse text-sm">
               <thead>
                 <tr className="bg-dark text-white">
-                  <th className="p-4 text-left text-xs font-semibold uppercase tracking-wider text-white/50" />
+                  <th className="p-4 text-left text-xs font-semibold uppercase tracking-wider text-white/70" />
                   {columns.map((col) => (
                     <th
                       key={col.name}
@@ -80,13 +80,13 @@ export function ComparisonTable({
                         className={`block text-sm font-bold ${
                           col.highlighted
                             ? "text-primary-red"
-                            : "text-white/70"
+                            : "text-white/80"
                         }`}
                       >
                         {col.name}
                       </span>
                       {col.tagline && (
-                        <span className="mt-1 block text-xs font-normal text-white/50">
+                        <span className="mt-1 block text-xs font-normal text-white/70">
                           {col.tagline}
                         </span>
                       )}
@@ -106,7 +106,7 @@ export function ComparisonTable({
                       <tr key={`cat-${i}`} className="bg-gray-bg">
                         <td
                           colSpan={totalCols}
-                          className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-dark/40"
+                          className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-dark/60"
                         >
                           {row.category}
                         </td>
@@ -118,7 +118,7 @@ export function ComparisonTable({
                       key={`row-${i}`}
                       className="border-b border-dark/5 transition-colors hover:bg-gray-bg/60 even:bg-gray-bg/30"
                     >
-                      <td className="border-r border-dark/5 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-dark/50">
+                      <td className="border-r border-dark/5 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-dark/70">
                         {row.label}
                       </td>
                       {row.values.map((val, vi) => (
@@ -140,7 +140,7 @@ export function ComparisonTable({
                 {/* CTA row */}
                 {ctaLabel && ctaHref && (
                   <tr className="bg-dark">
-                    <td className="px-4 py-5 text-sm font-normal text-white/50">
+                    <td className="px-4 py-5 text-sm font-normal text-white/70">
                       Not sure which fits?
                     </td>
                     <td
@@ -157,7 +157,7 @@ export function ComparisonTable({
                         {ctaSecondaryLabel && ctaSecondaryHref && (
                           <Link
                             href={ctaSecondaryHref}
-                            className="inline-block rounded border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white/70 transition-colors hover:bg-white/10"
+                            className="inline-block rounded border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white/80 transition-colors hover:bg-white/10"
                           >
                             {ctaSecondaryLabel}
                           </Link>
@@ -172,7 +172,7 @@ export function ComparisonTable({
         </div>
 
         {footnote && (
-          <p className="mt-4 text-xs leading-relaxed text-dark/40">
+          <p className="mt-4 text-xs leading-relaxed text-dark/60">
             {footnote}
           </p>
         )}

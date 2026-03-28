@@ -97,7 +97,7 @@ export function QuickComparison({
           {(footerText || footerLinkLabel) && (
             <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 px-6 py-4">
               {footerText && (
-                <span className="text-xs text-white/40">{footerText}</span>
+                <span className="text-xs text-white/60">{footerText}</span>
               )}
               {footerLinkLabel && footerLinkHref && (
                 <Link
