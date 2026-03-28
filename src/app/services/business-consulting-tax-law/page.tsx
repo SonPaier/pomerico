@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: data.title,
   description: data.metaDescription,
   alternates: { canonical: "/services/business-consulting-tax-law" },
+  openGraph: {
+    title: data.title,
+    description: data.metaDescription,
+  },
 };
 
 export default function Page() {

@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Read the Pomerico Group privacy policy. Learn how we collect, process, and protect your personal data in compliance with GDPR and Polish data protection law.",
   alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy",
+    description: "Read the Pomerico Group privacy policy. Learn how we collect, process, and protect your personal data in compliance with GDPR and Polish data protection law.",
+  },
 };
 
 export default function PrivacyPolicyPage() {

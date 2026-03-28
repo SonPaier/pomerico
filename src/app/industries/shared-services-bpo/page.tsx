@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: data.title,
   description: data.metaDescription,
   alternates: { canonical: "/industries/shared-services-bpo" },
+  openGraph: {
+    title: data.title,
+    description: data.metaDescription,
+  },
 };
 
 export default function SharedServicesBpoPage() {

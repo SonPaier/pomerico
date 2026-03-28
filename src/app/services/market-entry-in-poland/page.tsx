@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   title: data.title,
   description: data.metaDescription,
   alternates: { canonical: "/services/market-entry-in-poland" },
+  openGraph: {
+    title: data.title,
+    description: data.metaDescription,
+  },
 };
 
 export default function Page() {

@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   title: "Pomerico Group – BPO & HR Outsourcing Partner in Poland",
   description: "Build effective teams with Pomerico Group. End-to-end HR outsourcing, BPO, EOR, recruitment, and business consulting for international companies in Poland.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Pomerico Group �� BPO & HR Outsourcing Partner in Poland",
+    description: "Build effective teams with Pomerico Group. End-to-end HR outsourcing, BPO, EOR, recruitment, and business consulting for international companies in Poland.",
+  },
 };
 
 export default function Home() {
@@ -176,7 +180,7 @@ export default function Home() {
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-primary-blue/5">
                   <Image
                     src={card.icon}
-                    alt=""
+                    alt={card.heading}
                     width={28}
                     height={28}
                     className="h-7 w-7 object-contain"

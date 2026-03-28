@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: data.title,
   description: data.metaDescription,
   alternates: { canonical: "/industries/information-technology" },
+  openGraph: {
+    title: data.title,
+    description: data.metaDescription,
+  },
 };
 
 export default function InformationTechnologyPage() {

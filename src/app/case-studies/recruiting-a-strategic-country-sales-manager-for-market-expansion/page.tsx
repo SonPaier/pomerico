@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: data.title,
   description: data.metaDescription,
   alternates: { canonical: "/case-studies/recruiting-a-strategic-country-sales-manager-for-market-expansion" },
+  openGraph: {
+    title: data.title,
+    description: data.metaDescription,
+    type: "article",
+  },
 };
 
 export default function Page() {

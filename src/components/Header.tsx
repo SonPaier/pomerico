@@ -209,13 +209,13 @@ export function Header() {
         <div className="flex items-center gap-3 lg:hidden">
           <Link
             href="/contact"
-            className="rounded bg-primary-red px-4 py-2 font-ui text-xs font-semibold text-white"
+            className="min-h-[44px] rounded bg-primary-red px-4 py-2 font-ui text-xs font-semibold text-white flex items-center"
           >
             CONSULTATION
           </Link>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2"
+            className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2"
             aria-label="Menu Toggle"
             aria-expanded={mobileOpen}
           >

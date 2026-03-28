@@ -25,7 +25,7 @@ function FooterColumn({
           <li key={link.href}>
             <Link
               href={link.href}
-              className="font-ui text-sm text-dark/70 transition-colors hover:text-dark"
+              className="py-1 font-ui text-sm text-dark/70 transition-colors hover:text-dark"
             >
               {link.label}
             </Link>

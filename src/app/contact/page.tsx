@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "Contact Pomerico Group for a free consultation on HR outsourcing, BPO, recruitment, and business consulting services in Poland.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact – Get a Free Consultation",
+    description:
+      "Contact Pomerico Group for a free consultation on HR outsourcing, BPO, recruitment, and business consulting services in Poland.",
+  },
 };
 import { ImageCarousel } from "@/components/sections/ImageCarousel";
 import { clientLogos } from "@/content/shared";
@@ -110,7 +115,7 @@ export default function ContactPage() {
                 </h2>
                 <Image
                   src="/images/scroll-down-arrow-icon.svg"
-                  alt=""
+                  alt="Scroll down to form"
                   width={40}
                   height={40}
                   className="mb-6 h-10 w-10"

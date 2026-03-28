@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description:
     "Explore Pomerico's full range of HR outsourcing, BPO, EOR, recruitment, and consulting services in Poland. Build teams and scale operations. Get started today.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Services Overview – What We Do",
+    description:
+      "Explore Pomerico's full range of HR outsourcing, BPO, EOR, recruitment, and consulting services in Poland. Build teams and scale operations. Get started today.",
+  },
 };
 
 export default function ServicesPage() {

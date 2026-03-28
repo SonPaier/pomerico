@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   description:
     "Is financial outsourcing safe in the world of DORA regulation? Learn how to stay compliant while leveraging BPO services in the EU financial sector.",
   alternates: { canonical: "/blog/dora-vs-outsourcing" },
+  openGraph: {
+    title: "DORA vs Outsourcing – Is Financial Outsourcing Safe?",
+    description:
+      "Is financial outsourcing safe in the world of DORA regulation? Learn how to stay compliant while leveraging BPO services in the EU financial sector.",
+    type: "article",
+  },
 };
 
 export default function DoraVsOutsourcingPage() {

@@ -65,7 +65,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
         <div className="mt-4 flex items-center justify-center gap-4">
           <button
             onClick={scrollPrev}
-            className="rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100"
+            className="min-h-[44px] min-w-[44px] rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100"
             aria-label="Previous"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -74,7 +74,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
           </button>
           <button
             onClick={scrollNext}
-            className="rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100"
+            className="min-h-[44px] min-w-[44px] rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100"
             aria-label="Next"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">

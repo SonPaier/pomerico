@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "Since 2015, Pomerico Group provides end-to-end HR outsourcing, BPO, and business consulting for international companies in Poland. Meet our management team.",
   alternates: { canonical: "/about-us" },
+  openGraph: {
+    title: "About Us – Effective Teams, Complete Outsourcing",
+    description:
+      "Since 2015, Pomerico Group provides end-to-end HR outsourcing, BPO, and business consulting for international companies in Poland. Meet our management team.",
+  },
 };
 import { TestimonialCarousel } from "@/components/sections/TestimonialCarousel";
 import { CaseStudyGrid } from "@/components/sections/CaseStudyGrid";
@@ -79,7 +84,7 @@ export default function AboutUsPage() {
                 >
                   <Image
                     src={block.image}
-                    alt=""
+                    alt={`Pomerico integrated business solutions - section ${i + 1}`}
                     width={800}
                     height={600}
                     className="h-full w-full object-cover object-top"

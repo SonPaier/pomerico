@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: data.title,
   description: data.metaDescription,
   alternates: { canonical: "/case-studies/how-we-secured-a-quality-control-expert-in-just-weeks" },
+  openGraph: {
+    title: data.title,
+    description: data.metaDescription,
+    type: "article",
+  },
 };
 
 export default function Page() {

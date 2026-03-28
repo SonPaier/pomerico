@@ -33,7 +33,7 @@ export const doraVsOutsourcing = {
 <li>which criteria to use when choosing a provider,</li>
 <li>how we at Pomerico design services to support your DORA compliance.</li>
 </ul>
-<p><img width="1024" height="683" src="/images/dora-compliance-outsourcing-article.webp" alt="" /></p>
+<p><img width="1024" height="683" src="/images/dora-compliance-outsourcing-article.webp" alt="DORA compliance and outsourcing in the financial sector" /></p>
 
 <h3>1. DORA in a Nutshell &#8211; What Does It Really Regulate?</h3>
 <p>DORA (EU Regulation 2022/2554) applies from January 17, 2025, covering thousands of financial sector entities and ICT providers servicing them, including:</p>

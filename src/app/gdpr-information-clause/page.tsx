@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: "GDPR Information Clause",
   description: "GDPR information clause for Pomerico Group. Understand your data subject rights, how we process personal data, and our legal basis under EU GDPR regulations.",
   alternates: { canonical: "/gdpr-information-clause" },
+  openGraph: {
+    title: "GDPR Information Clause",
+    description: "GDPR information clause for Pomerico Group. Understand your data subject rights, how we process personal data, and our legal basis under EU GDPR regulations.",
+  },
 };
 
 export default function GDPRPage() {

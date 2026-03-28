@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description:
     "Expert insights on HR outsourcing, recruitment, compliance, and business operations in Poland from Pomerico Group.",
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog – HR & Outsourcing Insights",
+    description:
+      "Expert insights on HR outsourcing, recruitment, compliance, and business operations in Poland from Pomerico Group.",
+  },
 };
 
 export default function BlogPage() {

@@ -12,7 +12,7 @@ export function ServiceCard({ data }: ServiceCardProps) {
     <div className="flex h-full flex-col rounded-lg border border-dark/5 bg-white p-6">
       <Image
         src={data.icon}
-        alt=""
+        alt={data.heading}
         width={56}
         height={56}
         className="mb-5 h-auto max-w-[56px]"

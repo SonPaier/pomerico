@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description:
     "Find answers to common questions about Pomerico's HR outsourcing, BPO, EOR, recruitment, and business consulting services in Poland.",
   alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "FAQ – Frequently Asked Questions",
+    description:
+      "Find answers to common questions about Pomerico's HR outsourcing, BPO, EOR, recruitment, and business consulting services in Poland.",
+  },
 };
 import { ImageCarousel } from "@/components/sections/ImageCarousel";
 import { clientLogos } from "@/content/shared";

@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description:
     "Discover how Pomerico helps businesses across Europe build high-performing teams, enter new markets, and transform their HR operations.",
   alternates: { canonical: "/case-studies" },
+  openGraph: {
+    title: "Case Studies - Real Results for Our Clients",
+    description:
+      "Discover how Pomerico helps businesses across Europe build high-performing teams, enter new markets, and transform their HR operations.",
+  },
 };
 
 export default function CaseStudiesPage() {

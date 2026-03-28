@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description:
     "Pomerico partners with companies across industries to build high-performing teams, streamline operations, and optimize processes.",
   alternates: { canonical: "/industries" },
+  openGraph: {
+    title: "Industries – Building Teams, Optimizing Operations, Driving Growth",
+    description:
+      "Pomerico partners with companies across industries to build high-performing teams, streamline operations, and optimize processes.",
+  },
 };
 
 export default function IndustriesPage() {
