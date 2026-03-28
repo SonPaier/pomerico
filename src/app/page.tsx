@@ -39,7 +39,7 @@ export default function Home() {
             "url('/images/pomerico-hero-background.webp')",
         }}
       >
-        <div className="absolute inset-0 bg-primary-blue/40" />
+        <div className="absolute inset-0 bg-primary-blue/90" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24">
           <div className="max-w-2xl">
             <p className="mb-4 flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
@@ -199,16 +199,21 @@ export default function Home() {
       <CaseStudyGrid cards={allCaseStudyCards.slice(0, 4)} />
 
       {/* FAQ */}
-      <section
-        className="relative py-20"
-        style={{
-          backgroundImage:
-            "url('/images/pomerico-hero-background.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-white/80" />
+      <section className="relative overflow-hidden py-20 bg-gray-bg">
+        {/* Decorative diagonal stripe pattern */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          aria-hidden="true"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              -45deg,
+              transparent,
+              transparent 40px,
+              rgba(54, 85, 158, 0.015) 40px,
+              rgba(54, 85, 158, 0.015) 41px
+            )`,
+          }}
+        />
         <div className="relative z-10 mx-auto max-w-4xl px-6">
           <div className="mb-12 text-center">
             <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-red">

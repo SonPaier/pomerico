@@ -12,7 +12,7 @@ export function ContactInfo({
   contextMessage,
 }: ContactInfoProps) {
   return (
-    <div className="rounded-lg border border-dark/5 bg-white p-8">
+    <div className="min-w-[320px] rounded-lg border border-dark/5 bg-white p-8">
       <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/60">
         Contact us
       </p>
