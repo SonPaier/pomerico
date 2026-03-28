@@ -12,7 +12,7 @@ export const doraVsOutsourcing = {
     email: "sebastian.kunc@pomerico.pl",
   },
   featuredImage:
-    "/images/blog-thumbnail-dora-outsourcing.png",
+    "/images/dora-compliance-outsourcing-article.webp",
   content: `<p>With the entry into force of <b>DORA (Digital Operational Resilience Act)</b>, many boards and CFOs ask themselves one question:</p>
 <p><em>&#8220;Is it even appropriate to outsource financial processes, given that regulators are pushing so hard on technology and third-party provider risks?&#8221;</em></p>
 <p>The answer is: yes, financial outsourcing still makes sense &#8211; but the way you design it and manage the provider relationship changes.</p>

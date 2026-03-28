@@ -15,7 +15,8 @@ export default function DoraVsOutsourcingPage() {
     <BlogPostTemplate
       post={doraVsOutsourcing}
       slug="dora-vs-outsourcing"
-      relatedPosts={blogPosts}
+      category="Compliance & Regulations"
+      relatedPosts={blogPosts.filter((p) => p.slug !== "dora-vs-outsourcing")}
     />
   );
 }

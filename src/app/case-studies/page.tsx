@@ -41,12 +41,13 @@ export default function CaseStudiesPage() {
                 className="group block overflow-hidden rounded-lg border border-dark/5 bg-white transition-colors hover:border-primary-blue/20"
               >
                 {card.image && (
-                  <div className="relative aspect-video overflow-hidden bg-gray-100">
+                  <div className="flex h-24 items-center justify-center border-b border-dark/5 px-6">
                     <Image
                       src={card.image}
-                      alt=""
-                      fill
-                      className="object-contain p-4"
+                      alt={card.title}
+                      width={300}
+                      height={80}
+                      className="max-h-14 w-full object-contain"
                     />
                   </div>
                 )}

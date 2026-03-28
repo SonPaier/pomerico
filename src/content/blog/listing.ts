@@ -1,9 +1,11 @@
 export interface BlogPostCard {
   slug: string;
   title: string;
+  description: string;
   image: string;
   date: string;
   author: string;
+  category: string;
 }
 
 export const blogPosts: BlogPostCard[] = [
@@ -11,17 +13,21 @@ export const blogPosts: BlogPostCard[] = [
     slug: "dora-vs-outsourcing",
     title:
       "DORA vs Outsourcing. Is Financial Outsourcing Safe in the World of DORA?",
-    image:
-      "/images/blog-thumbnail-dora-outsourcing.png",
+    description:
+      "Learn how the new EU regulation impacts financial outsourcing and what you can do to stay compliant while leveraging BPO.",
+    image: "/images/dora-compliance-outsourcing-article.webp",
     date: "24/02/2026",
     author: "Sebastian Kunc",
+    category: "Compliance & Regulations",
   },
   {
     slug: "how-to-hire-more-effectively",
     title: "How to Hire More Effectively",
-    image:
-      "/images/blog-thumbnail-hiring-effectively.png",
+    description:
+      "Practical strategies for faster, smarter hiring — from defining roles to onboarding and long-term retention.",
+    image: "/images/pomerico-hero-background.webp",
     date: "24/02/2026",
     author: "Sebastian Kunc",
+    category: "Recruitment & HR",
   },
 ];

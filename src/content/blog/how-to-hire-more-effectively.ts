@@ -11,7 +11,7 @@ export const howToHireMoreEffectively = {
     email: "sebastian.kunc@pomerico.pl",
   },
   featuredImage:
-    "/images/blog-thumbnail-hiring-effectively.png",
+    "/images/pomerico-hero-background.webp",
   content: `<h2>Choosing the Right Recruitment Tools</h2>
 <p>Appropriate tools are also very important, because it will affect the costs and effectiveness of recruitment. Advertisements are known to be one of the most popular tools. Advertisements work really well if we have positions with a high ratio of people meeting our criteria in the population characteristic, for example, of a given region. So the so-called mass, production, lower-level positions. Where the risk increases that there are fewer people in society who lower our criteria, the less effective these announcements are.</p>
 <p>Advertisements still often have the disadvantage that we compete with other employers, which does not change the fact that sometimes these adverts are the right tool. We as a company also use this tool (about 10% of recruitments are carried out through advertisements) and here it is of great importance to know the costs of recruitment, it has a very large impact on its course. Because we can &#8220;burn&#8221; the budget for unnecessary tools.</p>
