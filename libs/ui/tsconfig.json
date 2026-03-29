@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@pomerico/content": ["../content/src/index.ts"],
+      "@pomerico/content/*": ["../content/src/*"]
+    }
+  },
+  "include": ["src"]
+}

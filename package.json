@@ -1,29 +1,17 @@
 {
-  "name": "pomerico",
-  "version": "0.1.0",
+  "name": "@pomerico/monorepo",
   "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "@tailwindcss/typography": "^0.5.19",
-    "embla-carousel-autoplay": "^8.6.0",
-    "embla-carousel-react": "^8.6.0",
-    "next": "16.2.1",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "dev": "pnpm --filter pomerico-com run dev",
+    "build": "pnpm --filter pomerico-com run build",
+    "dev:pl": "pnpm --filter pomerico-pl run dev",
+    "dev:dk": "pnpm --filter pomerico-dk run dev",
+    "build:all": "nx run-many --target=build",
+    "lint": "nx run-many --target=lint"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.1",
-    "tailwindcss": "^4",
+    "nx": "^21.3.2",
     "typescript": "^5"
   }
 }
