@@ -13,7 +13,7 @@ export const marketEntryComparisonTable: ComparisonTableProps = {
     {
       name: "Local Business Operations",
       tagline: "Operate in Poland without your own entity",
-      highlighted: true,
+      highlight: "good",
       badge: "Most popular",
     },
     {
@@ -23,6 +23,7 @@ export const marketEntryComparisonTable: ComparisonTableProps = {
     {
       name: "Own Entity (sp. z o.o.)",
       tagline: "Full independence \u2014 with full complexity",
+      highlight: "bad",
     },
   ],
   rows: [

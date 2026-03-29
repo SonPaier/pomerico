@@ -62,7 +62,7 @@ export const peoComparisonTable: ComparisonTableProps = {
     {
       name: "PEO",
       tagline: "Professional Employer Organization \u2014 shared employer model",
-      highlighted: true,
+      highlight: "good",
     },
     {
       name: "EOR",

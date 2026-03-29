@@ -7,8 +7,8 @@ export const eorComparisonTable: Omit<ComparisonTableProps, never> = {
   title: "Which option is right\nfor your expansion?",
   subtitle: "EOR vs. Own Entity",
   columns: [
-    { name: "EOR via Pomerico", highlighted: true, badge: "Recommended" },
-    { name: "Own Legal Entity (sp. z o.o.)" },
+    { name: "EOR via Pomerico", highlight: "good", badge: "Recommended" },
+    { name: "Own Legal Entity (sp. z o.o.)", highlight: "bad" },
   ],
   rows: [
     {

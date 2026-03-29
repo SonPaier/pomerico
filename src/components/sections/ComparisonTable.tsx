@@ -4,7 +4,7 @@ import { SectionHeader } from "./SectionHeader";
 export interface ComparisonTableColumn {
   name: string;
   tagline?: string;
-  highlighted?: boolean;
+  highlight?: "good" | "bad";
   badge?: string;
 }
 
@@ -34,13 +34,7 @@ function CellValue({
   if (typeof value === "string") {
     return <>{value}</>;
   }
-  const colorClass =
-    value.type === "good"
-      ? "text-green-700"
-      : value.type === "bad"
-        ? "text-red-700"
-        : "text-dark";
-  return <span className={colorClass}>{value.text}</span>;
+  return <span className="text-dark">{value.text}</span>;
 }
 
 export function ComparisonTable({
@@ -61,38 +55,37 @@ export function ComparisonTable({
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader heading={title} subtitle={subtitle} />
 
-        <div className="overflow-hidden rounded border border-dark/5 bg-white shadow-sm">
+        <div className="overflow-hidden rounded-lg border border-dark/10 bg-white">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[700px] border-collapse text-sm">
               <thead>
-                <tr className="bg-dark text-white">
-                  <th className="p-4 text-left text-xs font-semibold uppercase tracking-wider text-white/70" />
+                <tr className="border-b border-dark/10 bg-gray-bg">
+                  <th className="p-4 text-left text-xs font-semibold uppercase tracking-wider text-dark/50" />
                   {columns.map((col) => (
                     <th
                       key={col.name}
                       className={`p-4 text-left align-top ${
-                        col.highlighted
-                          ? "bg-primary-red/10"
-                          : ""
+                        col.highlight === "good"
+                          ? "bg-blue-50"
+                          : col.highlight === "bad"
+                            ? "bg-red-50"
+                            : ""
                       }`}
                     >
                       <span
                         className={`block text-sm font-bold ${
-                          col.highlighted
-                            ? "text-primary-red"
-                            : "text-white/80"
+                          col.highlight === "good"
+                            ? "text-blue-700"
+                            : col.highlight === "bad"
+                              ? "text-red-700"
+                              : "text-dark"
                         }`}
                       >
                         {col.name}
                       </span>
                       {col.tagline && (
-                        <span className="mt-1 block text-xs font-normal text-white/70">
+                        <span className="mt-1 block text-xs font-normal text-dark/50">
                           {col.tagline}
-                        </span>
-                      )}
-                      {col.badge && (
-                        <span className="mt-1.5 inline-block rounded-full bg-primary-red px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                          {col.badge}
                         </span>
                       )}
                     </th>
@@ -124,11 +117,13 @@ export function ComparisonTable({
                       {row.values.map((val, vi) => (
                         <td
                           key={vi}
-                          className={`px-4 py-3 leading-relaxed ${
-                            columns[vi]?.highlighted
-                              ? "border-r border-dark/5 bg-primary-red/[0.03] font-semibold text-dark"
-                              : "border-r border-dark/5 text-dark/70"
-                          } last:border-r-0`}
+                          className={`px-4 py-3 leading-relaxed border-r border-dark/5 last:border-r-0 ${
+                            columns[vi]?.highlight === "good"
+                              ? "bg-blue-50/30 font-semibold text-dark"
+                              : columns[vi]?.highlight === "bad"
+                                ? "bg-red-50/30 text-dark/70"
+                                : "text-dark/70"
+                          }`}
                         >
                           <CellValue value={val} />
                         </td>
@@ -139,8 +134,8 @@ export function ComparisonTable({
 
                 {/* CTA row */}
                 {ctaLabel && ctaHref && (
-                  <tr className="bg-dark">
-                    <td className="px-4 py-5 text-sm font-normal text-white/70">
+                  <tr className="border-t border-dark/10 bg-gray-bg">
+                    <td className="px-4 py-5 text-sm font-normal text-dark/60">
                       Not sure which fits?
                     </td>
                     <td
@@ -157,7 +152,7 @@ export function ComparisonTable({
                         {ctaSecondaryLabel && ctaSecondaryHref && (
                           <Link
                             href={ctaSecondaryHref}
-                            className="inline-block rounded border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white/80 transition-colors hover:bg-white/10"
+                            className="inline-block rounded border border-dark/15 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-dark/70 transition-colors hover:bg-dark/5"
                           >
                             {ctaSecondaryLabel}
                           </Link>
