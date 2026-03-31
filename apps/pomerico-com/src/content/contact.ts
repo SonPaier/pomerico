@@ -1,5 +1,5 @@
 export const contactHero = {
-  heading: "Every partnership starts with a conversation.",
+  heading: "Contact Pomerico – Free HR Outsourcing Consultation",
   description:
     "Share your challenge and we\u2019ll design a solution around your business - not the other way around. Free consultation, no commitment, reply within 24 hours.",
 };

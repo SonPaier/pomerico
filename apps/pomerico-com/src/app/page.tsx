@@ -23,11 +23,11 @@ import {
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 
 export const metadata: Metadata = {
-  title: "Pomerico Group – BPO & HR Outsourcing Partner in Poland",
+  title: "Pomerico Group – HR Outsourcing & BPO Partner in Poland",
   description: "Build effective teams with Pomerico Group. End-to-end HR outsourcing, BPO, EOR, recruitment, and business consulting for international companies in Poland.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Pomerico Group �� BPO & HR Outsourcing Partner in Poland",
+    title: "Pomerico Group – HR Outsourcing & BPO Partner in Poland",
     description: "Build effective teams with Pomerico Group. End-to-end HR outsourcing, BPO, EOR, recruitment, and business consulting for international companies in Poland.",
   },
 };
@@ -51,8 +51,8 @@ export default function Home() {
               Strategic HR &amp; BPO Excellence
             </p>
             <h1 className="font-heading text-4xl font-bold leading-tight text-white lg:text-6xl">
-              Your Strategic Growth{" "}
-              <span className="text-white">Partner in Poland.</span>
+              HR Outsourcing &amp; BPO{" "}
+              <span className="text-white">Partner in Poland</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80">
               Delivering precision-engineered human resources and business

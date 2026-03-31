@@ -1,7 +1,7 @@
 import type { ServiceCard, IconListItem } from "@pomerico/content";
 
 export const servicesListingHero = {
-  heading: "Services Overview – What We Do",
+  heading: "HR Outsourcing & BPO Services in Poland",
   description:
     "At Pomerico, we help businesses across Europe build high-performing teams, streamline operations, and unlock their full growth potential. Our comprehensive suite of services is designed to tackle real business challenges – from scaling teams and improving operational efficiency to ensuring compliance and supporting digital transformation.",
   iconList: [

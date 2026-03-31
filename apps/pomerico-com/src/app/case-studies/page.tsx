@@ -10,12 +10,12 @@ import {
 } from "@/content/case-studies/listing";
 
 export const metadata: Metadata = {
-  title: "Case Studies - Real Results for Our Clients",
+  title: "Case Studies – HR Outsourcing Success Stories",
   description:
     "Discover how Pomerico helps businesses across Europe build high-performing teams, enter new markets, and transform their HR operations.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
-    title: "Case Studies - Real Results for Our Clients",
+    title: "Case Studies – HR Outsourcing Success Stories",
     description:
       "Discover how Pomerico helps businesses across Europe build high-performing teams, enter new markets, and transform their HR operations.",
   },

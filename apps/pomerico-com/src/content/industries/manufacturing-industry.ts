@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico supports manufacturing and industrial companies in building stable, efficient teams and optimizing HR, payroll, and back-office processes.",
   hero: {
-    heading: "Manufacturing & Industry",
+    heading: "Manufacturing & Industry HR Solutions",
     description:
       "<p>Since 2015, we have been supporting manufacturing and industrial companies in building stable and efficient teams. With proven expertise, we are a trusted partner for international leaders \u2013 helping them not only hire engineers and technicians but also optimize HR, payroll, and back-office processes.</p>",
     iconList: [

@@ -3,12 +3,12 @@ import Image from "next/image";
 import { Accordion } from "@pomerico/ui/client";
 
 export const metadata: Metadata = {
-  title: "FAQ – Frequently Asked Questions",
+  title: "FAQ – HR Outsourcing & BPO Questions Answered",
   description:
     "Find answers to common questions about Pomerico's HR outsourcing, BPO, EOR, recruitment, and business consulting services in Poland.",
   alternates: { canonical: "/faq" },
   openGraph: {
-    title: "FAQ – Frequently Asked Questions",
+    title: "FAQ – HR Outsourcing & BPO Questions Answered",
     description:
       "Find answers to common questions about Pomerico's HR outsourcing, BPO, EOR, recruitment, and business consulting services in Poland.",
   },

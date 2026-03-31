@@ -3,7 +3,7 @@ import type { CaseStudyPageData } from "@pomerico/content";
 export const data: CaseStudyPageData = {
   slug: "hedepys-seamless-launch-in-poland-with-pomerico",
   title:
-    "Market Entry Made Simple Hedepy's Seamless Launch in Poland with Pomerico",
+    "Market Entry Made Simple: Hedepy's Seamless Launch in Poland with Pomerico",
   metaDescription:
     "How Pomerico helped Czech online therapy platform Hedepy launch in Poland with full EOR, legal, tax, and operational support \u2013 without setting up a local entity.",
   industry: "Healthcare / Online Therapy",

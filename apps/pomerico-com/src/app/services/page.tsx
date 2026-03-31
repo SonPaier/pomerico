@@ -6,12 +6,12 @@ import { Breadcrumbs } from "@pomerico/ui";
 import { servicesListingHero, allServiceCards } from "@/content/services/listing";
 
 export const metadata: Metadata = {
-  title: "Services Overview – What We Do",
+  title: "HR Outsourcing & BPO Services in Poland",
   description:
     "Explore Pomerico's full range of HR outsourcing, BPO, EOR, recruitment, and consulting services in Poland. Build teams and scale operations. Get started today.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Services Overview – What We Do",
+    title: "HR Outsourcing & BPO Services in Poland",
     description:
       "Explore Pomerico's full range of HR outsourcing, BPO, EOR, recruitment, and consulting services in Poland. Build teams and scale operations. Get started today.",
   },

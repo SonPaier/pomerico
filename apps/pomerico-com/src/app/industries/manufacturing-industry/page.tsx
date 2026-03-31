@@ -5,11 +5,11 @@ import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 
 export const metadata: Metadata = {
-  title: data.title,
+  title: "Manufacturing & Industry HR Solutions in Poland",
   description: data.metaDescription,
   alternates: { canonical: "/industries/manufacturing-industry" },
   openGraph: {
-    title: data.title,
+    title: "Manufacturing & Industry HR Solutions in Poland",
     description: data.metaDescription,
   },
 };

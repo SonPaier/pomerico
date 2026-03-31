@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico provides dedicated IT experts and teams through Body Leasing, RPO, and outsourcing, delivering solutions tailored to the needs of global businesses.",
   hero: {
-    heading: "Information Technology",
+    heading: "IT Outsourcing & Tech Team Building",
     description:
       "<p><strong>Pomerico provides dedicated IT experts and teams through Body Leasing, RPO, and outsourcing, delivering solutions tailored to the needs of global businesses.</strong></p><p>We specialize in Big Data, AI, DevOps, IT Support, and Software Development, helping companies rapidly scale projects, bridge skill gaps, and accelerate delivery timelines. Our teams are not only highly skilled technically but also fully integrated into your workflows, ensuring seamless collaboration and high-impact results.</p><p>Whether you need a fully dedicated team, on-demand specialists, or a hybrid solution, Pomerico ensures speed, reliability, and operational excellence, letting your organization focus on strategic initiatives and innovation.</p>",
     iconList: [

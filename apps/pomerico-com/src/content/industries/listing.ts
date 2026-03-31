@@ -1,7 +1,7 @@
 import type { ServiceCard, IconListItem } from "@pomerico/content";
 
 export const industriesListingHero = {
-  heading: "Building Teams, Optimizing Operations, Driving Growth",
+  heading: "Industry-Specific HR Outsourcing & Team Building",
   description:
     "Pomerico partners with companies across industries to build high-performing teams, streamline operations, and optimize processes. From manufacturing and logistics to finance and IT, we provide tailored solutions that enhance efficiency, ensure compliance, and drive sustainable growth. Our expertise helps businesses scale confidently, solve operational challenges, and achieve measurable results.",
   iconList: [

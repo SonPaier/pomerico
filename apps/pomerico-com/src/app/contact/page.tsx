@@ -4,12 +4,12 @@ import { CTAForm } from "@pomerico/ui/client";
 import { submitContactForm } from "@/app/actions/contact";
 
 export const metadata: Metadata = {
-  title: "Contact – Get a Free Consultation",
+  title: "Contact Pomerico – Free HR Outsourcing Consultation",
   description:
     "Contact Pomerico Group for a free consultation on HR outsourcing, BPO, recruitment, and business consulting services in Poland.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact – Get a Free Consultation",
+    title: "Contact Pomerico – Free HR Outsourcing Consultation",
     description:
       "Contact Pomerico Group for a free consultation on HR outsourcing, BPO, recruitment, and business consulting services in Poland.",
   },

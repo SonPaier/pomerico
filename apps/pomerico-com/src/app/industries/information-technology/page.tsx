@@ -5,11 +5,11 @@ import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 
 export const metadata: Metadata = {
-  title: data.title,
+  title: "IT Outsourcing & Tech Team Building in Poland",
   description: data.metaDescription,
   alternates: { canonical: "/industries/information-technology" },
   openGraph: {
-    title: data.title,
+    title: "IT Outsourcing & Tech Team Building in Poland",
     description: data.metaDescription,
   },
 };

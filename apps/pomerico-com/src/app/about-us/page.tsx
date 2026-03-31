@@ -4,12 +4,12 @@ import Image from "next/image";
 import { CTASection } from "@pomerico/ui";
 
 export const metadata: Metadata = {
-  title: "About Us – Effective Teams, Complete Outsourcing",
+  title: "About Pomerico Group – HR Outsourcing Experts Since 2015",
   description:
     "Since 2015, Pomerico Group provides end-to-end HR outsourcing, BPO, and business consulting for international companies in Poland. Meet our management team.",
   alternates: { canonical: "/about-us" },
   openGraph: {
-    title: "About Us – Effective Teams, Complete Outsourcing",
+    title: "About Pomerico Group – HR Outsourcing Experts Since 2015",
     description:
       "Since 2015, Pomerico Group provides end-to-end HR outsourcing, BPO, and business consulting for international companies in Poland. Meet our management team.",
   },

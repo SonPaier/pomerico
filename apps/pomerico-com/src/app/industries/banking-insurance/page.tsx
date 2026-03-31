@@ -5,11 +5,11 @@ import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 
 export const metadata: Metadata = {
-  title: data.title,
+  title: "Banking & Insurance HR Outsourcing in Poland",
   description: data.metaDescription,
   alternates: { canonical: "/industries/banking-insurance" },
   openGraph: {
-    title: data.title,
+    title: "Banking & Insurance HR Outsourcing in Poland",
     description: data.metaDescription,
   },
 };

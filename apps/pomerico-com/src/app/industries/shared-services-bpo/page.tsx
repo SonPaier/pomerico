@@ -5,11 +5,11 @@ import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 
 export const metadata: Metadata = {
-  title: data.title,
+  title: "Shared Services & BPO Outsourcing in Poland",
   description: data.metaDescription,
   alternates: { canonical: "/industries/shared-services-bpo" },
   openGraph: {
-    title: data.title,
+    title: "Shared Services & BPO Outsourcing in Poland",
     description: data.metaDescription,
   },
 };

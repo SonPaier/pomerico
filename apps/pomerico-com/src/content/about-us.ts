@@ -1,5 +1,5 @@
 export const aboutUsHero = {
-  heading: "Effective teams. Complete outsourcing",
+  heading: "About Pomerico Group — Effective Teams Since 2015",
   description: `<p><b>Pomerico Group is a Polish HR outsourcing and BPO company founded in 2015 in Gdańsk</b>, supporting the dynamic growth of businesses \u2013 particularly <b>international clients</b> \u2013 by providing end-to-end outsourcing from Poland, strategic <b>Human Resource</b> management, and expert <b>Business Consulting</b>.</p>
 <p>With <b>years of experience</b> and a deep understanding of the needs of global organizations, we take over key business processes, enabling companies to focus on achieving their strategic goals and driving sustainable <b>growth</b>.</p>`,
   teamImage: "/images/pomerico-team-gdansk-office.jpg",

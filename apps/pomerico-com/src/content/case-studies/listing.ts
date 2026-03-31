@@ -1,7 +1,7 @@
 import type { CaseStudyCard } from "@pomerico/content";
 
 export const caseStudiesListingHero = {
-  heading: "Case Studies - Real Results for Our Clients",
+  heading: "Case Studies – HR Outsourcing Success Stories",
   description:
     "Discover how Pomerico helps businesses across Europe build high-performing teams, enter new markets, and transform their HR operations. Each case study showcases our hands-on approach and measurable impact.",
   iconList: [] as { bold?: string; text: string }[],

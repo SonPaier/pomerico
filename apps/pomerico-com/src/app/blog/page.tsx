@@ -5,12 +5,12 @@ import { ArrowRightIcon } from "@pomerico/ui";
 import { blogPosts } from "@/content/blog/listing";
 
 export const metadata: Metadata = {
-  title: "Blog – HR & Outsourcing Insights",
+  title: "Blog – HR Outsourcing & Recruitment Insights from Poland",
   description:
     "Expert insights on HR outsourcing, recruitment, compliance, and business operations in Poland from Pomerico Group.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Blog – HR & Outsourcing Insights",
+    title: "Blog – HR Outsourcing & Recruitment Insights from Poland",
     description:
       "Expert insights on HR outsourcing, recruitment, compliance, and business operations in Poland from Pomerico Group.",
   },
@@ -26,7 +26,7 @@ export default function BlogPage() {
             Insights & Resources
           </p>
           <h1 className="mt-3 font-heading text-3xl font-bold lg:text-5xl">
-            Blog
+            HR Outsourcing &amp; Recruitment Insights
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/80">
             Expert articles on HR outsourcing, recruitment, compliance, and

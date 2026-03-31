@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico supports intralogistics companies in developing and scaling operations with optimized warehouse teams, rapid deployment, and full compliance.",
   hero: {
-    heading: "Intralogistics",
+    heading: "Intralogistics Outsourcing & HR Solutions",
     description:
       "<p>Since <b>2015</b>, we have been supporting intralogistics companies in developing and scaling their operations. Thanks to our extensive experience and <b>unique know-how</b>, we are a <b>strong partner for market leaders</b>.</p><p>We have a proven track record in intralogistics \u2013 for example, we were responsible for recruiting and building teams for the first fully automated <b>H&M</b> warehouse in Poland.</p>",
     iconList: [

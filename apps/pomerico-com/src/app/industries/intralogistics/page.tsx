@@ -5,11 +5,11 @@ import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 
 export const metadata: Metadata = {
-  title: data.title,
+  title: "Intralogistics Outsourcing & HR Solutions in Poland",
   description: data.metaDescription,
   alternates: { canonical: "/industries/intralogistics" },
   openGraph: {
-    title: data.title,
+    title: "Intralogistics Outsourcing & HR Solutions in Poland",
     description: data.metaDescription,
   },
 };

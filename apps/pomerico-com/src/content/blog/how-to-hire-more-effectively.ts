@@ -1,5 +1,5 @@
 export const howToHireMoreEffectively = {
-  title: "How to hire more effectively in 2023?",
+  title: "How to Hire More Effectively",
   preheading: "HR Outsourcing Partner",
   date: "24/02/2026",
   author: {

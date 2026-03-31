@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico supports banks, insurance companies, and fintechs in digital transformation and operational growth with compliant, high-performing teams.",
   hero: {
-    heading: "Banking & Insurance",
+    heading: "Banking & Insurance HR Outsourcing",
     description:
       "Since <b>2015</b>, we have been supporting banks, insurance companies, and fintechs in digital transformation and operational growth. Our experience and unique know-how make us a strong partner for financial institutions operating in a highly regulated environment.",
     iconList: [

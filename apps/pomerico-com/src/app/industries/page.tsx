@@ -6,12 +6,12 @@ import { Breadcrumbs } from "@pomerico/ui";
 import { industriesListingHero, allIndustryCards } from "@/content/industries/listing";
 
 export const metadata: Metadata = {
-  title: "Industries – Building Teams, Optimizing Operations, Driving Growth",
+  title: "Industries – HR Outsourcing Solutions by Sector",
   description:
     "Pomerico partners with companies across industries to build high-performing teams, streamline operations, and optimize processes.",
   alternates: { canonical: "/industries" },
   openGraph: {
-    title: "Industries – Building Teams, Optimizing Operations, Driving Growth",
+    title: "Industries – HR Outsourcing Solutions by Sector",
     description:
       "Pomerico partners with companies across industries to build high-performing teams, streamline operations, and optimize processes.",
   },

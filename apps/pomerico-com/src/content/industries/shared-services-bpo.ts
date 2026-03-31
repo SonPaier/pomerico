@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico helps SSC and BPO organizations build stable teams and scale operations efficiently with EoR, payroll, HR outsourcing, and full back-office management.",
   hero: {
-    heading: "Shared Services / BPO",
+    heading: "Shared Services & BPO Outsourcing",
     description:
       "<p>Since 2015, we have been helping SSC and BPO organizations in Poland and across Europe build stable teams and scale operations efficiently. Our know-how and experience make us the first-choice partner for companies seeking predictable costs, compliance, and scalability.</p><p>Pomerico specializes in building and managing SSC/BPO teams in Poland. We provide EoR, Payroll, HR outsourcing, and full back-office management tailored to international standards. Our recruitment and retention strategies ensure 0-7% employee turnover in the first year, compared to much higher market averages.</p>",
     iconList: [
