@@ -9,6 +9,7 @@ export const marketEntryComparisonTable: ComparisonTableProps = {
     {
       name: "Market Entry Advisory",
       tagline: "Strategy & legal guidance before you act",
+      highlight: "good",
     },
     {
       name: "Local Business Operations",
@@ -19,6 +20,7 @@ export const marketEntryComparisonTable: ComparisonTableProps = {
     {
       name: "Entry & Scale",
       tagline: "Consulting + outsourcing as a bridge to your own entity",
+      highlight: "good",
     },
     {
       name: "Own Entity (sp. z o.o.)",

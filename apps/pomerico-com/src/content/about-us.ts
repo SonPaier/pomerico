@@ -87,13 +87,10 @@ export const aboutUsWhatWeDo = {
   blocks: [
     {
       description: `<p><b>Our services cover the full spectrum</b> of processes related to team building and outsourcing in HR, administration, finance, and IT — from recruitment and employment to optimization, management, long-term talent retention, and delivery of business <b>KPIs</b>.</p>
-<p>Whether you are looking to hire a few specialists or need an entire department of dozens of professionals, <b>we create tailor-made teams that integrate seamlessly</b> with your organizational culture and deliver measurable results.</p>`,
-      image: "/images/pomerico-business-consulting-meeting.jpg",
-    },
-    {
-      description: `<p><strong>We go beyond traditional outsourcing:</strong> by combining advanced recruitment strategies, bespoke onboarding processes, and continuous performance management, we ensure that your teams not only meet operational targets but also grow and develop within your company. Our approach reduces turnover, optimizes costs, and strengthens employee engagement, giving you stable, high-performing teams ready to drive your business forward.</p>
+<p>Whether you are looking to hire a few specialists or need an entire department of dozens of professionals, <b>we create tailor-made teams that integrate seamlessly</b> with your organizational culture and deliver measurable results.</p>
+<p><strong>We go beyond traditional outsourcing:</strong> by combining advanced recruitment strategies, bespoke onboarding processes, and continuous performance management, we ensure that your teams not only meet operational targets but also grow and develop within your company. Our approach reduces turnover, optimizes costs, and strengthens employee engagement, giving you stable, high-performing teams ready to drive your business forward.</p>
 <p>From local startups to international corporations, Pomerico adapts its solutions to your specific needs, providing flexible models of cooperation such as Body Leasing, Employer of Record (EOR), or full process outsourcing. With Pomerico, every team member becomes a committed contributor to your goals, ensuring consistency, efficiency, and measurable impact across all areas of your business.</p>`,
-      image: "/images/pomerico-team-collaboration.jpg",
+      image: "/images/pomerico-business-consulting-meeting.jpg",
     },
   ],
 };

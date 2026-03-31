@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico supports banks, insurance companies, and fintechs in digital transformation and operational growth with compliant, high-performing teams.",
   hero: {
-    heading: "Banking & Insurance HR Outsourcing",
+    heading: "Banking & Insurance",
     description:
       "Since <b>2015</b>, we have been supporting banks, insurance companies, and fintechs in digital transformation and operational growth. Our experience and unique know-how make us a strong partner for financial institutions operating in a highly regulated environment.",
     iconList: [
@@ -45,10 +45,10 @@ export const data: IndustryPageData = {
   },
   testimonials: [
     {
-      quote: "Pomerico Group has a great team of leaders and people with creative talents. Personalities who naturally attract others to themselves, and the company\u2019s Management stands out in business as particularly ethical. The consulting industry in this case is a choice that stems from passion for people \u2013 which is evident here.",
-      author: "Marek Makarewicz",
-      role: "Financial Modelling Associate",
-      company: "London Stock Exchange Group",
+      quote: "They demonstrated loyalty on more than one occasion and carried out tasks exceeding our expectations, making decisions that were appropriate for the employer, not necessarily in their own interest. Before we started working with Pomerico, we had collaborated with many other agencies. I can confidently confirm, based on our experience, that this is the most reliable, effective, and trustworthy company.",
+      author: "Micha\u0142 Karpowicz",
+      role: "COO",
+      company: "Babord VAP",
     },
   ],
   caseStudySlugs: [

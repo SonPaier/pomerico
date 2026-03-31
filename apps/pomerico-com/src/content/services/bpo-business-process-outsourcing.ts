@@ -47,7 +47,7 @@ export const data: ServicePageData = {
     ],
   },
   details: {
-    heading: "What processes can we take over?",
+    heading: "What do we do?",
     cards: [
       { icon: "/images/icon-person-growth-performance.png", heading: "Finance & Accounting", description: "Payroll and HR administration, Controlling and financial reporting, Invoicing and accounts management, Budgeting and cost optimization, Cash flow management, tax reporting, audit support, procurement processing" },
       { icon: "/images/icon-gears-system-integration.png", heading: "HR & Administration", description: "Recruitment and talent acquisition, HR and personnel management, Employee benefits administration, Onboarding and retention programs, Learning & development, performance management, HR analytics" },

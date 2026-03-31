@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Open_Sans, Roboto, Roboto_Slab } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import { Header } from "@pomerico/ui/client";
 import { Footer } from "@pomerico/ui";
 import { mainNav } from "@/content/navigation";
@@ -20,20 +20,6 @@ const openSans = Open_Sans({
   subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-body",
-  display: "swap",
-});
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-ui",
-  display: "swap",
-});
-
-const robotoSlab = Roboto_Slab({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-heading",
   display: "swap",
 });
 
@@ -101,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${openSans.variable} ${roboto.variable} ${robotoSlab.variable}`}>
+    <html lang="en" className={openSans.variable}>
       <body className="font-body text-dark">
         <script
           type="application/ld+json"
@@ -176,6 +162,7 @@ export default function RootLayout({
                     "https://clutch.co/profile/pomerico-group",
                     "https://www.outsourceaccelerator.com/company/pomerico-group-2/",
                     "https://www.refetrust.com/agency/pomerico-group",
+                    "https://www.wikidata.org/wiki/Q138844186",
                     "https://pomerico.pl",
                   ],
                 },
@@ -202,6 +189,11 @@ export default function RootLayout({
           ctaLabel="FREE CONSULTATION"
           ctaLabelMobile="CONSULTATION"
           ctaHref="/contact"
+          topBarPhones={[
+            { label: "DK", number: "+45 66 33 90 70" },
+            { label: "PL", number: "+48 794 165 506" },
+          ]}
+          topBarEmail="office@pomerico.com"
         />
         <main id="main-content">{children}</main>
         <Footer

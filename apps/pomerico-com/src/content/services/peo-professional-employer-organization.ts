@@ -5,24 +5,23 @@ import type { ComparisonTableProps } from "@pomerico/ui/ComparisonTable";
 export const peoQuickComparison: QuickComparisonProps = {
   eyebrow: "Know the difference",
   title: "PEO vs EOR \u2014 in 30 seconds",
-  badge: "Quick read",
   columns: [
     {
       label: "PEO \u2014 Professional Employer Organization",
       accent: "red",
       points: [
         {
-          icon: "\uD83E\uDD1D",
+          icon: "",
           bold: "Co-employment model.",
           text: "Pomerico and your company share the employer role. You retain more direct control over HR policies and processes.",
         },
         {
-          icon: "\uD83C\uDFE2",
+          icon: "",
           bold: "Works best if you have",
           text: "\u2014 or plan to build \u2014 your own Polish entity. PEO complements your structure, it doesn\u2019t replace it.",
         },
         {
-          icon: "\u2699\uFE0F",
+          icon: "",
           bold: "More customisation.",
           text: "You shape the HR policies, benefits and processes. Pomerico administers and ensures compliance.",
         },
@@ -33,17 +32,17 @@ export const peoQuickComparison: QuickComparisonProps = {
       accent: "blue",
       points: [
         {
-          icon: "\uD83D\uDCCB",
+          icon: "",
           bold: "Full employer model.",
           text: "Pomerico is the sole legal employer on record. Your company has no employment obligations in Poland whatsoever.",
         },
         {
-          icon: "\uD83D\uDE80",
+          icon: "",
           bold: "No entity needed \u2014 ever.",
           text: "Hire in Poland or across the EU without registering a company, opening a bank account or dealing with KRS.",
         },
         {
-          icon: "\uD83D\uDD12",
+          icon: "",
           bold: "Zero compliance burden.",
           text: "All legal, payroll and tax obligations sit entirely with Pomerico. You focus on the work.",
         },

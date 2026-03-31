@@ -44,6 +44,9 @@ export function TestimonialCarousel({
     }
   }, [emblaApi, isPlaying]);
 
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
   const scrollTo = useCallback(
     (index: number) => emblaApi?.scrollTo(index),
     [emblaApi],
@@ -56,14 +59,36 @@ export function TestimonialCarousel({
           {heading}
         </h2>
 
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {testimonials.map((t, i) => (
-              <div key={i} className="min-w-0 shrink-0 basis-full px-4">
-                <TestimonialCard testimonial={t} />
-              </div>
-            ))}
+        <div className="relative">
+          <button
+            onClick={scrollPrev}
+            aria-label="Previous testimonial"
+            className="absolute -left-12 top-1/2 hidden -translate-y-1/2 text-dark/30 transition-colors hover:text-primary-blue md:flex"
+          >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {testimonials.map((t, i) => (
+                <div key={i} className="min-w-0 shrink-0 basis-full px-4">
+                  <TestimonialCard testimonial={t} />
+                </div>
+              ))}
+            </div>
           </div>
+
+          <button
+            onClick={scrollNext}
+            aria-label="Next testimonial"
+            className="absolute -right-12 top-1/2 hidden -translate-y-1/2 text-dark/30 transition-colors hover:text-primary-blue md:flex"
+          >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
         </div>
 
         {/* Pagination dots + pause */}

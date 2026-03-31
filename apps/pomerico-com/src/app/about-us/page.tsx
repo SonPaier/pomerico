@@ -33,7 +33,7 @@ export default function AboutUsPage() {
     <>
       {/* Hero */}
       <section className="bg-primary-blue text-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="flex flex-col gap-6">
 <h1 className="font-heading text-3xl font-bold lg:text-5xl">
@@ -58,7 +58,7 @@ export default function AboutUsPage() {
                 alt="Pomerico team"
                 width={600}
                 height={400}
-                className="max-w-full rounded-lg"
+                className="max-w-full max-h-[480px] w-auto rounded-lg object-cover"
               />
             </div>
           </div>
@@ -80,6 +80,7 @@ export default function AboutUsPage() {
                 key={i}
                 className="grid items-center gap-8 overflow-hidden rounded-lg border border-dark/5 bg-white lg:grid-cols-2"
               >
+                {block.image && (
                 <div
                   className={`${i % 2 === 1 ? "lg:order-2" : ""}`}
                 >
@@ -91,6 +92,7 @@ export default function AboutUsPage() {
                     className="h-full w-full object-cover object-top"
                   />
                 </div>
+                )}
                 <div
                   className={`p-8 lg:p-12 ${i % 2 === 1 ? "lg:order-1" : ""}`}
                 >
@@ -101,6 +103,68 @@ export default function AboutUsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission / Vision / Values */}
+      <section className="bg-gray-bg py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-10 lg:grid-cols-3">
+            {/* Mission */}
+            <div>
+              <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-blue">
+                OUR
+              </p>
+              <h2 className="mt-2 font-heading text-2xl font-bold text-dark">
+                Mission
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-dark/80">
+                With full commitment, we deliver <strong>flexible</strong> and{" "}
+                <strong>effective</strong> solutions tailored to our
+                clients&apos; realities. We build long-term relationships based
+                on trust, transparent communication, and{" "}
+                <strong>responsibility</strong> — enabling our clients to
+                achieve their business goals <strong>faster</strong> and more
+                effectively.
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div>
+              <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-blue">
+                OUR
+              </p>
+              <h2 className="mt-2 font-heading text-2xl font-bold text-dark">
+                Vision
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-dark/80">
+                To be the partner of first choice for our clients in both
+                operational and strategic support — thanks to{" "}
+                <strong>our effectiveness and predictability</strong>. We create
+                an environment where complex processes become simple for our
+                clients, and business challenges are solved through true
+                partnership.
+              </p>
+            </div>
+
+            {/* Values */}
+            <div>
+              <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-blue">
+                OUR
+              </p>
+              <h2 className="mt-2 font-heading text-2xl font-bold text-dark">
+                Values
+              </h2>
+              <ul className="mt-4 flex flex-col gap-2 text-sm leading-relaxed text-dark/80">
+                <li>Effectiveness through understanding</li>
+                <li>Trust</li>
+                <li>Mutual responsibility</li>
+                <li>Commitment</li>
+                <li>Partnership</li>
+                <li>Quality over quantity</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

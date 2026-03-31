@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico provides dedicated IT experts and teams through Body Leasing, RPO, and outsourcing, delivering solutions tailored to the needs of global businesses.",
   hero: {
-    heading: "IT Outsourcing & Tech Team Building",
+    heading: "IT Outsourcing",
     description:
       "<p><strong>Pomerico provides dedicated IT experts and teams through Body Leasing, RPO, and outsourcing, delivering solutions tailored to the needs of global businesses.</strong></p><p>We specialize in Big Data, AI, DevOps, IT Support, and Software Development, helping companies rapidly scale projects, bridge skill gaps, and accelerate delivery timelines. Our teams are not only highly skilled technically but also fully integrated into your workflows, ensuring seamless collaboration and high-impact results.</p><p>Whether you need a fully dedicated team, on-demand specialists, or a hybrid solution, Pomerico ensures speed, reliability, and operational excellence, letting your organization focus on strategic initiatives and innovation.</p>",
     iconList: [
@@ -41,10 +41,10 @@ export const data: IndustryPageData = {
   },
   testimonials: [
     {
-      quote: "At Datumo, we specialize in the Big Data and Cloud domain, offering services to renowned American companies, including those based in New York. We are pleased to confirm our collaboration with Pomerico Group, serving as our outsourcing services provider. The primary goal of our collaboration has been to enhance metrics in areas such as recruitment, sourcing and overall work efficiency. Pomerico Group excels in HR knowledge and organizational culture. Our experiences confirm that Pomerico Group is not only an expert but also a reliable partner who understands the challenges associated with organizational functioning. Their adeptness in identifying issues and crafting effective solutions ensures that collaborating with them is a guarantee of development. Despite not being a large company, they offer advantages through their flexibility, swift decision-making, and a genuine sense of care in working with you.",
-      author: "Julia Kasparek-Guzik",
-      role: "COO",
-      company: "Datumo",
+      quote: "At Datumo, we specialize in the Big Data and Cloud domain, offering services to renowned American companies, including those based in New York. We are pleased to confirm our collaboration with Pomerico Group, serving as our outsourcing services provider. The primary goal of our collaboration has been to enhance metrics in areas such as recruitment, sourcing and overall work efficiency. Pomerico Group excels in HR knowledge and organizational culture. Our experiences confirm that Pomerico Group is not only an expert but also a reliable partner who understands the challenges associated with organizational functioning.",
+      author: "Julia Kasparek",
+      role: "Director of Operations",
+      company: "DATUMO",
     },
   ],
   caseStudySlugs: [

@@ -28,14 +28,14 @@ export function QuickComparison({
   return (
     <section className="py-20">
       <div className="mx-auto max-w-4xl px-6">
-        <div className="overflow-hidden rounded bg-dark shadow-lg">
+        <div className="overflow-hidden rounded-lg border border-dark/10 bg-white shadow-sm">
           {/* Header */}
-          <div className="flex flex-col items-start gap-3 border-b border-white/10 px-6 py-5 sm:flex-row sm:items-center sm:gap-4">
+          <div className="flex flex-col items-start gap-3 border-b border-dark/10 bg-gray-bg px-6 py-5 sm:flex-row sm:items-center sm:gap-4">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary-red">
                 {eyebrow}
               </p>
-              <h3 className="mt-1 font-heading text-xl font-bold text-white">
+              <h3 className="mt-1 font-heading text-xl font-bold text-dark">
                 {title}
               </h3>
             </div>
@@ -53,7 +53,7 @@ export function QuickComparison({
                 key={ci}
                 className={`px-6 py-6 ${
                   ci === 0
-                    ? "border-b border-white/10 bg-primary-red/[0.04] md:border-b-0 md:border-r"
+                    ? "border-b border-dark/10 md:border-b-0 md:border-r"
                     : ""
                 }`}
               >
@@ -77,11 +77,13 @@ export function QuickComparison({
                 <div className="space-y-4">
                   {col.points.map((pt, pi) => (
                     <div key={pi} className="flex items-start gap-3">
-                      <span className="mt-0.5 shrink-0 text-base">
-                        {pt.icon}
-                      </span>
-                      <p className="text-sm leading-relaxed text-white/75">
-                        <strong className="font-semibold text-white">
+                      {pt.icon && (
+                        <span className="mt-0.5 shrink-0 text-base">
+                          {pt.icon}
+                        </span>
+                      )}
+                      <p className="text-sm leading-relaxed text-dark/70">
+                        <strong className="font-semibold text-dark">
                           {pt.bold}
                         </strong>{" "}
                         {pt.text}
@@ -95,9 +97,9 @@ export function QuickComparison({
 
           {/* Footer */}
           {(footerText || footerLinkLabel) && (
-            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-dark/10 bg-gray-bg px-6 py-4">
               {footerText && (
-                <span className="text-xs text-white/60">{footerText}</span>
+                <span className="text-xs text-dark/60">{footerText}</span>
               )}
               {footerLinkLabel && footerLinkHref && (
                 <Link

@@ -117,6 +117,8 @@ export interface IndustryPageData {
   metaDescription: string;
   hero: HeroSection;
   services: ServiceCard[];
+  /** Custom heading for the services section (defaults to "Our Services") */
+  servicesHeading?: string;
   /** "Benefits for your business" cards */
   benefits?: ServiceCard[];
   /** "Who is this for?" */

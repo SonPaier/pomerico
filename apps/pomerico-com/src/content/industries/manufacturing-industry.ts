@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico supports manufacturing and industrial companies in building stable, efficient teams and optimizing HR, payroll, and back-office processes.",
   hero: {
-    heading: "Manufacturing & Industry HR Solutions",
+    heading: "Manufacturing & Industry",
     description:
       "<p>Since 2015, we have been supporting manufacturing and industrial companies in building stable and efficient teams. With proven expertise, we are a trusted partner for international leaders \u2013 helping them not only hire engineers and technicians but also optimize HR, payroll, and back-office processes.</p>",
     iconList: [
@@ -16,6 +16,7 @@ export const data: IndustryPageData = {
     ],
     trustImage: "/images/pomerico-trusted-partner-badges.svg",
   },
+  servicesHeading: "Our Services for Manufacturing & Industry",
   services: [
     { icon: "/images/icon-gears-recruitment-process.png", heading: "Recruitment Process Outsourcing (RPO)", description: "Recruitment of specialists not available on traditional job boards. Direct Search and Assessment Center tailored to manufacturing requirements. Scaling project teams in record time." },
     { icon: "/images/icon-folders-document-management.png", heading: "Body Leasing / Staff Augmentation", description: "Dedicated experts for production projects, automation, and internal logistics. Flexible support depending on demand and production schedule." },
@@ -47,7 +48,7 @@ export const data: IndustryPageData = {
   },
   testimonials: [
     {
-      quote: "They demonstrated loyalty on more than one occasion and carried out tasks exceeding our expectations, making decisions that were appropriate for the employer, not necessarily in their own interest. Before we started working with Pomerico, we had collaborated with many other agencies. I can confidently confirm, based on our experience, that this is the most reliable, effective, and trustworthy company.",
+      quote: "They demonstrated loyalty on more than one occasion and carried out tasks exceeding our expectations, making decisions that were appropriate for the employer, not necessarily in their own interest. I can confidently confirm, based on our experience, that this is the most reliable, effective, and trustworthy company.",
       author: "Micha\u0142 Karpowicz",
       role: "COO",
       company: "Babord VAP",

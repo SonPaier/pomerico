@@ -54,7 +54,7 @@ export function CaseStudyGrid({
                   <h3 className="font-heading text-xl font-bold text-primary-blue group-hover:underline">
                     {cs.title}
                   </h3>
-                  {isLarge && cs.summary && (
+                  {cs.summary && (
                     <p className="mt-4 text-sm leading-relaxed text-dark/70">
                       {cs.summary}
                     </p>

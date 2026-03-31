@@ -15,23 +15,26 @@ export function CTASection({ submitAction }: CTASectionProps) {
               Your next step starts here.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-white/80">
-              Ready to optimize your processes, scale your team or enter a new market?
+              Ready to reduce costs, scale your team or enter a new market?
               One conversation is enough to know if we&apos;re the right fit.
             </p>
 
-            <ul className="mt-10 flex flex-col gap-5">
+            <ul className="mt-10 flex flex-col gap-6">
               {[
-                "We act as your internal team",
-                "Scale when you need it",
-                "Efficiency proven by numbers",
+                { title: "We act as your internal team", desc: "We are not an agency. We take full responsibility for people and processes." },
+                { title: "Scale when you need it", desc: "Hire faster, more flexibly, and without long-term commitments." },
+                { title: "Efficiency proven by numbers", desc: "2 500+ projects delivered, 85% of clients in long-term cooperation." },
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/10">
+                <li key={item.title} className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/10">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                       <path d="M11.5 3.5L5.25 9.75L2.5 7" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <span className="text-sm font-semibold">{item}</span>
+                  <div>
+                    <span className="text-sm font-semibold">{item.title}</span>
+                    <p className="mt-1 text-sm text-white/60">{item.desc}</p>
+                  </div>
                 </li>
               ))}
             </ul>

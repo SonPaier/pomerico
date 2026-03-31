@@ -5,11 +5,10 @@ import Link from "next/link";
 import { ArrowRightIcon } from "./ArrowRightIcon";
 
 const DEFAULT_TOPICS = [
-  "Cost Reduction",
-  "Team Scaling",
-  "Market Entry",
-  "HR Outsourcing",
-  "Recruitment / RPO",
+  "Choose a topic",
+  "Looking for a job",
+  "I offer services",
+  "I am a B2B Client, free quote and/or consultation",
   "Other",
 ] as const;
 
@@ -71,8 +70,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
         Book your free consultation
       </h3>
       <p className="mt-1 text-sm text-dark/70">
-        Fill out the form below and our strategy team will reach out within 24
-        hours.
+        No commitment &middot; Reply within 24h
       </p>
 
       {error && (
@@ -92,7 +90,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
               id="ctaform-name"
               type="text"
               name="name"
-              placeholder="John Doe"
+              placeholder="Name"
               required
               className={inputClass}
             />
@@ -105,7 +103,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
               id="ctaform-email"
               type="email"
               name="email"
-              placeholder="john@company.com"
+              placeholder="Email"
               required
               className={inputClass}
             />
@@ -122,7 +120,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
               id="ctaform-phone"
               type="tel"
               name="phone"
-              placeholder="+1 (555) 000-0000"
+              placeholder="Phone number (+xx)"
               required
               pattern="[0-9()#&+*\-=. ]+"
               className={inputClass}
@@ -150,7 +148,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
           <textarea
             id="ctaform-brief"
             name="message"
-            placeholder="Tell us about your goals..."
+            placeholder="Tell us about your situation - what are you looking to achieve?"
             rows={4}
             className={inputClass}
           />

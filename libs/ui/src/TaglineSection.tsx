@@ -16,8 +16,8 @@ export function TaglineSection({
   ctaHref,
 }: TaglineSectionProps) {
   return (
-    <section className="bg-primary-blue py-20 text-center text-white">
-      <div className="mx-auto max-w-4xl px-6">
+    <section className="bg-primary-blue py-20 text-white">
+      <div className="mx-auto max-w-7xl px-6">
         {preheading && (
           <p className="mb-2 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
             {preheading}

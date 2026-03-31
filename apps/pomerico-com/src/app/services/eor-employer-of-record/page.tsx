@@ -5,7 +5,7 @@ import { HeroSection } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
 import { IconList } from "@pomerico/ui";
 import { CTASection } from "@pomerico/ui";
-import { TestimonialCarousel } from "@pomerico/ui/client";
+import { TestimonialCarousel, Accordion } from "@pomerico/ui/client";
 import { CaseStudyGrid } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
 import { ProcessSection } from "@pomerico/ui";
@@ -15,6 +15,7 @@ import { ComparisonTable } from "@pomerico/ui";
 import { clutchBadge } from "@/content/shared";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
+import { faqItems } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: data.title,
@@ -76,29 +77,25 @@ export default function Page() {
                     __html: data.targetAudience.description,
                   }}
                 />
+                <div className="mt-8 flex items-center gap-4 rounded-lg border border-dark/5 bg-gray-bg/50 px-4 py-3 max-w-sm">
+                  <Image
+                    src={clutchBadge}
+                    alt="Clutch verified partner"
+                    width={80}
+                    height={87}
+                    className="max-w-[80px]"
+                  />
+                  <div>
+                    <p className="font-ui text-xs font-semibold text-dark/60">Top HR Outsourcing Company</p>
+                    <p className="font-ui text-xs text-dark/50">Clutch Poland 2023</p>
+                  </div>
+                </div>
               </div>
               <div>
                 {data.targetAudience.items &&
                   data.targetAudience.items.length > 0 && (
                     <IconList items={data.targetAudience.items} variant="light" />
                   )}
-                <div className="mt-8 flex items-center gap-6">
-                  <Image
-                    src={clutchBadge}
-                    alt="Clutch verified partner"
-                    width={120}
-                    height={130}
-                    className="max-w-[120px]"
-                  />
-                  <Image
-                    src="/images/decorative-doodle-element.svg"
-                    alt=""
-                    width={160}
-                    height={80}
-                    className="max-w-[160px]"
-                    unoptimized
-                  />
-                </div>
               </div>
             </div>
           </div>
@@ -132,6 +129,21 @@ export default function Page() {
           cards={allCaseStudyCards.filter((c) => slugs.includes(c.slug))}
         />
       )}
+
+      {/* FAQ */}
+      <section className="bg-gray-bg py-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="mb-12 text-center">
+            <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-red">
+              Got Questions?
+            </p>
+            <h2 className="font-heading mt-3 text-3xl font-bold text-dark lg:text-4xl">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <Accordion items={faqItems.slice(0, 5)} defaultOpen={0} />
+        </div>
+      </section>
 
       {/* Bottom CTA */}
       <CTASection submitAction={submitContactForm} />

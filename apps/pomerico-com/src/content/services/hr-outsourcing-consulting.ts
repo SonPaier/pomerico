@@ -28,17 +28,17 @@ export const data: ServicePageData = {
       {
         icon: "/images/icon-person-growth-performance.png",
         heading: "HR Consulting",
-        description: "<ul><li>audit of HR processes</li><li>defining structure & responsibilities</li><li>building competency matrices</li><li>implementing HR tools & workflows</li><li>performance & motivation systems</li><li>culture & engagement strategies</li><li>employer branding foundations</li><li>creation of HR documentation and procedures</li></ul>",
+        description: "Audit of HR processes. Defining structure & responsibilities. Building competency matrices. Implementing HR tools & workflows. Performance & motivation systems. Culture & engagement strategies. Employer branding foundations. Creation of HR documentation and procedures.",
       },
       {
         icon: "/images/icon-wrench-maintenance-services.png",
         heading: "HR Leadership-as-a-Service",
-        description: "<ul><li>interim HR Manager</li><li>interim Head of People</li><li>interim Talent Acquisition Lead</li><li>crisis HR leadership (mergers, restructuring)</li></ul>",
+        description: "Interim HR Manager. Interim Head of People. Interim Talent Acquisition Lead. Crisis HR leadership (mergers, restructuring).",
       },
       {
         icon: "/images/icon-gears-system-integration.png",
         heading: "HR Contracting (Interim / On-Demand HR)",
-        description: "<ul><li>HR Generalist / HRBP on contract</li><li>talent Acquisition on contract</li><li>temporary HR support for scaling</li><li>full HR function externally managed</li><li>maternity leave coverage</li><li>project-based HR roles</li></ul>",
+        description: "HR Generalist / HRBP on contract. Talent Acquisition on contract. Temporary HR support for scaling. Full HR function externally managed. Maternity leave coverage. Project-based HR roles.",
       },
     ],
   },

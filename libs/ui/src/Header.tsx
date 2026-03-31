@@ -170,19 +170,48 @@ function MobileNavItem({
   );
 }
 
+function TopBar({
+  phones,
+  email,
+}: {
+  phones: { label: string; number: string }[];
+  email: string;
+}) {
+  return (
+    <div className="hidden border-b border-gray-200 bg-gray-50 lg:block">
+      <div className="mx-auto flex max-w-7xl items-center justify-end gap-6 px-6 py-2.5 font-ui text-sm text-dark/80">
+        {phones.map((p) => (
+          <a key={p.label} href={`tel:${p.number.replace(/\s/g, "")}`} className="hover:text-primary-blue transition-colors">
+            {p.label} {p.number}
+          </a>
+        ))}
+        <span className="text-dark/30">|</span>
+        <a href={`mailto:${email}`} className="hover:text-primary-blue transition-colors">
+          {email}
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export interface HeaderProps {
   logo: string;
   navigation: NavItem[];
   ctaLabel: string;
   ctaLabelMobile?: string;
   ctaHref: string;
+  topBarPhones?: { label: string; number: string }[];
+  topBarEmail?: string;
 }
 
-export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref }: HeaderProps) {
+export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, topBarPhones, topBarEmail }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white">
+      {topBarPhones && topBarEmail && (
+        <TopBar phones={topBarPhones} email={topBarEmail} />
+      )}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link href="/" className="shrink-0">
           <Image

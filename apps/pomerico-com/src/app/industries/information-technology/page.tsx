@@ -3,6 +3,7 @@ import { IndustryPageTemplate } from "@pomerico/ui";
 import { data } from "@/content/industries/information-technology";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
+import { faqItems } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: "IT Outsourcing & Tech Team Building in Poland",
@@ -15,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function InformationTechnologyPage() {
-  return <IndustryPageTemplate data={data} allCaseStudyCards={allCaseStudyCards} submitAction={submitContactForm} />;
+  return <IndustryPageTemplate data={data} allCaseStudyCards={allCaseStudyCards} submitAction={submitContactForm} faqItems={faqItems.slice(0, 5)} />;
 }

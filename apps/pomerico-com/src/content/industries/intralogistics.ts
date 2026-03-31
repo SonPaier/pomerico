@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   metaDescription:
     "Pomerico supports intralogistics companies in developing and scaling operations with optimized warehouse teams, rapid deployment, and full compliance.",
   hero: {
-    heading: "Intralogistics Outsourcing & HR Solutions",
+    heading: "Intralogistics",
     description:
       "<p>Since <b>2015</b>, we have been supporting intralogistics companies in developing and scaling their operations. Thanks to our extensive experience and <b>unique know-how</b>, we are a <b>strong partner for market leaders</b>.</p><p>We have a proven track record in intralogistics \u2013 for example, we were responsible for recruiting and building teams for the first fully automated <b>H&M</b> warehouse in Poland.</p>",
     iconList: [
@@ -39,7 +39,7 @@ export const data: IndustryPageData = {
   },
   testimonials: [
     {
-      quote: "In my day-to-day operations, it is important for me to fulfill obligations and agreed arrangements, and this is exactly what cooperation with Pomerico Group looks like. The course of the process unfolded exactly as it had been presented during the service offering stage, and it was characterized by a strong focus on my expectations and the unconventional nature of the implementation itself. Establishing the cooperation was nothing more than delegating the task to specialists in exactly the same way I do in my daily operations when entrusting tasks to my team of technicians. The high quality of the service, manifested through reliability, effectiveness, and dependability in personnel selection, means that the responsible choice of our partner in the form of Pomerico Group proved to be the right and profitable decision in the sector. Highly recommended.",
+      quote: "In my day-to-day operations, it is important for me to fulfill obligations and agreed arrangements, and this is exactly what cooperation with Pomerico Group looks like. The course of the process unfolded exactly as it had been presented during the service offering stage, and it was characterized by a strong focus on my expectations and the unconventional nature of the implementation itself. The high quality of the service, manifested through reliability, effectiveness, and dependability in personnel selection, means that the responsible choice of our partner in the form of Pomerico Group proved to be the right and profitable decision in the sector. Highly recommended.",
       author: "Tadeusz K\u0119sik",
       role: "Head of CSS Department",
       company: "SSI Sch\u00e4fer",

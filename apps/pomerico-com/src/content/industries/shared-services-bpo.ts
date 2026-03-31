@@ -47,7 +47,7 @@ export const data: IndustryPageData = {
   },
   testimonials: [
     {
-      quote: "Despite having over 30 years of professional experience in the IT industry. (\u2026) I found the training run by the Pomerico Group incredibly interesting and valuable, and most importantly \u2013 meticulously prepared.",
+      quote: "Despite having over 30 years of professional experience in the IT industry, I found the training run by the Pomerico Group incredibly interesting and valuable, and most importantly \u2014 meticulously prepared.",
       author: "Zenon Ruta",
       role: "Infrastructure Operations Expert",
       company: "Nordea",

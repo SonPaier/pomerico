@@ -10,6 +10,7 @@ import { SectionHeader } from "../SectionHeader";
 import { ProcessSection } from "../ProcessSection";
 import { TaglineSection } from "../TaglineSection";
 import { Breadcrumbs } from "../Breadcrumbs";
+import { Accordion } from "../Accordion";
 import type { CaseStudyCard } from "@pomerico/content";
 
 function TargetAudienceSection({
@@ -38,28 +39,24 @@ function TargetAudienceSection({
               className="mt-6 text-base leading-relaxed text-dark/80"
               dangerouslySetInnerHTML={{ __html: description }}
             />
+            <div className="mt-8 flex items-center gap-4 rounded-lg border border-dark/5 bg-gray-bg/50 px-4 py-3 max-w-sm">
+              <Image
+                src={clutchBadge}
+                alt="Clutch verified partner"
+                width={80}
+                height={87}
+                className="max-w-[80px]"
+              />
+              <div>
+                <p className="font-ui text-xs font-semibold text-dark/60">Top HR Outsourcing Company</p>
+                <p className="font-ui text-xs text-dark/50">Clutch Poland 2023</p>
+              </div>
+            </div>
           </div>
           <div>
             {items && items.length > 0 && (
               <IconList items={items} variant="light" />
             )}
-            <div className="mt-8 flex items-center gap-6">
-              <Image
-                src={clutchBadge}
-                alt="Clutch verified partner"
-                width={120}
-                height={130}
-                className="max-w-[120px]"
-              />
-              <Image
-                src="/images/decorative-doodle-element.svg"
-                alt=""
-                width={160}
-                height={80}
-                className="max-w-[160px]"
-                unoptimized
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -72,9 +69,10 @@ interface ServicePageTemplateProps {
   allCaseStudyCards: CaseStudyCard[];
   clutchBadge: string;
   submitAction: (formData: FormData) => Promise<{ success: boolean; error?: string }>;
+  faqItems?: { question: string; answer: string }[];
 }
 
-export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, submitAction }: ServicePageTemplateProps) {
+export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, submitAction, faqItems }: ServicePageTemplateProps) {
   const slugs = data.caseStudySlugs;
 
   return (
@@ -111,12 +109,55 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
         />
       )}
 
-      {/* Tagline */}
-      {data.tagline && (
-        <TaglineSection
-          heading={data.tagline.heading}
-          description={data.tagline.description}
-        />
+      {/* Tagline + Testimonial — split view when both exist */}
+      {data.tagline && data.testimonials && data.testimonials.length > 0 ? (
+        <section className="bg-primary-blue py-20 text-white">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <div>
+                {data.tagline.preheading && (
+                  <p className="mb-2 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+                    {data.tagline.preheading}
+                  </p>
+                )}
+                <h2 className="font-heading text-2xl font-bold italic lg:text-3xl">
+                  {data.tagline.heading}
+                </h2>
+                {data.tagline.description && (
+                  <p className="mt-4 text-base leading-relaxed text-white/80">
+                    {data.tagline.description}
+                  </p>
+                )}
+              </div>
+              <div className="rounded-lg bg-white p-8">
+                <div className="mb-4 text-4xl font-bold text-primary-red">&ldquo;&rdquo;</div>
+                <p className="text-sm italic leading-relaxed text-dark/70">
+                  {data.testimonials[0].quote}
+                </p>
+                <div className="mt-6 border-t border-dark/10 pt-4">
+                  <p className="font-heading text-sm font-bold text-primary-red">
+                    {data.testimonials[0].author}
+                  </p>
+                  <p className="text-xs text-dark/60">
+                    {data.testimonials[0].role}{data.testimonials[0].company ? `, ${data.testimonials[0].company}` : ""}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (
+        <>
+          {data.tagline && (
+            <TaglineSection
+              heading={data.tagline.heading}
+              description={data.tagline.description}
+            />
+          )}
+          {data.testimonials && data.testimonials.length > 0 && (
+            <TestimonialCarousel testimonials={data.testimonials} />
+          )}
+        </>
       )}
 
       {/* Cooperation Process */}
@@ -137,16 +178,28 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
         </section>
       )}
 
-      {/* Testimonials */}
-      {data.testimonials && data.testimonials.length > 0 && (
-        <TestimonialCarousel testimonials={data.testimonials} />
-      )}
-
       {/* Case Studies */}
       {slugs && slugs.length > 0 && (
         <CaseStudyGrid
           cards={allCaseStudyCards.filter((c) => slugs.includes(c.slug))}
         />
+      )}
+
+      {/* FAQ */}
+      {faqItems && faqItems.length > 0 && (
+        <section className="bg-gray-bg py-20">
+          <div className="mx-auto max-w-4xl px-6">
+            <div className="mb-12 text-center">
+              <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-red">
+                Got Questions?
+              </p>
+              <h2 className="font-heading mt-3 text-3xl font-bold text-dark lg:text-4xl">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <Accordion items={faqItems} defaultOpen={0} />
+          </div>
+        </section>
       )}
 
       {/* Bottom CTA */}

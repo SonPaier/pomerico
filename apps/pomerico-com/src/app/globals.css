@@ -13,10 +13,10 @@
   --color-gray-bg: #F7F7F7;
   --color-dark: #333333;
 
-  /* Font families */
+  /* Font families — Open Sans everywhere */
   --font-body: "Open Sans", sans-serif;
-  --font-heading: "Roboto Slab", serif;
-  --font-ui: "Roboto", sans-serif;
+  --font-heading: "Open Sans", sans-serif;
+  --font-ui: "Open Sans", sans-serif;
 
   /* Border radius */
   --radius: 4px;
