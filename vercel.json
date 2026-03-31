@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm --filter pomerico-com run build",
+  "outputDirectory": "apps/pomerico-com/.next",
+  "installCommand": "pnpm install",
+  "framework": "nextjs"
+}
