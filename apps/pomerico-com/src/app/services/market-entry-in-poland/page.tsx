@@ -66,18 +66,22 @@ export default function Page() {
                     __html: data.targetAudience.description,
                   }}
                 />
-                <div className="mt-8 flex items-center gap-4 rounded-lg border border-dark/5 bg-gray-bg/50 px-4 py-3 max-w-sm">
+                <div className="mt-8 flex items-center justify-between max-w-sm">
                   <Image
                     src={clutchBadge}
-                    alt="Clutch verified partner"
+                    alt="Clutch verified partner – Top HR Outsourcing Company, Poland 2023"
                     width={80}
                     height={87}
-                    className="max-w-[80px]"
+                    className="max-w-[80px] shrink-0"
                   />
-                  <div>
-                    <p className="font-ui text-xs font-semibold text-dark/60">Top HR Outsourcing Company</p>
-                    <p className="font-ui text-xs text-dark/50">Clutch Poland 2023</p>
-                  </div>
+                  <Image
+                    src="/images/clutch-doodle.svg"
+                    alt="We work with companies that"
+                    width={180}
+                    height={87}
+                    className="max-w-[180px]"
+                    unoptimized
+                  />
                 </div>
               </div>
               <div>
@@ -91,15 +95,15 @@ export default function Page() {
         </section>
       )}
 
-      {/* 2. Market Entry comparison table + decision cards */}
-      <ComparisonTable {...marketEntryComparisonTable} />
-      <section className="bg-gray-bg pb-20 -mt-10">
+      {/* 2. Decision cards + comparison table */}
+      <section className="bg-gray-bg py-20">
         <div className="mx-auto max-w-7xl px-6">
           <DecisionCards cards={marketEntryDecisionCards} />
         </div>
       </section>
+      <ComparisonTable {...marketEntryComparisonTable} />
 
-      {/* 3. Cooperation Process (How it works) */}
+      {/* 3. Cooperation Process */}
       {data.process && (
         <ProcessSection
           heading={data.process.heading ?? "Cooperation Process"}
@@ -107,7 +111,17 @@ export default function Page() {
         />
       )}
 
-      {/* 4. Benefits for Your Business */}
+      {/* 4. How it works (Details) — before Benefits */}
+      {data.details && (
+        <section className="bg-gray-bg py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <SectionHeader heading={data.details.heading} />
+            <ServiceCardGrid cards={data.details.cards} />
+          </div>
+        </section>
+      )}
+
+      {/* 5. Benefits for Your Business */}
       {data.benefits.length > 0 && (
         <section className="bg-gray-bg py-20">
           <div className="mx-auto max-w-7xl px-6">
@@ -120,27 +134,38 @@ export default function Page() {
         </section>
       )}
 
-      {/* Tagline */}
-      {data.tagline && (
-        <TaglineSection
-          heading={data.tagline.heading}
-          description={data.tagline.description}
-        />
-      )}
-
-      {/* Details (How it works) */}
-      {data.details && (
-        <section className="bg-gray-bg py-20">
+      {/* Tagline + Testimonial — split view */}
+      {data.tagline && data.testimonials && data.testimonials.length > 0 && (
+        <section className="bg-primary-blue py-20 text-white">
           <div className="mx-auto max-w-7xl px-6">
-            <SectionHeader heading={data.details.heading} />
-            <ServiceCardGrid cards={data.details.cards} />
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="font-heading text-2xl font-bold italic lg:text-3xl">
+                  {data.tagline.heading}
+                </h2>
+                {data.tagline.description && (
+                  <p className="mt-4 text-base leading-relaxed text-white/80">
+                    {data.tagline.description}
+                  </p>
+                )}
+              </div>
+              <div className="rounded-lg bg-white p-8">
+                <div className="mb-4 text-4xl font-bold text-primary-red">&ldquo;&rdquo;</div>
+                <p className="text-sm italic leading-relaxed text-dark/70">
+                  {data.testimonials[0].quote}
+                </p>
+                <div className="mt-6 border-t border-dark/10 pt-4">
+                  <p className="font-heading text-sm font-bold text-primary-red">
+                    {data.testimonials[0].author}
+                  </p>
+                  <p className="text-xs text-dark/60">
+                    {data.testimonials[0].role}, {data.testimonials[0].company}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-      )}
-
-      {/* Testimonials */}
-      {data.testimonials && data.testimonials.length > 0 && (
-        <TestimonialCarousel testimonials={data.testimonials} />
       )}
 
       {/* Case Studies */}

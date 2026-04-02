@@ -22,16 +22,9 @@ export function DecisionCards({ cards }: DecisionCardsProps) {
               : "border-dark/5"
           } ${!card.highlighted ? "" : ""}`}
         >
-          <span className="mb-3 block text-2xl">{card.icon}</span>
-          <span
-            className={`mb-2 inline-block rounded px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider ${
-              card.highlighted
-                ? "bg-dark text-primary-red"
-                : "bg-dark/5 text-dark/70"
-            }`}
-          >
+          <p className="mb-2 font-ui text-xs font-bold uppercase tracking-widest text-dark/50">
             {card.model}
-          </span>
+          </p>
           <p className="mb-1.5 text-sm font-bold leading-snug text-dark">
             {card.quote}
           </p>

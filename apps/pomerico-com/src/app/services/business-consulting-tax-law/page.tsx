@@ -172,16 +172,15 @@ export default function Page() {
             {situationCards.map((card, i) => (
               <div
                 key={i}
-                className="flex flex-col rounded-2xl border border-dark/5 bg-white p-6"
+                className="flex flex-col rounded border border-dark/5 bg-white p-5 shadow-sm"
               >
-                <span className="text-3xl">{card.icon}</span>
-                <p className="mt-3 font-ui text-xs font-bold uppercase tracking-widest text-primary-blue">
+                <p className="mb-2 font-ui text-xs font-bold uppercase tracking-widest text-dark/50">
                   {card.label}
                 </p>
-                <p className="mt-3 font-heading text-base font-bold leading-snug text-dark">
+                <p className="mb-1.5 text-sm font-bold leading-snug text-dark">
                   {card.quote}
                 </p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-dark/60">
+                <p className="flex-1 text-xs leading-relaxed text-dark/70">
                   {card.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">

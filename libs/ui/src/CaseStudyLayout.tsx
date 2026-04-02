@@ -121,7 +121,7 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
                     alt={data.client ?? ""}
                     width={200}
                     height={80}
-                    className="h-16 w-auto object-contain"
+                    className="h-24 w-auto object-contain"
                   />
                 </div>
                 <div className="hidden h-12 w-px bg-dark/10 md:block" />

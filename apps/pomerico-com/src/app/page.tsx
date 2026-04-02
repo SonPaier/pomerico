@@ -75,30 +75,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-center">
-          <p className="font-ui text-xs uppercase tracking-[0.2em] text-white">
-            Explore More
-          </p>
-          <svg
-            className="mx-auto mt-2 text-white"
-            width="20"
-            height="12"
-            viewBox="0 0 20 12"
-            fill="none"
-          >
-            <path
-              d="M2 2L10 10L18 2"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
       </section>
 
       {/* Client logos */}
-      <section className="py-10">
+      <section id="client-logos" className="py-10 scroll-mt-4">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="mb-6 text-center font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/60">
             Trusted by Global Industry Leaders
@@ -159,9 +139,9 @@ export default function Home() {
           <Image
             src={mapImage}
             alt="Pomerico global presence"
-            width={1200}
-            height={600}
-            className="mx-auto max-w-full"
+            width={960}
+            height={480}
+            className="mx-auto max-w-[80%]"
           />
         </div>
       </section>

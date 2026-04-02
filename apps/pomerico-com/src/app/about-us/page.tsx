@@ -58,7 +58,7 @@ export default function AboutUsPage() {
                 alt="Pomerico team"
                 width={600}
                 height={400}
-                className="max-w-full max-h-[480px] w-auto rounded-lg object-cover"
+                className="max-w-[85%] max-h-[408px] w-auto rounded-lg object-cover"
               />
             </div>
           </div>
@@ -87,9 +87,9 @@ export default function AboutUsPage() {
                   <Image
                     src={block.image}
                     alt={`Pomerico integrated business solutions - section ${i + 1}`}
-                    width={800}
-                    height={600}
-                    className="h-full w-full object-cover object-top"
+                    width={600}
+                    height={400}
+                    className="h-full max-h-[320px] w-full object-cover object-top"
                   />
                 </div>
                 )}

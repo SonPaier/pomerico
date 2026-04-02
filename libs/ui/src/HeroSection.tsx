@@ -10,8 +10,8 @@ interface HeroSectionProps {
 export function HeroSection({ data }: HeroSectionProps) {
   return (
     <section className="bg-primary-blue text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-6 py-8 lg:py-10">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
 <h1 className="font-heading text-3xl font-bold lg:text-5xl">
               {data.heading}

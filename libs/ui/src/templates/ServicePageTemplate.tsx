@@ -39,18 +39,22 @@ function TargetAudienceSection({
               className="mt-6 text-base leading-relaxed text-dark/80"
               dangerouslySetInnerHTML={{ __html: description }}
             />
-            <div className="mt-8 flex items-center gap-4 rounded-lg border border-dark/5 bg-gray-bg/50 px-4 py-3 max-w-sm">
+            <div className="mt-8 flex items-center justify-between max-w-sm">
               <Image
                 src={clutchBadge}
-                alt="Clutch verified partner"
+                alt="Clutch verified partner – Top HR Outsourcing Company, Poland 2023"
                 width={80}
                 height={87}
-                className="max-w-[80px]"
+                className="max-w-[80px] shrink-0"
               />
-              <div>
-                <p className="font-ui text-xs font-semibold text-dark/60">Top HR Outsourcing Company</p>
-                <p className="font-ui text-xs text-dark/50">Clutch Poland 2023</p>
-              </div>
+              <Image
+                src="/images/clutch-doodle.svg"
+                alt="We work with companies that"
+                width={180}
+                height={87}
+                className="max-w-[180px]"
+                unoptimized
+              />
             </div>
           </div>
           <div>

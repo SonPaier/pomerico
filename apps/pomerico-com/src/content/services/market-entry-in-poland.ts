@@ -140,7 +140,6 @@ export const marketEntryDecisionCards: DecisionCard[] = [
     quote: "\u201CWe need to operate in Poland now, without setting up a company.\u201D",
     description:
       "The fastest path to market. Pomerico handles employment, HR, accounting and compliance \u2014 you focus on business.",
-    highlighted: true,
   },
   {
     icon: "\uD83D\uDCC8",
