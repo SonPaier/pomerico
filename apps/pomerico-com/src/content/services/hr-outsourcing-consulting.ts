@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "hr-outsourcing-consulting",
@@ -85,3 +85,42 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What areas does HR Consulting cover?",
+    answer: "We provide audits, recruitment strategy, career path design, benefit programs, and even external HR Directors or HRBPs to run transformation projects."
+  },
+  {
+    question: "How does HR Consulting improve employee retention?",
+    answer: "By aligning motivation tools, culture, and career paths with business strategy. Our clients report significant drops in turnover and higher engagement scores."
+  },
+  {
+    question: "Why trust Pomerico for HR Consulting?",
+    answer: "Because we combine academic HR expertise with hands-on business experience. We don't just advise - we implement, optimize, and deliver measurable improvements."
+  },
+  {
+    question: "How does HR contracting support companies without internal HR teams?",
+    answer: "We fully take over HR operations - documentation, onboarding, policies, recruitment flow, employee support and performance monitoring - giving you a functional HR department without hiring internally."
+  },
+  {
+    question: "What are the benefits of using an external HR consultant instead of hiring internally?",
+    answer: "You gain immediate expertise, eliminate recruitment delays, reduce costs, avoid employment risk, and get access to proven HR methodologies and tools used by Pomerico's specialists."
+  },
+  {
+    question: "What HR processes can be fully outsourced or delegated?",
+    answer: "Recruitment, onboarding/offboarding, HR administration, competency frameworks, performance management, culture initiatives, engagement surveys, documentation, HR audits and talent development systems."
+  },
+  {
+    question: "What is the difference between HR consulting, HR contracting and interim HR?",
+    answer: "HR Consulting focuses on analysing, designing and improving HR processes (onboarding, performance, recruitment, culture, competencies). HR contracting provides you with a dedicated HR specialist working inside your company on a flexible basis. Interim HR places an experienced HR leader (HR Manager, HRBP, Head of People) to temporarily manage your HR function during growth or organisational change."
+  },
+  {
+    question: "When should a company consider hiring an interim HR specialist?",
+    answer: "When you're scaling fast, facing a restructuring, experiencing high turnover, lacking HR leadership, or need temporary cover for maternity leave or long-term absences."
+  },
+  {
+    question: "How can HR consulting improve recruitment quality and reduce mis-hiring costs?",
+    answer: "Pomerico uses behavioural profiling, competency matrices, culture-fit analysis and structured interviews, significantly increasing hiring accuracy and reducing the cost of wrong hires."
+  },
+];

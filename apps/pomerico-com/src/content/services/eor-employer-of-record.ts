@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 import type {
   ComparisonTableProps,
 } from "@pomerico/ui/ComparisonTable";
@@ -141,3 +141,46 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is Employer of Record and why choose Pomerico?",
+    answer: "EOR allows you to hire employees in Poland without opening a local entity. Pomerico becomes the legal employer of your hired talent in Poland or the EU, handling contracts, payroll, taxes, benefits and compliance, while you manage daily operations. With 10+ years of expertise and 85% client retention, we are one of the most trusted EoR providers in Poland."
+  },
+  {
+    question: "When does EOR make more sense than opening an entity?",
+    answer: "<p>EOR (Employer of Record) is ideal when you need to hire employees in a new country quickly without setting up a legal entity. It makes sense when:</p><ul><li>You want to test a new market before committing to a full entity,</li><li>You need to reduce administrative, legal, and compliance burdens,</li><li>You want to onboard employees fast and remain fully compliant with local labor laws,</li><li>Your business requires flexibility for short-term projects or remote teams.</li></ul><p>EOR allows you to focus on operations and growth while the provider handles employment contracts, payroll, taxes, and regulatory compliance.</p>"
+  },
+  {
+    question: "What business results can I expect from EoR?",
+    answer: "Clients save time, reduce risk, and gain instant access to the Polish market. For example, we've helped clients fill critical managerial roles in just 2.5 weeks after months of unsuccessful in-house attempts. Payroll, compliance, and even office management, so you have a turnkey Polish branch ready to go. Some clients scaled to 25+ employees within 3 months this way."
+  },
+  {
+    question: "Why is EOR the best option for foreign companies?",
+    answer: "Because it provides immediate legal presence, full compliance, and zero admin burden. You can test and scale your business in Poland quickly, with a proven partner who has built hundreds of teams for global organizations."
+  },
+  {
+    question: "Is EOR legally safe and compliant with EU and Polish regulations?",
+    answer: "Yes, Pomerico ensures full compliance with Polish labour law, EU regulations, GDPR, tax requirements and industry-specific standards, eliminating employer liability for the client."
+  },
+  {
+    question: "Do I need a legal entity in Poland to hire employees through EoR?",
+    answer: "No, that's exactly what EOR solves. Pomerico becomes the registered employer, allowing you to operate locally without opening a branch or subsidiary."
+  },
+  {
+    question: "Can Pomerico recruit employees for us directly?",
+    answer: "Yes, recruitment is included and free of charge for EOR clients, using Direct Search, behavioural profiling and advanced sourcing tools to find specialists unavailable on job boards."
+  },
+  {
+    question: "Does EOR support remote, hybrid or on-site work?",
+    answer: "All models are supported - remote-first hiring is most common for international teams."
+  },
+  {
+    question: "What does Pomerico handle as the official employer?",
+    answer: "<p>We manage:</p><ul><li>employment contracts,</li><li>payroll & taxes,</li><li>benefits, insurance & leave tracking,</li><li>HR support & legal compliance,</li><li>onboarding documentation,</li><li>ongoing employee care.</li></ul><p><strong>You manage only the daily tasks and performance.</strong></p>"
+  },
+  {
+    question: "How does EOR affect our financial reporting?",
+    answer: "<p>Using an EOR generally impacts financial reporting by classifying the employees as legally employed by the EOR provider. This means:</p><ul><li>Payroll, benefits, and employment costs are processed through the EOR,</li><li>The company may record the costs as service expenses rather than direct employment costs, depending on accounting standards,</li><li>Obligations such as social contributions and taxes are managed by the EOR provider, simplifying compliance and reporting,</li><li>Companies retain control over budgets, performance metrics, and headcount planning without being the formal employer.</li></ul><p>EOR ensures compliance while keeping your internal reporting transparent and aligned with financial regulations.</p>"
+  },
+];

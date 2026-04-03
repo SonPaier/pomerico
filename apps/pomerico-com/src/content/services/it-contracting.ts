@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "it-contracting",
@@ -64,3 +64,34 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is IT contracting and how does it compare to outsourcing or permanent hiring?",
+    answer: "IT contracting gives companies fast, flexible access to specialized engineers without committing to permanent headcount. Unlike outsourcing, you keep full control over delivery, roadmap and daily work. Unlike employment, you avoid long recruitment cycles, payroll, compliance and long-term risk."
+  },
+  {
+    question: "Is contracting suitable for long-term projects?",
+    answer: "Yes, many clients use IT contracting for year-long or multi-year implementations."
+  },
+  {
+    question: "Can IT contractors work remotely, onsite or hybrid?",
+    answer: "Yes, clients combine remote flexibility with occasional onsite meetings depending on project requirements."
+  },
+  {
+    question: "Who manages IT contractors on a daily basis?",
+    answer: "Typically, IT contractors are managed by your internal team to ensure alignment with business priorities. However, depending on the model, Pomerico can also provide coordination or partial management support. This setup is adjusted to your preferred level of involvement."
+  },
+  {
+    question: "What happens if project requirements change?",
+    answer: "If requirements change, we can adjust the scope, replace or add specialists, or switch the cooperation model. This flexibility is one of the key advantages of IT contracting. You are not locked into rigid structures."
+  },
+  {
+    question: "Is IT contracting cost-effective compared to in-house hiring?",
+    answer: "Yes, IT contracting is often more cost-effective than permanent hiring. It eliminates recruitment fees, long-term employment risk and fixed overhead. Costs remain predictable and aligned with actual project needs."
+  },
+  {
+    question: "What level of support do I receive in IT contracting?",
+    answer: "You receive standard support covering recruitment, contracts, payroll, compliance and coordination. Depending on the model, we can also support onboarding, HR processes and performance follow-ups. The scope of support is flexible and can change as your needs evolve."
+  },
+];

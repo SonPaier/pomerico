@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 import type { ComparisonTableProps } from "@pomerico/ui/ComparisonTable";
 import type { DecisionCard } from "@pomerico/ui/DecisionCards";
 
@@ -228,3 +228,42 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "How can Pomerico help me enter the Polish market?",
+    answer: "We provide consulting, outsourcing, and hybrid models - covering HR, payroll, sales, office management, tax, and legal. You can operate without opening a company, fully compliant."
+  },
+  {
+    question: "What are the benefits of working with Pomerico for market entry?",
+    answer: "Faster entry, reduced costs, and minimized risk. We've supported companies that grew from zero to full teams in weeks, saving them months of setup."
+  },
+  {
+    question: "Why is Poland a strategic location for business?",
+    answer: "Poland is the largest market in Central and Eastern Europe, with a highly skilled workforce and competitive labor costs. Its location makes it one of the most attractive hubs for nearshoring, especially for Nordic and EU companies - just a 1h flight from Copenhagen to Gdańsk. With Pomerico, you gain a local partner for outsourcing in Poland and market entry consulting, who knows the market inside out."
+  },
+  {
+    question: "Do I need to open a legal entity to start operating in Poland?",
+    answer: "Not necessarily. With Pomerico's EOR/PEO services, you can hire employees and operate immediately without creating a subsidiary, delaying entity setup until your business is ready."
+  },
+  {
+    question: "Can Pomerico help me hire employees before I open a legal entity?",
+    answer: "Yes, this is one of the biggest advantages. Using EOR, Pomerico becomes the official employer so you can hire and operate immediately while preparing for long-term market entry."
+  },
+  {
+    question: "Can Pomerico support office setup or hybrid operations?",
+    answer: "Yes, we help with workspace setup, hybrid arrangements, equipment management and onboarding processes tailored to your operational needs."
+  },
+  {
+    question: "Can I test the Polish market before committing fully?",
+    answer: "Yes, hiring through EOR allows you to run a pilot team or small operation and scale later based on performance and market demand."
+  },
+  {
+    question: "How do I start entering the Polish market with Pomerico?",
+    answer: "Simply outline your hiring or operational goals. We create a full market entry plan with timelines, roles, costs, and the best legal structure to launch operations quickly and safely."
+  },
+  {
+    question: "What does \"market entry in Poland\" include and how does it work?",
+    answer: "Market entry in Poland means setting up or expanding operations in the Polish market using Pomerico's support in legal compliance, hiring, payroll, EOR/PEO employment, recruitment, office setup, HR processes and operational onboarding - without needing to build a local infrastructure from scratch."
+  },
+];

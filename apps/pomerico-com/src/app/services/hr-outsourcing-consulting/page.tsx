@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { data } from "@/content/services/hr-outsourcing-consulting";
+import { data, faqItems } from "@/content/services/hr-outsourcing-consulting";
 import { HeroSection } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
 import { IconList } from "@pomerico/ui";
@@ -13,7 +13,7 @@ import { Breadcrumbs } from "@pomerico/ui";
 import { clutchBadge } from "@/content/shared";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
-import { faqItems } from "@/content/faq";
+
 
 export const metadata: Metadata = {
   title: data.title,
@@ -179,7 +179,7 @@ export default function Page() {
               Frequently Asked Questions
             </h2>
           </div>
-          <Accordion items={faqItems.slice(0, 5)} defaultOpen={0} />
+          <Accordion items={faqItems} defaultOpen={0} />
         </div>
       </section>
 

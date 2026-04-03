@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "bpo-business-process-outsourcing",
@@ -72,3 +72,42 @@ export const data: ServicePageData = {
     "recruiting-a-strategic-country-sales-manager-for-market-expansion",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is BPO in Poland and how does Pomerico deliver Business Process Outsourcing?",
+    answer: "BPO means entrusting us with full responsibility for selected operational processes such as HR, finance, administration, or IT support. At Pomerico, we don't just \"take over tasks\" - we deliver ready-to-use, measurable results. With over 2 000 completed projects and 92% effectiveness, we guarantee efficiency, compliance, and transparency at every stage."
+  },
+  {
+    question: "Which processes can I outsource to Pomerico?",
+    answer: "Clients outsource payroll, HR, recruitment, finance controlling, IT Service Desk, and even full back-office operations. We provide dedicated project managers and clear KPIs (SLA, quality metrics) so you know exactly what you're getting. It's more than outsourcing - it's an extension of your business."
+  },
+  {
+    question: "What benefits will my company gain from BPO?",
+    answer: "Cost savings (up to 33% lower operational costs in client cases), higher productivity (up to 38% performance boost), and significantly reduced turnover (0-7% in outsourced teams). Most importantly, you gain a trusted partner that frees your leadership from administration and allows you to focus on growth."
+  },
+  {
+    question: "Is BPO cost-effective for small companies and startups?",
+    answer: "Yes. Outsourcing reduces fixed costs, eliminates the need to build internal HR/Finance departments, and with Pomerico you can start with just one employee - no minimum."
+  },
+  {
+    question: "Is outsourcing legally safe and GDPR-compliant?",
+    answer: "Yes. Pomerico ensures full compliance with labor law, taxes, social security, contracts, confidentiality and industry regulations (e.g., DORA, GDPR). Clients receive auditable processes and complete documentation."
+  },
+  {
+    question: "How quickly can cooperation start?",
+    answer: "Usually within 2-3 weeks, and even faster with pre-verified candidates. For larger teams, onboarding is typically 50% faster than internal hiring."
+  },
+  {
+    question: "Can an outsourced team work fully remotely?",
+    answer: "Yes, an outsourced team can work fully remotely. Pomerico specializes in building and managing remote teams across Europe, ensuring seamless communication, productivity, and integration with your internal processes. Our teams use secure collaboration tools, project management platforms, and regular reporting to maintain high performance and accountability, even when working off-site. Remote setups allow you to access top talent without geographic limitations, while we handle coordination, compliance, and operational support to ensure smooth project delivery."
+  },
+  {
+    question: "Which industries most commonly use BPO in Poland?",
+    answer: "BPO (Business Process Outsourcing) in Poland is widely used across multiple sectors due to the country's skilled workforce, competitive costs, and robust operational infrastructure. The industries most commonly leveraging BPO services include: Finance & Banking – accounting, payroll, compliance, and reporting processes. Insurance – policy administration, claims processing, and customer support. IT & Technology – software development, technical support, and IT operations. Manufacturing & Industry – supply chain management, HR, and administrative processes. Shared Services & SSC – back-office operations, procurement, and operational support. Polish BPO providers like Pomerico enable companies in these sectors to scale teams efficiently, optimize costs, and maintain high-quality service delivery."
+  },
+  {
+    question: "Can I combine BPO with other services like PEO, Payroll or Recruitment?",
+    answer: "Yes, many clients use a combined model. Pomerico acts as a one-stop partner for HR, payroll, legal, recruitment and operations."
+  },
+];

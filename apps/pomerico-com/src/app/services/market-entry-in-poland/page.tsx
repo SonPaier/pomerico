@@ -4,6 +4,7 @@ import {
   data,
   marketEntryComparisonTable,
   marketEntryDecisionCards,
+  faqItems,
 } from "@/content/services/market-entry-in-poland";
 import { HeroSection } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
@@ -20,7 +21,7 @@ import { DecisionCards } from "@pomerico/ui";
 import { clutchBadge } from "@/content/shared";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
-import { faqItems } from "@/content/faq";
+
 
 export const metadata: Metadata = {
   title: data.title,
@@ -186,7 +187,7 @@ export default function Page() {
               Frequently Asked Questions
             </h2>
           </div>
-          <Accordion items={faqItems.slice(0, 5)} defaultOpen={0} />
+          <Accordion items={faqItems} defaultOpen={0} />
         </div>
       </section>
 

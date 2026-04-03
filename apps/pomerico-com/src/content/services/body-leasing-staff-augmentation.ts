@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "body-leasing-staff-augmentation",
@@ -68,3 +68,18 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is Body Leasing/ Staff Augmentation in Poland and how does it work at Pomerico?",
+    answer: "It's a fast and flexible way to add IT, HR, finance, or marketing experts to your projects. They remain employed by us but work fully integrated with your team."
+  },
+  {
+    question: "How quickly can you provide specialists?",
+    answer: "Often within days. Thanks to our proprietary candidate base and in-house sourcing team, we can deliver qualified experts faster than traditional recruitment agencies in Poland."
+  },
+  {
+    question: "Why choose Pomerico for Body Leasing/ Staff Augmentation?",
+    answer: "Because we combine speed with quality. Our projects show turnover below 7%, proving we don't just provide people - we provide stable, effective teams."
+  },
+];

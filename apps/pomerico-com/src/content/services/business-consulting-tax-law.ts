@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "business-consulting-tax-law",
@@ -68,3 +68,42 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is Business Consulting at Pomerico?",
+    answer: "Strategic support in sales, marketing, restructuring, and scaling. Practical solutions tested in 2,500+ projects."
+  },
+  {
+    question: "How does it impact profitability?",
+    answer: "Help with cutting operational costs, optimizing structures, and designing effective sales and marketing strategies. Clients often achieve double-digit cost reductions and productivity gains."
+  },
+  {
+    question: "Why is Pomerico a better partner than large consultancies?",
+    answer: "Agile, flexible, and cost-efficient. Unlike corporations, adapts to your reality—delivering predictable, measurable results without inflated overhead."
+  },
+  {
+    question: "Do I need a legal entity to hire employees in Poland?",
+    answer: "No, Pomerico enables compliant hiring through EOR/PEO, letting you operate immediately while they manage legal employment responsibilities."
+  },
+  {
+    question: "Can Pomerico support my company with labour law and contracts?",
+    answer: "Yes, they prepare contracts, update policies, ensure labour law compliance and help prevent disputes or legal risk."
+  },
+  {
+    question: "Do you offer tax and payroll consulting for global companies?",
+    answer: "Yes, including ZUS, benefits, allowances, payroll calculations, tax optimization and cross-border employment structures."
+  },
+  {
+    question: "How do you help with market entry into Poland?",
+    answer: "Support hiring, legal structures, tax frameworks, operational processes, workspace setup, and EOR/PEO models for fast entry."
+  },
+  {
+    question: "Can you audit our current HR, payroll or legal processes?",
+    answer: "Yes, full compliance audits with clear recommendations and implementation support."
+  },
+  {
+    question: "Do you offer long-term or ongoing advisory support?",
+    answer: "Absolutely, many clients use ongoing consulting to stay compliant as they grow."
+  },
+];

@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData & {
   whatWeHandle: {
@@ -92,3 +92,38 @@ export const data: ServicePageData & {
     ],
   },
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "Why is Poland the best nearshoring location in Europe?",
+    answer: "Poland offers a large, highly skilled workforce, competitive labor costs, and strong IT and finance expertise. Its geographic proximity to Nordic and EU markets (just 1h flight from Gdansk to Copenhagen) makes it ideal for companies seeking efficiency, cultural fit, and fast collaboration."
+  },
+  {
+    question: "How does Pomerico support nearshoring in Poland?",
+    answer: "We provide a full package: recruitment, IT outsourcing, HR and payroll services, compliance, and office setup. Through Employer of Record and BPO Poland, we ensure your team is legally employed, fully compliant, and operational from day one."
+  },
+  {
+    question: "What business benefits can I expect from nearshoring with Pomerico?",
+    answer: "<ul><li>Faster time-to-market</li><li>Up to 30-40% cost savings compared to Western Europe</li><li>Dedicated, low-turnover teams (0-7%)</li><li>Full compliance with EU and local regulations</li></ul>"
+  },
+  {
+    question: "Do I need to open a legal entity to start nearshoring in Poland?",
+    answer: "No, Pomerico can employ your team through EOR/PEO, allowing you to operate immediately without a company setup."
+  },
+  {
+    question: "What employment models can I use for nearshoring in Poland?",
+    answer: "EoR, PEO, contracting, body leasing, staff augmentation, permanent recruitment or hybrid models."
+  },
+  {
+    question: "What are the cost benefits of nearshoring to Poland?",
+    answer: "You can expect up to 30-40% cost reduction versus Western Europe, while maintaining high project quality and EU compliance."
+  },
+  {
+    question: "Does nearshoring support hybrid or onsite teams?",
+    answer: "Yes - remote, hybrid and onsite nearshore teams are all possible, depending on your operational needs."
+  },
+  {
+    question: "How do I start nearshoring with Pomerico?",
+    answer: "Simply share your hiring needs. We prepare a tailored nearshoring plan, roles, costs, timelines and the best cooperation model."
+  },
+];

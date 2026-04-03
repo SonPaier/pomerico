@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "finance-outsourcing-contracting",
@@ -67,3 +67,30 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What does Finance Outsourcing with Pomerico include?",
+    answer: "We manage accounting, controlling, financial reporting, receivables, and audit preparation. Many of our international clients rely on us to fully replace or enhance their finance departments - ensuring stability, compliance, and efficiency."
+  },
+  {
+    question: "How does Finance Outsourcing reduce costs?",
+    answer: "Maintaining an in-house finance team can be costly and risky. With Pomerico, you reduce overhead while gaining access to a team of senior finance experts. In practice, this means lower payroll, fewer compliance risks, and predictable expenses with one monthly invoice."
+  },
+  {
+    question: "How do I know my finances are safe with Pomerico?",
+    answer: "With over 10 years of experience supporting international companies, we guarantee 0 penalties for compliance breaches and timely delivery of all reports. We act as your finance partner-always ahead of deadlines, so you can stay ahead of the market."
+  },
+  {
+    question: "Do you support tax and legal matters?",
+    answer: "We manage accounting, controlling, financial reporting, receivables, and audit preparation. Many of our international clients rely on us to fully replace or enhance their finance departments - ensuring stability, compliance, and efficiency."
+  },
+  {
+    question: "Do you automate finance processes?",
+    answer: "Yes, our experts work with SAP, SQL, Python, data processing and workflow automation."
+  },
+  {
+    question: "Can I hire just one expert?",
+    answer: "Yes, you can start with one specialist and expand anytime."
+  },
+];

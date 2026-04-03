@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "eor-on-site",
@@ -66,3 +66,30 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "How is EOR + On-Site different from regular EOR?",
+    answer: "It combines the legal simplicity of EoR with a physical office and team presence in Poland. You get employees legally hired by Pomerico but working daily on-site in a dedicated office - just like your own branch, but without the overhead."
+  },
+  {
+    question: "Can Pomerico set up and manage office operations?",
+    answer: "Yes, we handle HR, payroll, compliance, and even office management, so you have a turnkey Polish branch ready to go. Some clients scaled to 25+ employees within 3 months this way."
+  },
+  {
+    question: "Why is EoR + On-Site valuable for Nordic and EU companies?",
+    answer: "Because Poland is only an hour's flight away from Copenhagen or Stockholm, making it a cost-effective nearshore hub. With Pomerico, you gain local execution with international standards."
+  },
+  {
+    question: "Can EOR support temporary, seasonal or project-based onsite hiring?",
+    answer: "Absolutely, the EOR model works for long-term, short-term, pilot, seasonal or project-based onsite teams, depending on your operational needs."
+  },
+  {
+    question: "Can I integrate EOR onsite employees with my internal teams?",
+    answer: "Yes, onsite workers operate under your daily management and work alongside internal teams exactly as regular employees, while Pomerico handles HR and employment matters in the background."
+  },
+  {
+    question: "Can Pomerico provide managers or supervisors for onsite teams?",
+    answer: "Yes, we can supply onsite Team Leaders, Supervisors or Coordinators who operate under your leadership but remain legally employed by Pomerico."
+  },
+];

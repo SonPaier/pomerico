@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 import type { QuickComparisonProps } from "@pomerico/ui/QuickComparison";
 import type { ComparisonTableProps } from "@pomerico/ui/ComparisonTable";
 
@@ -260,3 +260,26 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is Employer of Record and why choose Pomerico?",
+    answer: "<p>EOR allows you to hire employees in Poland without opening a local entity. Pomerico becomes the legal employer, while you manage daily operations. With 10+ years of expertise and 85% client retention, we are one of the most trusted EoR providers in Poland.</p>"
+  },
+  {
+    question: "What business results can I expect from EOR?",
+    answer: "<p>Clients save time, reduce risk, and gain instant access to the Polish market. For example, we've helped clients fill critical managerial roles in just 2.5 weeks after months of unsuccessful in-house attempts.</p>"
+  },
+  {
+    question: "Why is EOR the best option for foreign companies?",
+    answer: "<p>Because it provides immediate legal presence, full compliance, and zero admin burden. You can test and scale your business in Poland quickly, with a proven partner who has built hundreds of teams for global organizations.</p>"
+  },
+  {
+    question: "What is the difference between PEO and EOR?",
+    answer: "<p>PEO = co-employment model (shared responsibilities). EOR = full legal employment responsibility taken by Pomerico.</p>"
+  },
+  {
+    question: "Can I hire just one person through Pomerico?",
+    answer: "<p>Yes, there is no minimum team size.</p>"
+  },
+];

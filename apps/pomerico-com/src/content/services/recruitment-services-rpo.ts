@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@pomerico/content";
+import type { ServicePageData, FAQItem } from "@pomerico/content";
 
 export const data: ServicePageData = {
   slug: "recruitment-services-rpo",
@@ -75,3 +75,30 @@ export const data: ServicePageData = {
     "60-hires-1600-applications-40000-people-reached",
   ],
 };
+
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is RPO and how does Pomerico deliver it?",
+    answer: "Recruitment Process Outsourcing in Poland means managing hiring end-to-end. Not just sending CVs - designing strategy, sourcing, testing, and onboarding employees as if an internal HR department."
+  },
+  {
+    question: "What makes Pomerico's recruitment different?",
+    answer: "Specializes in permanent recruitment. Finds candidates unavailable on job boards through Direct Search, employer branding, and advanced assessment tools. For one client, built a 25-person department in under 3 months with near 0% turnover in the first year."
+  },
+  {
+    question: "What are the business benefits of RPO with Pomerico?",
+    answer: "Predictable results, reduced costs, and access to candidates unreachable otherwise. With 92% recruitment success rate, clients view the company as a long-term partner, not just a vendor."
+  },
+  {
+    question: "What happens if a hired candidate leaves early?",
+    answer: "Replacement guarantees are offered depending on the RPO model and retention support is provided to minimize turnover."
+  },
+  {
+    question: "Do you support employer branding and candidate experience?",
+    answer: "Yes, the RPO model improves outreach quality, candidate communication and perception of the company brand in the market."
+  },
+  {
+    question: "Can Pomerico manage end-to-end recruitment for long-term hiring pipelines?",
+    answer: "Yes, RPO is built exactly for long-term, predictable and scalable hiring operations."
+  },
+];
