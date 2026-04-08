@@ -141,6 +141,8 @@ export interface IndustryPageData {
   };
   /** Optional case studies shown on this industry page */
   caseStudySlugs?: string[];
+  /** Logos of trusted clients in this industry */
+  trustedLogos?: { src: string; alt: string }[];
 }
 
 export interface CaseStudyPageData {

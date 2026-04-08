@@ -16,7 +16,7 @@ export function CTASection({ submitAction }: CTASectionProps) {
               Your next step starts here.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-white/80">
-              Ready to reduce costs, scale your team or enter a new market?
+              Ready to optimize your processes, scale your team or enter a new market?
               One conversation is enough to know if we&apos;re the right fit.
             </p>
 

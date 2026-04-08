@@ -47,7 +47,7 @@ export function CaseStudyGrid({
                         alt={cs.title}
                         width={260}
                         height={52}
-                        className="h-14 w-auto object-contain"
+                        className="h-14 w-auto object-contain mix-blend-multiply"
                       />
                     )}
                   </div>

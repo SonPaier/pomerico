@@ -3,6 +3,7 @@ import { HeroSection } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
 import { Breadcrumbs } from "@pomerico/ui";
+import { ServiceComparisonTable } from "@pomerico/ui/client";
 import { servicesListingHero, allServiceCards } from "@/content/services/listing";
 
 export const metadata: Metadata = {
@@ -36,6 +37,8 @@ export default function ServicesPage() {
           <ServiceCardGrid cards={allServiceCards} />
         </div>
       </section>
+
+      <ServiceComparisonTable />
     </>
   );
 }

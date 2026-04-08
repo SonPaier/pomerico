@@ -22,5 +22,5 @@ export const contactDetails = {
   },
   linkedin: "https://www.linkedin.com/company/pomerico/",
   mapUrl:
-    "https://maps.google.com/maps?q=Szafarnia%2011%2FF8&t=m&z=10&output=embed&iwloc=near",
+    "https://maps.google.com/maps?q=Pomerico+Group,+Szafarnia+11/F8,+80-755+Gdańsk&t=m&z=14&output=embed&iwloc=near",
 };

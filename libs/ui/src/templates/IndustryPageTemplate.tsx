@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { IndustryPageData } from "@pomerico/content";
 import { HeroSection } from "../HeroSection";
 import { ServiceCardGrid } from "../ServiceCardGrid";
@@ -31,6 +32,29 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
         { label: "Industries", href: "/industries" },
         { label: data.title },
       ]} />
+
+      {/* Trusted client logos */}
+      {data.trustedLogos && data.trustedLogos.length > 0 && (
+        <section className="py-12">
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="mb-6 text-center font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/50">
+              Trusted by industry leaders
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              {data.trustedLogos.map((logo) => (
+                <Image
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={160}
+                  height={60}
+                  className="h-12 w-auto object-contain grayscale transition-all hover:grayscale-0"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Services offered in this industry */}
       {data.services.length > 0 && (

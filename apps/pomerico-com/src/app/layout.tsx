@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://pomerico.com"),
   title: {
-    default: "Pomerico Group – BPO & HR Outsourcing Partner in Poland",
+    default: "Pomerico - BPO | HR & Finance",
     template: "%s | Pomerico Group",
   },
   description:
@@ -54,13 +54,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://pomerico.com",
     siteName: "Pomerico Group",
-    title: "Pomerico Group – BPO & HR Outsourcing Partner in Poland",
+    title: "Pomerico - BPO | HR & Finance",
     description:
       "End-to-end HR outsourcing, BPO, EOR, recruitment and business consulting for international companies operating in Poland.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pomerico Group – BPO & HR Outsourcing Partner in Poland",
+    title: "Pomerico - BPO | HR & Finance",
     description:
       "End-to-end HR outsourcing, BPO, EOR, recruitment and business consulting for international companies operating in Poland.",
   },

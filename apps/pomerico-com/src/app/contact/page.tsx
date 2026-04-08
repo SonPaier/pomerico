@@ -111,17 +111,19 @@ export default function ContactPage() {
             {/* Right: form */}
             <div>
               <div className="rounded-lg border border-dark/5 bg-white p-8">
-                <h2 className="font-heading mb-2 text-xl font-bold text-dark">
-                  Fill in the form and book a free consultation
-                </h2>
-                <Image
-                  src="/images/scroll-down-arrow-icon.svg"
-                  alt="Scroll down to form"
-                  width={40}
-                  height={40}
-                  className="mb-6 h-10 w-10"
-                  unoptimized
-                />
+                <div className="mb-6 flex flex-col items-center text-center">
+                  <h2 className="font-heading mb-2 text-xl font-bold text-dark">
+                    Fill in the form and book a free consultation
+                  </h2>
+                  <Image
+                    src="/images/scroll-down-arrow-icon.svg"
+                    alt="Scroll down to form"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                    unoptimized
+                  />
+                </div>
                 <CTAForm submitAction={submitContactForm} />
               </div>
             </div>

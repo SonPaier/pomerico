@@ -54,6 +54,11 @@ export const data: IndustryPageData = {
       company: "Babord VAP",
     },
   ],
+  trustedLogos: [
+    { src: "/images/sonac-logo.png", alt: "Sonac" },
+    { src: "/images/mmr-group-logo.png", alt: "MMR Group" },
+    { src: "/images/babord-logo.png", alt: "Babord" },
+  ],
   caseStudySlugs: [
     "hedepys-seamless-launch-in-poland-with-pomerico",
     "comprehensive-hr-transformation-driving-growth",

@@ -6,4 +6,5 @@ export { CounterSection } from "./CounterSection";
 export { CTAForm } from "./CTAForm";
 export { Header } from "./Header";
 export { ImageCarousel } from "./ImageCarousel";
+export { ServiceComparisonTable } from "./ServiceComparisonTable";
 export { TestimonialCarousel } from "./TestimonialCarousel";

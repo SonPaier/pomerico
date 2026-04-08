@@ -45,6 +45,11 @@ export const data: IndustryPageData = {
       company: "SSI Sch\u00e4fer",
     },
   ],
+  trustedLogos: [
+    { src: "/images/vanderlande-logo.png", alt: "Vanderlande" },
+    { src: "/images/ssi-schaefer-logo.png", alt: "SSI Schäfer" },
+    { src: "/images/kardex-logo.png", alt: "Kardex" },
+  ],
   caseStudySlugs: [
     "building-a-multidisciplinary-maintenance-team-for-automated-warehousing",
     "how-we-secured-a-quality-control-expert-in-just-weeks",
