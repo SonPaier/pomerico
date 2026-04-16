@@ -56,9 +56,9 @@ export default function AboutUsPage() {
               <Image
                 src={aboutUsHero.teamImage}
                 alt="Pomerico team"
-                width={600}
-                height={400}
-                className="max-w-[85%] max-h-[408px] w-auto rounded-lg object-cover"
+                width={400}
+                height={600}
+                className="max-w-[70%] max-h-[500px] w-auto rounded-lg object-cover"
               />
             </div>
           </div>

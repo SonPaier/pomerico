@@ -92,4 +92,24 @@ export const faqItems: FAQItem[] = [
     question: "Can Pomerico provide managers or supervisors for onsite teams?",
     answer: "Yes, we can supply onsite Team Leaders, Supervisors or Coordinators who operate under your leadership but remain legally employed by Pomerico."
   },
+  {
+    question: "What days are working days in Poland?",
+    answer: "The standard workweek in Poland consists of 5 days – from Monday to Friday. With Pomerico's EOR model, we adapt the work schedule to your business needs – alternative models (e.g. shift work or project-based work) are also possible, always in full compliance with local labor law."
+  },
+  {
+    question: "What are the public holidays in Poland?",
+    answer: "Poland has official public holidays during which employees typically do not work. In the EOR model: Pomerico ensures full compliance with the local holiday calendar, we include holidays in payroll and workforce planning, and we help optimize team availability (e.g. for international projects)."
+  },
+  {
+    question: "How many hours per week do people work in Poland?",
+    answer: "The standard working time in Poland is 40 hours per week (8 hours per day). With EOR: we ensure full compliance with the labor code, we manage overtime, leave, and sick days (L4), and we optimize labor costs and team efficiency."
+  },
+  {
+    question: "How many hours per month do people work in Poland?",
+    answer: "The number of working hours per month depends on the calendar (working days + holidays), but on average it is approximately 160–168 hours per month. With Pomerico: we accurately calculate working time, we account for local regulations and holidays, and we provide clear reporting for your company. You stay in control without operational burden."
+  },
+  {
+    question: "What public holidays are observed in Poland?",
+    answer: "Poland has several public holidays throughout the year (e.g. New Year's Day, Easter, Labour Day, Christmas). In practice, this means periodic decreases in team availability and the need for forward planning of projects. At Pomerico: we help you plan team capacity in advance, we propose solutions (e.g. rotations, backups), and we ensure business continuity."
+  },
 ];
