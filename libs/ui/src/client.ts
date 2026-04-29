@@ -2,6 +2,7 @@
 
 // Client components (require browser APIs / React state)
 export { Accordion } from "./Accordion";
+export { CookieConsent, ConsentPreferencesButton } from "./CookieConsent";
 export { CounterSection } from "./CounterSection";
 export { CTAForm } from "./CTAForm";
 export { Header } from "./Header";

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Open_Sans } from "next/font/google";
-import { Header } from "@pomerico/ui/client";
+import { Header, CookieConsent } from "@pomerico/ui/client";
 import { Footer } from "@pomerico/ui";
 import { mainNav } from "@/content/navigation";
 import {
@@ -205,6 +205,7 @@ export default function RootLayout({
           serviceLinks={footerServiceLinks}
           industryLinks={footerIndustryLinks}
         />
+        <CookieConsent />
       </body>
     </html>
   );
