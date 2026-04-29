@@ -1,8 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "./ArrowRightIcon";
+
+function formatBytes(bytes: number) {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
 
 const DEFAULT_TOPICS = [
   "Choose a topic",
@@ -22,6 +28,18 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [files, setFiles] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  function removeFile(index: number) {
+    const next = files.filter((_, i) => i !== index);
+    setFiles(next);
+    if (fileInputRef.current) {
+      const dt = new DataTransfer();
+      next.forEach((f) => dt.items.add(f));
+      fileInputRef.current.files = dt.files;
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -165,10 +183,38 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
             </svg>
             <span>
               <strong className="text-dark/70">Upload RFP or Specs</strong>
-              <span className="ml-2 text-xs">PDF, DOCX (Max 10MB)</span>
+              <span className="ml-2 text-xs">PDF, DOC, XLS, PNG, JPG (max 10MB / file)</span>
             </span>
-            <input type="file" name="file" multiple className="hidden" />
+            <input
+              ref={fileInputRef}
+              type="file"
+              name="file"
+              multiple
+              accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.webp,.txt"
+              onChange={(e) => setFiles(Array.from(e.target.files ?? []))}
+              className="hidden"
+            />
           </label>
+          {files.length > 0 && (
+            <ul className="mt-3 space-y-1.5 border-t border-dark/10 pt-3">
+              {files.map((f, i) => (
+                <li key={`${f.name}-${i}`} className="flex items-center justify-between gap-3 text-xs text-dark/80">
+                  <span className="truncate">
+                    <span className="font-medium">{f.name}</span>
+                    <span className="ml-2 text-dark/50">{formatBytes(f.size)}</span>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => removeFile(i)}
+                    aria-label={`Remove ${f.name}`}
+                    className="shrink-0 text-dark/50 transition hover:text-primary-red"
+                  >
+                    <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" clipRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" /></svg>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* GDPR */}
