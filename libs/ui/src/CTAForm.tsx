@@ -29,6 +29,9 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
     setError(null);
 
     const formData = new FormData(e.currentTarget);
+    if (typeof window !== "undefined") {
+      formData.set("source", window.location.pathname + window.location.search);
+    }
 
     try {
       const result = await submitAction(formData);
