@@ -43,7 +43,6 @@ export const mainNav: NavItem[] = [
     ],
   },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -54,7 +53,6 @@ export const footerCompanyLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About us", href: "/about-us" },
   { label: "Case studies", href: "/case-studies" },
-  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
