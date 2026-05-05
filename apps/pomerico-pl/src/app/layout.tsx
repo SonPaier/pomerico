@@ -5,7 +5,6 @@ import { CookieConsent } from "@pomerico/ui/client";
 import "./globals.css";
 
 const GTM_ID = "GTM-5TQ3M3L";
-const GA4_ID = "G-7329920774";
 
 const openSans = Open_Sans({
   subsets: ["latin", "latin-ext"],
@@ -41,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="pl" className={`${openSans.variable} ${roboto.variable} ${robotoSlab.variable}`}>
       <body className="font-body text-dark">
-        <Analytics gtmId={GTM_ID} ga4Id={GA4_ID} />
+        <Analytics gtmId={GTM_ID} />
         <GtmNoScript gtmId={GTM_ID} />
         <main>{children}</main>
         <CookieConsent locale="pl" />

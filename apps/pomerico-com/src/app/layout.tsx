@@ -4,7 +4,6 @@ import { Header, CookieConsent } from "@pomerico/ui/client";
 import { Analytics, Footer, GtmNoScript } from "@pomerico/ui";
 
 const GTM_ID = "GTM-K692K7D";
-const GA4_ID = "G-7329920774";
 import { mainNav } from "@/content/navigation";
 import {
   pomericoLogo,
@@ -92,7 +91,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={openSans.variable}>
       <body className="font-body text-dark">
-        <Analytics gtmId={GTM_ID} ga4Id={GA4_ID} />
+        <Analytics gtmId={GTM_ID} />
         <GtmNoScript gtmId={GTM_ID} />
         <script
           type="application/ld+json"
