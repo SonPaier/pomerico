@@ -46,7 +46,7 @@ export function CTASection({ submitAction }: CTASectionProps) {
                 alt="Trusted partner since 2015 – Team Stability, Founded in 2015, Business Partner"
                 width={384}
                 height={60}
-                className="max-w-sm brightness-0 invert"
+                className="h-auto w-full max-w-sm brightness-0 invert"
                 unoptimized
               />
             </div>

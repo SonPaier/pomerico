@@ -26,7 +26,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                 alt="Trusted partner since 2015"
                 width={384}
                 height={60}
-                className="mt-2 max-w-sm"
+                className="mt-2 h-auto w-full max-w-sm"
                 unoptimized
               />
             )}

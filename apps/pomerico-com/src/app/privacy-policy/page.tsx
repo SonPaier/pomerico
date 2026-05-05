@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
       <section className="py-16">
-        <div className="mx-auto max-w-4xl px-6 prose prose-lg max-w-none text-dark/80 [&_h2]:font-heading [&_h2]:text-primary-blue [&_h2]:text-2xl [&_h2]:mt-12 [&_h2]:mb-4 [&_h3]:font-heading [&_h3]:text-dark [&_h3]:text-lg [&_h3]:mt-8 [&_h3]:mb-3">
+        <div className="mx-auto max-w-4xl px-6 prose prose-lg max-w-none text-dark/80 [&_a]:break-words [&_h2]:font-heading [&_h2]:text-primary-blue [&_h2]:text-2xl [&_h2]:mt-12 [&_h2]:mb-4 [&_h3]:font-heading [&_h3]:text-dark [&_h3]:text-lg [&_h3]:mt-8 [&_h3]:mb-3">
           <p>
             This privacy notice for <strong>Pomerico Group Sp. z o.o.</strong> (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), describes how and why we might collect, store, use, and/or share (&quot;process&quot;) your information when you use our services (&quot;Services&quot;), such as when you visit our website at <a href="https://pomerico.com">pomerico.com</a>, or engage with us in other related ways, including any sales, marketing, or events.
           </p>

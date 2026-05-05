@@ -25,3 +25,10 @@
   --radius-lg: 4px;
   --radius-xl: 4px;
 }
+
+/* Allow grid/flex children to shrink below intrinsic min-content width */
+@layer base {
+  :where(.grid > *, .flex > *) {
+    min-width: 0;
+  }
+}

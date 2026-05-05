@@ -35,7 +35,7 @@ export default function AboutUsPage() {
       <section className="bg-primary-blue text-white">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex flex-col gap-6">
+            <div className="flex min-w-0 flex-col gap-6">
 <h1 className="font-heading text-3xl font-bold lg:text-5xl">
                 {aboutUsHero.heading}
               </h1>
@@ -48,7 +48,7 @@ export default function AboutUsPage() {
                 alt="Trusted partner since 2015"
                 width={384}
                 height={60}
-                className="mt-2 max-w-sm"
+                className="mt-2 h-auto w-full max-w-sm"
                 unoptimized
               />
             </div>
