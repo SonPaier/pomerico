@@ -48,16 +48,15 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="mb-4 flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="inline-block h-5 w-1 rounded bg-primary-red" />
-              Strategic HR &amp; BPO Excellence
+              Strategic BPO Excellence
             </p>
             <h1 className="font-heading text-4xl font-bold leading-tight text-white lg:text-6xl">
-              HR Outsourcing &amp; BPO{" "}
-              <span className="text-white">Partner in Poland</span>
+              BPO Partner in Poland
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80">
-              Delivering precision-engineered human resources and business
-              process outsourcing solutions. We bridge global scale with
-              localized Polish expertise for the world&apos;s leading enterprises.
+              Delivering precision-engineered finance outsourcing and business
+              process solutions. We bridge global scale with localized Polish
+              expertise for the world&apos;s leading enterprises.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
