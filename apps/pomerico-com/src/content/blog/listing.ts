@@ -4,14 +4,25 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "accounts-payable-under-pressure",
+    title:
+      "Accounts Payable Under Pressure: A Leader's Perspective on Operational Resilience in Finance",
+    description:
+      "How AP leaders manage operational resilience — from team capacity challenges to BPO, nearshoring and finance outsourcing in Poland.",
+    image: "/images/accounts-payable-under-pressure.webp",
+    date: "03/06/2026",
+    author: "Joanna Włodarczyk",
+    category: "Finance, BPO, Accounting, Management",
+  },
+  {
     slug: "dora-vs-outsourcing",
     title:
-      "DORA vs Outsourcing. Is Financial Outsourcing Safe in the World of DORA?",
+      "DORA and Financial Outsourcing: What You Really Need to Know Before Signing Your Next Contract",
     description:
-      "Learn how the new EU regulation impacts financial outsourcing and what you can do to stay compliant while leveraging BPO.",
+      "DORA doesn't end financial outsourcing — it changes the conditions. A practical guide for CFOs and COOs on contracts, risks and safe BPO in the regulated world.",
     image: "/images/dora-compliance-outsourcing-article.webp",
     date: "24/02/2026",
-    author: "Sebastian Kunc",
+    author: "Wiktoria Wierzbicka",
     category: "Compliance & Regulations",
   },
 ];

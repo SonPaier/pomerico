@@ -4,14 +4,16 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = {
-  title: "DORA vs Outsourcing – Is Financial Outsourcing Safe?",
+  title:
+    "DORA and Financial Outsourcing: What You Need to Know | Pomerico",
   description:
-    "Is financial outsourcing safe in the world of DORA regulation? Learn how to stay compliant while leveraging BPO services in the EU financial sector.",
+    "DORA doesn't end financial outsourcing — it changes the conditions. A practical guide for CFOs and COOs on contracts, risks and safe BPO in the regulated world.",
   alternates: { canonical: "/blog/dora-vs-outsourcing" },
   openGraph: {
-    title: "DORA vs Outsourcing – Is Financial Outsourcing Safe?",
+    title:
+      "DORA and Financial Outsourcing: What You Need to Know | Pomerico",
     description:
-      "Is financial outsourcing safe in the world of DORA regulation? Learn how to stay compliant while leveraging BPO services in the EU financial sector.",
+      "DORA doesn't end financial outsourcing — it changes the conditions. A practical guide for CFOs and COOs on contracts, risks and safe BPO in the regulated world.",
     type: "article",
   },
 };

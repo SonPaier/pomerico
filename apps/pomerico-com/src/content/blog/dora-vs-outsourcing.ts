@@ -1,208 +1,110 @@
 export const doraVsOutsourcing = {
   title:
-    "DORA vs Outsourcing. Is Financial Outsourcing Safe in the World of DORA?",
-  preheading: "HR Outsourcing Partner",
+    "DORA and Financial Outsourcing: What You Really Need to Know Before Signing Your Next Contract",
+  preheading: "Expert Article | Compliance & Finance Operations",
   date: "24/02/2026",
   author: {
-    name: "Sebastian Kunc",
-    photo:
-      "/images/pomerico-hr-outsourcing-office.jpg",
-    linkedin: "https://www.linkedin.com/in/sebastian-kunc/",
-    phone: "+48 727 906 253",
-    email: "sebastian.kunc@pomerico.pl",
+    name: "Wiktoria Wierzbicka",
+    photo: "/images/wiktoria-wierzbicka-operations-manager.webp",
+    linkedin: "https://www.linkedin.com/in/wiktoriawierzbicka/",
+    phone: "+48 794 165 506",
+    email: "wiktoria.wierzbicka@pomerico.com",
   },
-  featuredImage:
-    "/images/dora-compliance-outsourcing-article.webp",
-  content: `<p>With the entry into force of <b>DORA (Digital Operational Resilience Act)</b>, many boards and CFOs ask themselves one question:</p>
-<p><em>&#8220;Is it even appropriate to outsource financial processes, given that regulators are pushing so hard on technology and third-party provider risks?&#8221;</em></p>
-<p>The answer is: yes, financial outsourcing still makes sense &#8211; but the way you design it and manage the provider relationship changes.</p>
-<p>DORA does not prohibit cooperation with external partners. On the contrary, it assumes that you use them but imposes very specific obligations regarding:</p>
-<ul>
-<li>ICT risk management,</li>
-<li>Classification of services and providers,</li>
-<li>Contract content,</li>
-<li>Maintaining a service register,</li>
-<li>Resilience testing (OOC, TLPT),</li>
-<li>Oversight of the subcontractor chain.</li>
-</ul>
-<p>In this article, I explain:</p>
-<ul>
-<li>what DORA really changes for financial outsourcing,</li>
-<li>where the risks lie,</li>
-<li>when outsourcing is safe,</li>
-<li>which criteria to use when choosing a provider,</li>
-<li>how we at Pomerico design services to support your DORA compliance.</li>
-</ul>
-<p><img width="1024" height="683" src="/images/dora-compliance-outsourcing-article.webp" alt="DORA compliance and outsourcing in the financial sector" /></p>
+  featuredImage: "/images/dora-compliance-outsourcing-article.webp",
+  content: `<p>Since DORA came into force — on 17 January 2025 — the topic of financial outsourcing has returned to management boards' desks with renewed urgency. This time, however, the discussion is not about cost savings or access to talent. It is about a question we regularly hear from our clients and partners: after the implementation of DORA, can we still outsource financial processes at all? And will working with an external provider become a source of regulatory risk for us?</p>
+<p>The short answer is: yes, financial outsourcing still makes sense. But the conditions under which it should be carried out have changed significantly enough to deserve a thorough discussion — without marketing gloss and without creating unnecessary fear of bureaucracy. That is the purpose of this article.</p>
 
-<h3>1. DORA in a Nutshell &#8211; What Does It Really Regulate?</h3>
-<p>DORA (EU Regulation 2022/2554) applies from January 17, 2025, covering thousands of financial sector entities and ICT providers servicing them, including:</p>
+<h2>1. What DORA is — and what it is not</h2>
+<p>DORA, the EU Regulation 2022/2554 on digital operational resilience for the financial sector, is a regulation aimed at harmonising ICT risk management rules across the European financial industry. It covers a very broad range of entities: banks, insurance companies, payment institutions, investment funds, crypto-asset service providers and — importantly — third-party ICT service providers supporting these entities.</p>
+<p>The key point to understand at the outset is this: DORA is not a regulation that prohibits outsourcing. Quite the opposite — it assumes that financial institutions will use external providers and regulates how such cooperation should be managed.</p>
+<p>The centre of gravity of the regulation is primarily:</p>
 <ul>
-<li>Banks and brokerage houses,</li>
-<li>Insurance and reinsurance companies,</li>
-<li>Payment and electronic money institutions,</li>
-<li>Investment funds,</li>
-<li>Crypto service providers (CASP),</li>
-<li>Key ICT providers</li>
+<li>ICT third-party risk management strategy,</li>
+<li>a register of all contractual arrangements relating to ICT services,</li>
+<li>requirements concerning the content of contracts with providers,</li>
+<li>the obligation to retain the right to audit and supervise the provider,</li>
+<li>exit plans for terminating cooperation,</li>
+<li>operational resilience testing — both internal testing and advanced testing, including TLPT.</li>
 </ul>
-<p>Its main goals are:</p>
-<ul>
-<li>Standardizing digital operational resilience rules across the financial sector,</li>
-<li>Covering multiple types of institutions under a single regime,</li>
-<li>Structuring risk management for external ICT providers, including those performing business processes based on IT systems, e.g., financial and accounting outsourcing.</li>
-</ul>
-<p>A key section for outsourcing is <strong>DORA</strong>, which requires institutions to:</p>
-<ul>
-<li>Adopt a third-party risk strategy,</li>
-<li>Maintain a register of all ICT service agreements,</li>
-<li>Distinguish critical/important functions from others,</li>
-<li>Review provider risks and contracts,</li>
-<li>Implement testing programs (e.g., OOC, TLPT) and remedial plans,</li>
-<li>Have an exit plan for disengagement, data recovery, and process resumption.</li>
-</ul>
-<p>All this must be <strong>proportionate</strong> &#8211; regulator expectations depend on:</p>
-<ul>
-<li>Nature and scale of ICT dependency,</li>
-<li>Criticality of the functions supported,</li>
-<li>Potential impact of service failure on financial operations continuity.</li>
-</ul>
+<p><strong>Important principle:</strong> a financial institution that uses ICT services provided by an external entity never waives its responsibility for compliance with DORA. Responsibility remains with the financial institution — regardless of how well the contract with the provider is structured.</p>
 
-<h3>2. Financial Outsourcing under DORA &#8211; Where is the Risk?</h3>
-<p>Modern financial outsourcing (accounting, controlling, reporting, treasury support) almost always relies on ICT systems &#8211; cloud-based or on-premise at the provider.</p>
-<p>This means:</p>
+<h2>2. When does your financial provider become an ICT provider?</h2>
+<p>This question turns out to be more difficult than it may seem. Modern outsourcing of financial processes — accounting, controlling, payroll, management reporting — is almost always based on IT systems. This means that your BPO partner may fall within the definition of a third-party ICT service provider under DORA.</p>
+<p>DORA defines ICT services broadly: as digital and data services provided on an ongoing basis through ICT systems. At the same time, the regulation includes the principle of proportionality — the intensity of obligations depends on whether a given service supports functions that are critical or important to the operations of the financial entity.</p>
+<p>In practice, this means that before signing your next outsourcing agreement, you should answer several fundamental questions:</p>
 <ul>
-<li>Your BPO/outsourcing partner can be classified as an ICT provider or part of the chain (e.g., accounting firm + cloud provider).</li>
-<li>You, as a financial institution, never relinquish compliance responsibility &#8211; you remain accountable to the regulator.</li>
+<li>Does this service rely on ICT systems — and who owns those systems?</li>
+<li>Does it support a function whose disruption would have a significant impact on business continuity or the company's financial performance?</li>
+<li>What does the provider's subcontracting chain look like — and who controls the infrastructure on which your data operates?</li>
 </ul>
-<p>From DORA implementations and market analysis, major risks appear in four areas:</p>
-<p><strong>Lack of full ICT supply chain visibility</strong></p>
-<ul>
-<li>Companies may not know which ICT services are used, which support critical functions, or the full subcontractor/process chain.</li>
-<li>DORA requires a register linking all ICT service agreements to critical functions.</li>
-</ul>
-<p><strong>Contracts not aligned with DORA</strong></p>
-<ul>
-<li>Agreements often lack audit rights (including regulator inspections), incident reporting rules, resilience testing requirements, subcontracting controls, and detailed exit plans.</li>
-</ul>
-<p><strong>High concentration of risk in a few cloud &#8220;giants&#8221;</strong></p>
-<ul>
-<li>Dependence on one or two infrastructure/application providers without proper backup plans is a key regulator concern.</li>
-</ul>
-<p><strong>&#8220;Soft&#8221; approach to provider monitoring</strong></p>
-<ul>
-<li>No regular risk assessments,</li>
-<li>No KPI/KRI reviews,</li>
-<li>No scenario testing.</li>
-</ul>
-<p>This does not mean financial outsourcing is inherently risky &#8211; it means you need to raise the bar in selecting partners and managing the relationship.</p>
+<p>This is where one of the most common practical problems appears: companies do not have full visibility of their own ICT supply chain. They do not know which services are truly critical and which can be managed in a simplified way. This lack of a map is the first issue worth addressing.</p>
 
-<h3>3. When is Financial Outsourcing Safe in the DORA World?</h3>
-<p>Safe financial outsourcing under DORA meets three conditions:</p>
-<p><strong>3.1. DORA Compliance Built Into the Cooperation Model</strong></p>
+<h2>3. What does DORA change in contracts with providers?</h2>
+<p>One of the more practical requirements of DORA is the catalogue of elements that must be included in every contract concerning ICT services. These are not theoretical requirements — their absence from a contract may become a direct issue during supervisory inspection.</p>
+<h3>Basic requirements for every contract</h3>
+<p>Every contract concerning ICT services — regardless of whether it relates to a critical function or not — should include, among other things:</p>
 <ul>
-<li>Provider understands they are part of your risk management system,</li>
-<li>Supports regulatory obligations beyond just delivering SLA,</li>
-<li>Has processes, procedures, and documentation that integrate into your ICT service control system.</li>
+<li>a precise description of the ICT functions and services provided, including the scope of permitted subcontracting,</li>
+<li>the location where services are provided and data is processed — country, region — as well as the procedure for notifying the client of any change in that location,</li>
+<li>guarantees regarding the availability, authenticity, integrity and confidentiality of data,</li>
+<li>rules for data recovery and return in the event of termination of cooperation or the provider's insolvency,</li>
+<li>SLA clauses — clear, measurable and supported by an update procedure,</li>
+<li>the right to terminate the contract in strictly defined situations, such as regulatory breaches, deterioration in service quality or loss of supervisory capability,</li>
+<li>the provider's obligation to fully cooperate with supervisory authorities.</li>
 </ul>
-<p>In practice, the BPO/outsourcer collaborates not only with operations but also with:</p>
+<h3>Additional requirements for critical or important functions</h3>
+<p>If the outsourced service supports a function classified as critical or important, the requirements go further. The contract must also include:</p>
 <ul>
-<li>Compliance/legal,</li>
-<li>Risk,</li>
-<li>IT security,</li>
-<li>Internal audit.</li>
+<li>unrestricted rights of access, inspection and audit — both by the financial institution itself and by the supervisory authority,</li>
+<li>the provider's obligation to participate in threat-led penetration testing, or TLPT, carried out by the institution,</li>
+<li>detailed ongoing monitoring indicators, such as KPI/KRI, with a corrective action procedure in the event of SLA breaches,</li>
+<li>a mandatory exit plan: a plan for transition to another provider or an internal solution, with a sufficient transition period and a guarantee of service continuity.</li>
 </ul>
-<p><strong>3.2. The Contract is &#8220;DORA-Ready&#8221;</strong><br/>Agreements should include:</p>
+<p>An exit plan is not a formality. DORA requires you to be able to terminate cooperation with a provider without operational disruption, without compromising regulatory compliance and without reducing the quality of services provided to clients. It is worth building this plan together with the provider already at the contract-signing stage — not when something starts to go wrong.</p>
+
+<h2>4. Three risks worth keeping on your radar</h2>
+<p>Based on our experience in working with regulated entities, we identify three areas where companies most often encounter difficulties when implementing DORA in the context of financial outsourcing.</p>
+<h3>Risk 1: Concentration on one or several infrastructure providers</h3>
+<p>DORA directly regulates ICT concentration risk — a situation in which a financial institution is so heavily dependent on one provider, such as a single cloud platform or one ERP system, that its failure or unavailability could threaten the institution's ability to operate. The regulator expects institutions to assess this risk before signing the contract and to keep it monitored throughout the entire cooperation period.</p>
+<h3>Risk 2: Subcontracting chains</h3>
+<p>Your BPO provider uses a cloud-based accounting system. That system runs on another provider's infrastructure. Your financial data is processed there. This is what a typical subcontracting chain looks like — and DORA requires you to have visibility and control over it. In the case of services supporting critical or important functions, the contract must regulate the possibility of further subcontracting, and you have the right to object to the addition of a new subcontractor.</p>
+<h3>Risk 3: No up-to-date register of ICT services</h3>
+<p>DORA imposes an obligation to maintain and update a register of all contractual arrangements concerning ICT services — divided into those supporting critical or important functions and all others. This register must be ready to be presented to the supervisory authority. In practice, many companies are only now discovering that they do not have a full list of the services they use — nor a precise mapping of those services to business processes.</p>
+
+<h2>5. What does safe financial outsourcing under DORA look like?</h2>
+<p>Safe means compliant with regulatory requirements while still delivering business value. These two things are not contradictory. A good financial outsourcing model in the world of DORA is based on three pillars.</p>
+<h3>Pillar 1: The provider understands its place in your risk management system</h3>
+<p>A good outsourcing partner does not talk only about SLA. It can indicate which ICT systems it uses, what its subcontracting chain looks like, which security standards it applies and how its incident management process works. It is ready to enter discussions with your compliance, IT security and internal audit teams — not only with operations.</p>
+<h3>Pillar 2: The contract is structured consciously</h3>
+<p>The point is not for the contract to be long. The point is for it to contain all the elements required by DORA — described precisely, not merely listed to tick a box. The right to audit must be genuinely enforceable, not only written down. The exit plan must be realistic, not merely formal.</p>
+<h3>Pillar 3: You have real oversight, not only documentation</h3>
+<p>You maintain and update a register of ICT services. You have a cyclical process for assessing provider risk. You test emergency scenarios. You know what will happen if your payroll system provider is unavailable for 48 hours. This is not bureaucracy — this is operational maturity.</p>
+
+<h2>6. A practical plan for CFOs and COOs — where to start</h2>
+<p>If you are only beginning to organise the DORA topic in the context of financial outsourcing, below is a sequence of actions that, in our experience, provides the best starting point.</p>
 <ul>
-<li>Detailed description of services and ICT systems,</li>
-<li>Audit and inspection rights (including regulator),</li>
-<li>ICT incident and breach reporting rules,</li>
-<li>Clear subcontracting rules and veto rights,</li>
-<li>Continuity requirements (BCP/DRP) and test scope,</li>
-<li>Exit plan &#8211; data migration, formats, timelines, responsibilities</li>
-</ul>
-<p>Without these, you cannot effectively control risk.</p>
-<p><strong>3.3. Real Oversight and Monitoring</strong><br/>DORA requires a risk-based approach to providers: segmentation, KPIs/KRIs, periodic assessments, and tests.</p>
-<p>Safe outsourcing means:</p>
-<ul>
-<li>Maintaining a register of all ICT services and agreements,</li>
-<li>Cyclic risk assessment of providers (financial, operational, cyber),</li>
-<li>Scenario testing (e.g., invoicing system loss, payroll delays),</li>
-<li>Demonstrating records, assessment results, remediation plans, and tests to the regulator.</li>
+<li><strong>Step 1.</strong> Map all financial processes carried out by external providers — BPO providers, accounting firms, shared service centres and freelancers working on your systems.</li>
+<li><strong>Step 2.</strong> For each provider, determine whether its services are based on ICT systems and whether they support critical or important functions. This is a key classification step.</li>
+<li><strong>Step 3.</strong> Conduct due diligence on providers: ask about the systems they use, their subcontractors, security standards such as ISO 27001 and similar frameworks, and incident handling procedures.</li>
+<li><strong>Step 4.</strong> Build or update your register of ICT contracts — divided into critical and non-critical arrangements. This is a document you must be ready to show to the supervisory authority.</li>
+<li><strong>Step 5.</strong> Assess existing contracts against DORA requirements: do they include audit rights, incident reporting rules, subcontracting clauses and an exit plan?</li>
+<li><strong>Step 6.</strong> If you are planning a new financial outsourcing project, design it according to DORA logic from the very beginning. Involve compliance and IT security before the contract reaches the lawyer.</li>
 </ul>
 
-<h3>4. What to Consider When Choosing a Financial Outsourcing Provider</h3>
-<p>Checklist for CFOs, COOs, Heads of Finance/Back-Office:</p>
-<p><strong>4.1. Location and Jurisdiction</strong></p>
+<h2>7. A few words about how we approach this at Pomerico</h2>
+<p>At Pomerico, we have been building financial outsourcing models for European companies for years — including regulated entities operating in the financial sector. We know these questions well because they are asked by our clients: CFOs, Heads of Finance and Heads of Back Office who are looking for a partner capable of working in a regulated environment.</p>
+<p>In practice, this means that our clients can expect from us, among other things:</p>
 <ul>
-<li>Provider operates in the EU/EEA and is subject to DORA?</li>
-<li>Subcontractor chain mapped and transparent?</li>
-<li>Can the provider show data flow and system locations?</li>
+<li>transparency regarding the ICT systems we use and our subcontracting chain,</li>
+<li>readiness to speak with compliance and IT security teams at the cooperation design stage,</li>
+<li>contracts that include audit rights, incident-related clauses and exit plans built jointly with the client,</li>
+<li>financial teams with low turnover — because workforce continuity has a direct impact on the operational continuity required by DORA,</li>
+<li>support in creating or updating the ICT services register and classifying services as critical or important.</li>
 </ul>
-<p><strong>4.2. ICT and Security Maturity</strong></p>
-<ul>
-<li>Security standards (ISO, NIST, internal policies),</li>
-<li>Incident management and reporting process,</li>
-<li>Resilience tests (pen-tests, continuity, scenario) and frequency.</li>
-</ul>
-<p><strong>4.3. DORA-Ready Contracts</strong></p>
-<ul>
-<li>Contract templates covering audit, reporting, exit plan, subcontracting.</li>
-</ul>
-<p><strong>4.4. Subcontractor Transparency</strong></p>
-<ul>
-<li>Updated register of ICT subcontractors,</li>
-<li>Ability to veto new subcontractors outside EU.</li>
-</ul>
-<p><strong>4.5. Financial Sector Experience</strong></p>
-<ul>
-<li>Works with regulated entities (banks, insurers, fintechs)?</li>
-<li>Fluent in compliance and risk language, not just accounting or IT?</li>
-</ul>
+<p>We do not claim that compliance is our competitive advantage. We claim that it is a necessary condition for being a credible partner for regulated entities.</p>
 
-<h3>5. How Pomerico Meets DORA Requirements</h3>
-<p>Pomerico builds models for financial process outsourcing, BPO, EOR, and body leasing for European and regulated entities.</p>
-<p><strong>5.1. Services Designed for Regulations</strong></p>
-<ul>
-<li>BPO/finance process outsourcing,</li>
-<li>Payroll &amp; HR: full payroll, contracts, benefits, social contributions, leave,</li>
-<li>HR/legal/tax advisory: clauses and structures compliant with regulations.</li>
-</ul>
-<p><strong>5.2. Audit-Ready Contracts</strong></p>
-<ul>
-<li>Audit and inspection rights included,</li>
-<li>Clear system, subcontractor, and data flow descriptions,</li>
-<li>Exit plan designed from the start.</li>
-</ul>
-<p><strong>5.3. Registers and Monitoring</strong></p>
-<ul>
-<li>Creation/update of ICT/outsourcing agreement registers,</li>
-<li>Service classification (critical/important/other),</li>
-<li>KPI/KRI definition for financial services, including continuity metrics</li>
-</ul>
-<p><strong>5.4. Financial Teams Built for Regulated Sector</strong></p>
-<ul>
-<li>Highly specialized teams with very low turnover.</li>
-<li>Ensures knowledge retention, operational continuity, and audit reliability.</li>
-</ul>
-
-<h3>6. Practical Approach for Your Company</h3>
-<p>Steps for the board/CFO:</p>
-<ul>
-<li>Map all outsourced financial processes (BPO, accounting, service centers, freelancers).</li>
-<li>Identify which rely on ICT and support critical functions &#8211; these fall under DORA.</li>
-<li>Ask providers for: system lists, subcontractors, DORA-ready contract templates, and security/incident processes.</li>
-<li>Update outsourcing/ICT register to show the regulator.</li>
-<li>Verify current contracts meet DORA: audit, incident reporting, subcontracting, exit plan.</li>
-<li>Design new outsourcing with DORA in mind: choose providers familiar with the regulation, engage compliance/IT security early.</li>
-</ul>
-
-<h3>7. Is Financial Outsourcing Safe in the DORA World?</h3>
-<p>Yes &#8211; outsourcing can be very safe and even enhance operational resilience if:</p>
-<ul>
-<li>Partner has mature security and compliance processes,</li>
-<li>Contract is consciously built around DORA,</li>
-<li>You maintain real oversight of the relationship and subcontractor chain.</li>
-</ul>
-<p><strong>DORA is not the end of financial outsourcing.</strong> The right provider will help you navigate DORA seamlessly and work with your CFO, Compliance Head, and IT Security at one table.</p>
-<p>If you want to discuss how to make your financial outsourcing both cost-effective and DORA-proof, we can review your current agreements and cooperation model and show concrete improvement scenarios.</p>`,
+<h2>Summary</h2>
+<p>DORA changes financial outsourcing — but it does not end it. It changes the conditions under which outsourcing should be designed and managed. A good provider in the world of DORA is one that understands these conditions and helps you navigate them without unnecessary headaches.</p>
+<p>If you want to review your current contracts from a DORA perspective, assess the providers you work with or design a new financial outsourcing model — we are ready to talk.</p>
+<p><em>This article was prepared on the basis of an analysis of the DORA regulation, EU Regulation 2022/2554, and the RTS/ITS implementing acts. It does not constitute legal advice. For matters requiring legal assessment, we recommend consulting a law firm specialising in financial market law.</em></p>`,
 };
