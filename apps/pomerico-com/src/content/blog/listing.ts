@@ -14,14 +14,4 @@ export const blogPosts: BlogPostCard[] = [
     author: "Sebastian Kunc",
     category: "Compliance & Regulations",
   },
-  {
-    slug: "how-to-hire-more-effectively",
-    title: "How to Hire More Effectively",
-    description:
-      "Practical strategies for faster, smarter hiring — from defining roles to onboarding and long-term retention.",
-    image: "/images/pomerico-hero-background.webp",
-    date: "24/02/2026",
-    author: "Sebastian Kunc",
-    category: "Recruitment & HR",
-  },
 ];
