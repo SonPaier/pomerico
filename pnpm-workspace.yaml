@@ -1,3 +1,7 @@
 packages:
   - 'apps/*'
   - 'libs/*'
+allowBuilds:
+  nx: true
+  sharp: true
+  unrs-resolver: true
