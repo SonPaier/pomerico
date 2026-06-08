@@ -15,6 +15,16 @@ export const blogPosts: BlogPostCard[] = [
     category: "Finance, BPO, Accounting, Management",
   },
   {
+    slug: "how-to-hire-more-effectively",
+    title: "How to Hire More Effectively",
+    description:
+      "Practical strategies for more effective hiring – from defining roles and sourcing candidates to onboarding and retention. Expert HR advice from Pomerico Group.",
+    image: "/images/pomerico-hero-background.webp",
+    date: "24/02/2026",
+    author: "Sebastian Kunc",
+    category: "Recruitment & HR",
+  },
+  {
     slug: "dora-vs-outsourcing",
     title:
       "DORA and Financial Outsourcing: What You Really Need to Know Before Signing Your Next Contract",
