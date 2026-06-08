@@ -7,6 +7,7 @@ export const accountsPayableUnderPressure = {
     name: "Joanna Włodarczyk",
     photo: "/images/joanna-wlodarczyk.webp",
     linkedin: "https://www.linkedin.com/in/joanna-w%C5%82odarczyk-4b257b164/",
+    phone: "+48 794 165 506",
     email: "consult@pomerico.com",
   },
   featuredImage: "/images/accounts-payable-under-pressure.webp",
