@@ -8,7 +8,7 @@ export const howToHireMoreEffectively = {
       "/images/pomerico-hr-outsourcing-office.jpg",
     linkedin: "https://www.linkedin.com/in/sebastian-kunc/",
     phone: "+48 727 906 253",
-    email: "sebastian.kunc@pomerico.pl",
+    email: "consult@pomerico.com",
   },
   featuredImage:
     "/images/pomerico-hero-background.webp",
