@@ -30,7 +30,7 @@ export const contactWiktoria: ContactPerson = {
   role: "HR Project & Operations Manager",
   availability: "Mon–Fri, 9:00–17:00 CET",
   phones: [
-    { label: "+45 66 33 90 70", href: "tel:+4566339070" },
+    { label: "+45 92 45 39 27", href: "tel:+4592453927" },
     { label: "+48 794 165 506", href: "tel:+48794165506" },
   ],
   email: {

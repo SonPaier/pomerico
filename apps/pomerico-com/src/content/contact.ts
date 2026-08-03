@@ -6,7 +6,7 @@ export const contactHero = {
 
 export const contactDetails = {
   phones: [
-    { label: "DK: +45 36 99 21 42", href: "tel:+4536992142", flag: "dk" },
+    { label: "DK: +45 92 45 39 27", href: "tel:+4592453927", flag: "dk" },
     { label: "PL: +48 794 165 506", href: "tel:+48794165506", flag: "pl" },
   ],
   emails: [

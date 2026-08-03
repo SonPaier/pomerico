@@ -194,7 +194,7 @@ export default function RootLayout({
           ctaLabelMobile="CONSULTATION"
           ctaHref="/contact"
           topBarPhones={[
-            { label: "DK", number: "+45 66 33 90 70" },
+            { label: "DK", number: "+45 92 45 39 27" },
             { label: "PL", number: "+48 794 165 506" },
           ]}
           topBarEmail="office@pomerico.com"
