@@ -40,15 +40,15 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
             <p className="mb-6 text-center font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/50">
               Trusted by industry leaders
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-10">
+            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
               {data.trustedLogos.map((logo) => (
                 <Image
                   key={logo.alt}
                   src={logo.src}
                   alt={logo.alt}
-                  width={160}
-                  height={60}
-                  className="h-12 w-auto object-contain grayscale transition-all hover:grayscale-0"
+                  width={280}
+                  height={110}
+                  className="h-16 w-auto object-contain grayscale transition-all hover:grayscale-0 md:h-20"
                 />
               ))}
             </div>
