@@ -48,7 +48,7 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
                   alt={logo.alt}
                   width={280}
                   height={110}
-                  className="h-16 w-auto object-contain grayscale transition-all hover:grayscale-0 md:h-20"
+                  className="h-24 w-auto object-contain grayscale transition-all hover:grayscale-0 md:h-32"
                 />
               ))}
             </div>
