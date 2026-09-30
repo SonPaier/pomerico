@@ -4,6 +4,17 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "hiring-in-poland",
+    title:
+      "Want to hire someone in Poland? Here's what you need to do before you sign the contract",
+    description:
+      "Subsidiary, branch, direct employment or EOR? What a foreign company must know about ZUS, payroll, taxes and the B2B trap before hiring someone in Poland.",
+    image: "/images/hiring-in-poland.webp",
+    date: "30/09/2026",
+    author: "Wiktoria Wierzbicka & Sebastian Kunc",
+    category: "HR Outsourcing, EOR, Compliance",
+  },
+  {
     slug: "accounts-payable-under-pressure",
     title:
       "Accounts Payable Under Pressure: A Leader's Perspective on Operational Resilience in Finance",

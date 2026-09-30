@@ -5,18 +5,22 @@ import { Breadcrumbs } from "../Breadcrumbs";
 import { SectionHeader } from "../SectionHeader";
 import type { BlogPostCard } from "@pomerico/content";
 
+export interface BlogPostAuthor {
+  name: string;
+  role?: string;
+  photo: string;
+  linkedin: string;
+  phone: string;
+  email: string;
+}
+
 export interface BlogPostData {
   title: string;
   preheading: string;
   date: string;
-  author: {
-    name: string;
-    photo: string;
-    linkedin: string;
-    phone: string;
-    email: string;
-  };
+  author: BlogPostAuthor | BlogPostAuthor[];
   featuredImage: string;
+  featuredImageAlt?: string;
   content: string;
 }
 
@@ -33,17 +37,20 @@ export function BlogPostTemplate({
   category,
   relatedPosts,
 }: BlogPostTemplateProps) {
+  const authors = Array.isArray(post.author) ? post.author : [post.author];
+  const authorsJsonLd = authors.map((a) => ({
+    "@type": "Person",
+    name: a.name,
+    url: a.linkedin,
+  }));
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     image: `https://pomerico.com${post.featuredImage}`,
     datePublished: post.date,
-    author: {
-      "@type": "Person",
-      name: post.author.name,
-      url: post.author.linkedin,
-    },
+    author: authorsJsonLd.length === 1 ? authorsJsonLd[0] : authorsJsonLd,
     publisher: {
       "@type": "Organization",
       name: "Pomerico Group",
@@ -83,16 +90,31 @@ export function BlogPostTemplate({
             {post.title}
           </h1>
           <div className="mt-6 flex items-center gap-4">
-            <Image
-              src={post.author.photo}
-              alt={post.author.name}
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-full object-cover"
-            />
+            {authors.length === 1 ? (
+              <Image
+                src={authors[0].photo}
+                alt={authors[0].name}
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-full object-cover"
+              />
+            ) : (
+              <div className="flex -space-x-3">
+                {authors.map((a) => (
+                  <Image
+                    key={a.name}
+                    src={a.photo}
+                    alt={a.name}
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 rounded-full object-cover ring-2 ring-white"
+                  />
+                ))}
+              </div>
+            )}
             <div>
               <p className="text-sm font-semibold text-dark">
-                {post.author.name}
+                {authors.map((a) => a.name).join(" & ")}
               </p>
               <p className="text-xs text-dark/70">{post.date}</p>
             </div>
@@ -105,7 +127,7 @@ export function BlogPostTemplate({
         <div className="mx-auto max-w-4xl px-6">
           <Image
             src={post.featuredImage}
-            alt={post.title}
+            alt={post.featuredImageAlt ?? post.title}
             width={900}
             height={500}
             className="w-full rounded-lg"
@@ -121,35 +143,41 @@ export function BlogPostTemplate({
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          {/* Author card */}
-          <div className="mt-16 flex items-center gap-6 rounded-lg border border-dark/5 bg-gray-bg p-6">
-            <Image
-              src={post.author.photo}
-              alt={post.author.name}
-              width={80}
-              height={80}
-              className="h-20 w-20 shrink-0 rounded-full object-cover"
-            />
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-dark/70">
-                Written by
-              </p>
-              <p className="mt-1 font-heading text-lg font-bold text-dark">
-                {post.author.name}
-              </p>
-              <div className="mt-2 flex flex-wrap gap-4 text-sm text-dark/70">
-                <a
-                  href={post.author.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary-blue hover:underline"
-                >
-                  LinkedIn
-                </a>
-                <span>{post.author.email}</span>
+          {/* Author card(s) */}
+          {authors.map((a, i) => (
+            <div
+              key={a.name}
+              className={`${i === 0 ? "mt-16" : "mt-4"} flex items-center gap-6 rounded-lg border border-dark/5 bg-gray-bg p-6`}
+            >
+              <Image
+                src={a.photo}
+                alt={a.name}
+                width={80}
+                height={80}
+                className="h-20 w-20 shrink-0 rounded-full object-cover"
+              />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-dark/70">
+                  Written by
+                </p>
+                <p className="mt-1 font-heading text-lg font-bold text-dark">
+                  {a.name}
+                </p>
+                {a.role && <p className="text-sm text-dark/70">{a.role}</p>}
+                <div className="mt-2 flex flex-wrap gap-4 text-sm text-dark/70">
+                  <a
+                    href={a.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-blue hover:underline"
+                  >
+                    LinkedIn
+                  </a>
+                  <span>{a.email}</span>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
