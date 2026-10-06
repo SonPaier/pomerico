@@ -1,6 +1,6 @@
 export const hiringInPoland = {
   title:
-    "Want to hire someone in Poland? Here's what you need to do before you sign the contract",
+    "Want to Hire Someone in Poland? Here's What You Need to Do Before You Sign the Contract",
   preheading: "Expert Article | HR & Employment in Poland",
   date: "30/09/2026",
   author: [

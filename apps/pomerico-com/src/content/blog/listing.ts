@@ -4,9 +4,20 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "what-an-ssc-finance-manager-really-wants-to-hear",
+    title:
+      "What an SSC Finance Manager Really Wants to Hear From an Outsourcing Partner (and What They Don’t)",
+    description:
+      "What SSC, BSC and GBS finance managers don't want to hear from outsourcing partners - and what really gets their attention: structure, low disruption, risk.",
+    image: "/images/what-an-ssc-finance-manager-really-wants-to-hear.webp",
+    date: "06/10/2026",
+    author: "Wiktoria Wierzbicka",
+    category: "Finance, BPO, Shared Services",
+  },
+  {
     slug: "hiring-in-poland",
     title:
-      "Want to hire someone in Poland? Here's what you need to do before you sign the contract",
+      "Want to Hire Someone in Poland? Here's What You Need to Do Before You Sign the Contract",
     description:
       "Subsidiary, branch, direct employment or EOR? What a foreign company must know about ZUS, payroll, taxes and the B2B trap before hiring someone in Poland.",
     image: "/images/hiring-in-poland.webp",
