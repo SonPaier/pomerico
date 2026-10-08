@@ -4,6 +4,17 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "recruiting-for-an-accounts-payable-team",
+    title:
+      "Recruitment in Accounts Payable",
+    description:
+      "What an AP Team Lead really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
+    image: "/images/recruiting-for-an-accounts-payable-team.webp",
+    date: "08/10/2026",
+    author: "Joanna Włodarczyk",
+    category: "Finance, Accounting, Recruitment, Management",
+  },
+  {
     slug: "what-an-ssc-finance-manager-really-wants-to-hear",
     title:
       "What an SSC Finance Manager Really Wants to Hear From an Outsourcing Partner (and What They Don’t)",
