@@ -109,7 +109,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: form */}
-            <div>
+            <div id="consultation-form" className="scroll-mt-32">
               <div className="rounded-lg border border-dark/5 bg-white p-8">
                 <div className="mb-6 flex flex-col items-center text-center">
                   <h2 className="font-heading mb-2 text-xl font-bold text-dark">

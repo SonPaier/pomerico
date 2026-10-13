@@ -60,7 +60,7 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="/contact"
+                href="/contact#book-consultation"
                 className="inline-flex items-center gap-2 rounded bg-primary-red px-8 py-4 font-ui text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-primary-red/90"
               >
                 Schedule Consultation

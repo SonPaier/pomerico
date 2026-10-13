@@ -16,6 +16,7 @@ import {
   footerServiceLinks,
   footerIndustryLinks,
 } from "@/content/navigation";
+import { ConsultationScroll } from "./ConsultationScroll";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -192,7 +193,7 @@ export default function RootLayout({
           navigation={mainNav}
           ctaLabel="FREE CONSULTATION"
           ctaLabelMobile="CONSULTATION"
-          ctaHref="/contact"
+          ctaHref="/contact#book-consultation"
           topBarPhones={[
             { label: "DK", number: "+45 92 45 39 27" },
             { label: "PL", number: "+48 794 165 506" },
@@ -209,6 +210,7 @@ export default function RootLayout({
           serviceLinks={footerServiceLinks}
           industryLinks={footerIndustryLinks}
         />
+        <ConsultationScroll />
         <CookieConsent />
       </body>
     </html>

@@ -77,7 +77,7 @@ export function ContactInfo({
       </div>
 
       <Link
-        href="/contact"
+        href="/contact#book-consultation"
         className="mt-5 block w-full rounded bg-primary-red px-4 py-2.5 text-center font-ui text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-primary-red/90"
       >
         Book a Free Consultation
