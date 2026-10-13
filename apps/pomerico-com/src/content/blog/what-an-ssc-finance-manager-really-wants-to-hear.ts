@@ -10,7 +10,7 @@ export const whatAnSscFinanceManagerReallyWantsToHear = {
     linkedin:
       "https://www.linkedin.com/in/wiktoriawierzbicka/?isSelfProfile=true",
     phone: "+48 794 165 506",
-    email: "wiktoria.wierzbicka@pomerico.com",
+    email: "consult@pomerico.com",
   },
   featuredImage: "/images/what-an-ssc-finance-manager-really-wants-to-hear.webp",
   featuredImageAlt:
@@ -53,5 +53,5 @@ export const whatAnSscFinanceManagerReallyWantsToHear = {
 <p>I am not writing this article to claim that Pomerico does everything differently from its competitors. I am writing it because these principles are our starting point, not a goal we are still working towards.</p>
 <p>Before suggesting that we work together, we try to establish whether it makes sense in the first place. Not every SSC needs what we offer. The timing is not always right. And not every conversation should end with a proposal.</p>
 <p>But if you are a finance manager reading this and thinking, "That sounds like my last meeting with a provider." perhaps it is worth talking about what a different kind of conversation could look like.</p>
-<p><em>Wiktoria Wierzbicka is HR Project &amp; Operations Manager at Pomerico Group - a BPO partner specialising in finance and HR outsourcing for international companies in Poland. If you would like to discuss working together or simply compare notes on the market, email office@pomerico.com or visit <a href="/">pomerico.com</a>.</em></p>`,
+<p><em>Wiktoria Wierzbicka is HR Project &amp; Operations Manager at Pomerico Group - a BPO partner specialising in finance and HR outsourcing for international companies in Poland. If you would like to discuss working together or simply compare notes on the market - email consult@pomerico.com.</em></p>`,
 };

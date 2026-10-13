@@ -8,7 +8,7 @@ export const doraVsOutsourcing = {
     photo: "/images/wiktoria-wierzbicka-operations-manager.webp",
     linkedin: "https://www.linkedin.com/in/wiktoriawierzbicka/",
     phone: "+48 794 165 506",
-    email: "wiktoria.wierzbicka@pomerico.com",
+    email: "consult@pomerico.com",
   },
   featuredImage: "/images/dora-compliance-outsourcing-article.webp",
   content: `<p>Since DORA came into force — on 17 January 2025 — the topic of financial outsourcing has returned to management boards' desks with renewed urgency. This time, however, the discussion is not about cost savings or access to talent. It is about a question we regularly hear from our clients and partners: after the implementation of DORA, can we still outsource financial processes at all? And will working with an external provider become a source of regulatory risk for us?</p>

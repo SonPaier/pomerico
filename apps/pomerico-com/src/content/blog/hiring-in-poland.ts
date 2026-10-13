@@ -11,7 +11,7 @@ export const hiringInPoland = {
       linkedin:
         "https://www.linkedin.com/in/wiktoriawierzbicka/?isSelfProfile=true",
       phone: "+48 794 165 506",
-      email: "wiktoria.wierzbicka@pomerico.com",
+      email: "consult@pomerico.com",
     },
     {
       name: "Sebastian Kunc",

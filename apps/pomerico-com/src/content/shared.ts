@@ -34,8 +34,8 @@ export const contactWiktoria: ContactPerson = {
     { label: "+48 794 165 506", href: "tel:+48794165506" },
   ],
   email: {
-    label: "wiktoria.wierzbicka@pomerico.com",
-    href: "mailto:wiktoria.wierzbicka@pomerico.com",
+    label: "consult@pomerico.com",
+    href: "mailto:consult@pomerico.com",
   },
   linkedin: { href: "https://www.linkedin.com/in/wiktoriawierzbicka/" },
   photo: "/images/wiktoria-wierzbicka-contact-portrait.jpg",
