@@ -4,6 +4,17 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "polish-sscs-and-scandinavian-expectations",
+    title:
+      "Polish SSCs and Scandinavian Expectations – Why Culture Matters More Than the EUR/PLN Exchange Rate",
+    description:
+      "Why culture, not the EUR/PLN exchange rate, decides whether Polish SSCs and Scandinavian companies build a lasting partnership - feedback, deadlines, initiative.",
+    image: "/images/polish-sscs-and-scandinavian-expectations-featured.webp",
+    date: "13/10/2026",
+    author: "Wiktoria Wierzbicka",
+    category: "Finance, BPO, Shared Services",
+  },
+  {
     slug: "recruiting-for-an-accounts-payable-team",
     title:
       "Recruitment in Accounts Payable",
