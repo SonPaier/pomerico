@@ -61,4 +61,31 @@ export const accountsPayableUnderPressure = {
 <h2>Operational maturity and the role of the leader</h2>
 <p>Based on our experience across different areas of AP, we know that the same solution will not work everywhere. What we do know is when each solution is needed to ensure continuity, security and operational calm. Difficult questions arise often, and one topic usually requires several perspectives. Teams that do not avoid these conversations and are able to talk to one another cope best with pressure and change.</p>
 <p>A responsible finance leader does not rely on temporary fixes. They build a team with potential &#8211; open to development and ready to broaden its horizons. This is the philosophy through which we work with our clients at Pomerico, supporting Scandinavian and international organisations in the areas of HR services Poland, payroll services Poland, finance outsourcing Poland and tailored nearshoring in Poland.</p>`,
+  faq: {
+    title: "FAQ: operational resilience in Accounts Payable",
+    items: [
+      {
+        question:
+          "What are the biggest operational challenges in Accounts Payable?",
+        answer:
+          "They rarely come from a lack of competence. More often they are caused by sudden drops in team capacity due to sick leave or turnover, closings that overlap with peak workload, system changes and migrations after mergers, fast growth in transaction volumes, and extra work from audits and transformation projects.",
+      },
+      {
+        question: "How can an AP team prepare for ad hoc situations?",
+        answer:
+          "With in-depth knowledge of processes, harmonised processes across units and locations, a knowledge base of working instructions supported by recordings, a stable backup structure, effective tools and, above all, honest communication. Without these foundations, even a strong team ends up putting out fires.",
+      },
+      {
+        question: "When does an AP team need external support?",
+        answer:
+          "When capacity problems are being solved mainly with overtime and extended closing periods, which in the long run leads to burnout. Support can be temporary or permanent: interim specialists, external partners, new tools or automation. These models are complementary tools for managing volatility, not alternatives to one another.",
+      },
+      {
+        question:
+          "Is language a barrier when working with an external AP team?",
+        answer:
+          "Rarely. The real concern is usually whether responsibility can be clearly communicated and enforced. Where processes are stable and the division of tasks is clear, team spirit and the ability to rely on one another make the difference, not linguistic perfection.",
+      },
+    ],
+  },
 };

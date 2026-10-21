@@ -52,6 +52,29 @@ export const whatAnSscFinanceManagerReallyWantsToHear = {
 <h2>What does this mean for a partnership with Pomerico?</h2>
 <p>I am not writing this article to claim that Pomerico does everything differently from its competitors. I am writing it because these principles are our starting point, not a goal we are still working towards.</p>
 <p>Before suggesting that we work together, we try to establish whether it makes sense in the first place. Not every SSC needs what we offer. The timing is not always right. And not every conversation should end with a proposal.</p>
-<p>But if you are a finance manager reading this and thinking, "That sounds like my last meeting with a provider." perhaps it is worth talking about what a different kind of conversation could look like.</p>
-<p><em>Wiktoria Wierzbicka is HR Project &amp; Operations Manager at Pomerico Group - a BPO partner specialising in finance and HR outsourcing for international companies in Poland. If you would like to discuss working together or simply compare notes on the market - email consult@pomerico.com.</em></p>`,
+<p>But if you are a finance manager reading this and thinking, "That sounds like my last meeting with a provider." perhaps it is worth talking about what a different kind of conversation could look like.</p>`,
+  faq: {
+    title: "FAQ: working with SSC finance managers",
+    items: [
+      {
+        question:
+          "What do SSC finance managers look for in an outsourcing partner?",
+        answer:
+          "An understanding of their specific organisational structure rather than generic industry knowledge, confidence that bringing in the partner will not disrupt their processes, an open discussion of risks before they ask, and concrete value up front – such as market data, rate benchmarks for their location or relevant hiring trends.",
+      },
+      {
+        question:
+          "Which claims from outsourcing providers do SSC managers find least convincing?",
+        answer:
+          "Generic phrases such as \"we offer tailored solutions\", promises to \"reduce operating costs\" without explaining how, \"we work with similar companies\" without showing what was actually done, and requests for a meeting that offer no value beforehand.",
+      },
+      {
+        question:
+          "What is the biggest concern for an SSC manager when bringing in an external provider?",
+        answer:
+          "Usually not the price, but the risk of disruption: how quickly a new specialist can get up to speed, who handles onboarding and what happens if someone leaves after two months. A partner who answers these questions clearly offers peace of mind – often worth more than a discount.",
+      },
+    ],
+  },
+  contentAfterFaq: `<p><em>Wiktoria Wierzbicka is HR Project &amp; Operations Manager at Pomerico Group - a BPO partner specialising in finance and HR outsourcing for international companies in Poland. If you would like to discuss working together or simply compare notes on the market - email consult@pomerico.com.</em></p>`,
 };
