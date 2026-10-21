@@ -4,6 +4,17 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "accounts-payable-onboarding-mistakes",
+    title:
+      "Accounts Payable Onboarding: 7 Mistakes to Avoid in a New Team Member's First Weeks",
+    description:
+      "The 7 most common Accounts Payable onboarding mistakes – and what works instead: a mentor, a day-by-day plan, an access checklist and weekly check-ins.",
+    image: "/images/accounts-payable-onboarding-mistakes.webp",
+    date: "21/10/2026",
+    author: "Joanna Włodarczyk",
+    category: "Finance, Accounts Payable, Onboarding",
+  },
+  {
     slug: "polish-sscs-and-scandinavian-expectations",
     title:
       "Polish SSCs and Scandinavian Expectations – Why Culture Matters More Than the EUR/PLN Exchange Rate",
