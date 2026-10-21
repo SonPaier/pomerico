@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "../ArrowRightIcon";
 import { Breadcrumbs } from "../Breadcrumbs";
+import { BlogFaq, type BlogFaqData } from "../BlogFaq";
 import { SectionHeader } from "../SectionHeader";
 import type { BlogPostCard } from "@pomerico/content";
 
@@ -22,7 +23,13 @@ export interface BlogPostData {
   featuredImage: string;
   featuredImageAlt?: string;
   content: string;
+  /** Optional FAQ accordion rendered after `content`, followed by `contentAfterFaq`. */
+  faq?: BlogFaqData;
+  contentAfterFaq?: string;
 }
+
+const articleClassName =
+  "prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-dark prose-h2:mt-12 prose-h2:text-2xl prose-h3:mt-8 prose-h3:text-xl prose-p:leading-relaxed prose-p:text-dark/80 prose-li:text-dark/80 prose-strong:text-dark prose-img:rounded-lg prose-img:my-8";
 
 interface BlogPostTemplateProps {
   post: BlogPostData;
@@ -139,9 +146,16 @@ export function BlogPostTemplate({
       <section className="pb-20">
         <div className="mx-auto max-w-4xl px-6">
           <article
-            className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-dark prose-h2:mt-12 prose-h2:text-2xl prose-h3:mt-8 prose-h3:text-xl prose-p:leading-relaxed prose-p:text-dark/80 prose-li:text-dark/80 prose-strong:text-dark prose-img:rounded-lg prose-img:my-8"
+            className={articleClassName}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+          {post.faq && <BlogFaq {...post.faq} />}
+          {post.contentAfterFaq && (
+            <article
+              className={`mt-12 ${articleClassName}`}
+              dangerouslySetInnerHTML={{ __html: post.contentAfterFaq }}
+            />
+          )}
 
           {/* Author card(s) */}
           {authors.map((a, i) => (

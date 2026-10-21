@@ -1,6 +1,7 @@
 // Server components
 export { Analytics, GtmNoScript, COOKIE_CONSENT_STORAGE_KEY } from "./Analytics";
 export { ArrowRightIcon } from "./ArrowRightIcon";
+export { BlogFaq } from "./BlogFaq";
 export { Breadcrumbs } from "./Breadcrumbs";
 export { CaseStudyGrid } from "./CaseStudyGrid";
 export { CaseStudyLayout } from "./CaseStudyLayout";

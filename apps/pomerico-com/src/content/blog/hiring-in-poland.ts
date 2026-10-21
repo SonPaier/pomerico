@@ -56,6 +56,33 @@ export const hiringInPoland = {
 <p>For companies that want to hire talent in Poland quickly and legally - without building their own HR and payroll back office from scratch - it is simply the cheaper and faster solution.</p>
 <p>Entering the Polish market is a good business decision. Poland has one of the strongest markets for skilled professionals in the CEE region, attractive operating costs and a large pool of qualified people in finance, IT and operations.</p>
 <p>The question worth asking yourself before you start recruiting: do you want to run a company here too - with everything that entails - or do you want to employ people here?</p>
-<p>These are two different projects. And they call for two different approaches.</p>
-<p><em>Pomerico supports foreign companies in hiring employees in Poland legally and efficiently - without the need to set up their own structure. If you’re considering expansion, we’d be happy to tell you what it looks like in practice.</em></p>`,
+<p>These are two different projects. And they call for two different approaches.</p>`,
+  faq: {
+    title: "FAQ: hiring an employee in Poland as a foreign company",
+    items: [
+      {
+        question: "How can a foreign company hire an employee in Poland?",
+        answer:
+          "There are three main paths: setting up a Polish limited liability company (sp. z o.o.), registering a branch of the foreign enterprise, or employing directly without registering a company. Companies that want to hire a small team without building local infrastructure can also use an Employer of Record (EOR).",
+      },
+      {
+        question:
+          "What are the ZUS obligations of a foreign employer in Poland?",
+        answer:
+          "A company that becomes a ZUS contribution payer has 7 days from the start of employment to register. Each employee must be registered for social security and health insurance, and a monthly DRA declaration must be submitted electronically by the 15th of the following month. Changes and deregistrations must also be reported.",
+      },
+      {
+        question:
+          "Is a B2B contract with a Polish contractor a safe alternative to employment?",
+        answer:
+          "Not always. If a long-term B2B contractor in practice acts on behalf of the foreign company, the Polish tax authorities may conclude that the company has a permanent establishment in Poland. That creates an obligation to pay CIT in Poland on the business activities associated with that contractor.",
+      },
+      {
+        question: "When does an Employer of Record make sense in Poland?",
+        answer:
+          "When a company wants to hire a few people and focus on the work rather than the administration. The EOR is the formal employer and handles obligations towards ZUS, the tax office and labour law, while the foreign company manages the employees operationally – with no company registration and no permanent establishment risk.",
+      },
+    ],
+  },
+  contentAfterFaq: `<p><em>Pomerico supports foreign companies in hiring employees in Poland legally and efficiently - without the need to set up their own structure. If you’re considering expansion, we’d be happy to tell you what it looks like in practice.</em></p>`,
 };

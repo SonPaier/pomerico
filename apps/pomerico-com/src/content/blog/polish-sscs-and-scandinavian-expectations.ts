@@ -61,7 +61,35 @@ export const polishSscsAndScandinavianExpectations = {
 <h2>Instead of a summary</h2>
 <p>The cost difference between Poland and Scandinavia - yes, it is significant. But a Polish company or service centre that offers only that is replaceable. By the next country that will be cheaper.</p>
 <p>The lasting value of this collaboration is built where the Polish partner understands that the Scandinavian client does not want a supplier - they want someone who will speak plainly when something is not right, deliver on what they promised, and proactively look for better solutions instead of waiting for instructions.</p>
-<p>This is exactly the competence that Polish organisations can build. And one that, over a 5-year horizon, is worth more than any exchange rate.</p>
-
-<p><em>Wiktoria Wierzbicka is HR Project &amp; Operations Manager at Pomerico Group - a BPO partner specialising in finance and HR outsourcing for international companies operating in Poland. Pomerico works with organisations from the Scandinavian and Central European markets, supporting the building of effective operational teams. Contact: consult@pomerico.com.</em></p>`,
+<p>This is exactly the competence that Polish organisations can build. And one that, over a 5-year horizon, is worth more than any exchange rate.</p>`,
+  faq: {
+    title: "FAQ: Polish SSCs and Scandinavian clients",
+    items: [
+      {
+        question:
+          "What do Scandinavian companies expect from a Polish SSC or outsourcing partner?",
+        answer:
+          "A partnership rather than a supplier relationship: direct contact with decision-makers without long escalation chains, proactive communication about problems as soon as they arise, and respect for consensus-based decision-making. In practice, they want a partner who speaks plainly, delivers on what was promised and proposes better solutions without waiting for instructions.",
+      },
+      {
+        question:
+          "Which cultural differences cause the most friction between Polish teams and Scandinavian clients?",
+        answer:
+          "Three areas: feedback, deadlines and initiative. Scandinavians give feedback directly and expect \"we know, we're fixing it\" rather than defensiveness or apologies. A deadline is a deadline – if it is at risk, say so early and propose a new one. Improvements should be proposed as a conversation, not as a showcase.",
+      },
+      {
+        question:
+          "How can a Polish–Scandinavian collaboration be set up for long-term success?",
+        answer:
+          "Agree on communication norms in the first month – response times, escalation rules and first points of contact on both sides. Run cultural onboarding for Polish teams based on concrete scenarios, and build regular two-way feedback, for example a quarterly review of what works and what doesn't.",
+      },
+      {
+        question:
+          "Why is the Tricity a strong location for serving Scandinavian companies?",
+        answer:
+          "Gdansk, Gdynia and Sopot have long-standing historical and economic ties with Scandinavia – the port, trade and Nordic companies present in the region for decades. As a result, many local professionals have real experience of working in a Scandinavian business culture, not just theoretical knowledge of it.",
+      },
+    ],
+  },
+  contentAfterFaq: `<p><em>Wiktoria Wierzbicka is HR Project &amp; Operations Manager at Pomerico Group - a BPO partner specialising in finance and HR outsourcing for international companies operating in Poland. Pomerico works with organisations from the Scandinavian and Central European markets, supporting the building of effective operational teams. Contact: consult@pomerico.com.</em></p>`,
 };

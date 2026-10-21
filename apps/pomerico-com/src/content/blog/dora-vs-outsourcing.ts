@@ -105,6 +105,34 @@ export const doraVsOutsourcing = {
 
 <h2>Summary</h2>
 <p>DORA changes financial outsourcing — but it does not end it. It changes the conditions under which outsourcing should be designed and managed. A good provider in the world of DORA is one that understands these conditions and helps you navigate them without unnecessary headaches.</p>
-<p>If you want to review your current contracts from a DORA perspective, assess the providers you work with or design a new financial outsourcing model — we are ready to talk.</p>
-<p><em>This article was prepared on the basis of an analysis of the DORA regulation, EU Regulation 2022/2554, and the RTS/ITS implementing acts. It does not constitute legal advice. For matters requiring legal assessment, we recommend consulting a law firm specialising in financial market law.</em></p>`,
+<p>If you want to review your current contracts from a DORA perspective, assess the providers you work with or design a new financial outsourcing model — we are ready to talk.</p>`,
+  faq: {
+    title: "FAQ: DORA and financial outsourcing",
+    items: [
+      {
+        question: "Does DORA prohibit outsourcing of financial processes?",
+        answer:
+          "No. DORA, EU Regulation 2022/2554, in force since 17 January 2025, assumes that financial institutions will use external providers and regulates how that cooperation should be managed. Responsibility for compliance, however, always remains with the financial institution, regardless of how the contract with the provider is structured.",
+      },
+      {
+        question:
+          "When does a financial outsourcing provider count as an ICT provider under DORA?",
+        answer:
+          "When its services are delivered on an ongoing basis through ICT systems, which applies to most modern outsourcing of accounting, controlling, payroll and reporting. The intensity of obligations depends on whether the service supports functions that are critical or important to the financial entity.",
+      },
+      {
+        question:
+          "What must a contract with an ICT provider include under DORA?",
+        answer:
+          "Among other things: a description of services and permitted subcontracting, service and data locations, data security guarantees, data recovery and return rules, measurable SLAs, termination rights and cooperation with supervisors. For critical or important functions, also audit rights, participation in TLPT, monitoring indicators and an exit plan.",
+      },
+      {
+        question:
+          "Where should a CFO start with DORA in financial outsourcing?",
+        answer:
+          "Map all financial processes run by external providers, classify them by ICT reliance and criticality, carry out due diligence on providers, build or update the register of ICT contracts, review existing contracts against DORA requirements, and involve compliance and IT security from the start of any new project.",
+      },
+    ],
+  },
+  contentAfterFaq: `<p><em>This article was prepared on the basis of an analysis of the DORA regulation, EU Regulation 2022/2554, and the RTS/ITS implementing acts. It does not constitute legal advice. For matters requiring legal assessment, we recommend consulting a law firm specialising in financial market law.</em></p>`,
 };

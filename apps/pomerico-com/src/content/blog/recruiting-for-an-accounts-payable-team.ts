@@ -42,4 +42,27 @@ export const recruitingForAnAccountsPayableTeam = {
 
 <h2>In closing</h2>
 <p>For me, recruiting for AP is a bit like putting together a team that has to safeguard the company's money, but also talk every day with people on both sides - inside and outside the organization. Gaps in technical skills can be closed. It's harder to develop accuracy combined with composure, integrity and a willingness to ask questions. And it's precisely these qualities that, after all these years, tell me whether a given person will do well on this team in the long run, or only for the first few months.</p>`,
+  faq: {
+    title: "FAQ: recruiting for an Accounts Payable team",
+    items: [
+      {
+        question:
+          "What qualities matter most when hiring an Accounts Payable specialist?",
+        answer:
+          "Technical skills are the easiest part to teach. What matters more is accuracy without perfectionism, the ability to talk calmly to frustrated suppliers and colleagues, curiosity about what the numbers mean, calm under month-end pressure, integrity and a willingness to learn new tools.",
+      },
+      {
+        question:
+          "Is experience with a specific ERP system required for an AP role?",
+        answer:
+          "Not necessarily. Familiarity with a particular system is convenient, but accounting systems and automations change quickly. What matters more is whether the candidate is willing to learn new tools fast, because within a year or two the team will probably be working with something new anyway.",
+      },
+      {
+        question:
+          "How can you assess an AP candidate's soft skills during an interview?",
+        answer:
+          "Ask how they cope with time pressure and large document volumes, how they handled conflict or a period of higher workload at a previous job, and how they approached ethically ambiguous situations. These answers reveal far more than self-descriptions such as \"I'm very accurate in my work\".",
+      },
+    ],
+  },
 };

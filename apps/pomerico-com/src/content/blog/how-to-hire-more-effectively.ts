@@ -47,4 +47,29 @@ export const howToHireMoreEffectively = {
 <h2>Summary</h2>
 <p>In theory, recruitment is easy, because all you have to do is post an advertisement. However, as experience shows, there are many factors that affect its success. Fortunately or unfortunately, many effects of our actions cannot be seen in Excel or directly on the VAT invoice. This can be an opportunity, because the right HR strategy is a key factor determining the competitive advantages of a given company. In 90% of cases, we work with Clients who have their own HR departments and we support them, because it is difficult for an internal department to have access to as many tools as a professional agency and experience in such a quantity on given positions, and to have proven recruitment funnels, supported by a dedicated marketing department. Importantly, it also works the other way around, because internal HR departments at employers often help us provide services for them more effectively.</p>
 <p>Thanks to all these factors, when we recruit, we achieve 92% effectiveness in the financial, administration or purchasing departments. Moreover, about 90% of our Clients work with us for a long time.</p>`,
+  faq: {
+    title: "FAQ: effective recruitment",
+    items: [
+      {
+        question: "Which recruitment method works best?",
+        answer:
+          "It depends on the role. Job ads work well for positions where many people in the region meet the criteria, but become less effective for specialist roles. To reach passive candidates – people open to a change but not actively looking – Direct Search is more effective, and it avoids competing directly with other employers' ads.",
+      },
+      {
+        question: "What is Direct Search in recruitment?",
+        answer:
+          "An approach in which the recruiter reaches out to suitable candidates directly instead of waiting for applications. It combines several tools – databases, relationships with partners, schools and universities, direct messages, social media and targeted campaigns – into a recruitment funnel designed to find the best-matched person.",
+      },
+      {
+        question: "How can you reduce employee turnover after hiring?",
+        answer:
+          "By selecting the candidate profile carefully – matching personality, motivation and ambitions to the role, checking technical skills and offering realistic pay – and by planned onboarding. A \"welcome book\" describing the company's values and rules of cooperation helps new people settle in.",
+      },
+      {
+        question: "Why does onboarding matter for recruitment results?",
+        answer:
+          "Recruitment does not end when the contract is signed. Whether a hire pays off depends on how the new person is introduced: looking after them in the first days, preparing them for the business side of the role and regularly asking whether everything is working for them.",
+      },
+    ],
+  },
 };

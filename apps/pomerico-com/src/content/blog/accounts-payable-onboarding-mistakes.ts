@@ -71,16 +71,29 @@ export const accountsPayableOnboardingMistakes = {
 </ul>
 
 <h2>Summary</h2>
-<p>Good Accounts Payable onboarding is not a one-off system training. It is a carefully planned process – with a clear schedule, a mentor, a concrete access list and room for ongoing feedback. The investment in those first weeks pays back many times over: fewer errors, faster independence and lower turnover in the team.</p>
-
-<h2>FAQ: Accounts Payable onboarding</h2>
-<p><strong>What does the first month of onboarding in Accounts Payable look like?</strong></p>
-<p>In our team, a new person follows a day-by-day plan for the first two weeks, works with a mentor for the first 4–6 weeks and has weekly check-ins throughout the first month. The scope of responsibility grows gradually, from simple, repetitive cases to more complex ones.</p>
-<p><strong>What should an AP onboarding checklist include?</strong></p>
-<p>At minimum: access to each system with an explanation of what it is for (ticketing system, online banking, supplier data verification tool, ERP), a named mentor and contact points, a day-by-day plan for the first two weeks, the team calendar with closing dates, and scheduled feedback check-ins.</p>
-<p><strong>Why shouldn't a new AP specialist take over a full supplier portfolio right after system training?</strong></p>
-<p>System training doesn't cover the business context or the team's rhythm. Handing over full responsibility too early leads to posting errors, missed payment deadlines and incorrectly assigned cost centres – which is why we start with simple, repetitive cases.</p>
-
-<h2>Building or expanding an AP team in Poland?</h2>
+<p>Good Accounts Payable onboarding is not a one-off system training. It is a carefully planned process – with a clear schedule, a mentor, a concrete access list and room for ongoing feedback. The investment in those first weeks pays back many times over: fewer errors, faster independence and lower turnover in the team.</p>`,
+  faq: {
+    title: "FAQ: Accounts Payable onboarding",
+    items: [
+      {
+        question:
+          "What does the first month of onboarding in Accounts Payable look like?",
+        answer:
+          "In our team, a new person follows a day-by-day plan for the first two weeks, works with a mentor for the first 4–6 weeks and has weekly check-ins throughout the first month. The scope of responsibility grows gradually, from simple, repetitive cases to more complex ones.",
+      },
+      {
+        question: "What should an AP onboarding checklist include?",
+        answer:
+          "At minimum: access to each system with an explanation of what it is for (ticketing system, online banking, supplier data verification tool, ERP), a named mentor and contact points, a day-by-day plan for the first two weeks, the team calendar with closing dates, and scheduled feedback check-ins.",
+      },
+      {
+        question:
+          "Why shouldn't a new AP specialist take over a full supplier portfolio right after system training?",
+        answer:
+          "System training doesn't cover the business context or the team's rhythm. Handing over full responsibility too early leads to posting errors, missed payment deadlines and incorrectly assigned cost centres – which is why we start with simple, repetitive cases.",
+      },
+    ],
+  },
+  contentAfterFaq: `<h2>Building or expanding an AP team in Poland?</h2>
 <p>At Pomerico Group, we help international companies build finance teams in Poland – through <a href="/services/recruitment-services-rpo">finance recruitment</a> and <a href="/services/finance-outsourcing-contracting">finance outsourcing and contracting</a>, including Accounts Payable specialists. If your AP function is under pressure, read <a href="/blog/accounts-payable-under-pressure">Accounts Payable Under Pressure</a> or <a href="/contact#book-consultation">book a free consultation</a> with our team.</p>`,
 };
