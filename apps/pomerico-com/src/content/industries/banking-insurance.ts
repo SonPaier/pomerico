@@ -51,10 +51,4 @@ export const data: IndustryPageData = {
       company: "London Stock Exchange Group",
     },
   ],
-  caseStudySlugs: [
-    "hedepys-seamless-launch-in-poland-with-pomerico",
-    "comprehensive-hr-transformation-driving-growth",
-    "recruiting-a-strategic-country-sales-manager-for-market-expansion",
-    "60-hires-1600-applications-40000-people-reached",
-  ],
 };

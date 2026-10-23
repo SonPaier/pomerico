@@ -22,6 +22,7 @@ export const allCaseStudyCards: CaseStudyCard[] = [
     slug: "comprehensive-hr-transformation-driving-growth",
     title: "HR Transformation at Datumo: Comprehensive Strategic Project",
     industry: "Technology",
+    industries: ["information-technology"],
     summary:
       "Pomerico delivered a 17+ phase HR transformation for Datumo covering recruitment systems, employer branding, organizational design, and performance metrics.",
     image: "/images/datumo-case-study-logo.jpg",
@@ -30,6 +31,7 @@ export const allCaseStudyCards: CaseStudyCard[] = [
     slug: "recruiting-a-strategic-country-sales-manager-for-market-expansion",
     title: "Recruiting a Strategic Sales Leader for Market Expansion",
     industry: "Intralogistics / Warehouse Automation",
+    industries: ["intralogistics"],
     summary:
       "Kardex approached Pomerico with a strategically critical assignment -- to recruit a Country Sales Manager through structured executive search.",
     image: "/images/kardex-logo.png",
@@ -38,6 +40,7 @@ export const allCaseStudyCards: CaseStudyCard[] = [
     slug: "60-hires-1600-applications-40000-people-reached",
     title: "60 Hires, 1,600 Applications, 40,000 People Reached",
     industry: "Food Processing / Production",
+    industries: ["manufacturing-industry"],
     summary:
       "Babord VAP entrusted Pomerico with recruiting 60 employees for a new production line through community engagement and creative field-based sourcing.",
     image: "/images/babord-case-study-logo.png",
@@ -46,6 +49,7 @@ export const allCaseStudyCards: CaseStudyCard[] = [
     slug: "how-we-secured-a-quality-control-expert-in-just-weeks",
     title: "How We Secured a Quality Control Expert in Just Weeks",
     industry: "Industrial Construction",
+    industries: ["manufacturing-industry"],
     summary:
       "After four agencies rejected the assignment, Pomerico recruited a Quality Control Manager for Joong Won Poland within weeks.",
     image: "/images/joong-won-poland-logo.png",
@@ -55,6 +59,7 @@ export const allCaseStudyCards: CaseStudyCard[] = [
     title:
       "Building a Multidisciplinary Maintenance Team for Automated Warehousing",
     industry: "Intralogistics / Warehousing",
+    industries: ["intralogistics"],
     summary:
       "SSI Schaefer entrusted Pomerico with building a 35-person maintenance team from scratch in just 3 months -- half the planned timeframe.",
     image: "/images/ssi-schaefer-case-study-logo.png",
@@ -64,6 +69,7 @@ export const allCaseStudyCards: CaseStudyCard[] = [
     title:
       "How Pomerico Ensured a Successful Succession and Hired the Ideal Service Network Leader",
     industry: "Transport Refrigeration / Automotive",
+    industries: ["manufacturing-industry"],
     summary:
       "Pomerico recruited a Service Network Manager for Apex Thermo King through multi-stage executive search, enabling a smooth succession to Service Director.",
     image: "/images/thermo-king-case-study-logo.png",

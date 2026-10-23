@@ -20,7 +20,9 @@ interface IndustryPageTemplateProps {
 }
 
 export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, faqItems }: IndustryPageTemplateProps) {
-  const slugs = data.caseStudySlugs;
+  const caseStudyCards = allCaseStudyCards.filter((c) =>
+    c.industries?.includes(data.slug),
+  );
 
   return (
     <>
@@ -134,10 +136,8 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
       )}
 
       {/* Case Studies */}
-      {slugs && slugs.length > 0 && (
-        <CaseStudyGrid
-          cards={allCaseStudyCards.filter((c) => slugs.includes(c.slug))}
-        />
+      {caseStudyCards.length > 0 && (
+        <CaseStudyGrid cards={caseStudyCards} />
       )}
 
       {/* FAQ */}

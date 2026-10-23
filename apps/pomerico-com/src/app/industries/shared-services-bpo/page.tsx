@@ -23,7 +23,9 @@ export const metadata: Metadata = {
 };
 
 export default function SharedServicesBpoPage() {
-  const slugs = data.caseStudySlugs;
+  const caseStudyCards = allCaseStudyCards.filter((c) =>
+    c.industries?.includes(data.slug),
+  );
   const testimonial = data.testimonials?.[0];
 
   return (
@@ -107,10 +109,8 @@ export default function SharedServicesBpoPage() {
       )}
 
       {/* Case Studies */}
-      {slugs && slugs.length > 0 && (
-        <CaseStudyGrid
-          cards={allCaseStudyCards.filter((c) => slugs.includes(c.slug))}
-        />
+      {caseStudyCards.length > 0 && (
+        <CaseStudyGrid cards={caseStudyCards} />
       )}
 
       {/* FAQ */}

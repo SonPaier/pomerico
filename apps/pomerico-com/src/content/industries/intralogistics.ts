@@ -50,10 +50,4 @@ export const data: IndustryPageData = {
     { src: "/images/ssi-schaefer-logo.png", alt: "SSI Schäfer" },
     { src: "/images/kardex-logo.png", alt: "Kardex" },
   ],
-  caseStudySlugs: [
-    "building-a-multidisciplinary-maintenance-team-for-automated-warehousing",
-    "how-we-secured-a-quality-control-expert-in-just-weeks",
-    "recruiting-a-strategic-country-sales-manager-for-market-expansion",
-    "60-hires-1600-applications-40000-people-reached",
-  ],
 };

@@ -28,12 +28,16 @@ export function CaseStudyGrid({
             const tag =
               cs.industry?.split("/")[0].trim().toUpperCase() ?? "CASE STUDY";
             const isLarge = i === 0 || i === 3;
+            // Last card alone in its row — keep column width, center it
+            const isOrphan = cards.length % 2 === 1 && i === cards.length - 1;
             return (
               <Link
                 key={cs.slug}
                 href={`/case-studies/${cs.slug}`}
                 className={`group flex flex-col justify-between rounded-lg border border-dark/5 bg-white p-8 transition-all hover:border-primary-blue/20 ${
                   isLarge ? "sm:row-span-1" : ""
+                } ${
+                  isOrphan ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.75rem)]" : ""
                 }`}
               >
                 <div>

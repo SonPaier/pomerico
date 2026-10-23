@@ -59,6 +59,8 @@ export interface CaseStudyCard {
   slug: string;
   title: string;
   industry?: string;
+  /** Industry page slugs (/industries/*) this case study is shown on */
+  industries?: string[];
   summary: string;
   image?: string;
 }
@@ -139,8 +141,6 @@ export interface IndustryPageData {
     heading: string;
     description?: string;
   };
-  /** Optional case studies shown on this industry page */
-  caseStudySlugs?: string[];
   /** Logos of trusted clients in this industry */
   trustedLogos?: { src: string; alt: string }[];
 }
