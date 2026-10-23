@@ -29,6 +29,7 @@ export const data: ServicePageData = {
     description: "Pomerico ensures you hire faster, smarter, and with minimal risk, giving your business the talent it needs to grow. Hire top talent faster. With precision. And without the cost of building an internal recruitment team.",
     items: [
       { bold: "Companies scaling teams quickly –", text: "Ideal for periods of rapid growth, new product development or international expansion." },
+      { bold: "Companies launching greenfield sites in Poland –", text: "New factories, warehouses and production lines that need a complete team recruited from zero before go-live." },
       { bold: "Organizations without internal recruitment teams –", text: "RPO replaces the need for hiring full-time recruiters, HR specialists or sourcers." },
       { bold: "Businesses struggling with recruitment quality or low candidate flow –", text: "Pomerico's advanced sourcing solves bottlenecks and improves talent pipelines." },
       { bold: "Firms needing niche or rare specialists –", text: "IT (SQL, Python, DevOps, SAP), Finance, Industry, R&D, HR, Operations, Accounting, Engineering and more." },
@@ -100,5 +101,9 @@ export const faqItems: FAQItem[] = [
   {
     question: "Can Pomerico manage end-to-end recruitment for long-term hiring pipelines?",
     answer: "Yes, RPO is built exactly for long-term, predictable and scalable hiring operations."
+  },
+  {
+    question: "Can Pomerico staff a greenfield site in Poland?",
+    answer: "Yes. For greenfield projects – new factories, warehouses or production sites – we recruit the full team from scratch before go-live, including technical, managerial and support roles. For SSI Schäfer, we built a maintenance team for a brand-new automated distribution centre in Lower Silesia: the core team was hired in 3 months, half the planned time, and grew to 35 people."
   },
 ];

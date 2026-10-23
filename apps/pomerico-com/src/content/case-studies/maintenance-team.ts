@@ -10,7 +10,7 @@ export const data: CaseStudyPageData = {
   client: "SSI Schäfer",
   image: "/images/ssi-schaefer-case-study-logo.png",
 
-  goal: `<p><strong>SSI Schäfer</strong>, a global leader in intralogistics solutions, entrusted us with the strategic task of building a Maintenance Department team from scratch in a location with limited candidate availability – Bolesławiec (Osła) – next to the newly opened Amazon warehouse. This project required not only speed but also exceptional precision in matching competencies.</p>
+  goal: `<p><strong>SSI Schäfer</strong>, a global leader in intralogistics solutions, entrusted us with the strategic task of building a Maintenance Department team from scratch in a location with limited candidate availability – Bolesławiec (Osła) – next to the newly opened Amazon warehouse. This project required not only speed but also exceptional precision in matching competencies. A greenfield assignment: a brand-new automated distribution centre in Lower Silesia, Poland, no existing team, and a go-live date fixed by the end customer.</p>
 <p>From the client's perspective, it was a critical undertaking – any delay could have resulted in high contractual penalties imposed by the end customer.</p>
 <p>Our mission was to deliver a fully functional and stable team within a short timeframe.</p>`,
 

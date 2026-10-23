@@ -38,6 +38,7 @@ export const data: ServicePageData & {
       { bold: "Businesses wanting EU-level quality at competitive cost -", text: "Poland is significantly more cost-efficient than Western Europe while offering high standards." },
       { bold: "Firms planning long-term delivery or transformation projects -", text: "Stable teams with low turnover ensure predictable output." },
       { bold: "Companies without local HR/Payroll/Legal capacity -", text: "We take over all operational, legal and employment complexity." },
+      { bold: "Companies launching greenfield operations in Poland -", text: "A brand-new site where the whole team has to be recruited, employed and onboarded at once." },
       { bold: "International companies entering Poland gradually -", text: "Start with nearshore teams and transition to an entity later-or stay fully outsourced." },
     ],
   },

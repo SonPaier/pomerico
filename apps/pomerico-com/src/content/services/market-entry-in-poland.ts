@@ -184,6 +184,7 @@ export const data: ServicePageData = {
     description: "Our Market Entry in Poland service is designed for international organizations that want to start operating in Poland quickly, compliantly, and without unnecessary complexity. We provide a complete solution - from legal, tax, and HR setup to operational and administrative support - so you can focus on building your business, not bureaucracy.",
     items: [
       { bold: "Plan to expand to Poland -", text: "And need a local partner to handle legal, tax, and HR compliance." },
+      { bold: "Are opening a greenfield site -", text: "A new factory, warehouse or operations centre in Poland that needs a full team recruited, employed and onboarded before go-live." },
       { bold: "Want to test the Polish market -", text: "Before establishing a legal entity." },
       { bold: "Seek to hire and manage local talent -", text: "(Marketing, finance, IT, operations) Without opening a company in Poland." },
       { bold: "Value flexibility and cost efficiency -", text: "While maintaining full control and transparency of their operations." },
@@ -249,6 +250,10 @@ export const faqItems: FAQItem[] = [
   {
     question: "Can Pomerico help me hire employees before I open a legal entity?",
     answer: "Yes, this is one of the biggest advantages. Using EOR, Pomerico becomes the official employer so you can hire and operate immediately while preparing for long-term market entry."
+  },
+  {
+    question: "Can Pomerico build a team for a new site or factory in Poland?",
+    answer: "Yes. For greenfield investments we recruit, employ and onboard the whole team from scratch, so it is in place before the site goes live. We have done this for a brand-new automated distribution centre in Lower Silesia (SSI Schäfer case study)."
   },
   {
     question: "Can Pomerico support office setup or hybrid operations?",
