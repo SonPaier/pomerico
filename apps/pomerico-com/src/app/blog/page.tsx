@@ -5,14 +5,16 @@ import { ArrowRightIcon } from "@pomerico/ui";
 import { blogPosts } from "@/content/blog/listing";
 
 export const metadata: Metadata = {
-  title: "Blog – HR Outsourcing & Recruitment Insights from Poland",
+  title: {
+    absolute: "Finance Outsourcing, BPO & Recruitment Blog – Poland | Pomerico",
+  },
   description:
-    "Expert insights on HR outsourcing, recruitment, compliance, and business operations in Poland from Pomerico Group.",
+    "Expert articles on finance outsourcing, BPO, recruitment, EOR and compliance in Poland from Pomerico Group's team in Gdańsk.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Blog – HR Outsourcing & Recruitment Insights from Poland",
+    title: "Finance Outsourcing, BPO & Recruitment Blog – Poland | Pomerico",
     description:
-      "Expert insights on HR outsourcing, recruitment, compliance, and business operations in Poland from Pomerico Group.",
+      "Expert articles on finance outsourcing, BPO, recruitment, EOR and compliance in Poland from Pomerico Group's team in Gdańsk.",
   },
 };
 
@@ -26,11 +28,11 @@ export default function BlogPage() {
             Insights & Resources
           </p>
           <h1 className="mt-3 font-heading text-3xl font-bold lg:text-5xl">
-            HR Outsourcing &amp; Recruitment Insights
+            Finance Outsourcing, BPO &amp; Recruitment Insights
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/80">
-            Expert articles on HR outsourcing, recruitment, compliance, and
-            scaling operations in Poland.
+            Expert articles on finance outsourcing, BPO, recruitment, EOR and
+            compliance in Poland from Pomerico Group.
           </p>
         </div>
       </section>
