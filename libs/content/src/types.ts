@@ -55,6 +55,15 @@ export interface ServiceCard {
   href?: string;
 }
 
+/** Icon names available in ServiceDetailCard */
+export type ServiceDetailIcon = "users" | "cog";
+
+export interface ServiceDetail {
+  icon: ServiceDetailIcon;
+  heading: string;
+  paragraphs: string[];
+}
+
 export interface CaseStudyCard {
   slug: string;
   title: string;
@@ -88,6 +97,8 @@ export interface ServicePageData {
   services?: {
     heading: string;
     cards: ServiceCard[];
+    /** Service descriptions listed below the cards */
+    items?: ServiceDetail[];
   };
   /** "Who is this for?" */
   targetAudience?: {

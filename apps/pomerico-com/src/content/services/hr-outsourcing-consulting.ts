@@ -38,7 +38,7 @@ export const data: ServicePageData = {
       {
         icon: "/images/icon-gears-system-integration.png",
         heading: "HR Contracting (Interim / On-Demand HR)",
-        description: "HR Generalist / HRBP on contract. Talent Acquisition on contract. Temporary HR support for scaling. Full HR function externally managed. Maternity leave coverage. Project-based HR roles.",
+        description: "HR Generalist / HRBP on contract. Talent Acquisition on contract. Temporary HR support for scaling. Full HR function externally managed. Maternity leave coverage. Project-based HR roles. Interim HR Specialist employed by Pomerico. Mid Office specialists on contract.",
       },
     ],
   },

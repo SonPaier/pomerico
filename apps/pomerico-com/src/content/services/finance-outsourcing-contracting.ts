@@ -31,6 +31,26 @@ export const data: ServicePageData = {
       { icon: "/images/icon-workflow-process-automation.png", heading: "AI and finance automation", description: "Support for finance and controlling improvements using AI, Python, SQL, RPA, Power Query, VBA, R and Power BI." },
       { icon: "/images/icon-shield-compliance-protection.png", heading: "Specialist insurance reporting", description: "Solvency II and Quantitative Reporting Templates (QRT), IFRS 9 and expected credit losses (ECL), investment portfolio control and intra-group reporting, and insurance premium tax (IPT) reporting across European countries." },
     ],
+    // Task 22: the next service goes first in this list
+    items: [
+      {
+        icon: "users",
+        heading: "Interim Finance Specialists",
+        paragraphs: [
+          "Hire an experienced, vetted finance consultant through Pomerico to support your SSC or finance team during transitions, system migrations, team absences or temporary workload peaks.",
+          "We handle recruitment, payroll and employment administration, while your team directs the agreed tasks, with hourly or monthly billing and an agreed assignment period.",
+          "The consultant supports your team without a direct employment contract with your organisation. Where a matching consultant is available, the assignment can start immediately; otherwise we aim to start within two weeks. We confirm the start date for each assignment.",
+        ],
+      },
+      {
+        icon: "cog",
+        heading: "Finance Transformation Consultant",
+        paragraphs: [
+          "Bring finance and technology expertise into a defined transformation project. A Finance Transformation Consultant supports automation, SAP migration activities and finance process optimisation, connecting operational finance requirements with systems and reporting.",
+          "Engage the consultant for a three-to-six-month project, with deliverables and responsibilities agreed before work begins.",
+        ],
+      },
+    ],
   },
   targetAudience: {
     heading: "Who Is Finance Outsourcing & Contracting For?",

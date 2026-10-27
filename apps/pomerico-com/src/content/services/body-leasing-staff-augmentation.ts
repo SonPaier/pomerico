@@ -8,9 +8,9 @@ export const data: ServicePageData = {
   hero: {
     heading: "Body Leasing / Staff Augmentation",
     description:
-      "<p>Body Leasing is a <b>flexible service</b> where Pomerico assigns specialists from various fields - such as IT, HR, Finance or Marketing - to support your team. These experts can work <b>exclusively</b> for your company or on a flexible schedule, while remaining formally employed by Pomerico. This way, you avoid employment-related formalities and can quickly expand the delivery capacity of your project team.</p>",
+      "<p>Body Leasing is a <b>flexible service</b> where Pomerico assigns specialists from various fields - such as IT, HR, Finance, Mid Office or Marketing - to support your team. These experts can work <b>exclusively</b> for your company or on a flexible schedule, while remaining formally employed by Pomerico. This way, you avoid employment-related formalities and can quickly expand the delivery capacity of your project team.</p>",
     iconList: [
-      { bold: "Flexible talent deployment -", text: "Pomerico provides specialists on-demand across IT, HR, Finance, and Marketing to expand your team quickly." },
+      { bold: "Flexible talent deployment -", text: "Pomerico provides specialists on-demand across IT, HR, Finance, Mid Office and Marketing to expand your team quickly." },
       { bold: "Rapid project scaling -", text: "Experts work exclusively for your company on flexible schedules, enabling fast ramp-up of project capacity." },
       { bold: "Streamlined employment management -", text: "All employment, payroll, and compliance responsibilities are handled by Pomerico, letting your team focus on delivery." },
     ],

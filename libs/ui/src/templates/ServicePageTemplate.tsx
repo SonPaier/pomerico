@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { ServicePageData } from "@pomerico/content";
 import { HeroSection } from "../HeroSection";
 import { ServiceCardGrid } from "../ServiceCardGrid";
+import { ServiceDetailCard } from "../ServiceDetailCard";
 import { IconList } from "../IconList";
 import { CTASection } from "../CTASection";
 import { TestimonialCarousel } from "../TestimonialCarousel";
@@ -109,6 +110,13 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
           <div className="mx-auto max-w-7xl px-6">
             <SectionHeader heading={data.services.heading} />
             <ServiceCardGrid cards={data.services.cards} />
+            {data.services.items && data.services.items.length > 0 && (
+              <div className="mt-8 grid gap-8">
+                {data.services.items.map((item) => (
+                  <ServiceDetailCard key={item.heading} data={item} />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}

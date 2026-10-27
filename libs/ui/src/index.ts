@@ -17,6 +17,7 @@ export { QuickComparison } from "./QuickComparison";
 export { SectionHeader } from "./SectionHeader";
 export { ServiceCard } from "./ServiceCard";
 export { ServiceCardGrid } from "./ServiceCardGrid";
+export { ServiceDetailCard } from "./ServiceDetailCard";
 export { TaglineSection } from "./TaglineSection";
 export { TestimonialBlock } from "./TestimonialBlock";
 export { TestimonialCard } from "./TestimonialCard";

@@ -7,6 +7,8 @@ export type {
   Testimonial,
   HeroSection,
   ServiceCard,
+  ServiceDetail,
+  ServiceDetailIcon,
   CaseStudyCard,
   FAQItem,
   ProcessStep,
