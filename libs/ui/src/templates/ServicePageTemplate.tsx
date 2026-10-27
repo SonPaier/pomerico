@@ -111,11 +111,18 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
             <SectionHeader heading={data.services.heading} />
             <ServiceCardGrid cards={data.services.cards} />
             {data.services.items && data.services.items.length > 0 && (
-              <div className="mt-8 grid gap-8">
-                {data.services.items.map((item) => (
-                  <ServiceDetailCard key={item.heading} data={item} />
-                ))}
-              </div>
+              <>
+                {data.services.itemsHeading && (
+                  <div className="mt-20">
+                    <SectionHeader heading={data.services.itemsHeading} />
+                  </div>
+                )}
+                <div className={`grid gap-8 ${data.services.itemsHeading ? "" : "mt-8"}`}>
+                  {data.services.items.map((item) => (
+                    <ServiceDetailCard key={item.heading} data={item} />
+                  ))}
+                </div>
+              </>
             )}
           </div>
         </section>

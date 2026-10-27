@@ -31,8 +31,16 @@ export const data: ServicePageData = {
       { icon: "/images/icon-workflow-process-automation.png", heading: "AI and finance automation", description: "Support for finance and controlling improvements using AI, Python, SQL, RPA, Power Query, VBA, R and Power BI." },
       { icon: "/images/icon-shield-compliance-protection.png", heading: "Specialist insurance reporting", description: "Solvency II and Quantitative Reporting Templates (QRT), IFRS 9 and expected credit losses (ECL), investment portfolio control and intra-group reporting, and insurance premium tax (IPT) reporting across European countries." },
     ],
-    // Task 22: the next service goes first in this list
+    itemsHeading: "Financial Consultants in Poland",
     items: [
+      {
+        icon: "lightbulb",
+        heading: "Consulting in accounting, AI, AP/AR and controlling",
+        paragraphs: [
+          "Practical consulting and hands-on support for finance teams and accounting firms in accounting, AI-enabled improvements, Accounts Payable, Accounts Receivable and controlling, including an experienced accountant working directly with your team.",
+          "We review the agreed processes, identify improvement opportunities and define recommendations and implementation responsibilities.",
+        ],
+      },
       {
         icon: "users",
         heading: "Interim Finance Specialists",
@@ -48,6 +56,45 @@ export const data: ServicePageData = {
         paragraphs: [
           "Bring finance and technology expertise into a defined transformation project. A Finance Transformation Consultant supports automation, SAP migration activities and finance process optimisation, connecting operational finance requirements with systems and reporting.",
           "Engage the consultant for a three-to-six-month project, with deliverables and responsibilities agreed before work begins.",
+        ],
+      },
+      {
+        icon: "clipboard-list",
+        heading: "Project-based finance specialists",
+        paragraphs: [
+          "Engage a finance specialist or team for a defined project, such as a transition, transformation or system migration.",
+          "We agree the required expertise, project duration, deliverables and reporting with your organisation.",
+        ],
+      },
+      {
+        icon: "user-check",
+        heading: "Long-term finance specialists",
+        paragraphs: [
+          "Add a dedicated finance specialist or team for ongoing support in your finance processes.",
+          "Pomerico handles finance recruitment, employment and HR administration, while the scope, working hours and division of responsibilities are agreed with your organisation.",
+        ],
+      },
+      {
+        icon: "git-merge",
+        heading: "Transition and merger project delivery",
+        paragraphs: [
+          "Support for finance transitions and integration following mergers, including knowledge transfer, process takeover, AP/RTR harmonisation and handover.",
+          "We define the project scope, responsibilities and deliverables with your organisation.",
+        ],
+      },
+      {
+        icon: "file-warning",
+        heading: "Finance Exception Specialist On-Demand",
+        paragraphs: [
+          "Automated processing can leave finance teams with cases that need specialist investigation: disputed invoices, vendor-data errors, purchase order and goods-receipt mismatches, or cross-border invoices requiring manual reconciliation.",
+          "A Finance Exception Specialist investigates these cases, coordinates resolution with the relevant teams and documents recurring issues. The service provides ongoing support through an agreed recurring allocation of hours, with scope, reporting and escalation rules defined around your workload.",
+        ],
+      },
+      {
+        icon: "handshake",
+        heading: "HR Business Partner support for finance teams",
+        paragraphs: [
+          "Engage HR Business Partner support for your finance team, with the people-related scope, responsibilities and cooperation with your internal HR function agreed for the assignment.",
         ],
       },
     ],

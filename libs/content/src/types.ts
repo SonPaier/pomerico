@@ -56,7 +56,15 @@ export interface ServiceCard {
 }
 
 /** Icon names available in ServiceDetailCard */
-export type ServiceDetailIcon = "users" | "cog";
+export type ServiceDetailIcon =
+  | "users"
+  | "cog"
+  | "lightbulb"
+  | "clipboard-list"
+  | "user-check"
+  | "git-merge"
+  | "file-warning"
+  | "handshake";
 
 export interface ServiceDetail {
   icon: ServiceDetailIcon;
@@ -97,6 +105,8 @@ export interface ServicePageData {
   services?: {
     heading: string;
     cards: ServiceCard[];
+    /** Optional H2 shown above the service descriptions */
+    itemsHeading?: string;
     /** Service descriptions listed below the cards */
     items?: ServiceDetail[];
   };
