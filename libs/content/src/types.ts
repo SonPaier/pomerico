@@ -84,6 +84,11 @@ export interface ServicePageData {
   metaDescription: string;
   hero: HeroSection;
   benefits: ServiceCard[];
+  /** Service cards shown directly below Benefits */
+  services?: {
+    heading: string;
+    cards: ServiceCard[];
+  };
   /** "Who is this for?" */
   targetAudience?: {
     heading: string;

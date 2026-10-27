@@ -103,6 +103,16 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
         </section>
       )}
 
+      {/* Services */}
+      {data.services && data.services.cards.length > 0 && (
+        <section className="bg-gray-bg py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <SectionHeader heading={data.services.heading} />
+            <ServiceCardGrid cards={data.services.cards} />
+          </div>
+        </section>
+      )}
+
       {/* Target Audience */}
       {data.targetAudience && (
         <TargetAudienceSection

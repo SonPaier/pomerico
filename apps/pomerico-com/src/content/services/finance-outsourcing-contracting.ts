@@ -8,7 +8,7 @@ export const data: ServicePageData = {
   hero: {
     heading: "Finance Outsourcing & Contracting",
     description:
-      "<p><b>Reduce costs. Increase accuracy. Focus on what drives your business.</b></p><p>Pomerico provides end-to-end finance outsourcing and financial contracting services, helping companies streamline their accounting, controlling and financial operations with full compliance, transparency and measurable efficiency.</p><p>We take over the processes that slow down your organization - from bookkeeping and reporting to controlling, payroll integration and operational finance - so your teams can focus entirely on strategy, growth and profitability.<br/>Whether you need a dedicated financial expert (on-contract) or a fully managed finance department, Pomerico delivers the right specialists, at the right cost, with guaranteed compliance.</p>",
+      "<p><b>Reduce costs. Increase accuracy. Focus on what drives your business.</b></p><p>Pomerico Group provides specialist finance outsourcing in Poland, finance contracting and finance consultants for international companies and shared service centres (SSCs). We support AP, AR, RTR, controlling and IFRS reporting, including SAP FI/CO finance workstreams, S/4HANA migrations and SSC transitions. Our team also supports AI-enabled improvements and finance process automation.</p>",
     iconList: [
       { bold: "Optimized financial operations -", text: "Pomerico manages accounting, controlling, payroll, and operational finance so your team can focus on strategy and growth." },
       { bold: "Faster financial outcomes -", text: "Dedicated financial experts deliver accurate results quickly, ensuring full transparency and efficiency." },
@@ -22,6 +22,16 @@ export const data: ServicePageData = {
     { icon: "/images/icon-target-bpo-outsourcing.png", heading: "Access to High-Level Experts", description: "Access experienced finance consultants and specialists in AP, AR, RTR, controlling and IFRS reporting, including SAP FI/CO, S/4HANA migrations and SSC transitions." },
     { icon: "/images/icon-checklist-compliance-audit.png", heading: "One Partner for Finance + HR + Payroll + Legal", description: "You eliminate vendor chaos. We manage financial processes, HR administration, payroll, tax matters and compliance - all under one roof." },
   ],
+  services: {
+    heading: "Finance Outsourcing Services in Poland",
+    cards: [
+      { icon: "/images/icon-checklist-task-management.png", heading: "AP / AR / RTR", description: "Accounts Payable within Procure-to-Pay (PTP / P2P), Accounts Receivable within Order-to-Cash (OTC / O2C), and Record-to-Report (RTR / R2R). Support includes invoices, reconciliations, payment runs, collections, intercompany accounting and period-end close." },
+      { icon: "/images/icon-gears-system-integration.png", heading: "SAP and SSC transitions", description: "SAP FI/CO and S/4HANA migration support, knowledge transfer, process takeover and post-migration operational setup. Experience includes AP/RTR harmonisation following mergers and testing Coupa, Ariba and OCR workflows." },
+      { icon: "/images/icon-chart-growth-scalability.png", heading: "Controlling and IFRS", description: "Budgeting, forecasting, variance analysis, cost allocation models and reporting under IFRS and local GAAP." },
+      { icon: "/images/icon-workflow-process-automation.png", heading: "AI and finance automation", description: "Support for finance and controlling improvements using AI, Python, SQL, RPA, Power Query, VBA, R and Power BI." },
+      { icon: "/images/icon-shield-compliance-protection.png", heading: "Specialist insurance reporting", description: "Solvency II and Quantitative Reporting Templates (QRT), IFRS 9 and expected credit losses (ECL), investment portfolio control and intra-group reporting, and insurance premium tax (IPT) reporting across European countries." },
+    ],
+  },
   targetAudience: {
     heading: "Who Is Finance Outsourcing & Contracting For?",
     description: "For companies that need accuracy, speed, expert support and predictable financial operations - without hiring internally. Finance Outsourcing & Contracting from Pomerico is designed for organizations that want to strengthen or scale their financial capabilities while keeping costs, risks and complexity low.",
