@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${baseUrl}/blog/accounts-payable-process-documentation`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/blog/accounts-payable-onboarding-mistakes`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/blog/polish-sscs-and-scandinavian-expectations`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/blog/recruiting-for-an-accounts-payable-team`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },

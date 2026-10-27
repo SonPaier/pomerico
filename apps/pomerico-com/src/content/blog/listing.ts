@@ -4,6 +4,17 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "accounts-payable-process-documentation",
+    title:
+      "Accounts Payable Process Documentation: Why a Good AP Procedure Is Worth Its Weight in Gold",
+    description:
+      "How to document Accounts Payable processes: write for first-timers, cover the exceptions, keep it short, organise supporting documents and stay SOX-ready.",
+    image: "/images/accounts-payable-process-documentation.webp",
+    date: "27/10/2026",
+    author: "Joanna Włodarczyk",
+    category: "Finance, Accounts Payable, Process Documentation",
+  },
+  {
     slug: "accounts-payable-onboarding-mistakes",
     title:
       "Accounts Payable Onboarding: 7 Mistakes to Avoid in a New Team Member's First Weeks",
