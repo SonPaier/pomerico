@@ -74,7 +74,7 @@ export const data: ServicePageData = {
     {
       quote: "The primary goal of our collaboration has been to enhance metrics in areas such as recruitment, sourcing and overall work efficiency. Pomerico Group excels in HR knowledge and organizational culture. Our experiences confirm that Pomerico Group is not only an expert but also a reliable partner who understands the challenges associated with organizational functioning. Their adeptness in identifying issues and crafting effective solutions ensures that collaborating with them is a guarantee of development. Despite not being a large company, they offer advantages through their flexibility, swift decision-making, and a genuine sense of care in working with you.",
       author: "Julia Kasparek-Guzik",
-      role: "COO",
+      role: "Director of Operations",
       company: "Datumo",
     },
   ],

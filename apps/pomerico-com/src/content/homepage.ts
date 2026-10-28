@@ -119,7 +119,7 @@ export const homepageTestimonials: Testimonial[] = [
     quote:
       "Pomerico Group excels in HR knowledge and organizational culture. Their adeptness in identifying issues and crafting effective solutions ensures that collaborating with them is a guarantee of development.",
     author: "Julia Kasparek-Guzik",
-    role: "COO",
+    role: "Director of Operations",
     company: "Datumo",
   },
   {

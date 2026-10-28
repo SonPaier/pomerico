@@ -42,9 +42,9 @@ export const data: IndustryPageData = {
   testimonials: [
     {
       quote: "At Datumo, we specialize in the Big Data and Cloud domain, offering services to renowned American companies, including those based in New York. We are pleased to confirm our collaboration with Pomerico Group, serving as our outsourcing services provider. The primary goal of our collaboration has been to enhance metrics in areas such as recruitment, sourcing and overall work efficiency. Pomerico Group excels in HR knowledge and organizational culture. Our experiences confirm that Pomerico Group is not only an expert but also a reliable partner who understands the challenges associated with organizational functioning.",
-      author: "Julia Kasparek",
+      author: "Julia Kasparek-Guzik",
       role: "Director of Operations",
-      company: "DATUMO",
+      company: "Datumo",
     },
   ],
 };

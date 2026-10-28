@@ -20,7 +20,8 @@ export const data: CaseStudyPageData = {
     quote:
       "The primary goal of our collaboration has been to enhance metrics in areas such as recruitment, sourcing and overall work efficiency. Pomerico Group excels in HR knowledge and organizational culture. Our experiences confirm that Pomerico Group is not only an expert but also a reliable partner who understands the challenges associated with organizational functioning. Their adeptness in identifying issues and crafting effective solutions ensures that collaborating with them is a guarantee of development. Despite not being a large company, they offer advantages through their flexibility, swift decision-making, and a genuine sense of care in working with you.",
     author: "Julia Kasparek-Guzik",
-    role: "COO",
+    role: "Director of Operations",
+    company: "Datumo",
   },
 
   goal: `<p><strong>Duration:</strong> Over 12 months<br /><strong>Scope:</strong> HR -- recruitment, employer branding, organizational structures, management, motivation</p>
@@ -81,9 +82,5 @@ export const data: CaseStudyPageData = {
 <li>A standardized onboarding and performance evaluation process was implemented.</li>
 <li>Clear HR KPIs were defined and adopted, allowing Datumo to measure efficiency and profitability of HR processes.</li>
 <li>Employer branding was significantly strengthened, especially among Mid and Senior-level specialists.</li>
-</ul>
-<blockquote>
-<p>"The primary goal of our collaboration has been <b>to enhance metrics</b> in areas such as recruitment, sourcing and overall work efficiency. Pomerico Group <b>excels in HR knowledge</b> and organizational culture. Our experiences confirm that Pomerico Group is not only an expert but also a <b>reliable partner</b> who understands the challenges associated with organizational functioning. Their adeptness in identifying issues and crafting effective solutions ensures that collaborating with them is a guarantee of development. Despite not being a large company, they offer <b>advantages through their flexibility</b>, swift decision-making, and a genuine sense of care in working with you."</p>
-<p><b>Julia Kasparek-Guzik</b>, COO</p>
-</blockquote>`,
+</ul>`,
 };

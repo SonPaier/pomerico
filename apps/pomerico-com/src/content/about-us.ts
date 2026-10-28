@@ -55,7 +55,7 @@ export const aboutTestimonials = [
     quote:
       "Pomerico is not only an expert but also a reliable partner who understands business challenges.",
     author: "Julia Kasparek-Guzik",
-    role: "COO",
+    role: "Director of Operations",
     company: "Datumo",
   },
   {
