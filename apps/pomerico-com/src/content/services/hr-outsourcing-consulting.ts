@@ -4,11 +4,11 @@ export const data: ServicePageData = {
   slug: "hr-outsourcing-consulting",
   title: "HR Outsourcing & Consulting",
   metaDescription:
-    "Transform your HR operations in Poland with Pomerico's outsourcing and consulting services. Streamline hiring, payroll, and compliance. Book a free call.",
+    "HR outsourcing in Poland: HR consulting, interim HR, payroll coordination, offboarding and outplacement for international companies. Book a free call.",
   hero: {
     heading: "HR Outsourcing & Consulting",
     description:
-      "<p><b>Build stronger teams, transform your HR</b> processes and hire with confidence.<br/>Pomerico provides end-to-end HR consulting, interim HR leadership and HR contracting, helping organizations optimize people operations, improve performance and strengthen talent acquisition.</p><p>Whether you need <b>strategic HR expertise</b>, temporary HR support, or a dedicated HR specialist working inside your company \u2013 <b>we deliver</b> the knowledge, processes and tools that accelerate growth and reduce operational risks.</p>",
+      "<p><b>Build stronger teams, transform your HR</b> processes and hire with confidence.<br/>Pomerico provides end-to-end <b>HR outsourcing in Poland</b>: HR consulting, interim HR leadership and HR contracting – covering the full employee lifecycle, from hiring and onboarding to offboarding and outplacement. We help organizations optimize people operations, improve performance and strengthen talent acquisition.</p><p>Whether you need <b>strategic HR expertise</b>, temporary HR support, or a dedicated HR specialist working inside your company \u2013 <b>we deliver</b> the knowledge, processes and tools that accelerate growth and reduce operational risks.</p>",
     iconList: [
       { bold: "Optimized HR operations -", text: "Pomerico manages HR processes, payroll, and compliance so your team can focus on strategic initiatives." },
       { bold: "Faster talent acquisition -", text: "Access top candidates quickly with our interim HR support, consulting, and contracting solutions." },
@@ -52,6 +52,7 @@ export const data: ServicePageData = {
       { bold: "Companies looking for temporary or project-based HR specialists -", text: "For moments when you need HR power now: maternity covers, burnout in the HR team, peak hiring, transformation projects." },
       { bold: "Firms scaling teams across IT, Finance, Operations or Sales -", text: "We build hiring and onboarding processes that prevent bottlenecks and hiring failures." },
       { bold: "Leaders who want strategic HR, not reactive HR -", text: "Pomerico helps define: people strategy, leadership frameworks, performance systems, development & succession paths." },
+      { bold: "Companies restructuring, downsizing or closing a site in Poland -", text: "We plan and run the people side of the change: compliant offboarding, clear communication and outplacement services that protect your employer brand and the morale of the team that stays." },
     ],
   },
   tagline: {
@@ -122,5 +123,9 @@ export const faqItems: FAQItem[] = [
   {
     question: "How can HR consulting improve recruitment quality and reduce mis-hiring costs?",
     answer: "Pomerico uses behavioural profiling, competency matrices, culture-fit analysis and structured interviews, significantly increasing hiring accuracy and reducing the cost of wrong hires."
+  },
+  {
+    question: "Do you offer offboarding and outplacement services in Poland?",
+    answer: "Yes. Pomerico runs offboarding and outplacement as part of its HR outsourcing services in Poland. We handle single departures and larger restructuring projects – from exit documentation and transition process management to final settlement with payroll and exit interviews. For redundancies, we prepare the communication plan, support managers and provide outplacement programmes that help departing employees find new roles faster."
   },
 ];
