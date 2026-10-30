@@ -11,6 +11,7 @@ import { SectionHeader } from "@pomerico/ui";
 import { ProcessSection } from "@pomerico/ui";
 import { TaglineSection } from "@pomerico/ui";
 import { Breadcrumbs } from "@pomerico/ui";
+import { FaqJsonLd } from "@pomerico/ui";
 import { clutchBadge } from "@/content/shared";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
@@ -151,6 +152,7 @@ export default function Page() {
               Frequently Asked Questions
             </h2>
           </div>
+          <FaqJsonLd items={faqItems} />
           <Accordion items={faqItems} defaultOpen={0} />
         </div>
       </section>

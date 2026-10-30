@@ -12,6 +12,7 @@ import { ProcessSection } from "../ProcessSection";
 import { TaglineSection } from "../TaglineSection";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { Accordion } from "../Accordion";
+import { FaqJsonLd } from "../FaqJsonLd";
 import type { CaseStudyCard } from "@pomerico/content";
 
 function TargetAudienceSection({
@@ -226,6 +227,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
                 Frequently Asked Questions
               </h2>
             </div>
+            <FaqJsonLd items={faqItems} />
             <Accordion items={faqItems} defaultOpen={0} />
           </div>
         </section>

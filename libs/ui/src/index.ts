@@ -10,6 +10,7 @@ export { ComparisonTable } from "./ComparisonTable";
 export { ContactInfo } from "./ContactInfo";
 export { CTASection } from "./CTASection";
 export { DecisionCards } from "./DecisionCards";
+export { FaqJsonLd } from "./FaqJsonLd";
 export { HeroSection } from "./HeroSection";
 export { IconList } from "./IconList";
 export { ProcessSection } from "./ProcessSection";

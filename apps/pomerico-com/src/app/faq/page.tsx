@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Accordion } from "@pomerico/ui/client";
+import { FaqJsonLd } from "@pomerico/ui";
 
 export const metadata: Metadata = {
   title: "FAQ – HR Outsourcing & BPO Questions Answered",
@@ -17,32 +18,10 @@ import { ImageCarousel } from "@pomerico/ui/client";
 import { clientLogos } from "@/content/shared";
 import { faqHero, faqItems } from "@/content/faq";
 
-function FAQJsonLd() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer.replace(/<[^>]*>/g, ""),
-      },
-    })),
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-    />
-  );
-}
-
 export default function FAQPage() {
   return (
     <>
-      <FAQJsonLd />
+      <FaqJsonLd items={faqItems} />
       {/* Hero */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">

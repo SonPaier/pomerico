@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import type { FAQItem } from "@pomerico/content";
 
 export function AccordionIcon({
@@ -58,13 +58,15 @@ function AccordionItem({
   isOpen,
   onToggle,
   variant,
-  index,
+  buttonId,
+  panelId,
 }: {
   item: FAQItem;
   isOpen: boolean;
   onToggle: () => void;
   variant: "light" | "dark";
-  index: number;
+  buttonId: string;
+  panelId: string;
 }) {
   const borderColor = variant === "dark" ? "border-white/20" : "border-gray-200";
   const questionColor = variant === "dark" ? "text-white" : "text-dark";
@@ -73,27 +75,28 @@ function AccordionItem({
   return (
     <div className={`border-b ${borderColor}`}>
       <button
-        id={`accordion-button-${index}`}
+        id={buttonId}
+        type="button"
         onClick={onToggle}
         className="flex w-full items-center justify-between py-5 text-left"
         aria-expanded={isOpen}
-        aria-controls={`accordion-panel-${index}`}
+        aria-controls={panelId}
       >
         <span className={`font-heading pr-4 text-base font-bold ${questionColor}`}>
           {item.question}
         </span>
         <AccordionIcon isOpen={isOpen} variant={variant} />
       </button>
-      {isOpen && (
-        <div
-          id={`accordion-panel-${index}`}
-          role="region"
-          aria-labelledby={`accordion-button-${index}`}
-          className={`pb-5 text-sm leading-relaxed ${answerColor}`}
-        >
-          <div dangerouslySetInnerHTML={{ __html: item.answer }} />
-        </div>
-      )}
+      {/* Always rendered so every answer is in the server HTML; closed panels are only `hidden`. */}
+      <div
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
+        hidden={!isOpen}
+        className={`pb-5 text-sm leading-relaxed ${answerColor}`}
+      >
+        <div dangerouslySetInnerHTML={{ __html: item.answer }} />
+      </div>
     </div>
   );
 }
@@ -106,6 +109,7 @@ interface AccordionProps {
 
 export function Accordion({ items, defaultOpen = 0, variant = "light" }: AccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(defaultOpen);
+  const idPrefix = useId();
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -116,7 +120,8 @@ export function Accordion({ items, defaultOpen = 0, variant = "light" }: Accordi
           isOpen={openIndex === i}
           onToggle={() => setOpenIndex(openIndex === i ? null : i)}
           variant={variant}
-          index={i}
+          buttonId={`${idPrefix}-button-${i}`}
+          panelId={`${idPrefix}-panel-${i}`}
         />
       ))}
     </div>
