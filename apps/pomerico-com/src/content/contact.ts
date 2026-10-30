@@ -1,3 +1,5 @@
+import { phones } from "./shared";
+
 export const contactHero = {
   heading: "Contact Pomerico – Free HR Outsourcing Consultation",
   description:
@@ -6,8 +8,8 @@ export const contactHero = {
 
 export const contactDetails = {
   phones: [
-    { label: "DK: +45 92 45 39 27", href: "tel:+4592453927", flag: "dk" },
-    { label: "PL: +48 794 165 506", href: "tel:+48794165506", flag: "pl" },
+    { label: `DK: ${phones.dk.display}`, href: phones.dk.href, flag: "dk" },
+    { label: `PL: ${phones.pl.display}`, href: phones.pl.href, flag: "pl" },
   ],
   emails: [
     { label: "For job seekers", address: "recruitment@pomerico.com" },

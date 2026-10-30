@@ -23,6 +23,17 @@ export const trustImageCompact = "/images/pomerico-trusted-partner-badges-compac
 /** Clutch badge */
 export const clutchBadge = "/images/clutch-verified-partner-badge.png";
 
+// ── Company phone numbers ────────────────────────────────
+
+/**
+ * Single source for company phone numbers (header, contact blocks, /contact, JSON-LD).
+ * public/llms.txt is static and must be updated by hand when a number changes.
+ */
+export const phones = {
+  dk: { display: "+45 92 45 39 27", href: "tel:+4592453927", schema: "+45-92-45-39-27" },
+  pl: { display: "+48 794 165 506", href: "tel:+48794165506", schema: "+48-794-165-506" },
+};
+
 // ── Primary contact person ───────────────────────────────
 
 export const contactWiktoria: ContactPerson = {
@@ -30,8 +41,8 @@ export const contactWiktoria: ContactPerson = {
   role: "HR Project & Operations Manager",
   availability: "Mon–Fri, 9:00–17:00 CET",
   phones: [
-    { label: "+45 92 45 39 27", href: "tel:+4592453927" },
-    { label: "+48 794 165 506", href: "tel:+48794165506" },
+    { label: phones.dk.display, href: phones.dk.href },
+    { label: phones.pl.display, href: phones.pl.href },
   ],
   email: {
     label: "consult@pomerico.com",

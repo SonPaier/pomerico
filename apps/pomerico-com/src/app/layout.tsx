@@ -10,6 +10,7 @@ import {
   companyLinkedin,
   clutchBadge,
   contactWiktoria,
+  phones,
 } from "@/content/shared";
 import {
   footerCompanyLinks,
@@ -154,13 +155,22 @@ export default function RootLayout({
                     postalCode: "80-755",
                     addressCountry: "PL",
                   },
-                  contactPoint: {
-                    "@type": "ContactPoint",
-                    telephone: "+48-794-165-506",
-                    email: "wiktoria.wierzbicka@pomerico.com",
-                    contactType: "sales",
-                    availableLanguage: ["English", "Polish", "Danish"],
-                  },
+                  contactPoint: [
+                    {
+                      "@type": "ContactPoint",
+                      telephone: phones.pl.schema,
+                      email: "wiktoria.wierzbicka@pomerico.com",
+                      contactType: "sales",
+                      availableLanguage: ["English", "Polish", "Danish"],
+                    },
+                    {
+                      "@type": "ContactPoint",
+                      telephone: phones.dk.schema,
+                      contactType: "sales",
+                      areaServed: "DK",
+                      availableLanguage: "English",
+                    },
+                  ],
                   sameAs: [
                     "https://www.linkedin.com/company/pomerico/",
                     "https://www.facebook.com/pomericogroup/",
@@ -195,8 +205,8 @@ export default function RootLayout({
           ctaLabelMobile="CONSULTATION"
           ctaHref="/contact#book-consultation"
           topBarPhones={[
-            { label: "DK", number: "+45 92 45 39 27" },
-            { label: "PL", number: "+48 794 165 506" },
+            { label: "DK", number: phones.dk.display },
+            { label: "PL", number: phones.pl.display },
           ]}
           topBarEmail="office@pomerico.com"
         />
