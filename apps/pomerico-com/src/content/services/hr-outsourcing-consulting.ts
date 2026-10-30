@@ -40,6 +40,11 @@ export const data: ServicePageData = {
         heading: "HR Contracting (Interim / On-Demand HR)",
         description: "HR Generalist / HRBP on contract. Talent Acquisition on contract. Temporary HR support for scaling. Full HR function externally managed. Maternity leave coverage. Project-based HR roles. Interim HR Specialist employed by Pomerico. Mid Office specialists on contract.",
       },
+      {
+        icon: "/images/icon-handshake-partnership.png",
+        heading: "Offboarding & Outplacement",
+        description: "Structured offboarding as part of our HR outsourcing in Poland: notice and exit documentation in line with Polish labour law, transition process management, equipment and system-access checklists, final settlement coordinated with payroll. Exit interviews with reporting on why people leave. Restructuring support: redundancy planning, communication plans and preparing managers for difficult conversations. Outplacement programmes for departing employees: career counselling, CV and LinkedIn support, interview preparation and active job-market support.",
+      },
     ],
   },
   targetAudience: {
@@ -52,7 +57,7 @@ export const data: ServicePageData = {
       { bold: "Companies looking for temporary or project-based HR specialists -", text: "For moments when you need HR power now: maternity covers, burnout in the HR team, peak hiring, transformation projects." },
       { bold: "Firms scaling teams across IT, Finance, Operations or Sales -", text: "We build hiring and onboarding processes that prevent bottlenecks and hiring failures." },
       { bold: "Leaders who want strategic HR, not reactive HR -", text: "Pomerico helps define: people strategy, leadership frameworks, performance systems, development & succession paths." },
-      { bold: "Companies restructuring, downsizing or closing a site in Poland -", text: "We plan and run the people side of the change: compliant offboarding, clear communication and outplacement services that protect your employer brand and the morale of the team that stays." },
+      { bold: "Companies needing offboarding and outplacement support -", text: "When restructuring, downsizing or closing a site in Poland, we plan and run the people side of the change: compliant exits, clear communication and outplacement programmes that protect your employer brand and the morale of the team that stays." },
     ],
   },
   tagline: {
