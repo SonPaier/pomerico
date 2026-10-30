@@ -10,25 +10,33 @@ function AnimatedCounter({
   item: CounterItem;
   variant: "light" | "dark";
 }) {
-  const [count, setCount] = useState(0);
+  // Server HTML (and crawlers) get the final value; the count-up from 0 only runs in the browser.
+  const [count, setCount] = useState(item.value);
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    // Already on screen at mount: keep the final value instead of flashing back to 0.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) return;
+
+    setCount(0);
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !started) {
+        if (entry.isIntersecting) {
           setStarted(true);
+          observer.disconnect();
         }
       },
       { threshold: 0.3 },
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [started]);
+  }, []);
 
   useEffect(() => {
     if (!started) return;
