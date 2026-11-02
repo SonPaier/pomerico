@@ -66,7 +66,6 @@ export const clientLogos: ClientLogo[] = [
   { src: "/images/dachser-logistics-logo.png", alt: "Dachser Logistics" },
   { src: "/images/wp-holding-logo.png", alt: "WP Holding" },
   { src: "/images/datumo-logo.png", alt: "Datumo" },
-  { src: "/images/fairplay-towage-logo.png", alt: "Fairplay Towage" },
   { src: "/images/babord-logo.png", alt: "Babord" },
   { src: "/images/thai-union-logo.png", alt: "Thai Union" },
   { src: "/images/vanderlande-logo.png", alt: "Vanderlande" },
