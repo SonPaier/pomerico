@@ -56,7 +56,7 @@ export const data: ServicePageData = {
       quote: "Pomerico stands out for their reliability and efficiency thanks to which I know I can fully trust them in cooperation. Their effectiveness in HR, marketing and other strategic areas deserves recognition and is the reason for the impressive quality of their services. They're the best company that I've ever had the pleasure to work with in the sector. Highly recommended.",
       author: "Mikołaj Piec",
       role: "Owner",
-      company: "Meta Automatic",
+      company: "Mera Automatic",
     },
   ],
   caseStudySlugs: [
