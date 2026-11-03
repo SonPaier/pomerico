@@ -202,9 +202,9 @@ export const data: ServicePageData = {
   slug: "peo-professional-employer-organization",
   title: "PEO - Professional Employer Organization",
   metaDescription:
-    "Use Pomerico's PEO services to hire employees in Poland legally and compliantly. Reduce risk, cut admin overhead, and scale your team. Contact us today.",
+    "PEO in Poland: hire legally while you keep control of daily work. Pomerico handles HR administration, payroll and compliance. Scale your team safely.",
   hero: {
-    heading: "PEO - Professional Employer Organization",
+    heading: "PEO – Professional Employer Organization in Poland",
     description:
       "<p><b>Hire globally. Legally. With less risk. And zero complexity.</b></p><p>As your PEO partner, Pomerico takes over all employment-related responsibilities - payroll, HR administration, taxes, compliance, onboarding and employee documentation. <b>You manage the work and goals. We take care of everything else.</b></p><p>This is the fastest and safest way to hire employees in Poland or remotely in other markets <b>without setting up a legal entity and without dealing with local bureaucracy or compliance risks.</b></p>",
     iconList: [

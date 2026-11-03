@@ -4,9 +4,9 @@ export const data: ServicePageData = {
   slug: "finance-outsourcing-contracting",
   title: "Finance Outsourcing & Contracting",
   metaDescription:
-    "Outsource finance and accounting to Poland with Pomerico Group. Cut costs, boost accuracy, and stay compliant. Get a free BPO consultation today.",
+    "Finance outsourcing in Poland: AP/AR, controlling and IFRS teams, interim finance specialists and finance consultants for international companies.",
   hero: {
-    heading: "Finance Outsourcing & Contracting",
+    heading: "Finance Outsourcing & Contracting in Poland",
     description:
       "<p><b>Reduce costs. Increase accuracy. Focus on what drives your business.</b></p><p>Pomerico Group provides specialist finance outsourcing in Poland, finance contracting and finance consultants for international companies and shared service centres (SSCs). We support AP, AR, RTR, controlling and IFRS reporting, including SAP FI/CO finance workstreams, S/4HANA migrations and SSC transitions. Our team also supports AI-enabled improvements and finance process automation.</p><p>Our finance consultants have experience supporting, among others, Nordic (Denmark, Sweden, Norway) and German markets, including cross-border transactions and international invoices.</p>",
     iconList: [

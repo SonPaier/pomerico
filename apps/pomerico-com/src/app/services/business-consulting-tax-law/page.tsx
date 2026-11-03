@@ -81,12 +81,19 @@ const situationCards = [
   },
 ];
 
+const metaTitle = "Business Consulting, Tax & Law in Poland | Pomerico";
+
 export const metadata: Metadata = {
-  title: data.title,
+  title: { absolute: metaTitle },
   description: data.metaDescription,
   alternates: { canonical: "/services/business-consulting-tax-law" },
   openGraph: {
-    title: data.title,
+    title: metaTitle,
+    description: data.metaDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: metaTitle,
     description: data.metaDescription,
   },
 };

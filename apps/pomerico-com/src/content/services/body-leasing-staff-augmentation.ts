@@ -4,9 +4,9 @@ export const data: ServicePageData = {
   slug: "body-leasing-staff-augmentation",
   title: "Body Leasing / Staff Augmentation",
   metaDescription:
-    "Body Leasing is a flexible service where Pomerico assigns specialists from various fields - such as IT, HR, Finance or Marketing - to support your team.",
+    "Staff augmentation in Poland: Pomerico employs finance, HR, IT and marketing specialists who work in your team. Flexible scaling, no long-term commitment.",
   hero: {
-    heading: "Body Leasing / Staff Augmentation",
+    heading: "Body Leasing / Staff Augmentation in Poland",
     description:
       "<p>Body Leasing is a <b>flexible service</b> where Pomerico assigns specialists from various fields - such as IT, HR, Finance, Mid Office or Marketing - to support your team. These experts can work <b>exclusively</b> for your company or on a flexible schedule, while remaining formally employed by Pomerico. This way, you avoid employment-related formalities and can quickly expand the delivery capacity of your project team.</p>",
     iconList: [

@@ -4,9 +4,9 @@ export const data: ServicePageData = {
   slug: "bpo-business-process-outsourcing",
   title: "BPO - Business Process Outsourcing",
   metaDescription:
-    "Pomerico's BPO service means taking full responsibility for selected operational processes within your company-such as HR, administration, finance, or IT support.",
+    "BPO in Poland: we take over finance, HR, administration and back-office processes with a dedicated team and manager. Fixed monthly fee, agreed KPIs.",
   hero: {
-    heading: "BPO - Business Process Outsourcing",
+    heading: "BPO – Business Process Outsourcing in Poland",
     description:
       "<p>Pomerico's BPO service means taking full responsibility for selected operational processes within your company-such as HR, administration, finance, or IT support. With this solution, you gain ready-to-use results without the need to engage your own internal resources. Pomerico provides a dedicated team of specialists, professional management, and guarantees delivery of agreed KPIs.</p>",
     iconList: [

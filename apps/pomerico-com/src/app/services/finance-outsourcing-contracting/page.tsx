@@ -5,12 +5,19 @@ import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { clutchBadge } from "@/content/shared";
 import { submitContactForm } from "@/app/actions/contact";
 
+const metaTitle = "Finance Outsourcing Poland – AP/AR & Controlling | Pomerico";
+
 export const metadata: Metadata = {
-  title: data.title,
+  title: { absolute: metaTitle },
   description: data.metaDescription,
   alternates: { canonical: "/services/finance-outsourcing-contracting" },
   openGraph: {
-    title: data.title,
+    title: metaTitle,
+    description: data.metaDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: metaTitle,
     description: data.metaDescription,
   },
 };

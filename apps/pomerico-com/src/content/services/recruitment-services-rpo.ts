@@ -4,9 +4,9 @@ export const data: ServicePageData = {
   slug: "recruitment-services-rpo",
   title: "Recruitment Services / RPO",
   metaDescription:
-    "Hire top talent faster with precision and without the cost of building an internal recruitment team. Pomerico provides high-accuracy recruitment and RPO.",
+    "Recruitment agency in Poland: recruitment process outsourcing (RPO), direct and executive search for finance, IT and engineering roles. Book a free call.",
   hero: {
-    heading: "Recruitment Services / RPO",
+    heading: "Recruitment Agency in Poland – RPO & Executive Search",
     description:
       "<p><b>Hire top talent faster. With precision. And without the cost of building an internal recruitment team.</b></p><p>Pomerico provides high-accuracy recruitment and RPO (Recruitment Process Outsourcing) for companies that want to scale teams, improve hiring quality and reach candidates unavailable on job boards.<br/>We combine behavioural profiling, technical verification and Direct Search methodologies to deliver specialists who perform – not only during interviews, but in real roles.</p><p>With RPO, Pomerico becomes your extended recruitment department: fully embedded in your processes, culture and business goals.</p>",
     iconList: [

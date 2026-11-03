@@ -11,7 +11,7 @@ export const data: ServicePageData & {
   slug: "nearshoring-in-poland",
   title: "Nearshoring in Poland",
   metaDescription:
-    "Build high-quality, cost-efficient teams in Poland-fast, safely and without operational complexity.",
+    "Nearshoring in Poland: build finance, HR and back-office teams in the EU, close to your time zone – cost-efficient and without operational complexity.",
   hero: {
     heading: "Nearshoring in Poland",
     description:

@@ -161,7 +161,7 @@ export const data: ServicePageData = {
   slug: "market-entry-in-poland",
   title: "Market Entry in Poland",
   metaDescription:
-    "Pomerico's Market Entry Poland service provides comprehensive support for foreign companies planning to establish operations in Poland.",
+    "Market entry in Poland: compare EOR with setting up a company in Poland and get legal, tax, HR and accounting support for your expansion.",
   hero: {
     heading: "Market Entry in Poland",
     description:

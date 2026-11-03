@@ -78,9 +78,9 @@ export const data: ServicePageData = {
   slug: "eor-employer-of-record",
   title: "EOR - Employer of Record",
   metaDescription:
-    "Hire in Poland and Europe - without opening a legal entity. Trusted by companies from Denmark, Germany, Netherlands and across the EU.",
+    "Employer of Record in Poland: hire without a Polish entity. Pomerico handles contracts, payroll and compliance. Employment outsourcing from 1 employee.",
   hero: {
-    heading: "EOR - Employer of Record",
+    heading: "EOR – Employer of Record in Poland",
     description:
       "<p><b>Hire in Poland and Europe - without opening a legal entity. Trusted by companies from Denmark, Germany, Netherlands and across the EU.</b></p><p>Pomerico acts as your official <b>Employer of Record</b> (EOR), enabling you to hire employees in Poland or across the EU quickly, legally and without establishing a local company.</p><p>You gain access to top talent while we manage all legal, HR, payroll and compliance responsibilities on your behalf.</p><p>With EOR, you focus on the work. We handle everything else - from employment contracts to monthly payroll and regulatory compliance.</p>",
     iconList: [

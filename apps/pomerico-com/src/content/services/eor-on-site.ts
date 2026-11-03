@@ -6,7 +6,7 @@ export const data: ServicePageData = {
   metaDescription:
     "Hire and manage on-site teams in Poland without a local entity. Pomerico's EOR on-site service handles payroll, compliance, and HR admin. Get a quote now.",
   hero: {
-    heading: "EOR + On-Site",
+    heading: "EOR + On-Site in Poland",
     description:
       "<p><b>Hire and manage onsite teams in Poland – without opening a local entity.</b></p><p>With EoR + Onsite, Pomerico enables international companies to legally employ and manage physical, on-location teams in Poland – <b>without creating a branch, subsidiary or legal structure.</b></p><p>We become the official employer, handle all compliance, payroll, HR and documentation, while you manage the work of your onsite staff directly at your chosen location.</p><p>This model is ideal for companies that need physical presence – operations, warehouses, production, R&amp;D, field specialists, local teams – but want to avoid legal, tax and HR complexity.</p>",
     iconList: [

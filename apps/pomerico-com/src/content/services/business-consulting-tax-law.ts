@@ -6,7 +6,7 @@ export const data: ServicePageData = {
   metaDescription:
     "Navigate Polish regulations with confidence. We secure your legal, tax and operational compliance \u2013 so you can scale safely.",
   hero: {
-    heading: "Business Consulting / Tax & Law",
+    heading: "Business Consulting / Tax & Law in Poland",
     description:
       "<p><b>Navigate Polish regulations with confidence. We secure your legal, tax and operational compliance \u2013 so you can scale safely.</b></p><p>Pomerico provides comprehensive business, tax and legal consulting for companies operating in Poland or entering the Polish market.<br/>We combine legal expertise, operational consulting and HR/payroll compliance to ensure your business runs smoothly, safely and cost-effectively-no matter its size or stage of growth.<br/>Whether you need legal oversight, tax clarity, entity setup, operational guidance or regulatory risk management, our experts guide you through every step.</p>",
     iconList: [
