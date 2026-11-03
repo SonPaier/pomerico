@@ -4,14 +4,20 @@ import { Accordion } from "@pomerico/ui/client";
 import { FaqJsonLd } from "@pomerico/ui";
 
 export const metadata: Metadata = {
-  title: "FAQ – HR Outsourcing & BPO Questions Answered",
+  title: { absolute: "FAQ – Outsourcing, BPO & EOR in Poland | Pomerico" },
   description:
-    "Find answers to common questions about Pomerico's HR outsourcing, BPO, EOR, recruitment, and business consulting services in Poland.",
+    "Answers about BPO, finance outsourcing, recruitment, EOR and HR outsourcing in Poland: costs, billing models, compliance and how fast cooperation starts.",
   alternates: { canonical: "/faq" },
   openGraph: {
-    title: "FAQ – HR Outsourcing & BPO Questions Answered",
+    title: "FAQ – Outsourcing, BPO & EOR in Poland | Pomerico",
     description:
-      "Find answers to common questions about Pomerico's HR outsourcing, BPO, EOR, recruitment, and business consulting services in Poland.",
+      "Answers about BPO, finance outsourcing, recruitment, EOR and HR outsourcing in Poland: costs, billing models, compliance and how fast cooperation starts.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ – Outsourcing, BPO & EOR in Poland | Pomerico",
+    description:
+      "Answers about BPO, finance outsourcing, recruitment, EOR and HR outsourcing in Poland: costs, billing models, compliance and how fast cooperation starts.",
   },
 };
 import { ImageCarousel } from "@pomerico/ui/client";

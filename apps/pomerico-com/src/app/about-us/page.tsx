@@ -4,14 +4,20 @@ import Image from "next/image";
 import { CTASection } from "@pomerico/ui";
 
 export const metadata: Metadata = {
-  title: "About Pomerico Group – HR Outsourcing Experts Since 2015",
+  title: { absolute: "About Pomerico – BPO & Recruitment Company in Gdańsk" },
   description:
-    "Since 2015, Pomerico Group provides end-to-end HR outsourcing, BPO, and business consulting for international companies in Poland. Meet our management team.",
+    "Founded in 2015 in Gdańsk as a recruitment agency, Pomerico Group is today a BPO and finance outsourcing partner for international companies in Poland.",
   alternates: { canonical: "/about-us" },
   openGraph: {
-    title: "About Pomerico Group – HR Outsourcing Experts Since 2015",
+    title: "About Pomerico – BPO & Recruitment Company in Gdańsk",
     description:
-      "Since 2015, Pomerico Group provides end-to-end HR outsourcing, BPO, and business consulting for international companies in Poland. Meet our management team.",
+      "Founded in 2015 in Gdańsk as a recruitment agency, Pomerico Group is today a BPO and finance outsourcing partner for international companies in Poland.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Pomerico – BPO & Recruitment Company in Gdańsk",
+    description:
+      "Founded in 2015 in Gdańsk as a recruitment agency, Pomerico Group is today a BPO and finance outsourcing partner for international companies in Poland.",
   },
 };
 import { TestimonialCarousel } from "@pomerico/ui/client";

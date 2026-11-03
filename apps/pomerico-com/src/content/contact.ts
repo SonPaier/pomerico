@@ -1,7 +1,7 @@
 import { phones } from "./shared";
 
 export const contactHero = {
-  heading: "Contact Pomerico – Free HR Outsourcing Consultation",
+  heading: "Contact Pomerico – Free Consultation",
   description:
     "Share your challenge and we\u2019ll design a solution around your business - not the other way around. Free consultation, no commitment, reply within 24 hours.",
 };

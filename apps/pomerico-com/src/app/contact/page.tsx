@@ -4,14 +4,20 @@ import { CTAForm } from "@pomerico/ui/client";
 import { submitContactForm } from "@/app/actions/contact";
 
 export const metadata: Metadata = {
-  title: "Contact Pomerico – Free HR Outsourcing Consultation",
+  title: { absolute: "Contact Pomerico – Gdańsk, Poland | Free Consultation" },
   description:
-    "Contact Pomerico Group for a free consultation on HR outsourcing, BPO, recruitment, and business consulting services in Poland.",
+    "Contact Pomerico in Gdańsk for a free consultation on BPO, finance outsourcing, recruitment or EOR in Poland. We reply within 24 hours.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Pomerico – Free HR Outsourcing Consultation",
+    title: "Contact Pomerico – Gdańsk, Poland | Free Consultation",
     description:
-      "Contact Pomerico Group for a free consultation on HR outsourcing, BPO, recruitment, and business consulting services in Poland.",
+      "Contact Pomerico in Gdańsk for a free consultation on BPO, finance outsourcing, recruitment or EOR in Poland. We reply within 24 hours.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Pomerico – Gdańsk, Poland | Free Consultation",
+    description:
+      "Contact Pomerico in Gdańsk for a free consultation on BPO, finance outsourcing, recruitment or EOR in Poland. We reply within 24 hours.",
   },
 };
 import { ImageCarousel } from "@pomerico/ui/client";

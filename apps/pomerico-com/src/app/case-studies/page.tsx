@@ -10,14 +10,20 @@ import {
 } from "@/content/case-studies/listing";
 
 export const metadata: Metadata = {
-  title: "Case Studies – HR Outsourcing Success Stories",
+  title: { absolute: "Case Studies – Outsourcing & Recruitment in Poland | Pomerico" },
   description:
-    "Discover how Pomerico helps businesses across Europe build high-performing teams, enter new markets, and transform their HR operations.",
+    "How Pomerico delivered recruitment, EOR, market entry and HR projects for international companies in Poland – real results from our clients.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
-    title: "Case Studies – HR Outsourcing Success Stories",
+    title: "Case Studies – Outsourcing & Recruitment in Poland | Pomerico",
     description:
-      "Discover how Pomerico helps businesses across Europe build high-performing teams, enter new markets, and transform their HR operations.",
+      "How Pomerico delivered recruitment, EOR, market entry and HR projects for international companies in Poland – real results from our clients.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies – Outsourcing & Recruitment in Poland | Pomerico",
+    description:
+      "How Pomerico delivered recruitment, EOR, market entry and HR projects for international companies in Poland – real results from our clients.",
   },
 };
 

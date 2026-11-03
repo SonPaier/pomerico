@@ -23,12 +23,20 @@ import {
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 
 export const metadata: Metadata = {
-  title: "Pomerico - BPO | HR & Finance",
-  description: "Build effective teams with Pomerico Group. End-to-end HR outsourcing, BPO, EOR, recruitment, and business consulting for international companies in Poland.",
+  title: { absolute: "BPO & Finance Outsourcing in Poland | Pomerico" },
+  description:
+    "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Pomerico - BPO | HR & Finance",
-    description: "Build effective teams with Pomerico Group. End-to-end HR outsourcing, BPO, EOR, recruitment, and business consulting for international companies in Poland.",
+    title: "BPO & Finance Outsourcing in Poland | Pomerico",
+    description:
+      "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BPO & Finance Outsourcing in Poland | Pomerico",
+    description:
+      "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
   },
 };
 

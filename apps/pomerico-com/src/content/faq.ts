@@ -1,7 +1,7 @@
 import type { FAQItem } from "@pomerico/content";
 
 export const faqHero = {
-  heading: "Frequently Asked Questions About HR Outsourcing",
+  heading: "Frequently Asked Questions About Outsourcing in Poland",
   description:
     "Outsourcing or Business Process Outsourcing (BPO) means transferring selected business processes to Pomerico, where we take full responsibility for their execution. You can delegate HR, payroll, finance, IT support, administration, or even sales operations. Our clients gain ready-to-perform teams and processes without the need to build internal departments.",
 };

@@ -1,6 +1,6 @@
 # Pomerico Group
 
-> Pomerico Group is a Polish HR outsourcing and BPO company founded in 2015 in Gdańsk, Poland. We provide end-to-end HR outsourcing, BPO, EOR, recruitment and business consulting for international companies operating in Poland and across Europe.
+> Pomerico Group is a BPO and finance outsourcing partner based in Gdańsk, Poland. Since 2015 we provide finance teams, recruitment, EOR and HR outsourcing for international companies operating in Poland.
 
 ## Company Facts
 
@@ -25,17 +25,17 @@
 ## Services
 
 - BPO – Business Process Outsourcing: full takeover of HR, finance, IT, admin processes with dedicated teams and KPI delivery
-- PEO – Professional Employer Organization: co-employment model, client retains operational control, Pomerico handles HR admin and compliance
-- EOR – Employer of Record: Pomerico is sole legal employer, hire in Poland/EU without local entity setup
 - Finance Outsourcing & Contracting: accounting, controlling, payroll, operational finance with SAP/SQL/Python expertise
+- Recruitment Services / RPO: end-to-end recruitment, Direct Search, Executive Search, employer branding
+- EOR – Employer of Record: Pomerico is sole legal employer, hire in Poland/EU without local entity setup
+- EOR On-Site: Employer of Record with dedicated onsite management and remote team coordination
+- PEO – Professional Employer Organization: co-employment model, client retains operational control, Pomerico handles HR admin and compliance
 - Body Leasing / Staff Augmentation: flexible specialist deployment in IT, HR, Finance, Marketing
 - HR Outsourcing & Consulting: HR audits, competency matrices, interim HR leadership, HRBP contracting
-- Recruitment Services / RPO: end-to-end recruitment, Direct Search, Executive Search, employer branding
-- IT Contracting: developers, DevOps, data engineers, cloud engineers on flexible terms
 - Market Entry in Poland: legal, tax, HR, accounting and compliance support for companies entering the Polish market
 - Business Consulting / Tax & Law: Polish tax regulations, legal compliance, international expansion advisory
 - Nearshoring in Poland: dedicated teams operating in client's time zone at competitive rates
-- EOR On-Site: Employer of Record with dedicated onsite management and remote team coordination
+- IT Contracting: developers, DevOps, data engineers, cloud engineers on flexible terms
 
 ## Industries
 

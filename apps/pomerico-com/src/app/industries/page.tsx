@@ -6,14 +6,20 @@ import { Breadcrumbs } from "@pomerico/ui";
 import { industriesListingHero, allIndustryCards } from "@/content/industries/listing";
 
 export const metadata: Metadata = {
-  title: "Industries – HR Outsourcing Solutions by Sector",
+  title: { absolute: "Outsourcing & Recruitment in Poland by Industry | Pomerico" },
   description:
-    "Pomerico partners with companies across industries to build high-performing teams, streamline operations, and optimize processes.",
+    "Outsourcing and recruitment in Poland for banking & insurance, shared services, manufacturing, intralogistics and IT companies.",
   alternates: { canonical: "/industries" },
   openGraph: {
-    title: "Industries – HR Outsourcing Solutions by Sector",
+    title: "Outsourcing & Recruitment in Poland by Industry | Pomerico",
     description:
-      "Pomerico partners with companies across industries to build high-performing teams, streamline operations, and optimize processes.",
+      "Outsourcing and recruitment in Poland for banking & insurance, shared services, manufacturing, intralogistics and IT companies.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Outsourcing & Recruitment in Poland by Industry | Pomerico",
+    description:
+      "Outsourcing and recruitment in Poland for banking & insurance, shared services, manufacturing, intralogistics and IT companies.",
   },
 };
 

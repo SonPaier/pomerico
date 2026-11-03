@@ -1,5 +1,5 @@
 export const aboutUsHero = {
-  heading: "Effective teams. Complete outsourcing",
+  heading: "Your BPO & Finance Outsourcing Partner in Gdańsk",
   description: `<p>Since 2015, Pomerico Group has been supporting the dynamic growth of businesses – particularly <b>international clients</b> – by providing end-to-end outsourcing in Poland, strategic <b>Human Resource</b> management, and expert <b>Business Consulting</b>.</p>
 <p>With years of experience and a deep understanding of the needs of global organizations, we take over key business processes, enabling companies to focus on achieving their strategic goals and driving sustainable growth.</p>`,
   teamImage: "/images/wiktoria-wierzbicka-about-hero.jpg",

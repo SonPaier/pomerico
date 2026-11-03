@@ -37,17 +37,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://pomerico.com"),
   title: {
-    default: "Pomerico - BPO | HR & Finance",
+    default: "BPO & Finance Outsourcing in Poland | Pomerico",
     template: "%s | Pomerico Group",
   },
   description:
-    "We build effective teams. End-to-end HR outsourcing, BPO, EOR, recruitment and business consulting for international companies operating in Poland.",
+    "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
   keywords: [
-    "HR outsourcing Poland",
     "BPO Poland",
+    "finance outsourcing Poland",
+    "recruitment Poland",
     "EOR Poland",
     "employer of record",
-    "recruitment Poland",
+    "HR outsourcing Poland",
     "staff augmentation",
     "nearshoring Poland",
     "body leasing",
@@ -58,15 +59,15 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://pomerico.com",
     siteName: "Pomerico Group",
-    title: "Pomerico - BPO | HR & Finance",
+    title: "BPO & Finance Outsourcing in Poland | Pomerico",
     description:
-      "End-to-end HR outsourcing, BPO, EOR, recruitment and business consulting for international companies operating in Poland.",
+      "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pomerico - BPO | HR & Finance",
+    title: "BPO & Finance Outsourcing in Poland | Pomerico",
     description:
-      "End-to-end HR outsourcing, BPO, EOR, recruitment and business consulting for international companies operating in Poland.",
+      "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
   },
   alternates: {
     canonical: "/",
@@ -112,7 +113,7 @@ export default function RootLayout({
                     url: "https://pomerico.com/images/pomerico-group-logo.png",
                   },
                   description:
-                    "Pomerico Group is a Polish HR outsourcing and BPO company founded in 2015 in Gdańsk, providing end-to-end HR outsourcing, BPO, EOR, recruitment and business consulting for international companies operating in Poland.",
+                    "Pomerico Group is a BPO and finance outsourcing partner based in Gdańsk, Poland. Since 2015 we provide finance teams, recruitment, EOR and HR outsourcing for international companies operating in Poland.",
                   foundingDate: "2015",
                   foundingLocation: {
                     "@type": "Place",
@@ -131,14 +132,18 @@ export default function RootLayout({
                   },
                   slogan: "We build effective teams",
                   knowsAbout: [
-                    "HR outsourcing",
                     "Business Process Outsourcing",
-                    "Employer of Record",
+                    "finance outsourcing",
+                    "finance recruitment",
+                    "accounts payable and receivable (AP/AR)",
+                    "controlling",
                     "recruitment process outsourcing",
+                    "payroll services",
+                    "Employer of Record",
                     "staff augmentation",
+                    "HR outsourcing",
                     "nearshoring",
-                    "body leasing",
-                    "business consulting",
+                    "market entry in Poland",
                   ],
                   areaServed: [
                     { "@type": "Country", name: "Poland" },

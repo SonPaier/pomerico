@@ -7,14 +7,20 @@ import { ServiceComparisonTable } from "@pomerico/ui/client";
 import { servicesListingHero, allServiceCards } from "@/content/services/listing";
 
 export const metadata: Metadata = {
-  title: "HR Outsourcing & BPO Services in Poland",
+  title: { absolute: "Outsourcing Services in Poland – BPO, Finance, EOR | Pomerico" },
   description:
-    "Explore Pomerico's full range of HR outsourcing, BPO, EOR, recruitment, and consulting services in Poland. Build teams and scale operations. Get started today.",
+    "Outsourcing services in Poland: BPO, finance outsourcing, recruitment, payroll, Employer of Record and HR outsourcing. Compare cooperation models.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "HR Outsourcing & BPO Services in Poland",
+    title: "Outsourcing Services in Poland – BPO, Finance, EOR | Pomerico",
     description:
-      "Explore Pomerico's full range of HR outsourcing, BPO, EOR, recruitment, and consulting services in Poland. Build teams and scale operations. Get started today.",
+      "Outsourcing services in Poland: BPO, finance outsourcing, recruitment, payroll, Employer of Record and HR outsourcing. Compare cooperation models.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Outsourcing Services in Poland – BPO, Finance, EOR | Pomerico",
+    description:
+      "Outsourcing services in Poland: BPO, finance outsourcing, recruitment, payroll, Employer of Record and HR outsourcing. Compare cooperation models.",
   },
 };
 
