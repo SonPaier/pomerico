@@ -14,13 +14,13 @@ export const polishSscsAndScandinavianExpectations = {
   featuredImage: "/images/polish-sscs-and-scandinavian-expectations-featured.webp",
   featuredImageAlt:
     "Meeting room with a map of Europe and euro and złoty symbols on the wall",
-  content: `<p>When a Scandinavian company decides to open a shared services centre in Poland - or to outsource its finance and HR processes to a Polish partner - the first conversation usually revolves around costs.</p>
+  content: `<p>When a Scandinavian company decides to open a shared services centre in Poland - or to <a href="/services/finance-outsourcing-contracting">outsource its finance and HR processes</a> to a Polish partner - the first conversation usually revolves around costs.</p>
 <p>That is natural. The wage gap between Poland and Denmark, Sweden or Norway is still significant. The Polish economy, the office infrastructure in the Tricity (Gdańsk, Gdynia, Sopot), Kraków or Warsaw, access to an educated workforce with language skills - all of this sounds like a ready-made business case.</p>
 <p>But after several years of working at the interface between Polish operational teams and Scandinavian parent organisations, I see clearly: <strong>what determines the long-term success of this collaboration rarely shows up in the cost spreadsheet.</strong></p>
 <p>Culture is what determines it. More specifically - whether both sides understand that they work according to different assumptions about what good collaboration looks like.</p>
 
 <h2>What Scandinavia means by "Partner"</h2>
-<p>In the Danish, Swedish and Norwegian working model, partnership is not a word from a sales proposal. It is a description of the expected relationship between organisations.</p>
+<p>In the Danish, Swedish and Norwegian working model, partnership is not <a href="/blog/what-an-ssc-finance-manager-really-wants-to-hear">a word from a sales proposal</a>. It is a description of the expected relationship between organisations.</p>
 <p>This means several things that may not be obvious to Polish SSC teams at the outset:</p>
 <p><strong>Flat hierarchy on the client side.</strong> A Danish CFO does not expect the Polish side to approach them through intermediaries. A Swedish Finance Director will not build the relationship through a long escalation chain. A Norwegian company expects that the person doing the work can contact the decision-maker directly - without formal intermediation.</p>
 <p>The Polish organisational model can be different here. Accustomed to reporting hierarchies, Polish teams often wait for "authorisation" to speak with a more senior client representative. Scandinavians read this as a lack of engagement or a sign that something is being hidden.</p>
@@ -45,7 +45,7 @@ export const polishSscsAndScandinavianExpectations = {
 <p>It is worth saying plainly: Polish work culture brings elements to this collaboration that Scandinavians genuinely value.</p>
 <p><strong>Operational flexibility.</strong> Polish teams are used to working amid shifting priorities, non-standard requests and ad hoc processes. A Scandinavian company that wants to launch a new operation quickly or handle peak volumes will find in Poland a capacity for rapid action that it does not always have at home.</p>
 <p><strong>Language competence.</strong> Polish F&amp;A specialists with a command of English, Danish, Swedish or Norwegian are a real asset - and this is no coincidence. The Tricity in particular, with its history of ties to the Nordic market, produces professionals who are able to work within this culture.</p>
-<p><strong>High standards of technical expertise.</strong> Polish universities of economics and a dozen or so years of building the SSC ecosystem in Poland have produced a generation of finance professionals who understand end-to-end processes, know IFRS, and can work with systems such as SAP and Workday. This is not a "cheap resource". It is a competent resource at a lower price.</p>
+<p><strong>High standards of technical expertise.</strong> Polish universities of economics and a dozen or so years of building <a href="/industries/shared-services-bpo">the SSC ecosystem in Poland</a> have produced a generation of finance professionals who understand end-to-end processes, know IFRS, and can work with systems such as SAP and Workday. This is not a "cheap resource". It is a competent resource at a lower price.</p>
 
 <h2>How this translates into collaboration in practice</h2>
 <p>From what I observe, the organisations that are most successful at building a lasting Polish-Scandinavian relationship do several things together:</p>

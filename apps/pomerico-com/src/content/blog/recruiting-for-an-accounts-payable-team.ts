@@ -14,7 +14,7 @@ export const recruitingForAnAccountsPayableTeam = {
   featuredImageAlt: "Job interview for an Accounts Payable position",
   content: `<h2>Who I'm really looking for when recruiting for an Accounts Payable team</h2>
 <p>When recruiting new people, it's easy to notice that you instinctively look for the same words: "SAP", "Excel", "timely payments". But if you think about it - that isn't a list that tells me anything about the person. It's a list that only tells me what someone has learned. And after years of managing work in AP, I now know that technical skills are the easiest piece of this puzzle. The rest is much harder to spot on paper.</p>
-<p>So I decided to write down what I actually pay attention to when I recruit someone for a team responsible for payables. Not as a ready-made recipe, because there is no such thing, but as something that may be useful to other AP leaders - or to people wondering whether this career path is for them.</p>
+<p>So I decided to write down what I actually pay attention to when I <a href="/services/recruitment-services-rpo">recruit someone for a team responsible for payables</a>. Not as a ready-made recipe, because there is no such thing, but as something that may be useful to other AP leaders - or to people wondering whether this career path is for them.</p>
 
 <h2>Accuracy that isn't the same as perfectionism</h2>
 <p>At first glance, it seems that a good AP specialist has to be meticulous to a fault. And indeed - an error in a bank account number or an invoice amount can cost a company real money and real stress. But over time, I've learned to distinguish between two things: accuracy and perfectionism.</p>
@@ -41,7 +41,7 @@ export const recruitingForAnAccountsPayableTeam = {
 <p>Just as important as what I check is what I consciously don't treat as a requirement. I don't expect comprehensive experience in every area of AP - I'd rather have someone who has solid foundations and wants to grow than a person who knows everything but has no curiosity. Nor do I expect someone to be perfectly self-confident during the interview. Feeling stressed during the recruitment process is natural, and I'd rather see a genuine, slightly nervous person than a rehearsed presentation.</p>
 
 <h2>In closing</h2>
-<p>For me, recruiting for AP is a bit like putting together a team that has to safeguard the company's money, but also talk every day with people on both sides - inside and outside the organization. Gaps in technical skills can be closed. It's harder to develop accuracy combined with composure, integrity and a willingness to ask questions. And it's precisely these qualities that, after all these years, tell me whether a given person will do well on this team in the long run, or only for the first few months.</p>`,
+<p>For me, recruiting for AP is a bit like putting together a team that has to safeguard the company's money, but also talk every day with people on both sides - inside and outside the organization. <a href="/blog/accounts-payable-onboarding-mistakes">Gaps in technical skills can be closed</a>. It's harder to develop accuracy combined with composure, integrity and a willingness to ask questions. And it's precisely these qualities that, after all these years, tell me whether a given person will do well on this team in the long run, or only for the first few months.</p>`,
   faq: {
     title: "FAQ: recruiting for an Accounts Payable team",
     items: [

@@ -16,7 +16,7 @@ export const whatAnSscFinanceManagerReallyWantsToHear = {
   featuredImageAlt:
     "Two finance professionals reviewing documents in a modern office",
   content: `<p>I speak with finance managers regularly. Not just to tell them what Pomerico offers, but above all to understand the day-to-day reality of their work.</p>
-<p>After dozens of conversations like these with managers leading F&amp;A teams in Poland’s shared services centres - SSC, BSC, GBS - one thing stands out:</p>
+<p>After dozens of conversations like these with managers leading F&amp;A teams in <a href="/industries/shared-services-bpo">Poland’s shared services centres</a> - SSC, BSC, GBS - one thing stands out:</p>
 <p><strong>Most partnership discussions start in the wrong place. And both sides can sense it.</strong></p>
 <p>This article is an attempt to spell that out - without beating around the bush.</p>
 
@@ -51,7 +51,7 @@ export const whatAnSscFinanceManagerReallyWantsToHear = {
 
 <h2>What does this mean for a partnership with Pomerico?</h2>
 <p>I am not writing this article to claim that Pomerico does everything differently from its competitors. I am writing it because these principles are our starting point, not a goal we are still working towards.</p>
-<p>Before suggesting that we work together, we try to establish whether it makes sense in the first place. Not every SSC needs what we offer. The timing is not always right. And not every conversation should end with a proposal.</p>
+<p>Before suggesting that we work together, we try to establish whether it makes sense in the first place. Not every SSC needs <a href="/services/finance-outsourcing-contracting">what we offer</a>. The timing is not always right. And not every conversation should end with a proposal.</p>
 <p>But if you are a finance manager reading this and thinking, "That sounds like my last meeting with a provider." perhaps it is worth talking about what a different kind of conversation could look like.</p>`,
   faq: {
     title: "FAQ: working with SSC finance managers",

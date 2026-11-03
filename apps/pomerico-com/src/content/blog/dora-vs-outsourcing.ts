@@ -15,7 +15,7 @@ export const doraVsOutsourcing = {
 <p>The short answer is: yes, financial outsourcing still makes sense. But the conditions under which it should be carried out have changed significantly enough to deserve a thorough discussion — without marketing gloss and without creating unnecessary fear of bureaucracy. That is the purpose of this article.</p>
 
 <h2>1. What DORA is — and what it is not</h2>
-<p>DORA, the EU Regulation 2022/2554 on digital operational resilience for the financial sector, is a regulation aimed at harmonising ICT risk management rules across the European financial industry. It covers a very broad range of entities: banks, insurance companies, payment institutions, investment funds, crypto-asset service providers and — importantly — third-party ICT service providers supporting these entities.</p>
+<p>DORA, the EU Regulation 2022/2554 on digital operational resilience for the financial sector, is a regulation aimed at harmonising ICT risk management rules across the European financial industry. It covers a very broad range of entities: <a href="/industries/banking-insurance">banks, insurance companies</a>, payment institutions, investment funds, crypto-asset service providers and — importantly — third-party ICT service providers supporting these entities.</p>
 <p>The key point to understand at the outset is this: DORA is not a regulation that prohibits outsourcing. Quite the opposite — it assumes that financial institutions will use external providers and regulates how such cooperation should be managed.</p>
 <p>The centre of gravity of the regulation is primarily:</p>
 <ul>
@@ -92,7 +92,7 @@ export const doraVsOutsourcing = {
 </ul>
 
 <h2>7. A few words about how we approach this at Pomerico</h2>
-<p>At Pomerico, we have been building financial outsourcing models for European companies for years — including regulated entities operating in the financial sector. We know these questions well because they are asked by our clients: CFOs, Heads of Finance and Heads of Back Office who are looking for a partner capable of working in a regulated environment.</p>
+<p>At Pomerico, we have been building <a href="/services/finance-outsourcing-contracting">financial outsourcing models</a> for European companies for years — including regulated entities operating in the financial sector. We know these questions well because they are asked by our clients: CFOs, Heads of Finance and Heads of Back Office who are looking for a partner capable of working in a regulated environment.</p>
 <p>In practice, this means that our clients can expect from us, among other things:</p>
 <ul>
 <li>transparency regarding the ICT systems we use and our subcontracting chain,</li>

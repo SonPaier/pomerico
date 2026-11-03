@@ -36,7 +36,7 @@ export const accountsPayableProcessDocumentation = {
 <p>This approach has one more advantage. When people write procedures for their own tasks, they start noticing things they used to do on autopilot. Sometimes it turns out that a step isn't needed at all, or that two people do the same thing in two different ways.</p>
 
 <h2>Documentation is not a one-off project</h2>
-<p>The biggest trap is treating documentation as a project with an end date. Done, ticked off, forgotten. AP processes change along with systems, suppliers and regulations, so an instruction that isn't updated becomes more confusing than helpful within a year.</p>
+<p>The biggest trap is treating documentation as a project with an end date. Done, ticked off, forgotten. <a href="/services/bpo-business-process-outsourcing">AP processes</a> change along with systems, suppliers and regulations, so an instruction that isn't updated becomes more confusing than helpful within a year.</p>
 <p>What worked for us is a simple habit: whenever a process changes, the last step is updating the documentation – not a nice extra "when there's time". We also introduced a quarterly review of our instructions. Not to rewrite everything from scratch, but to check whether they still match reality.</p>
 
 <h2>Archiving is part of the process, not an add-on</h2>
