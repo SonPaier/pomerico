@@ -32,7 +32,7 @@ export const managementTeam: TeamMember[] = [
   },
   {
     name: "Wiktoria Wierzbicka",
-    role: "HR Project & Operations Manager, Psychologist",
+    role: "Project & Operations Manager, Psychologist",
     bio: "An experienced consultant and HR Business Partner specializing in managing HR projects for international clients. As a psychologist, she conducts and analyzes behavioral assessments, leads recruitment processes, and develops effective team management and employee motivation strategies. She focuses particularly on international recruitment in the finance and IT sectors and also co-manages the operational delivery of our projects, including consultant team management.",
     image: "/images/wiktoria-wierzbicka-operations-manager.webp",
     linkedin: "https://www.linkedin.com/in/wiktoriawierzbicka/",

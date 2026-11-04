@@ -123,7 +123,7 @@ export default function AboutUsPage() {
       {/* Mission / Vision / Values */}
       <section className="bg-gray-bg py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-10 lg:grid-cols-3">
+          <div className="grid gap-8 text-center md:grid-cols-3">
             {/* Mission */}
             <div>
               <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-blue">
@@ -132,9 +132,9 @@ export default function AboutUsPage() {
               <h2 className="mt-2 font-heading text-2xl font-bold text-dark">
                 Mission
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-dark/80">
+              <p className="mx-auto mt-4 max-w-[340px] text-justify text-sm leading-relaxed text-dark/80 hyphens-auto [text-align-last:center]">
                 With full commitment, we deliver <strong>flexible</strong> and{" "}
-                <strong>effective</strong> solutions tailored to our
+                <strong>effective</strong>{" "}solutions tailored to our
                 clients&apos; realities. We build long-term relationships based
                 on trust, transparent communication, and{" "}
                 <strong>responsibility</strong> — enabling our clients to
@@ -151,7 +151,7 @@ export default function AboutUsPage() {
               <h2 className="mt-2 font-heading text-2xl font-bold text-dark">
                 Vision
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-dark/80">
+              <p className="mx-auto mt-4 max-w-[340px] text-justify text-sm leading-relaxed text-dark/80 hyphens-auto [text-align-last:center]">
                 To be the partner of first choice for our clients in both
                 operational and strategic support — thanks to{" "}
                 <strong>our effectiveness and predictability</strong>. We create

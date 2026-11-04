@@ -119,7 +119,7 @@ export function TeamCarousel({ members, label, navLabel }: TeamCarouselProps) {
                   </a>
                 )}
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-dark/70">
+              <p className="mt-3 text-justify text-sm leading-relaxed text-dark/70 hyphens-auto">
                 {member.bio}
               </p>
             </div>
