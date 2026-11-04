@@ -212,14 +212,16 @@ export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, to
       {topBarPhones && topBarEmail && (
         <TopBar phones={topBarPhones} email={topBarEmail} />
       )}
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <Link href="/" className="shrink-0">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-6 py-3">
+        {/* On narrow phones the logo scales down so it never collides with
+            the CTA + menu buttons, which keep their full size. */}
+        <Link href="/" className="min-w-0 lg:shrink-0">
           <Image
             src={logo}
             alt="Pomerico Group"
             width={172}
             height={36}
-            className="h-9 w-auto max-w-[172px]"
+            className="h-auto w-full max-w-[172px] lg:h-9 lg:w-auto"
             loading="eager"
           />
         </Link>
@@ -238,10 +240,10 @@ export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, to
           <ArrowRightIcon stroke="white" />
         </Link>
 
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3 lg:hidden">
           <Link
             href={ctaHref}
-            className="min-h-[44px] rounded bg-primary-red px-4 py-2 font-ui text-xs font-semibold text-white flex items-center"
+            className="min-h-[44px] whitespace-nowrap rounded bg-primary-red px-3 py-2 font-ui text-xs font-semibold text-white flex items-center sm:px-4"
           >
             {ctaLabelMobile ?? ctaLabel}
           </Link>
