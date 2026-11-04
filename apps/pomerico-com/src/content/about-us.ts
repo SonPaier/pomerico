@@ -47,7 +47,7 @@ export const experts: Expert[] = [
   {
     name: "Joanna Włodarczyk",
     role: "Accounts Payable Manager",
-    bio: "An experienced finance professional with over nine years of experience in international Shared Service Centers, covering Accounts Payable and Record-to-Report. She has been involved in process transitions, process harmonization, and the creation of new teams. As part of her role, she nurtures strong relationships within the Accounts Payable team, provides expert support to colleagues, and introduces them to new solutions. She is also expanding her expertise in HR Projects and shares her expertise on the Pomerico blog.",
+    bio: "An experienced finance professional with over nine years of experience in international Shared Service Centers, covering Accounts Payable and Record-to-Report. She has been involved in process transitions, process harmonization, and the creation of new teams. As part of her role, she nurtures strong relationships within the Accounts Payable team, provides expert support to colleagues, and introduces them to new solutions.",
     image: "/images/joanna-wlodarczyk-expert.webp",
     linkedin: "https://www.linkedin.com/in/joanna-w%C5%82odarczyk-4b257b164",
   },
@@ -59,7 +59,7 @@ export const experts: Expert[] = [
   },
   {
     name: "Olga Zabieglik",
-    role: "Attorney-at-law",
+    role: "Legal Partner",
     bio: "Legal expert and attorney-at-law with over 25 years of experience in providing comprehensive legal advisory services to businesses. She specializes in commercial, corporate, and consumer law, with a strong focus on supporting companies in their day-to-day operations, contract negotiations, and legal risk management. Olga has extensive experience in EU funding acquisition, project management, and advising businesses on both domestic and international legal matters. She is a graduate of the University of Gdańsk and holds a Mastère Spécialisé in Financial Management from a Polish-French postgraduate program, combining legal expertise with a strong understanding of business and finance.",
     image: "/images/olga-zabieglik.webp",
   },
