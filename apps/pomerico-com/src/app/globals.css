@@ -26,6 +26,47 @@
   --radius-xl: 4px;
 }
 
+/*
+ * About Us hero team photo.
+ * Source: /images/pomerico-team-about-hero.webp (2576×2060, wall extended on
+ * top so there is plain wall above the heads).
+ * Mobile/tablet (<1024px): in flow under the copy, full-bleed (cancels the
+ * 1.5rem container padding on both sides) and flush with the section bottom.
+ * Fade from the TOP only. The box (2576/2000) trims 60px of extended wall, so
+ * the highest head (top of hair) sits at ~17% of the box height; the fade is
+ * fully opaque at 14.5%, i.e. it ends above everyone. The box is pulled up
+ * by 1.5rem into the grid gap: its top is fully transparent there, and it
+ * keeps the hero no taller than before.
+ * Desktop (≥1024px): fade from the LEFT only, over the palm/curtain
+ * (2%–24.5% of photo width), ending before the first person. Full photo
+ * width, anchored bottom-right, as tall as the hero; it may start left of the
+ * column split only so far that the copy (ends at 50vw - 24px) overlaps
+ * nothing more opaque than the first ~8% of the fade:
+ * 0.938 × width ≤ 50vw + 24px, width = 1.2505 × height.
+ */
+.about-hero-team {
+  position: relative;
+  display: block;
+  width: calc(100% + 3rem);
+  margin: -1.5rem -1.5rem -4rem;
+  aspect-ratio: 2576 / 2000;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.1) 3.5%, rgb(0 0 0 / 0.36) 7%, rgb(0 0 0 / 0.7) 10.5%, rgb(0 0 0 / 0.92) 13%, #000 14.5%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.1) 3.5%, rgb(0 0 0 / 0.36) 7%, rgb(0 0 0 / 0.7) 10.5%, rgb(0 0 0 / 0.92) 13%, #000 14.5%);
+}
+@media (min-width: 1024px) {
+  .about-hero-team {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: min(100%, calc((50vw + 16px) / 1.173));
+    margin: 0;
+    aspect-ratio: 2576 / 2060;
+    -webkit-mask-image: linear-gradient(to right, transparent 2%, rgb(0 0 0 / 0.08) 6.2%, rgb(0 0 0 / 0.3) 11.5%, rgb(0 0 0 / 0.62) 17.2%, rgb(0 0 0 / 0.88) 22%, #000 24.5%);
+    mask-image: linear-gradient(to right, transparent 2%, rgb(0 0 0 / 0.08) 6.2%, rgb(0 0 0 / 0.3) 11.5%, rgb(0 0 0 / 0.62) 17.2%, rgb(0 0 0 / 0.88) 22%, #000 24.5%);
+  }
+}
+
 /* Allow grid/flex children to shrink below intrinsic min-content width */
 @layer base {
   :where(.grid > *, .flex > *) {

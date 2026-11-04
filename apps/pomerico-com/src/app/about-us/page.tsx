@@ -38,7 +38,7 @@ export default function AboutUsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary-blue text-white">
+      <section className="relative overflow-hidden bg-primary-blue text-white">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="flex min-w-0 flex-col gap-6">
@@ -58,14 +58,18 @@ export default function AboutUsPage() {
                 unoptimized
               />
             </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src={aboutUsHero.teamImage}
-                alt="Pomerico team"
-                width={400}
-                height={600}
-                className="max-w-[70%] max-h-[500px] w-auto rounded-lg object-cover"
-              />
+            <div>
+              <div className="about-hero-team">
+                <Image
+                  src={aboutUsHero.teamImage}
+                  alt="Pomerico Group team"
+                  fill
+                  preload
+                  quality={90}
+                  sizes="100vw"
+                  className="object-cover object-left-bottom"
+                />
+              </div>
             </div>
           </div>
         </div>
