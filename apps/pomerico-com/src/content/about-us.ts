@@ -20,7 +20,7 @@ export const managementTeam: TeamMember[] = [
     name: "Sebastian Kunc",
     role: "General Manager",
     bio: "President of the Management Board, entrepreneur, manager, and HR Business Partner with over 13 years of experience. A graduate of the University of Gdańsk in Management, Sebastian specializes in designing and implementing recruitment and operational programs, combining his sales training background with strategic advisory expertise. He has worked with clients across the financial, IT, and technical sectors. As a mentor and trainer, he supports both managers and teams in developing leadership and operational excellence.",
-    image: "/images/sebastian-kunc-general-manager.jpg",
+    image: "/images/sebastian-kunc-general-manager.webp",
     linkedin: "https://www.linkedin.com/in/sebastian-kunc/",
   },
   {
