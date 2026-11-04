@@ -67,6 +67,73 @@
   }
 }
 
+/*
+ * About Us team carousels (TeamCarousel.tsx): "Meet our Management Team"
+ * and "Meet Our Experts". Native horizontal scroll with snap, always within
+ * the container edges (symmetric margins) and only whole cards visible –
+ * the next card never peeks in.
+ * Mobile (<768): 1 card, full container width.
+ * 768+: 3 cards of (container - 2 gaps) / 3 – identical to the former
+ * `grid gap-8 md:grid-cols-3` layout. With exactly 3 members (management)
+ * nothing scrolls, so it looks and behaves like that grid.
+ */
+.team-carousel {
+  container-type: inline-size;
+  position: relative;
+}
+/* Side arrows: centred on the square photo (photo height = card width) and
+ * straddling the outer card edges, so they fit the 24px mobile margin too. */
+.team-nav {
+  --card: 100cqw;
+  position: absolute;
+  top: calc(var(--card) / 2);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.team-nav--prev {
+  left: -22px;
+}
+.team-nav--next {
+  right: -22px;
+}
+@media (min-width: 768px) {
+  .team-nav {
+    --card: calc((100cqw - 4rem) / 3);
+  }
+}
+.team-track {
+  --gap: 2rem;
+  --card: 100cqw;
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.team-track::-webkit-scrollbar {
+  display: none;
+}
+.team-track > * {
+  flex: 0 0 var(--card);
+  scroll-snap-align: start;
+}
+.team-track:focus-visible {
+  outline: 2px solid var(--color-primary-blue);
+  outline-offset: 4px;
+}
+@media (min-width: 768px) {
+  .team-track {
+    --card: calc((100cqw - 4rem) / 3);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-track {
+    scroll-behavior: auto;
+  }
+}
+
 /* Allow grid/flex children to shrink below intrinsic min-content width */
 @layer base {
   :where(.grid > *, .flex > *) {

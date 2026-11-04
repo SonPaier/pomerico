@@ -39,6 +39,39 @@ export const managementTeam: TeamMember[] = [
   },
 ];
 
+// ── Experts ────────────────────────────────────────────
+
+export type Expert = Omit<TeamMember, "linkedin"> & { linkedin?: string };
+
+export const experts: Expert[] = [
+  {
+    name: "Joanna Włodarczyk",
+    role: "Accounts Payable Manager",
+    bio: "An experienced finance professional with over nine years of experience in international Shared Service Centers, covering Accounts Payable and Record-to-Report. She has been involved in process transitions, process harmonization, and the creation of new teams. As part of her role, she nurtures strong relationships within the Accounts Payable team, provides expert support to colleagues, and introduces them to new solutions. She is also expanding her expertise in HR Projects and shares her expertise on the Pomerico blog.",
+    image: "/images/joanna-wlodarczyk-expert.webp",
+    linkedin: "https://www.linkedin.com/in/joanna-w%C5%82odarczyk-4b257b164",
+  },
+  {
+    name: "Igor Nalepka",
+    role: "Tech Lead",
+    bio: "Tech Lead and FullStack Developer with experience in designing, developing and maintaining modern software systems. Specializes in software architecture, IT product development and technology strategy, combining hands-on engineering expertise with project delivery skills. Responsible for the technical development of products, software quality and the coordination of frontend and backend development. Works closely with Project Managers and business stakeholders to translate requirements into scalable, reliable solutions, particularly in the area of modern CRM and sales platforms. Actively incorporates AI tools into software development workflows to improve efficiency and the quality of delivered solutions.",
+    image: "/images/igor-nalepka.webp",
+  },
+  {
+    name: "Olga Zabieglik",
+    role: "Attorney-at-law",
+    bio: "Legal expert and attorney-at-law with over 25 years of experience in providing comprehensive legal advisory services to businesses. She specializes in commercial, corporate, and consumer law, with a strong focus on supporting companies in their day-to-day operations, contract negotiations, and legal risk management. Olga has extensive experience in EU funding acquisition, project management, and advising businesses on both domestic and international legal matters. She is a graduate of the University of Gdańsk and holds a Mastère Spécialisé in Financial Management from a Polish-French postgraduate program, combining legal expertise with a strong understanding of business and finance.",
+    image: "/images/olga-zabieglik.webp",
+  },
+  {
+    name: "Monika Płocharczyk",
+    role: "Business Operations & Growth Specialist",
+    bio: "Monika keeps Pomerico running day to day. She manages the company's back office – monthly closing, invoicing, payroll and reporting – and works closely with our accounting partners to keep everything in order. On the growth side, she coordinates outreach campaigns to Scandinavian and international companies and supports the sales team with research and lead generation. Monika also looks after Pomerico’s websites and blog, while continuing to develop her skills in marketing. She has a hands-on approach to AI and automation: many of our internal finance and prospecting workflows now run on tools she built with Claude.",
+    image: "/images/monika-plocharczyk.webp",
+    linkedin: "https://www.linkedin.com/in/monika-p%C5%82ocharczyk-598b2a257",
+  },
+];
+
 // ── CTA Banner ─────────────────────────────────────────
 
 export const aboutCtaBanner = {
