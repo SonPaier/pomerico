@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   title:
     "Recruitment in Accounts Payable | Pomerico",
   description:
-    "What an AP Team Lead really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
+    "What an Accounts Payable Manager really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
   alternates: { canonical: "/blog/recruiting-for-an-accounts-payable-team" },
   openGraph: {
     title:
       "Recruitment in Accounts Payable | Pomerico",
     description:
-      "What an AP Team Lead really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
+      "What an Accounts Payable Manager really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
     type: "article",
   },
 };

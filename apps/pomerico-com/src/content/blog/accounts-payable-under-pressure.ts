@@ -1,10 +1,11 @@
 export const accountsPayableUnderPressure = {
   title:
     "Accounts Payable Under Pressure: A Leader's Perspective on Operational Resilience in Finance",
-  preheading: "AP Team Lead at Pomerico",
+  preheading: "Accounts Payable Manager at Pomerico",
   date: "03/06/2026",
   author: {
     name: "Joanna Włodarczyk",
+    role: "Accounts Payable Manager",
     photo: "/images/joanna-wlodarczyk.webp",
     linkedin: "https://www.linkedin.com/in/joanna-w%C5%82odarczyk-4b257b164/",
     phone: "+48 794 165 506",

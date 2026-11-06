@@ -41,7 +41,7 @@ export const blogPosts: BlogPostCard[] = [
     title:
       "Recruitment in Accounts Payable",
     description:
-      "What an AP Team Lead really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
+      "What an Accounts Payable Manager really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
     image: "/images/recruiting-for-an-accounts-payable-team.webp",
     date: "08/10/2026",
     author: "Joanna Włodarczyk",

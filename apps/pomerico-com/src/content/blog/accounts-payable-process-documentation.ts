@@ -1,11 +1,11 @@
 export const accountsPayableProcessDocumentation = {
   title:
     "Accounts Payable Process Documentation: Why a Good AP Procedure Is Worth Its Weight in Gold",
-  preheading: "AP Team Lead at Pomerico",
+  preheading: "Accounts Payable Manager at Pomerico",
   date: "27/10/2026",
   author: {
     name: "Joanna Włodarczyk",
-    role: "AP Team Lead",
+    role: "Accounts Payable Manager",
     photo: "/images/joanna-wlodarczyk.webp",
     linkedin: "https://www.linkedin.com/in/joanna-w%C5%82odarczyk-4b257b164/",
     phone: "+48 794 165 506",
