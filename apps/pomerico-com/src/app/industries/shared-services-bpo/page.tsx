@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import { data } from "@/content/industries/shared-services-bpo";
 import { HeroSection } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
@@ -12,7 +13,7 @@ import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 import { faqItems } from "@/content/faq";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: "Shared Services & BPO Outsourcing in Poland",
   description: data.metaDescription,
   alternates: { canonical: "/industries/shared-services-bpo" },
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     title: "Shared Services & BPO Outsourcing in Poland",
     description: data.metaDescription,
   },
-};
+});
 
 export default function SharedServicesBpoPage() {
   const caseStudyCards = allCaseStudyCards.filter((c) =>

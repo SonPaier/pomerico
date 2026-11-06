@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import Link from "next/link";
 import Image from "next/image";
 import { CTASection } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: "About Pomerico – BPO & Recruitment Company in Gdańsk" },
   description:
     "Founded in 2015 in Gdańsk as a recruitment agency, Pomerico Group is today a BPO and finance outsourcing partner for international companies in Poland.",
@@ -19,7 +20,12 @@ export const metadata: Metadata = {
     description:
       "Founded in 2015 in Gdańsk as a recruitment agency, Pomerico Group is today a BPO and finance outsourcing partner for international companies in Poland.",
   },
-};
+}, {
+  url: "/images/og/pomerico-team-about-hero.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Pomerico Group management team in a bright studio",
+});
 import { TestimonialCarousel } from "@pomerico/ui/client";
 import { CaseStudyGrid } from "@pomerico/ui";
 import { trustImageWide } from "@/content/shared";
@@ -97,11 +103,11 @@ export default function AboutUsPage() {
                 >
                   <Image
                     src={block.image}
-                    alt={`Pomerico integrated business solutions - section ${i + 1}`}
-                    width={800}
-                    height={1200}
+                    alt={block.imageAlt}
+                    width={1200}
+                    height={1800}
+                    sizes="(min-width: 1280px) 600px, (min-width: 1024px) calc(50vw - 40px), calc(100vw - 50px)"
                     className="h-auto w-full object-contain"
-                    unoptimized
                   />
                 </div>
                 )}

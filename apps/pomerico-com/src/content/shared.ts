@@ -49,7 +49,7 @@ export const contactWiktoria: ContactPerson = {
     href: "mailto:consult@pomerico.com",
   },
   linkedin: { href: "https://www.linkedin.com/in/wiktoriawierzbicka/" },
-  photo: "/images/wiktoria-wierzbicka-contact-portrait.jpg",
+  photo: "/images/wiktoria-wierzbicka-contact-portrait.webp",
 };
 
 // ── Company social links ─────────────────────────────────

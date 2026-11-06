@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage, blogPostOgImage } from "@/lib/og-image";
 import { doraVsOutsourcing } from "@/content/blog/dora-vs-outsourcing";
 import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title:
     "DORA and Financial Outsourcing: What You Need to Know | Pomerico",
   description:
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       "DORA doesn't end financial outsourcing — it changes the conditions. A practical guide for CFOs and COOs on contracts, risks and safe BPO in the regulated world.",
     type: "article",
   },
-};
+}, blogPostOgImage(doraVsOutsourcing));
 
 export default function DoraVsOutsourcingPage() {
   return (

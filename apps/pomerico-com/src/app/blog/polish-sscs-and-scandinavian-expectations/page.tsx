@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage, blogPostOgImage } from "@/lib/og-image";
 import { polishSscsAndScandinavianExpectations } from "@/content/blog/polish-sscs-and-scandinavian-expectations";
 import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title:
     "Polish SSCs and Scandinavian Expectations: Why Culture Matters | Pomerico",
   description:
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       "Why culture, not the EUR/PLN exchange rate, decides whether Polish SSCs and Scandinavian companies build a lasting partnership - feedback, deadlines, initiative.",
     type: "article",
   },
-};
+}, blogPostOgImage(polishSscsAndScandinavianExpectations));
 
 export default function PolishSscsAndScandinavianExpectationsPage() {
   return (

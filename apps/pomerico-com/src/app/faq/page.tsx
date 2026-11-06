@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import Image from "next/image";
 import { Accordion } from "@pomerico/ui/client";
 import { FaqJsonLd } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: "FAQ – Outsourcing, BPO & EOR in Poland | Pomerico" },
   description:
     "Answers about BPO, finance outsourcing, recruitment, EOR and HR outsourcing in Poland: costs, billing models, compliance and how fast cooperation starts.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     description:
       "Answers about BPO, finance outsourcing, recruitment, EOR and HR outsourcing in Poland: costs, billing models, compliance and how fast cooperation starts.",
   },
-};
+});
 import { ImageCarousel } from "@pomerico/ui/client";
 import { clientLogos } from "@/content/shared";
 import { faqHero, faqItems } from "@/content/faq";

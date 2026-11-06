@@ -12,6 +12,8 @@ export const accountsPayableUnderPressure = {
     email: "consult@pomerico.com",
   },
   featuredImage: "/images/accounts-payable-under-pressure.webp",
+  featuredImageAlt:
+    "Finance team reviewing invoices and reports around a meeting table, seen from above",
   content: `<p>Having worked for many years in the Accounts Payable area &#8211; across different organisations, cultures and operating models &#8211; we have come to understand this function from many different angles. Companies change, people change, ERP systems change, and yet the key challenges in AP remain surprisingly similar. Stressful situations rarely announce themselves in advance. They usually appear during month-end closing, year-end closing or in the middle of a system migration &#8211; exactly when the team has the least capacity to absorb them.</p>
 <p>When AP works well, it lives its own life in the background of the organisation and rarely appears on the management board&#8217;s agenda. The moment it stops delivering, the entire company is put on alert &#8211; because business continuity, supplier service and the organisation&#8217;s reputation depend on it. For C-level executives considering finance outsourcing Poland, BPO Poland or nearshoring in Poland as part of their operating model, AP is precisely the function where operational maturity becomes most visible.</p>
 

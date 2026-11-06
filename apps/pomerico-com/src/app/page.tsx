@@ -44,13 +44,19 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative flex min-h-[85vh] items-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/images/pomerico-hero-background.webp')",
-        }}
-      >
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden">
+        {/* Hero background = LCP element: a real <img> (found by the preload
+            scanner, high priority) instead of a CSS background-image. Same
+            look: covers the section, centred, under the 90% blue overlay. */}
+        <Image
+          src="/images/pomerico-hero-background.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-primary-blue/90" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24">
           <div className="max-w-2xl">
@@ -130,9 +136,10 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <Image
                 src="/images/pomerico-client-logos-banner.png"
-                alt="Client logos"
+                alt="Logos of Pomerico clients, including Winora, Thai Union, Sonac and Kardex"
                 width={1024}
                 height={296}
+                sizes="(min-width: 1280px) 600px, (min-width: 1024px) calc(50vw - 40px), calc(100vw - 48px)"
                 className="max-w-full"
               />
             </div>
@@ -145,9 +152,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <Image
             src={mapImage}
-            alt="Pomerico global presence"
+            alt="World map of countries where Pomerico works: North America, Europe, India, Southeast Asia and Australia"
             width={960}
             height={480}
+            sizes="(min-width: 1248px) 960px, calc(80vw - 40px)"
             className="mx-auto max-w-[80%]"
           />
         </div>

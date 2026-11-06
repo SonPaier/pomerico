@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import Image from "next/image";
 import { CTAForm } from "@pomerico/ui/client";
 import { submitContactForm } from "@/app/actions/contact";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: "Contact Pomerico – Gdańsk, Poland | Free Consultation" },
   description:
     "Contact Pomerico in Gdańsk for a free consultation on BPO, finance outsourcing, recruitment or EOR in Poland. We reply within 24 hours.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     description:
       "Contact Pomerico in Gdańsk for a free consultation on BPO, finance outsourcing, recruitment or EOR in Poland. We reply within 24 hours.",
   },
-};
+});
 import { ImageCarousel } from "@pomerico/ui/client";
 import { clientLogos } from "@/content/shared";
 import { contactHero, contactDetails } from "@/content/contact";

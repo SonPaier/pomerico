@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@pomerico/ui";
 import { blogPosts } from "@/content/blog/listing";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: {
     absolute: "Finance Outsourcing, BPO & Recruitment Blog – Poland | Pomerico",
   },
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Expert articles on finance outsourcing, BPO, recruitment, EOR and compliance in Poland from Pomerico Group's team in Gdańsk.",
   },
-};
+});
 
 export default function BlogPage() {
   return (
@@ -52,6 +53,7 @@ export default function BlogPage() {
                     src={post.image}
                     alt={post.title}
                     fill
+                    sizes="(min-width: 1280px) 600px, (min-width: 640px) calc(50vw - 40px), calc(100vw - 48px)"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import Image from "next/image";
 import { data, faqItems } from "@/content/services/nearshoring-in-poland";
 import { HeroSection } from "@pomerico/ui";
@@ -19,7 +20,7 @@ import { submitContactForm } from "@/app/actions/contact";
 
 const metaTitle = "Nearshoring in Poland | Pomerico";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: metaTitle },
   description: data.metaDescription,
   alternates: { canonical: "/services/nearshoring-in-poland" },
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     title: metaTitle,
     description: data.metaDescription,
   },
-};
+});
 
 export default function Page() {
   const slugs = data.caseStudySlugs;

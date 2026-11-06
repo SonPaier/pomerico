@@ -91,7 +91,7 @@ export function TeamCarousel({ members, label, navLabel }: TeamCarouselProps) {
                 alt={member.name}
                 fill
                 quality={90}
-                sizes="(min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1280px) 390px, (min-width: 768px) calc((100vw - 112px) / 3), calc(100vw - 48px)"
                 className="object-cover"
               />
             </div>

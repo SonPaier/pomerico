@@ -137,6 +137,10 @@ export function BlogPostTemplate({
             alt={post.featuredImageAlt ?? post.title}
             width={900}
             height={500}
+            // Largest Contentful Paint of every post: load it first, not lazily.
+            loading="eager"
+            fetchPriority="high"
+            sizes="(min-width: 896px) 848px, calc(100vw - 48px)"
             className="w-full rounded-lg"
           />
         </div>
@@ -211,6 +215,7 @@ export function BlogPostTemplate({
                     src={p.image}
                     alt={p.title}
                     fill
+                    sizes="(min-width: 1280px) 600px, (min-width: 640px) calc(50vw - 40px), calc(100vw - 48px)"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

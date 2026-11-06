@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import { HeroSection } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
@@ -6,7 +7,7 @@ import { Breadcrumbs } from "@pomerico/ui";
 import { ServiceComparisonTable } from "@pomerico/ui/client";
 import { servicesListingHero, allServiceCards } from "@/content/services/listing";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: "Outsourcing Services in Poland – BPO, Finance, EOR | Pomerico" },
   description:
     "Outsourcing services in Poland: BPO, finance outsourcing, recruitment, payroll, Employer of Record and HR outsourcing. Compare cooperation models.",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Outsourcing services in Poland: BPO, finance outsourcing, recruitment, payroll, Employer of Record and HR outsourcing. Compare cooperation models.",
   },
-};
+});
 
 export default function ServicesPage() {
   return (

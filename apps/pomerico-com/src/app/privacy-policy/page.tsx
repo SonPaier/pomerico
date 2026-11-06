@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: "Privacy Policy",
   description: "Read the Pomerico Group privacy policy. Learn how we collect, process, and protect your personal data in compliance with GDPR and Polish data protection law.",
   alternates: { canonical: "/privacy-policy" },
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description: "Read the Pomerico Group privacy policy. Learn how we collect, process, and protect your personal data in compliance with GDPR and Polish data protection law.",
   },
-};
+});
 
 export default function PrivacyPolicyPage() {
   return (

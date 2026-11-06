@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import { IndustryPageTemplate } from "@pomerico/ui";
 import { data } from "@/content/industries/intralogistics";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 import { faqItems } from "@/content/faq";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: "Intralogistics Outsourcing & HR Solutions in Poland",
   description: data.metaDescription,
   alternates: { canonical: "/industries/intralogistics" },
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     title: "Intralogistics Outsourcing & HR Solutions in Poland",
     description: data.metaDescription,
   },
-};
+});
 
 export default function IntralogisticsPage() {
   return <IndustryPageTemplate data={data} allCaseStudyCards={allCaseStudyCards} submitAction={submitContactForm} faqItems={faqItems.slice(0, 5)} />;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import Image from "next/image";
 import { data, faqItems } from "@/content/services/business-consulting-tax-law";
 import { HeroSection } from "@pomerico/ui";
@@ -83,7 +84,7 @@ const situationCards = [
 
 const metaTitle = "Business Consulting, Tax & Law in Poland | Pomerico";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: metaTitle },
   description: data.metaDescription,
   alternates: { canonical: "/services/business-consulting-tax-law" },
@@ -96,7 +97,7 @@ export const metadata: Metadata = {
     title: metaTitle,
     description: data.metaDescription,
   },
-};
+});
 
 export default function Page() {
   const slugs = data.caseStudySlugs;

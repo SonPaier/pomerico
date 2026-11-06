@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import { ServicePageTemplate } from "@pomerico/ui";
 import { data, faqItems } from "@/content/services/recruitment-services-rpo";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
@@ -7,7 +8,7 @@ import { submitContactForm } from "@/app/actions/contact";
 
 const metaTitle = "Recruitment Agency Poland – RPO & Executive Search | Pomerico";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: metaTitle },
   description: data.metaDescription,
   alternates: { canonical: "/services/recruitment-services-rpo" },
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     title: metaTitle,
     description: data.metaDescription,
   },
-};
+});
 
 export default function RecruitmentServicesRPOPage() {
   return <ServicePageTemplate data={data} allCaseStudyCards={allCaseStudyCards} clutchBadge={clutchBadge} submitAction={submitContactForm} faqItems={faqItems} />;

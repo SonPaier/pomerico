@@ -28,6 +28,7 @@ export function ContactInfo({
           src={person.photo}
           alt={person.name}
           fill
+          sizes="144px"
           className="object-cover object-top"
         />
       </div>

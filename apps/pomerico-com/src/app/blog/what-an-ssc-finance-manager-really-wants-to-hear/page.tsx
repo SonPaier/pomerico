@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage, blogPostOgImage } from "@/lib/og-image";
 import { whatAnSscFinanceManagerReallyWantsToHear } from "@/content/blog/what-an-ssc-finance-manager-really-wants-to-hear";
 import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title:
     "What an SSC Finance Manager Wants From an Outsourcing Partner | Pomerico",
   description:
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       "What SSC, BSC and GBS finance managers don't want to hear from outsourcing partners - and what really gets their attention: structure, low disruption, risk.",
     type: "article",
   },
-};
+}, blogPostOgImage(whatAnSscFinanceManagerReallyWantsToHear));
 
 export default function WhatAnSscFinanceManagerReallyWantsToHearPage() {
   return (

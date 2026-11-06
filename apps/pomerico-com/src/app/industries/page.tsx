@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import { HeroSection } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
 import { Breadcrumbs } from "@pomerico/ui";
 import { industriesListingHero, allIndustryCards } from "@/content/industries/listing";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: "Outsourcing & Recruitment in Poland by Industry | Pomerico" },
   description:
     "Outsourcing and recruitment in Poland for banking & insurance, shared services, manufacturing, intralogistics and IT companies.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     description:
       "Outsourcing and recruitment in Poland for banking & insurance, shared services, manufacturing, intralogistics and IT companies.",
   },
-};
+});
 
 export default function IndustriesPage() {
   return (

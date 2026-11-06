@@ -16,7 +16,7 @@ export const hiringInPoland = {
     {
       name: "Sebastian Kunc",
       role: "CEO",
-      photo: "/images/pomerico-hr-outsourcing-office.jpg",
+      photo: "/images/sebastian-kunc-blog-avatar.webp",
       linkedin: "https://www.linkedin.com/in/sebastian-kunc/",
       phone: "+48 727 906 253",
       email: "consult@pomerico.com",

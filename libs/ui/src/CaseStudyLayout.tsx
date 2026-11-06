@@ -75,8 +75,11 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
             src="/images/case-study-hero-building.jpg"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover"
-            priority
+            // `priority` is deprecated in Next.js 16; same effect for the hero.
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/90 via-primary-blue/85 to-primary-blue/75" />
         </div>

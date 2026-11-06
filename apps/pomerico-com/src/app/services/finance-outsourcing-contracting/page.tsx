@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import { ServicePageTemplate } from "@pomerico/ui";
 import { data, faqItems } from "@/content/services/finance-outsourcing-contracting";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
@@ -7,7 +8,7 @@ import { submitContactForm } from "@/app/actions/contact";
 
 const metaTitle = "Finance Outsourcing Poland – AP/AR & Controlling | Pomerico";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: metaTitle },
   description: data.metaDescription,
   alternates: { canonical: "/services/finance-outsourcing-contracting" },
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     title: metaTitle,
     description: data.metaDescription,
   },
-};
+});
 
 export default function Page() {
   return <ServicePageTemplate data={data} allCaseStudyCards={allCaseStudyCards} clutchBadge={clutchBadge} submitAction={submitContactForm} faqItems={faqItems} />;

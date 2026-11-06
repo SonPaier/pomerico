@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage, blogPostOgImage } from "@/lib/og-image";
 import { recruitingForAnAccountsPayableTeam } from "@/content/blog/recruiting-for-an-accounts-payable-team";
 import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title:
     "Recruitment in Accounts Payable | Pomerico",
   description:
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       "What an Accounts Payable Manager really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
     type: "article",
   },
-};
+}, blogPostOgImage(recruitingForAnAccountsPayableTeam));
 
 export default function RecruitingForAnAccountsPayableTeamPage() {
   return (

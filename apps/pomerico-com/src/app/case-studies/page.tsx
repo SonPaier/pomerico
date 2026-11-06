@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import Link from "next/link";
 import Image from "next/image";
 import { HeroSection } from "@pomerico/ui";
@@ -9,7 +10,7 @@ import {
   allCaseStudyCards,
 } from "@/content/case-studies/listing";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: { absolute: "Case Studies – Outsourcing & Recruitment in Poland | Pomerico" },
   description:
     "How Pomerico delivered recruitment, EOR, market entry and HR projects for international companies in Poland – real results from our clients.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description:
       "How Pomerico delivered recruitment, EOR, market entry and HR projects for international companies in Poland – real results from our clients.",
   },
-};
+});
 
 export default function CaseStudiesPage() {
   return (

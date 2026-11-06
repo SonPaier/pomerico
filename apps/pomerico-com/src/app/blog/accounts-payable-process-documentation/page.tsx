@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage, blogPostOgImage } from "@/lib/og-image";
 import { accountsPayableProcessDocumentation } from "@/content/blog/accounts-payable-process-documentation";
 import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title:
     "Accounts Payable Process Documentation: Why It Pays Off | Pomerico",
   description:
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       "How to document Accounts Payable processes: write for first-timers, cover the exceptions, keep it short, organise supporting documents and stay SOX-ready.",
     type: "article",
   },
-};
+}, blogPostOgImage(accountsPayableProcessDocumentation));
 
 export default function AccountsPayableProcessDocumentationPage() {
   return (

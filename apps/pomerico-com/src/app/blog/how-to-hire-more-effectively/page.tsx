@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOgImage, blogPostOgImage } from "@/lib/og-image";
 import { howToHireMoreEffectively } from "@/content/blog/how-to-hire-more-effectively";
 import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: "How to Hire More Effectively",
   description:
     "Practical strategies for more effective hiring – from defining roles and sourcing candidates to onboarding and retention. Expert HR advice from Pomerico Group.",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
       "Practical strategies for more effective hiring – from defining roles and sourcing candidates to onboarding and retention. Expert HR advice from Pomerico Group.",
     type: "article",
   },
-};
+}, blogPostOgImage(howToHireMoreEffectively));
 
 export default function HowToHirePage() {
   return (

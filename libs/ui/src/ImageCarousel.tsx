@@ -53,6 +53,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
                     alt={img.alt}
                     width={220}
                     height={130}
+                    sizes="180px"
                     className="max-w-[180px] object-contain"
                   />
                 </div>

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { withOgImage } from "@/lib/og-image";
 import { CaseStudyLayout } from "@pomerico/ui";
 import { data } from "@/content/case-studies/hedepy";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOgImage({
   title: data.title,
   description: data.metaDescription,
   alternates: { canonical: "/case-studies/hedepys-seamless-launch-in-poland-with-pomerico" },
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     description: data.metaDescription,
     type: "article",
   },
-};
+});
 
 export default function Page() {
   return <CaseStudyLayout data={data} allCaseStudyCards={allCaseStudyCards} submitAction={submitContactForm} />;
