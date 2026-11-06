@@ -46,3 +46,6 @@ next-env.d.ts
 
 # Claude Code — keep project settings, ignore per-user
 .claude/settings.local.json
+
+# browser automation session dumps
+.playwright-mcp/

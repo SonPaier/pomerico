@@ -1,8 +1,23 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/content/blog/listing";
+
+/** Blog listing dates are "DD/MM/YYYY" strings. Returns undefined (no <lastmod>) on a malformed
+ *  or out-of-range date (Date.UTC would silently roll "32/10" over to 1 Nov) instead of an
+ *  Invalid Date, which would throw in toISOString() and fail the whole build. */
+function parsePostDate(date: string): Date | undefined {
+  const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(date);
+  if (!match) return undefined;
+  const [day, month, year] = match.slice(1).map(Number);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+  const roundTrips =
+    parsed.getUTCFullYear() === year && parsed.getUTCMonth() === month - 1 && parsed.getUTCDate() === day;
+  return roundTrips ? parsed : undefined;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://pomerico.com";
-  const now = new Date();
+  // No `lastModified` on evergreen pages: a build-time `new Date()` on every URL is noise
+  // that Google learns to ignore. Blog posts carry their real publication date.
 
   const services = [
     "bpo-business-process-outsourcing",
@@ -38,39 +53,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
-    { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${baseUrl}/about-us`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/industries`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/case-studies`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${baseUrl}/blog/accounts-payable-process-documentation`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog/accounts-payable-onboarding-mistakes`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog/polish-sscs-and-scandinavian-expectations`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog/recruiting-for-an-accounts-payable-team`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog/what-an-ssc-finance-manager-really-wants-to-hear`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog/hiring-in-poland`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog/dora-vs-outsourcing`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/blog/how-to-hire-more-effectively`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
-    { url: `${baseUrl}/gdpr-information-clause`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: baseUrl, changeFrequency: "weekly", priority: 1 },
+    { url: `${baseUrl}/about-us`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/services`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/industries`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/case-studies`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/contact`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/faq`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${baseUrl}/blog`, changeFrequency: "weekly", priority: 0.6 },
+    ...blogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: parsePostDate(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+    { url: `${baseUrl}/privacy-policy`, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${baseUrl}/gdpr-information-clause`, changeFrequency: "yearly", priority: 0.2 },
     ...services.map((slug) => ({
       url: `${baseUrl}/services/${slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
     ...industries.map((slug) => ({
       url: `${baseUrl}/industries/${slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
     ...caseStudies.map((slug) => ({
       url: `${baseUrl}/case-studies/${slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),

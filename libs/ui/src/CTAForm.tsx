@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "./ArrowRightIcon";
+import { pushDataLayer } from "./dataLayer";
 
 function formatBytes(bytes: number) {
   if (bytes < 1024) return `${bytes} B`;
@@ -19,7 +20,9 @@ const DEFAULT_TOPICS = [
 ] as const;
 
 export interface CTAFormProps {
-  submitAction: (formData: FormData) => Promise<{ success: boolean; error?: string }>;
+  submitAction: (
+    formData: FormData,
+  ) => Promise<{ success: boolean; error?: string; code?: string }>;
   topics?: readonly string[];
 }
 
@@ -47,19 +50,34 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
     setError(null);
 
     const formData = new FormData(e.currentTarget);
-    if (typeof window !== "undefined") {
-      formData.set("source", window.location.pathname + window.location.search);
-    }
+    formData.set("source", window.location.pathname + window.location.search);
+
+    // GTM listens for `form_submit_success` / `form_submit_error` (Custom Event triggers)
+    // and fires the GA4 lead tags off them. No PII: topic is a fixed-list value.
+    const trackingPayload = {
+      form_name: "cta_contact",
+      form_topic: String(formData.get("topic") ?? ""),
+      has_attachments: files.length > 0,
+      page_path: window.location.pathname,
+    };
 
     try {
       const result = await submitAction(formData);
 
       if (result.success) {
+        pushDataLayer({ event: "form_submit_success", ...trackingPayload });
         setSubmitted(true);
       } else {
+        // Only the stable code goes to analytics; `result.error` can contain user file names.
+        pushDataLayer({
+          event: "form_submit_error",
+          ...trackingPayload,
+          error_code: result.code ?? "unknown",
+        });
         setError(result.error ?? "Something went wrong. Please try again.");
       }
     } catch {
+      pushDataLayer({ event: "form_submit_error", ...trackingPayload, error_code: "exception" });
       setError("An unexpected error occurred. Please try again later.");
     } finally {
       setSubmitting(false);

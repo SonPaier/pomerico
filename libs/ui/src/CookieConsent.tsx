@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { pushDataLayer, type DataLayerWindow } from "./dataLayer";
 
 const STORAGE_KEY = "pomerico-cookie-consent";
 
@@ -145,6 +146,17 @@ const CATEGORIES_EN: Category[] = [
         duration: "1 day",
         description: "Google Analytics sets this cookie to store information on how visitors use a website.",
       },
+      {
+        name: "_hjSessionUser_*",
+        duration: "1 year",
+        description:
+          "Hotjar sets this cookie to recognise a returning visitor and attribute session recordings and heatmaps to the same anonymous user ID.",
+      },
+      {
+        name: "_hjSession_*",
+        duration: "30 minutes",
+        description: "Hotjar sets this cookie to hold the current session data so that subsequent requests within the session are attributed to the same session.",
+      },
     ],
   },
   {
@@ -164,6 +176,26 @@ const CATEGORIES_EN: Category[] = [
         name: "bcookie",
         duration: "1 year",
         description: "LinkedIn sets this cookie from LinkedIn share buttons and ad tags to recognise browser IDs.",
+      },
+      {
+        name: "UserMatchHistory",
+        duration: "30 days",
+        description: "LinkedIn Insight Tag sets this cookie for LinkedIn Ads ID syncing and conversion attribution.",
+      },
+      {
+        name: "AnalyticsSyncHistory",
+        duration: "30 days",
+        description: "LinkedIn sets this cookie to store information about the time a sync with the lms_analytics cookie took place.",
+      },
+      {
+        name: "li_sugr",
+        duration: "90 days",
+        description: "LinkedIn sets this cookie to make a probabilistic match of a user's identity outside the Designated Countries.",
+      },
+      {
+        name: "m-b, m-b_lax, m-b_strict",
+        duration: "2 years",
+        description: "Quora Pixel (third-party cookies on quora.com) uses these to identify the browser for Quora Ads conversion tracking and audience building.",
       },
     ],
   },
@@ -225,6 +257,17 @@ const CATEGORIES_PL: Category[] = [
         duration: "1 dzień",
         description: "Google Analytics używa tego pliku do przechowywania informacji o tym, jak użytkownicy korzystają ze strony.",
       },
+      {
+        name: "_hjSessionUser_*",
+        duration: "1 rok",
+        description:
+          "Hotjar używa tego pliku do rozpoznania powracającego użytkownika i przypisania nagrań sesji oraz map cieplnych do tego samego anonimowego identyfikatora.",
+      },
+      {
+        name: "_hjSession_*",
+        duration: "30 minut",
+        description: "Hotjar używa tego pliku do przechowywania danych bieżącej sesji, aby kolejne żądania w jej trakcie były przypisane do tej samej sesji.",
+      },
     ],
   },
   {
@@ -244,6 +287,26 @@ const CATEGORIES_PL: Category[] = [
         name: "bcookie",
         duration: "1 rok",
         description: "LinkedIn używa tego pliku do rozpoznawania identyfikatorów przeglądarek z przycisków udostępniania i tagów reklam.",
+      },
+      {
+        name: "UserMatchHistory",
+        duration: "30 dni",
+        description: "LinkedIn Insight Tag używa tego pliku do synchronizacji identyfikatorów LinkedIn Ads i atrybucji konwersji.",
+      },
+      {
+        name: "AnalyticsSyncHistory",
+        duration: "30 dni",
+        description: "LinkedIn używa tego pliku do zapisania czasu synchronizacji z plikiem lms_analytics.",
+      },
+      {
+        name: "li_sugr",
+        duration: "90 dni",
+        description: "LinkedIn używa tego pliku do probabilistycznego dopasowania tożsamości użytkownika poza wyznaczonymi krajami.",
+      },
+      {
+        name: "m-b, m-b_lax, m-b_strict",
+        duration: "2 lata",
+        description: "Quora Pixel (pliki podmiotu trzeciego w domenie quora.com) używa ich do identyfikacji przeglądarki na potrzeby śledzenia konwersji i budowania grup odbiorców Quora Ads.",
       },
     ],
   },
@@ -279,7 +342,7 @@ function readConsent(): StoredConsent | null {
 }
 
 type GtagFn = (...args: unknown[]) => void;
-type WindowWithGtag = Window & { gtag?: GtagFn; dataLayer?: unknown[] };
+type WindowWithGtag = DataLayerWindow & { gtag?: GtagFn };
 
 function pushConsentUpdate(categories: Categories) {
   if (typeof window === "undefined") return;
@@ -300,7 +363,7 @@ function pushConsentUpdate(categories: Categories) {
     personalization_storage: categories.functional ? "granted" : "denied",
     security_storage: "granted",
   });
-  w.dataLayer.push({ event: "consent_update", consent: categories });
+  pushDataLayer({ event: "consent_update", consent: categories });
 }
 
 function writeConsent(categories: Categories) {

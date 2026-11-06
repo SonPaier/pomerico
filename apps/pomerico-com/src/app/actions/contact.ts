@@ -2,7 +2,18 @@
 
 import nodemailer from "nodemailer";
 
-type ContactResult = { success: boolean; error?: string };
+/** Stable, PII-free error code — safe to send to analytics (the `error` text may contain file names). */
+type ContactErrorCode =
+  | "missing_required"
+  | "invalid_email"
+  | "gdpr_not_accepted"
+  | "file_too_large"
+  | "file_type_not_allowed"
+  | "total_size_exceeded"
+  | "not_configured"
+  | "send_failed";
+
+type ContactResult = { success: boolean; error?: string; code?: ContactErrorCode };
 
 const REQUIRED_ENV = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "MAIL_TO"] as const;
 
@@ -39,16 +50,16 @@ export async function submitContactForm(formData: FormData): Promise<ContactResu
   const gdpr = formData.get("gdpr");
 
   if (!name || !email) {
-    return { success: false, error: "Name and email are required." };
+    return { success: false, error: "Name and email are required.", code: "missing_required" };
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return { success: false, error: "Please provide a valid email address." };
+    return { success: false, error: "Please provide a valid email address.", code: "invalid_email" };
   }
 
   if (!gdpr) {
-    return { success: false, error: "Please accept the privacy policy to continue." };
+    return { success: false, error: "Please accept the privacy policy to continue.", code: "gdpr_not_accepted" };
   }
 
   const rawFiles = formData.getAll("file");
@@ -57,15 +68,15 @@ export async function submitContactForm(formData: FormData): Promise<ContactResu
   let totalSize = 0;
   for (const f of incomingFiles) {
     if (f.size > MAX_FILE_SIZE) {
-      return { success: false, error: `File "${f.name}" exceeds the 10MB limit.` };
+      return { success: false, error: `File "${f.name}" exceeds the 10MB limit.`, code: "file_too_large" };
     }
     if (f.type && !ALLOWED_TYPES.has(f.type)) {
-      return { success: false, error: `File type not allowed: ${f.name}. Use PDF, DOC/DOCX, XLS/XLSX, PNG, JPG, or TXT.` };
+      return { success: false, error: `File type not allowed: ${f.name}. Use PDF, DOC/DOCX, XLS/XLSX, PNG, JPG, or TXT.`, code: "file_type_not_allowed" };
     }
     totalSize += f.size;
   }
   if (totalSize > MAX_TOTAL_SIZE) {
-    return { success: false, error: "Total attachment size exceeds 25MB. Please send larger files separately." };
+    return { success: false, error: "Total attachment size exceeds 25MB. Please send larger files separately.", code: "total_size_exceeded" };
   }
 
   const attachments = await Promise.all(
@@ -79,7 +90,7 @@ export async function submitContactForm(formData: FormData): Promise<ContactResu
   const missing = REQUIRED_ENV.filter((k) => !process.env[k]);
   if (missing.length) {
     console.error("Contact form misconfigured, missing env:", missing.join(", "));
-    return { success: false, error: "Email service is not configured. Please email office@pomerico.com directly." };
+    return { success: false, error: "Email service is not configured. Please email office@pomerico.com directly.", code: "not_configured" };
   }
 
   const port = Number(process.env.SMTP_PORT);
@@ -138,7 +149,7 @@ export async function submitContactForm(formData: FormData): Promise<ContactResu
     });
   } catch (err) {
     console.error("SMTP send failed:", err);
-    return { success: false, error: "We couldn't send your message right now. Please try again or email office@pomerico.com." };
+    return { success: false, error: "We couldn't send your message right now. Please try again or email office@pomerico.com.", code: "send_failed" };
   }
 
   return { success: true };

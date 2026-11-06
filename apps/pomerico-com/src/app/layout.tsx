@@ -84,6 +84,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  // Google Search Console HTML-tag verification (fallback — preferred method is a DNS TXT
+  // record on the domain property). Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in Vercel env.
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
 export default function RootLayout({
