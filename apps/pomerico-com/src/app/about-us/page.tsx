@@ -28,7 +28,6 @@ import {
   aboutUsHero,
   aboutUsWhatWeDo,
   managementTeam,
-  experts,
   aboutCtaBanner,
   aboutTestimonials,
 } from "@/content/about-us";
@@ -191,18 +190,6 @@ export default function AboutUsPage() {
             members={managementTeam}
             label="Meet our Management Team"
             navLabel="management team members"
-          />
-        </div>
-      </section>
-
-      {/* Meet Our Experts */}
-      <section className="bg-gray-bg pb-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <SectionHeader heading="Meet Our Experts" align="center" />
-          <TeamCarousel
-            members={experts}
-            label="Meet Our Experts"
-            navLabel="experts"
           />
         </div>
       </section>

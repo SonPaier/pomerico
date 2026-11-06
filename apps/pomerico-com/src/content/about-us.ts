@@ -12,7 +12,7 @@ export interface TeamMember {
   role: string;
   bio: string;
   image: string;
-  linkedin: string;
+  linkedin?: string;
 }
 
 export const managementTeam: TeamMember[] = [
@@ -37,13 +37,6 @@ export const managementTeam: TeamMember[] = [
     image: "/images/wiktoria-wierzbicka-operations-manager.webp",
     linkedin: "https://www.linkedin.com/in/wiktoriawierzbicka/",
   },
-];
-
-// ── Experts ────────────────────────────────────────────
-
-export type Expert = Omit<TeamMember, "linkedin"> & { linkedin?: string };
-
-export const experts: Expert[] = [
   {
     name: "Joanna Włodarczyk",
     role: "Accounts Payable Manager",

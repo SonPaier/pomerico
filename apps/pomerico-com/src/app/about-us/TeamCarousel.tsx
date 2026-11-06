@@ -2,10 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import type { Expert } from "@/content/about-us";
+import type { TeamMember } from "@/content/about-us";
 
 interface TeamCarouselProps {
-  members: Expert[];
+  members: TeamMember[];
   /** Accessible name of the carousel region, e.g. the section heading. */
   label: string;
   /** Used in the arrow aria-labels: "Previous {navLabel}" / "Next {navLabel}". */
