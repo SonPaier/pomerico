@@ -5,8 +5,8 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = withOgImage({
-  title:
-    "Accounts Payable Under Pressure – A Leader's Perspective | Pomerico",
+  title: { absolute:
+    "Accounts Payable Under Pressure – A Leader's Perspective | Pomerico" },
   description:
     "How AP leaders manage operational resilience — from team capacity challenges to BPO, nearshoring and finance outsourcing in Poland. A practical perspective from Pomerico.",
   alternates: { canonical: "/blog/accounts-payable-under-pressure" },

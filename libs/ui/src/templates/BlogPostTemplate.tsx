@@ -18,7 +18,10 @@ export interface BlogPostAuthor {
 export interface BlogPostData {
   title: string;
   preheading: string;
+  /** Publication date, "DD/MM/YYYY" (shown on the page as is). */
   date: string;
+  /** Optional last substantive update, "DD/MM/YYYY". Defaults to `date`. */
+  dateModified?: string;
   author: BlogPostAuthor | BlogPostAuthor[];
   featuredImage: string;
   featuredImageAlt?: string;
@@ -30,6 +33,18 @@ export interface BlogPostData {
 
 const articleClassName =
   "prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-dark prose-h2:mt-12 prose-h2:text-2xl prose-h3:mt-8 prose-h3:text-xl prose-p:leading-relaxed prose-p:text-dark/80 prose-li:text-dark/80 prose-strong:text-dark prose-img:rounded-lg prose-img:my-8";
+
+/** "DD/MM/YYYY" -> ISO 8601 "YYYY-MM-DD" for schema.org, which rejects the Polish format.
+ *  Returns undefined on a malformed or impossible date, so JSON.stringify drops the field
+ *  instead of publishing an invalid value. */
+function toIsoDate(date: string | undefined): string | undefined {
+  const match = date ? /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(date) : null;
+  if (!match) return undefined;
+  const [, dd, mm, yyyy] = match;
+  const parsed = new Date(Date.UTC(Number(yyyy), Number(mm) - 1, Number(dd)));
+  if (parsed.getUTCDate() !== Number(dd) || parsed.getUTCMonth() !== Number(mm) - 1) return undefined;
+  return `${yyyy}-${mm}-${dd}`;
+}
 
 interface BlogPostTemplateProps {
   post: BlogPostData;
@@ -56,7 +71,8 @@ export function BlogPostTemplate({
     "@type": "Article",
     headline: post.title,
     image: `https://pomerico.com${post.featuredImage}`,
-    datePublished: post.date,
+    datePublished: toIsoDate(post.date),
+    dateModified: toIsoDate(post.dateModified ?? post.date),
     author: authorsJsonLd.length === 1 ? authorsJsonLd[0] : authorsJsonLd,
     publisher: {
       "@type": "Organization",

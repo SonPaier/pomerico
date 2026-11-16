@@ -5,8 +5,8 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = withOgImage({
-  title:
-    "Recruitment in Accounts Payable | Pomerico",
+  title: { absolute:
+    "Recruitment in Accounts Payable | Pomerico" },
   description:
     "What an Accounts Payable Manager really looks for when recruiting for an Accounts Payable team — accuracy, calm under month-end pressure, curiosity about numbers and integrity.",
   alternates: { canonical: "/blog/recruiting-for-an-accounts-payable-team" },

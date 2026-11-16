@@ -5,8 +5,8 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = withOgImage({
-  title:
-    "Polish SSCs and Scandinavian Expectations: Why Culture Matters | Pomerico",
+  title: { absolute:
+    "Polish SSCs and Scandinavian Expectations: Why Culture Matters | Pomerico" },
   description:
     "Why culture, not the EUR/PLN exchange rate, decides whether Polish SSCs and Scandinavian companies build a lasting partnership - feedback, deadlines, initiative.",
   alternates: { canonical: "/blog/polish-sscs-and-scandinavian-expectations" },

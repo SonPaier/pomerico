@@ -5,8 +5,8 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = withOgImage({
-  title:
-    "Hiring in Poland: What to Do Before You Sign the Contract | Pomerico",
+  title: { absolute:
+    "Hiring in Poland: What to Do Before You Sign the Contract | Pomerico" },
   description:
     "Subsidiary, branch, direct employment or EOR? What a foreign company must know about ZUS, payroll, taxes and the B2B trap before hiring someone in Poland.",
   alternates: { canonical: "/blog/hiring-in-poland" },

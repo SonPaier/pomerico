@@ -5,8 +5,8 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = withOgImage({
-  title:
-    "Accounts Payable Process Documentation: Why It Pays Off | Pomerico",
+  title: { absolute:
+    "Accounts Payable Process Documentation: Why It Pays Off | Pomerico" },
   description:
     "How to document Accounts Payable processes: write for first-timers, cover the exceptions, keep it short, organise supporting documents and stay SOX-ready.",
   alternates: { canonical: "/blog/accounts-payable-process-documentation" },

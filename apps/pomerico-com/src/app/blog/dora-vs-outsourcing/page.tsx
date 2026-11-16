@@ -5,8 +5,8 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = withOgImage({
-  title:
-    "DORA and Financial Outsourcing: What You Need to Know | Pomerico",
+  title: { absolute:
+    "DORA and Financial Outsourcing: What You Need to Know | Pomerico" },
   description:
     "DORA doesn't end financial outsourcing — it changes the conditions. A practical guide for CFOs and COOs on contracts, risks and safe BPO in the regulated world.",
   alternates: { canonical: "/blog/dora-vs-outsourcing" },

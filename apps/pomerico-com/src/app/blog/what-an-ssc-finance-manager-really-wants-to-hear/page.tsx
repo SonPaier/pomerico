@@ -5,8 +5,8 @@ import { blogPosts } from "@/content/blog/listing";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 export const metadata: Metadata = withOgImage({
-  title:
-    "What an SSC Finance Manager Wants From an Outsourcing Partner | Pomerico",
+  title: { absolute:
+    "What an SSC Finance Manager Wants From an Outsourcing Partner | Pomerico" },
   description:
     "What SSC, BSC and GBS finance managers don't want to hear from outsourcing partners - and what really gets their attention: structure, low disruption, risk.",
   alternates: { canonical: "/blog/what-an-ssc-finance-manager-really-wants-to-hear" },
