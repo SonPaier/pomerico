@@ -24,6 +24,7 @@
 
 ## Services
 
+- AI Transformation: AI readiness audits, process mapping and bottleneck analysis, business case for AI use cases, AI policy and AI literacy training, implementation of AI tools, agents and RPA in finance, HR, recruitment and back office, AI engineers who join the client's team for the implementation, delivered on the client's own environment. https://pomerico.com/services/ai-transformation
 - BPO – Business Process Outsourcing: full takeover of HR, finance, IT, admin processes with dedicated teams and KPI delivery
 - Finance Outsourcing & Contracting: accounting, controlling, payroll, operational finance with SAP/SQL/Python expertise
 - Recruitment Services / RPO: end-to-end recruitment, Direct Search, Executive Search, employer branding

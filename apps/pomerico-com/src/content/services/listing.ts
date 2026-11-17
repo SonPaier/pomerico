@@ -1,9 +1,10 @@
 import type { ServiceCard, IconListItem } from "@pomerico/content";
+import { aiTransformationCard } from "./ai-transformation";
 
 export const servicesListingHero = {
   heading: "Outsourcing Services in Poland",
   description:
-    "At Pomerico, we help businesses across Europe build high-performing teams, streamline operations, and unlock their full growth potential. Our comprehensive suite of services is designed to tackle real business challenges – from scaling teams and improving operational efficiency to ensuring compliance and supporting digital transformation.",
+    "At Pomerico, we help businesses across Europe build high-performing teams, streamline operations, and unlock their full growth potential. Our comprehensive suite of services is designed to tackle real business challenges – from scaling teams and improving operational efficiency to ensuring compliance and supporting AI transformation.",
   iconList: [
     { bold: "Enable faster", text: "and more efficient delivery of critical business processes" },
     { bold: "Reduce operational", text: "complexity and administrative burden" },
@@ -15,6 +16,7 @@ export const servicesListingHero = {
 };
 
 export const allServiceCards: ServiceCard[] = [
+  aiTransformationCard,
   { icon: "/images/icon-target-bpo-outsourcing.png", heading: "BPO – Business Process Outsourcing", description: "We take over complete business processes so you can focus on core strategy. From back-office operations to customer support, our teams deliver measurable efficiency gains.", href: "/services/bpo-business-process-outsourcing" },
   { icon: "/images/icon-shield-trusted-by-candidates.png", heading: "PEO – Professional Employer Organization", description: "Share employment responsibilities while retaining full operational control. We handle payroll, benefits, and compliance so you can focus on managing your team.", href: "/services/peo-professional-employer-organization" },
   { icon: "/images/icon-effectiveness-employee-growth.png", heading: "Finance Outsourcing & Contracting", description: "Optimized financial operations with reliable compliance and reporting. We provide skilled finance professionals who integrate with your workflows and deliver faster outcomes.", href: "/services/finance-outsourcing-contracting" },

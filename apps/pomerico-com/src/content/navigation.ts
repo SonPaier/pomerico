@@ -17,6 +17,7 @@ export const mainNav: NavItem[] = [
     label: "Services",
     href: "/services",
     children: [
+      { label: "AI Transformation", href: "/services/ai-transformation" },
       { label: "BPO – Business Process Outsourcing", href: "/services/bpo-business-process-outsourcing" },
       { label: "Finance Outsourcing & Contracting", href: "/services/finance-outsourcing-contracting" },
       { label: "Nearshoring in Poland", href: "/services/nearshoring-in-poland" },
@@ -62,6 +63,7 @@ export const footerCompanyLinks: NavLink[] = [
 ];
 
 export const footerServiceLinks: NavLink[] = [
+  { label: "AI Transformation", href: "/services/ai-transformation" },
   { label: "Nearshoring in Poland", href: "/services/nearshoring-in-poland" },
   { label: "Business Consulting / Tax & Law", href: "/services/business-consulting-tax-law" },
   { label: "Market Entry in Poland", href: "/services/market-entry-in-poland" },

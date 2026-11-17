@@ -1,4 +1,5 @@
 import type { IndustryPageData } from "@pomerico/content";
+import { aiInYourBackOffice } from "./shared-sections";
 
 export const data: IndustryPageData = {
   slug: "information-technology",
@@ -24,6 +25,7 @@ export const data: IndustryPageData = {
     { icon: "/images/icon-gears-system-integration.png", heading: "EOR/ EOR + Onsite", description: "Hire IT talent in Poland without opening a local entity. Full legal employment in Poland. Payroll, benefits & compliance covered. Perfect for EU expansion & pilot teams." },
     { icon: "/images/icon-gears-system-integration.png", heading: "Nearshoring in Poland", description: "Build entire IT teams in Poland \u2013 EU-level quality at reduced cost. 30-40% lower operational costs. Developers, DevOps, Data, QA, Cloud. Fully managed by Pomerico." },
   ],
+  extraSections: [aiInYourBackOffice],
   tagline: {
     heading: "Empowering IT teams. Accelerating results. Delivering impact.",
     description: "Fast deployment, stable teams, and predictable costs \u2013 accelerating your IT projects with confidence.",

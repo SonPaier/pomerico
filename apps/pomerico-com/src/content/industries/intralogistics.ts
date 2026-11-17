@@ -1,4 +1,5 @@
 import type { IndustryPageData } from "@pomerico/content";
+import { aiInYourBackOffice } from "./shared-sections";
 
 export const data: IndustryPageData = {
   slug: "intralogistics",
@@ -22,6 +23,7 @@ export const data: IndustryPageData = {
     { icon: "/images/icon-person-growth-performance.png", heading: "EOR / PEO", description: "Full legal, tax, and HR support that enables fast and compliant hiring in Poland without establishing a local entity" },
     { icon: "/images/icon-checklist-regulatory-compliance.png", heading: "Market Entry", description: "We assist companies in entering the Polish market through consulting or outsourcing models. We act as your local partner in Poland" },
   ],
+  extraSections: [aiInYourBackOffice],
   tagline: {
     heading: "Companies choose Pomerico for intralogistics because we build high-performing, stable teams \u2013 not just fill positions.",
     description: "Delivering ready-to-work specialists in weeks, minimizing turnover, and ensuring seamless integration \u2013 all with transparent, fixed fees and no hidden costs.",

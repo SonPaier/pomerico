@@ -1,4 +1,5 @@
 import type { IndustryPageData } from "@pomerico/content";
+import { aiInYourBackOffice } from "./shared-sections";
 
 export const data: IndustryPageData = {
   slug: "manufacturing-industry",
@@ -31,6 +32,7 @@ export const data: IndustryPageData = {
     { icon: "/images/icon-handshake-partnership.png", heading: "Operational Reliability", description: "Stable, fully trained, and compliant teams ensure consistent delivery, minimal turnover, and predictable results." },
     { icon: "/images/icon-strategy-market-entry.png", heading: "Flexibility & Scalability", description: "Adjust team size, skills, and scope on-demand, enabling your business to respond quickly to market changes and project needs." },
   ],
+  extraSections: [aiInYourBackOffice],
   tagline: {
     heading: "Pomerico delivers stable teams, fast results, and measurable impact.",
     description: "0-7% turnover, teams onboarded in weeks, transparent costs.",

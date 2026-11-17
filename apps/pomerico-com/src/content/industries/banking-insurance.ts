@@ -8,7 +8,7 @@ export const data: IndustryPageData = {
   hero: {
     heading: "Banking & Insurance",
     description:
-      "Since <b>2015</b>, we have been supporting banks, insurance companies, and fintechs in digital transformation and operational growth. Our experience and unique know-how make us a strong partner for financial institutions operating in a highly regulated environment.",
+      "Since <b>2015</b>, we have been supporting banks, insurance companies, and fintechs in operational growth. We combine compliant finance teams with AI-enabled processes, designed with DORA and the EU AI Act in mind. Our experience and unique know-how make us a strong partner for financial institutions operating in a highly regulated environment.",
     iconList: [
       { bold: "Optimized financial operations -", text: "Pomerico manages compliance, payroll, and HR processes, allowing banks and insurance companies to focus on core operations." },
       { bold: "Faster digital transformation -", text: "Rapid deployment of skilled specialists ensures accelerated projects in fintech, banking, and insurance." },

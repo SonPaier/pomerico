@@ -16,6 +16,7 @@ const DEFAULT_TOPICS = [
   "Looking for a job",
   "I offer services",
   "I am a B2B Client, free quote and/or consultation",
+  "AI Transformation",
   "Other",
 ] as const;
 

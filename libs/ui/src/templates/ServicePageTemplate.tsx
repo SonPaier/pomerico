@@ -13,6 +13,7 @@ import { TaglineSection } from "../TaglineSection";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { Accordion } from "../Accordion";
 import { FaqJsonLd } from "../FaqJsonLd";
+import { ContentSection } from "../ContentSection";
 import type { CaseStudyCard } from "@pomerico/content";
 
 function TargetAudienceSection({
@@ -128,6 +129,11 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
           </div>
         </section>
       )}
+
+      {/* Extra text sections */}
+      {data.extraSections?.map((section) => (
+        <ContentSection key={section.heading} data={section} />
+      ))}
 
       {/* Target Audience */}
       {data.targetAudience && (

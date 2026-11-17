@@ -8,7 +8,7 @@ export const data: ServicePageData = {
   hero: {
     heading: "BPO – Business Process Outsourcing in Poland",
     description:
-      "<p>Pomerico's BPO service means taking full responsibility for selected operational processes within your company-such as HR, administration, finance, or IT support. With this solution, you gain ready-to-use results without the need to engage your own internal resources. Pomerico provides a dedicated team of specialists, professional management, and guarantees delivery of agreed KPIs.</p>",
+      "<p>Pomerico's BPO service means taking full responsibility for selected operational processes within your company-such as HR, administration, finance, or IT support. With this solution, you gain ready-to-use results without the need to engage your own internal resources. Pomerico provides a dedicated team of specialists, professional management, and guarantees delivery of agreed KPIs.</p><p><b>AI-enabled BPO:</b> we run your processes with people and AI, and a person approves every output.</p>",
     iconList: [
       { bold: "Reduced internal workload -", text: "Pomerico takes full responsibility for HR, finance, IT, and administrative processes, so your team can focus on strategic priorities." },
       { bold: "Faster operational outcomes -", text: "Dedicated teams and professional management deliver ready-to-use results quickly, without delays or operational bottlenecks." },
@@ -109,5 +109,9 @@ export const faqItems: FAQItem[] = [
   {
     question: "Can I combine BPO with other services like PEO, Payroll or Recruitment?",
     answer: "Yes, many clients use a combined model. Pomerico acts as a one-stop partner for HR, payroll, legal, recruitment and operations."
+  },
+  {
+    question: "Do you use AI in BPO delivery?",
+    answer: "Yes, where it helps and where you approve it. AI takes over repetitive steps; our team checks and approves every result."
   },
 ];

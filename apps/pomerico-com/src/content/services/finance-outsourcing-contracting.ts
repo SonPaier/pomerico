@@ -99,6 +99,22 @@ export const data: ServicePageData = {
       },
     ],
   },
+  extraSections: [
+    {
+      heading: "Systems we work with",
+      paragraphs: [
+        "Our consultants work in your systems from day one.",
+        "<b>ERP:</b> SAP (ERP, S/4HANA, FICO), Oracle, IFS, NetSuite, Microsoft Dynamics.<br/><b>Nordic accounting:</b> e-conomic, Dinero, Uniconta.<br/><b>P2P and T&amp;E:</b> Coupa, Ariba, Concur, OCR.<br/><b>Close and controls:</b> Blackline, ServiceNow.<br/><b>Insurance reporting:</b> Solvency II (QRT) and IFRS 9.<br/><b>Automation and analytics:</b> Power BI, Power Query, VBA, Python, SQL, R, RPA, and AI tools such as Claude, ChatGPT and Microsoft 365 Copilot.",
+      ],
+    },
+    {
+      heading: "Automation and RPA in finance",
+      paragraphs: [
+        "Many finance tasks follow fixed rules: moving data between systems, posting standard documents, reconciling balances, sending recurring reports. Our consultants automate them with RPA, Power Query, VBA and Python, and add AI where documents or judgement are involved. The result is shorter close and reporting cycles and fewer manual errors.",
+      ],
+      link: { label: "See AI Transformation", href: "/services/ai-transformation" },
+    },
+  ],
   targetAudience: {
     heading: "Who Is Finance Outsourcing & Contracting For?",
     description: "For companies that need accuracy, speed, expert support and predictable financial operations - without hiring internally. Finance Outsourcing & Contracting from Pomerico is designed for organizations that want to strengthen or scale their financial capabilities while keeping costs, risks and complexity low.",

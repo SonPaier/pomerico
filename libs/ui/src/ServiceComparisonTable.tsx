@@ -110,94 +110,101 @@ const columns = [
     href: "/services/it-contracting",
     group: "it",
   },
+  {
+    badge: "Advisory & Implementation",
+    name: "AI Transformation",
+    desc: "Process mapping, AI readiness audit & AI implementation",
+    href: "/services/ai-transformation",
+    group: "advisory",
+  },
 ];
 
-// Column order: EOR | EOR+Onsite | PEO | BPO | Finance Out. | HR Out. | Body Leasing | RPO/Recruit. | Nearshoring | Market Entry | Biz Consulting | IT Contracting
+// Column order: EOR | EOR+Onsite | PEO | BPO | Finance Out. | HR Out. | Body Leasing | RPO/Recruit. | Nearshoring | Market Entry | Biz Consulting | IT Contracting | AI Transformation
 const rows: Row[] = [
   { kind: "category", label: "Employment & Legal" },
   { kind: "data", feature: "No local entity required", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "Not required" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Supported" }, { type: "partial", label: "Advisory only" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "Not required" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Supported" }, { type: "partial", label: "Advisory only" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" },
   ]},
   { kind: "data", feature: "Pomerico is the legal employer", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes — fully" }, { type: "yes", label: "Yes — fully" }, { type: "partial", label: "Shared" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Optional" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes — fully" }, { type: "yes", label: "Yes — fully" }, { type: "partial", label: "Shared" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Optional" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "partial", label: "AI engineers only" },
   ]},
   { kind: "data", feature: "Client retains employer status", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — after setup" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" },
+    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — after setup" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" },
   ]},
   { kind: "data", feature: "Full EU / Polish law compliance", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Partial" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes — core focus" }, { type: "yes", label: "Yes — core focus" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Partial" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes — core focus" }, { type: "yes", label: "Yes — core focus" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes — GDPR & EU AI Act" },
   ]},
 
   { kind: "category", label: "HR & Payroll" },
   { kind: "data", feature: "Payroll managed by Pomerico", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "partial", label: "AI engineers only" },
   ]},
   { kind: "data", feature: "HR admin (contracts, leave, benefits)", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Core service" }, { type: "yes", label: "Full" }, { type: "no", label: "No" }, { type: "yes", label: "Full" }, { type: "partial", label: "Setup only" }, { type: "no", label: "No" }, { type: "yes", label: "Full" },
+    { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Full" }, { type: "yes", label: "Core service" }, { type: "yes", label: "Full" }, { type: "no", label: "No" }, { type: "yes", label: "Full" }, { type: "partial", label: "Setup only" }, { type: "no", label: "No" }, { type: "yes", label: "Full" }, { type: "partial", label: "AI engineers only" },
   ]},
   { kind: "data", feature: "Dedicated HR Business Partner", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "On request" }, { type: "yes", label: "Yes" }, { type: "partial", label: "On request" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "On request" }, { type: "yes", label: "Yes" }, { type: "partial", label: "On request" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" },
   ]},
   { kind: "data", feature: "Onsite manager / coordinator provided", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "no", label: "No" }, { type: "yes", label: "Yes — core feature" }, { type: "no", label: "No" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" },
+    { type: "no", label: "No" }, { type: "yes", label: "Yes — core feature" }, { type: "no", label: "No" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" },
   ]},
 
   { kind: "category", label: "Talent & Recruitment" },
   { kind: "data", feature: "Recruitment included (no extra fee)", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "partial", label: "Included" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Core service" }, { type: "yes", label: "Yes — free" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — free" },
+    { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Yes — free" }, { type: "partial", label: "Included" }, { type: "yes", label: "Yes — free" }, { type: "yes", label: "Core service" }, { type: "yes", label: "Yes — free" }, { type: "partial", label: "Optional" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — free" }, { type: "no", label: "No" },
   ]},
   { kind: "data", feature: "Direct Search / hidden market access", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Selective" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Selective" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" },
   ]},
   { kind: "data", feature: "Onboarding managed by Pomerico", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" },
   ]},
 
   { kind: "category", label: "Flexibility & Scale" },
   { kind: "data", feature: "Minimum team / engagement size", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "txt", label: "1 person" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 process" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 function" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 role" }, { type: "txt", label: "1 team" }, { type: "txt", label: "1 project" }, { type: "txt", label: "1 project" }, { type: "txt", label: "1 person" },
+    { type: "txt", label: "1 person" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 process" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 function" }, { type: "txt", label: "1 person" }, { type: "txt", label: "1 role" }, { type: "txt", label: "1 team" }, { type: "txt", label: "1 project" }, { type: "txt", label: "1 project" }, { type: "txt", label: "1 person" }, { type: "txt", label: "One process" },
   ]},
   { kind: "data", feature: "Typical time to deployment", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "txt", label: "1–3 weeks" }, { type: "txt", label: "2–4 weeks" }, { type: "txt", label: "1–3 weeks" }, { type: "txt", label: "2–4 weeks" }, { type: "txt", label: "1–2 weeks" }, { type: "txt", label: "1–2 weeks" }, { type: "txt", label: "Days" }, { type: "txt", label: "2–6 weeks" }, { type: "txt", label: "4–8 weeks" }, { type: "txt", label: "4–12 weeks" }, { type: "txt", label: "1–2 weeks" }, { type: "txt", label: "Days–1 week" },
+    { type: "txt", label: "1–3 weeks" }, { type: "txt", label: "2–4 weeks" }, { type: "txt", label: "1–3 weeks" }, { type: "txt", label: "2–4 weeks" }, { type: "txt", label: "1–2 weeks" }, { type: "txt", label: "1–2 weeks" }, { type: "txt", label: "Days" }, { type: "txt", label: "2–6 weeks" }, { type: "txt", label: "4–8 weeks" }, { type: "txt", label: "4–12 weeks" }, { type: "txt", label: "1–2 weeks" }, { type: "txt", label: "Days–1 week" }, { type: "txt", label: "Audit: 3–4 weeks" },
   ]},
   { kind: "data", feature: "Scale up / down without long-term commitment", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Moderate" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "High flexibility" }, { type: "partial", label: "Per project" }, { type: "yes", label: "Yes" }, { type: "no", label: "One-time" }, { type: "partial", label: "Per mandate" }, { type: "yes", label: "High flexibility" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Moderate" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "High flexibility" }, { type: "partial", label: "Per project" }, { type: "yes", label: "Yes" }, { type: "no", label: "One-time" }, { type: "partial", label: "Per mandate" }, { type: "yes", label: "High flexibility" }, { type: "yes", label: "Yes — step by step" },
   ]},
   { kind: "data", feature: "Remote / hybrid / on-site support", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "partial", label: "Client-led" }, { type: "yes", label: "All models" }, { type: "partial", label: "On-site preferred" }, { type: "partial", label: "Remote / hybrid" }, { type: "yes", label: "All models" },
+    { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "yes", label: "All models" }, { type: "partial", label: "Client-led" }, { type: "yes", label: "All models" }, { type: "partial", label: "On-site preferred" }, { type: "partial", label: "Remote / hybrid" }, { type: "yes", label: "All models" }, { type: "txt", label: "On your environment" },
   ]},
 
   { kind: "category", label: "Billing & Cost" },
   { kind: "data", feature: "Fixed monthly invoice (predictable cost)", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Project-based" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Project-based" }, { type: "partial", label: "Per mandate" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Project-based" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Project-based" }, { type: "partial", label: "Per mandate" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Fixed-price audit" },
   ]},
   { kind: "data", feature: "Cost savings vs. Western Europe", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "txt", label: "Up to 40%" }, { type: "txt", label: "Up to 40%" }, { type: "txt", label: "Up to 40%" }, { type: "txt", label: "30–50%" }, { type: "txt", label: "30–45%" }, { type: "txt", label: "30–40%" }, { type: "txt", label: "Up to 40%" }, { type: "txt", label: "Variable" }, { type: "txt", label: "Up to 50%" }, { type: "txt", label: "N/A" }, { type: "txt", label: "N/A" }, { type: "txt", label: "Up to 50%" },
+    { type: "txt", label: "Up to 40%" }, { type: "txt", label: "Up to 40%" }, { type: "txt", label: "Up to 40%" }, { type: "txt", label: "30–50%" }, { type: "txt", label: "30–45%" }, { type: "txt", label: "30–40%" }, { type: "txt", label: "Up to 40%" }, { type: "txt", label: "Variable" }, { type: "txt", label: "Up to 50%" }, { type: "txt", label: "N/A" }, { type: "txt", label: "N/A" }, { type: "txt", label: "Up to 50%" }, { type: "txt", label: "Hours & FTE freed" },
   ]},
   { kind: "data", feature: "Zero hidden admin / compliance costs", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Fixed scope" }, { type: "partial", label: "Fixed scope" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "partial", label: "Fixed scope" }, { type: "partial", label: "Fixed scope" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" },
   ]},
 
   { kind: "category", label: "Process Management" },
   { kind: "data", feature: "Full process ownership by Pomerico", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "partial", label: "Hiring process" }, { type: "partial", label: "Team mgmt" }, { type: "yes", label: "Yes — setup" }, { type: "partial", label: "Advisory" }, { type: "no", label: "No" },
+    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No" }, { type: "partial", label: "Hiring process" }, { type: "partial", label: "Team mgmt" }, { type: "yes", label: "Yes — setup" }, { type: "partial", label: "Advisory" }, { type: "no", label: "No" }, { type: "no", label: "No — you own it" },
   ]},
   { kind: "data", feature: "Client manages daily tasks & goals", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No — Pomerico" }, { type: "partial", label: "Shared" }, { type: "partial", label: "Shared" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" },
+    { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "no", label: "No — Pomerico" }, { type: "partial", label: "Shared" }, { type: "partial", label: "Shared" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" }, { type: "yes", label: "Yes" },
   ]},
   { kind: "data", feature: "KPI / SLA reporting included", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "partial", label: "Monthly" }, { type: "yes", label: "Full KPI/SLA" }, { type: "partial", label: "Monthly" }, { type: "yes", label: "Full KPI/SLA" }, { type: "yes", label: "Full KPI/SLA" }, { type: "yes", label: "Full KPI/SLA" }, { type: "partial", label: "Monthly" }, { type: "partial", label: "Per project" }, { type: "partial", label: "Monthly" }, { type: "partial", label: "Milestone-based" }, { type: "partial", label: "Per mandate" }, { type: "partial", label: "Per project" },
+    { type: "partial", label: "Monthly" }, { type: "yes", label: "Full KPI/SLA" }, { type: "partial", label: "Monthly" }, { type: "yes", label: "Full KPI/SLA" }, { type: "yes", label: "Full KPI/SLA" }, { type: "yes", label: "Full KPI/SLA" }, { type: "partial", label: "Monthly" }, { type: "partial", label: "Per project" }, { type: "partial", label: "Monthly" }, { type: "partial", label: "Milestone-based" }, { type: "partial", label: "Per mandate" }, { type: "partial", label: "Per project" }, { type: "yes", label: "Baseline vs. result" },
   ]},
 
   { kind: "category", label: "Advisory & Market Entry" },
   { kind: "data", feature: "Entity formation / registration support", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — core" }, { type: "partial", label: "Advisory" }, { type: "no", label: "No" },
+    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — core" }, { type: "partial", label: "Advisory" }, { type: "no", label: "No" }, { type: "no", label: "No" },
   ]},
   { kind: "data", feature: "Tax & legal advisory (Polish regulations)", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "partial", label: "Compliance" }, { type: "partial", label: "Compliance" }, { type: "partial", label: "Compliance" }, { type: "no", label: "No" }, { type: "partial", label: "Finance law" }, { type: "partial", label: "Labour law" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — core" }, { type: "yes", label: "Yes — core" }, { type: "no", label: "No" },
+    { type: "partial", label: "Compliance" }, { type: "partial", label: "Compliance" }, { type: "partial", label: "Compliance" }, { type: "no", label: "No" }, { type: "partial", label: "Finance law" }, { type: "partial", label: "Labour law" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — core" }, { type: "yes", label: "Yes — core" }, { type: "no", label: "No" }, { type: "no", label: "No" },
   ]},
   { kind: "data", feature: "Business strategy & growth consulting", tags: ["employment", "outsourcing", "staffing", "advisory", "it"], cells: [
-    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "partial", label: "HR strategy" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — core" }, { type: "yes", label: "Yes — core" }, { type: "no", label: "No" },
+    { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "partial", label: "HR strategy" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "no", label: "No" }, { type: "yes", label: "Yes — core" }, { type: "yes", label: "Yes — core" }, { type: "no", label: "No" }, { type: "partial", label: "AI roadmap" },
   ]},
 ];
 
@@ -214,6 +221,7 @@ const bestFor = [
   "Foreign companies launching operations in Poland — from entity setup to hiring the first local team.",
   "International businesses navigating Polish tax law, regulatory compliance, and business strategy.",
   "Companies needing skilled developers, engineers or tech leads for project-based or ongoing IT work.",
+  "Companies that pay for AI licences but want measurable results – from process map and business case to working AI tools.",
 ];
 
 const filters = [
@@ -289,7 +297,7 @@ export function ServiceComparisonTable() {
         {/* Table */}
         <div className="overflow-hidden rounded-lg border border-dark/10 bg-white">
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[1400px] border-collapse text-sm">
+            <table className="w-full min-w-[1500px] border-collapse text-sm">
               <thead>
                 <tr className="border-b border-dark/10 bg-gray-bg">
                   <th className="min-w-[180px] p-4 text-left text-xs font-semibold uppercase tracking-wider text-dark/50" />

@@ -10,6 +10,7 @@ import { ProcessSection } from "../ProcessSection";
 import { TaglineSection } from "../TaglineSection";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { Accordion } from "../Accordion";
+import { ContentSection } from "../ContentSection";
 import type { CaseStudyCard } from "@pomerico/content";
 
 interface IndustryPageTemplateProps {
@@ -80,6 +81,11 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
           </div>
         </section>
       )}
+
+      {/* Extra text sections */}
+      {data.extraSections?.map((section) => (
+        <ContentSection key={section.heading} data={section} />
+      ))}
 
       {/* Tagline + Testimonial — split view when both exist */}
       {data.tagline && data.testimonials && data.testimonials.length > 0 ? (

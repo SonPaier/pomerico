@@ -149,6 +149,13 @@ export default function RootLayout({
                     "HR outsourcing",
                     "nearshoring",
                     "market entry in Poland",
+                    "AI transformation",
+                    "business process mapping",
+                    "AI readiness assessment",
+                    "RPA",
+                    "EU AI Act compliance",
+                    "shared services",
+                    "BPO",
                   ],
                   areaServed: [
                     { "@type": "Country", name: "Poland" },

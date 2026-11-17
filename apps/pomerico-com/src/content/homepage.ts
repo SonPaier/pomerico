@@ -1,4 +1,5 @@
 import type { ServiceCard, Testimonial } from "@pomerico/content";
+import { aiTransformationCard } from "./services/ai-transformation";
 
 // ── Hero ────────────────────────────────────────────────
 
@@ -11,6 +12,7 @@ export const homepageHero = {
 // ── Service cards (homepage "What we specialize in?") ───
 
 export const homepageServiceCards: ServiceCard[] = [
+  aiTransformationCard,
   {
     icon: "/images/icon-person-growth-performance.png",
     heading: "Finance Outsourcing & Contracting",

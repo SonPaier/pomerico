@@ -21,14 +21,16 @@ export const metadata: Metadata = withOgImage({
       "Answers about BPO, finance outsourcing, recruitment, EOR and HR outsourcing in Poland: costs, billing models, compliance and how fast cooperation starts.",
   },
 });
+import Link from "next/link";
 import { ImageCarousel } from "@pomerico/ui/client";
+import { ArrowRightIcon } from "@pomerico/ui";
 import { clientLogos } from "@/content/shared";
-import { faqHero, faqItems } from "@/content/faq";
+import { faqHero, faqItems, aiTransformationFaqCategory } from "@/content/faq";
 
 export default function FAQPage() {
   return (
     <>
-      <FaqJsonLd items={faqItems} />
+      <FaqJsonLd items={[...faqItems, ...aiTransformationFaqCategory]} />
       {/* Hero */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
@@ -85,6 +87,23 @@ export default function FAQPage() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Accordion items={faqItems} />
+        </div>
+      </section>
+
+      {/* Category: AI Transformation */}
+      <section className="bg-gray-bg py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-10 font-heading text-3xl font-bold text-dark lg:text-4xl">
+            AI Transformation
+          </h2>
+          <Accordion items={aiTransformationFaqCategory} />
+          <Link
+            href="/services/ai-transformation"
+            className="mt-8 inline-flex items-center gap-2 font-ui text-sm font-semibold text-primary-blue hover:underline"
+          >
+            See AI Transformation
+            <ArrowRightIcon />
+          </Link>
         </div>
       </section>
 

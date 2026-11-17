@@ -45,6 +45,11 @@ export const data: ServicePageData = {
         heading: "Offboarding & Outplacement",
         description: "Structured offboarding as part of our HR outsourcing in Poland: notice and exit documentation in line with Polish labour law, transition process management, equipment and system-access checklists, final settlement coordinated with payroll. Exit interviews with reporting on why people leave. Restructuring support: redundancy planning, communication plans and preparing managers for difficult conversations. Outplacement programmes for departing employees: career counselling, CV and LinkedIn support, interview preparation and active job-market support.",
       },
+      {
+        icon: "/images/icon-brain-knowledge-expertise.png",
+        heading: "AI readiness in HR",
+        description: "AI policy, AI literacy training and a review of HR tools under the EU AI Act.",
+      },
     ],
   },
   targetAudience: {

@@ -1,4 +1,5 @@
 import type { FAQItem } from "@pomerico/content";
+import { faqItems as aiTransformationFaqItems } from "./services/ai-transformation";
 
 export const faqHero = {
   heading: "Frequently Asked Questions About Outsourcing in Poland",
@@ -101,3 +102,13 @@ export const faqItems: FAQItem[] = [
 <p>Pomerico is not just an executor — we are your strategic advisor. We combine outsourcing with consulting, helping you optimize costs, improve processes, and align HR/finance with business goals.</p>`,
   },
 ];
+
+// Homepage FAQ: first question, ahead of the general items.
+export const homepageAiFaqItem: FAQItem = {
+  question: "Do you help companies implement AI?",
+  answer:
+    "Yes. We run AI readiness audits, map processes, estimate the business case and implement AI tools in finance, HR, recruitment and back office – the same way we did it in our own company.",
+};
+
+// /faq category "AI Transformation": the first 5 questions from /services/ai-transformation.
+export const aiTransformationFaqCategory: FAQItem[] = aiTransformationFaqItems.slice(0, 5);

@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // that Google learns to ignore. Blog posts carry their real publication date.
 
   const services = [
+    "ai-transformation",
     "bpo-business-process-outsourcing",
     "finance-outsourcing-contracting",
     "peo-professional-employer-organization",

@@ -8,6 +8,7 @@ export { CaseStudyLayout } from "./CaseStudyLayout";
 export { CheckmarkIcon } from "./CheckmarkIcon";
 export { ComparisonTable } from "./ComparisonTable";
 export { ContactInfo } from "./ContactInfo";
+export { ContentSection } from "./ContentSection";
 export { CTASection } from "./CTASection";
 export { DecisionCards } from "./DecisionCards";
 export { FaqJsonLd } from "./FaqJsonLd";

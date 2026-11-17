@@ -93,6 +93,14 @@ export interface ProcessStep {
   description: string;
 }
 
+/** Free-text section (H2 + paragraphs + optional link), e.g. "AI in your back office" */
+export interface ContentSectionData {
+  heading: string;
+  /** HTML strings, one per paragraph */
+  paragraphs: string[];
+  link?: { label: string; href: string };
+}
+
 // ── Page data types ──────────────────────────────────────
 
 export interface ServicePageData {
@@ -131,6 +139,8 @@ export interface ServicePageData {
   testimonials?: Testimonial[];
   /** Featured case study slugs */
   caseStudySlugs?: string[];
+  /** Extra free-text sections shown after Benefits / Services */
+  extraSections?: ContentSectionData[];
   /** Optional tagline between sections */
   tagline?: {
     preheading?: string;
@@ -167,6 +177,8 @@ export interface IndustryPageData {
     heading: string;
     description?: string;
   };
+  /** Extra free-text sections shown after Benefits */
+  extraSections?: ContentSectionData[];
   /** Logos of trusted clients in this industry */
   trustedLogos?: { src: string; alt: string }[];
 }

@@ -12,6 +12,7 @@ export type {
   CaseStudyCard,
   FAQItem,
   ProcessStep,
+  ContentSectionData,
   ServicePageData,
   IndustryPageData,
   CaseStudyPageData,

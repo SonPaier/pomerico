@@ -9,6 +9,7 @@ import { CaseStudyGrid } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
 import { ProcessSection } from "@pomerico/ui";
 import { Breadcrumbs } from "@pomerico/ui";
+import { ContentSection } from "@pomerico/ui";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 import { submitContactForm } from "@/app/actions/contact";
 import { faqItems } from "@/content/faq";
@@ -64,6 +65,11 @@ export default function SharedServicesBpoPage() {
           </div>
         </section>
       )}
+
+      {/* Extra text sections (AI transformation for SSCs) */}
+      {data.extraSections?.map((section) => (
+        <ContentSection key={section.heading} data={section} />
+      ))}
 
       {/* Tagline + Testimonial — split view */}
       {data.tagline && testimonial && (

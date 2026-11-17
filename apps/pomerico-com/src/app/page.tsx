@@ -9,7 +9,8 @@ import { ArrowRightIcon } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
 import { CaseStudyGrid } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
-import { faqItems } from "@/content/faq";
+import { withOgImage } from "@/lib/og-image";
+import { faqItems, homepageAiFaqItem } from "@/content/faq";
 import {
   counters,
   clientLogos,
@@ -22,23 +23,24 @@ import {
 } from "@/content/homepage";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 
-export const metadata: Metadata = {
-  title: { absolute: "BPO & Finance Outsourcing in Poland | Pomerico" },
-  description:
-    "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
+const homeTitle = "BPO & AI Transformation Partner in Poland | Pomerico";
+const homeDescription =
+  "BPO, finance outsourcing and AI transformation in Poland: finance teams, recruitment, EOR and HR outsourcing for international companies. Based in Gdańsk.";
+
+export const metadata: Metadata = withOgImage({
+  title: { absolute: homeTitle },
+  description: homeDescription,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "BPO & Finance Outsourcing in Poland | Pomerico",
-    description:
-      "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
+    title: homeTitle,
+    description: homeDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "BPO & Finance Outsourcing in Poland | Pomerico",
-    description:
-      "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk.",
+    title: homeTitle,
+    description: homeDescription,
   },
-};
+});
 
 export default function Home() {
   return (
@@ -231,7 +233,7 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
           </div>
-          <Accordion items={faqItems.slice(0, 7)} defaultOpen={0} />
+          <Accordion items={[homepageAiFaqItem, ...faqItems.slice(0, 6)]} defaultOpen={0} />
           <div className="mt-8 text-center">
             <Link
               href="/faq"

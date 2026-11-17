@@ -30,6 +30,15 @@ export const data: IndustryPageData = {
     { icon: "/images/icon-person-growth-performance.png", heading: "Cost Optimization", description: "Reduce overheads and optimize operational costs while maintaining high service quality." },
     { icon: "/images/icon-gears-operations-management.png", heading: "Cost Optimization", description: "Low turnover, fully trained teams, and consistent delivery ensure predictable results." },
   ],
+  extraSections: [
+    {
+      heading: "AI transformation for shared service centres",
+      paragraphs: [
+        "Most SSCs already pay for AI licences, but work looks the same. We map your processes, measure where time is lost, estimate the benefit of each AI use case and run a pilot on your environment. If the change needs extra hands, we staff the process while your team adapts.",
+      ],
+      link: { label: "See AI Transformation", href: "/services/ai-transformation" },
+    },
+  ],
   tagline: {
     heading: "Pomerico makes SSC and BPO simple",
     description: "Focus on your business, we handle the rest \u2013 reliable SSC/BPO teams ready to deliver from day one.",
