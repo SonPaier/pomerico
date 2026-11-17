@@ -11,7 +11,7 @@ export const hero = {
   heading: "AI Transformation for Companies: From Process Map to Working AI Tools",
   description:
     "We map your processes, find the bottlenecks, estimate what AI can realistically deliver and implement tools your people actually use – on your own environment and within your security rules. We did it in our own company first.",
-  cta: { label: "Book an AI readiness call", href: "/contact#book-consultation" },
+  trustImage: "/images/pomerico-trusted-partner-badges.svg",
   // "See how we use AI at Pomerico" – add once /case-studies/ai-at-pomerico is published (#11056).
 };
 
