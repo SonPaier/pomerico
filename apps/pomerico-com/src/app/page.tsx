@@ -5,7 +5,7 @@ import { CounterSection } from "@pomerico/ui/client";
 import { ImageCarousel } from "@pomerico/ui/client";
 import { TestimonialCarousel } from "@pomerico/ui/client";
 import { Accordion } from "@pomerico/ui/client";
-import { ArrowRightIcon } from "@pomerico/ui";
+import { ArrowRightIcon, heroFadeMaskStyle } from "@pomerico/ui";
 import { ServiceCardGrid } from "@pomerico/ui";
 import { CaseStudyGrid } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
@@ -44,21 +44,26 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[72vh] items-center overflow-hidden">
         {/* Hero background = LCP element: a real <img> (found by the preload
             scanner, high priority) instead of a CSS background-image. Same
             look: covers the section, centred, under the 90% blue overlay. */}
-        <Image
-          src="/images/pomerico-hero-background.webp"
-          alt=""
-          fill
-          sizes="100vw"
-          loading="eager"
-          fetchPriority="high"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-primary-blue/90" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-24">
+        {/* Photo + blue overlay fade softly into the white section below
+            (same fade as the FAQ, Blog, Services and Industries heroes). */}
+        <div className="absolute inset-0" style={heroFadeMaskStyle()}>
+          <Image
+            src="/images/pomerico-hero-background.webp"
+            alt=""
+            fill
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-primary-blue/90" />
+        </div>
+        {/* Bottom padding holds the fade, so the content stays on solid blue */}
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-12 pb-44">
           <div className="max-w-2xl">
             <p className="mb-4 flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="inline-block h-5 w-1 rounded bg-primary-red" />

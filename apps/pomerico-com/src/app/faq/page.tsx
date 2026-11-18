@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { withOgImage } from "@/lib/og-image";
+import { heroFadeStyle } from "@pomerico/ui";
 import { Accordion } from "@pomerico/ui/client";
 import { FaqJsonLd } from "@pomerico/ui";
 
@@ -32,17 +33,7 @@ export default function FAQPage() {
       {/* Brand-blue hero (as on other pages) that fades softly into white towards the logo carousel */}
       <section
         className="pt-16 pb-44 text-white"
-        style={{
-          // Solid blue behind the text; a long, eased fade (no visible edge) only in the bottom padding.
-          backgroundImage: `linear-gradient(to bottom, ${[
-            "rgb(54 85 158) 0%",
-            "rgb(54 85 158) calc(100% - 11rem)",
-            ...[0.97, 0.91, 0.82, 0.7, 0.57, 0.43, 0.3, 0.19, 0.1, 0.04].map(
-              (a, i) => `rgb(54 85 158 / ${a}) calc(100% - ${11 - (i + 1)}rem)`,
-            ),
-            "rgb(54 85 158 / 0) 100%",
-          ].join(", ")})`,
-        }}
+        style={heroFadeStyle()}
       >
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto flex max-w-4xl flex-col gap-6 text-center">
