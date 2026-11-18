@@ -5,7 +5,7 @@ export const howToHireMoreEffectively = {
   author: {
     name: "Sebastian Kunc",
     photo:
-      "/images/sebastian-kunc-blog-avatar.webp",
+      "/images/sebastian-kunc-general-manager-blog-avatar.webp",
     linkedin: "https://www.linkedin.com/in/sebastian-kunc/",
     phone: "+48 727 906 253",
     email: "consult@pomerico.com",

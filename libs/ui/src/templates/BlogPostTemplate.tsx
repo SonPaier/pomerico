@@ -10,8 +10,9 @@ export interface BlogPostAuthor {
   name: string;
   role?: string;
   photo: string;
-  linkedin: string;
-  phone: string;
+  /** Optional: the "LinkedIn" link in the author card is shown only when set. */
+  linkedin?: string;
+  phone?: string;
   email: string;
 }
 
@@ -199,14 +200,16 @@ export function BlogPostTemplate({
                 </p>
                 {a.role && <p className="text-sm text-dark/70">{a.role}</p>}
                 <div className="mt-2 flex flex-wrap gap-4 text-sm text-dark/70">
-                  <a
-                    href={a.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-blue hover:underline"
-                  >
-                    LinkedIn
-                  </a>
+                  {a.linkedin && (
+                    <a
+                      href={a.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-blue hover:underline"
+                    >
+                      LinkedIn
+                    </a>
+                  )}
                   <span>{a.email}</span>
                 </div>
               </div>

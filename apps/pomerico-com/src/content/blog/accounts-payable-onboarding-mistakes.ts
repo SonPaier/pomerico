@@ -6,7 +6,7 @@ export const accountsPayableOnboardingMistakes = {
   author: {
     name: "Joanna Włodarczyk",
     role: "Accounts Payable Manager",
-    photo: "/images/joanna-wlodarczyk.webp",
+    photo: "/images/joanna-wlodarczyk-expert-blog-avatar.webp",
     linkedin: "https://www.linkedin.com/in/joanna-w%C5%82odarczyk-4b257b164/",
     phone: "+48 794 165 506",
     email: "consult@pomerico.com",
