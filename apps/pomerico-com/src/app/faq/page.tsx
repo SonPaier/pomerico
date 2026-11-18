@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { withOgImage } from "@/lib/og-image";
-import Image from "next/image";
 import { Accordion } from "@pomerico/ui/client";
 import { FaqJsonLd } from "@pomerico/ui";
 
@@ -30,24 +29,29 @@ export default function FAQPage() {
     <>
       <FaqJsonLd items={faqItems} />
       {/* Hero */}
-      <section className="py-20">
+      {/* Brand-blue hero (as on other pages) that fades softly into white towards the logo carousel */}
+      <section
+        className="pt-16 pb-44 text-white"
+        style={{
+          // Solid blue behind the text; a long, eased fade (no visible edge) only in the bottom padding.
+          backgroundImage: `linear-gradient(to bottom, ${[
+            "rgb(54 85 158) 0%",
+            "rgb(54 85 158) calc(100% - 11rem)",
+            ...[0.97, 0.91, 0.82, 0.7, 0.57, 0.43, 0.3, 0.19, 0.1, 0.04].map(
+              (a, i) => `rgb(54 85 158 / ${a}) calc(100% - ${11 - (i + 1)}rem)`,
+            ),
+            "rgb(54 85 158 / 0) 100%",
+          ].join(", ")})`,
+        }}
+      >
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex flex-col gap-6">
-<h1 className="font-heading text-3xl font-bold text-dark lg:text-5xl">
-                {faqHero.heading}
-              </h1>
-              <p className="text-base leading-relaxed text-dark/80">
-                {faqHero.description}
-              </p>
-            </div>
-            <div
-              className="hidden bg-contain bg-right-top bg-no-repeat lg:block"
-              style={{
-                backgroundImage:
-                  "url('/images/contact-page-background.webp')",
-              }}
-            />
+          <div className="mx-auto flex max-w-4xl flex-col gap-6 text-center">
+            <h1 className="font-heading text-3xl font-bold lg:text-5xl">
+              {faqHero.heading}
+            </h1>
+            <p className="text-lg leading-relaxed text-white/80">
+              {faqHero.description}
+            </p>
           </div>
         </div>
       </section>
@@ -60,22 +64,9 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ heading */}
-      <section
-        className="bg-cover bg-center bg-no-repeat py-20"
-        style={{
-          backgroundImage:
-            "url('/images/faq-section-background.webp')",
-        }}
-      >
+      <section className="py-12">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <Image
-            src="/images/pomerico-group-logo.png"
-            alt="Pomerico Group"
-            width={200}
-            height={40}
-            className="mx-auto mb-4 h-10 max-w-[200px]"
-          />
-          <h2 className="font-heading text-3xl font-bold text-white">
+          <h2 className="font-heading text-3xl font-bold text-dark lg:text-4xl">
             Frequently Asked Questions
           </h2>
         </div>
