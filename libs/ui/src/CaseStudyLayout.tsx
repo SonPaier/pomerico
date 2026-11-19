@@ -73,7 +73,7 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/case-study-hero-building.jpg"
-            alt=""
+            alt="Glass facade of a modern office building against a blue sky"
             fill
             sizes="100vw"
             className="object-cover"

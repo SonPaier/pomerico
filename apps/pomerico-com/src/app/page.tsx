@@ -53,7 +53,7 @@ export default function Home() {
         <div className="absolute inset-0" style={heroFadeMaskStyle()}>
           <Image
             src="/images/pomerico-hero-background.webp"
-            alt=""
+            alt="Business team meeting around a conference table with laptops and documents in a bright office"
             fill
             sizes="100vw"
             loading="eager"
