@@ -4,6 +4,17 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "pay-transparency-before-the-act-enters-into-force",
+    title:
+      "Pay transparency: the act is not here yet, but the obligations already are. What do you need to do before it enters into force?",
+    description:
+      "The Polish pay transparency act is not in force yet, but some obligations already apply. Where to start: job descriptions, job evaluation, pay grades.",
+    image: "/images/pay-transparency-before-the-act-enters-into-force.webp",
+    date: "18/11/2026",
+    author: "Sebastian Kunc & Olga Zabieglik",
+    category: "HR Outsourcing, Compliance, Management",
+  },
+  {
     slug: "accounts-payable-process-documentation",
     title:
       "Accounts Payable Process Documentation: Why a Good AP Procedure Is Worth Its Weight in Gold",

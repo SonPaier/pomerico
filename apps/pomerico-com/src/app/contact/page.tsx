@@ -31,22 +31,13 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex flex-col gap-6">
-              <h1 className="font-heading text-3xl font-bold text-dark lg:text-5xl">
-                {contactHero.heading}
-              </h1>
-              <p className="text-base leading-relaxed text-dark/80">
-                {contactHero.description}
-              </p>
-            </div>
-            <div
-              className="hidden bg-contain bg-right-top bg-no-repeat lg:block"
-              style={{
-                backgroundImage:
-                  "url('/images/contact-page-background.webp')",
-              }}
-            />
+          <div className="mx-auto flex max-w-3xl flex-col gap-6 text-center">
+            <h1 className="font-heading text-3xl font-bold text-dark lg:text-5xl">
+              {contactHero.heading}
+            </h1>
+            <p className="text-base leading-relaxed text-dark/80">
+              {contactHero.description}
+            </p>
           </div>
         </div>
       </section>

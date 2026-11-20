@@ -13,6 +13,7 @@ export { CTASection } from "./CTASection";
 export { DecisionCards } from "./DecisionCards";
 export { FaqJsonLd } from "./FaqJsonLd";
 export { HeroSection } from "./HeroSection";
+export { heroFadeStyle, heroFadeMaskStyle, HERO_FADE_REM } from "./heroFade";
 export { IconList } from "./IconList";
 export { ProcessSection } from "./ProcessSection";
 export { QuickComparison } from "./QuickComparison";

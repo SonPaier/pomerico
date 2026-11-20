@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { withOgImage } from "@/lib/og-image";
+import { heroFadeStyle } from "@pomerico/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@pomerico/ui";
@@ -23,7 +24,11 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary-blue py-16 text-white">
+      {/* Brand-blue hero with the same soft fade into white as on the FAQ page */}
+      <section
+        className="pt-16 pb-44 text-white"
+        style={heroFadeStyle("var(--color-gray-bg)")}
+      >
         <div className="mx-auto max-w-7xl px-6">
           <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
             Insights & Resources

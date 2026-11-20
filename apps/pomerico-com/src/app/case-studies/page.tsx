@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { withOgImage } from "@/lib/og-image";
+import { heroFadeStyle } from "@pomerico/ui";
 import Link from "next/link";
 import Image from "next/image";
-import { HeroSection } from "@pomerico/ui";
 import { SectionHeader } from "@pomerico/ui";
 import { Breadcrumbs } from "@pomerico/ui";
 import {
@@ -31,7 +31,33 @@ export const metadata: Metadata = withOgImage({
 export default function CaseStudiesPage() {
   return (
     <>
-      <HeroSection data={caseStudiesListingHero} />
+      {/* Hero: same look as the shared HeroSection, but the text runs wider and
+          the trust badges sit on the right instead of under the description */}
+      <section
+        className="pb-44 text-white"
+        style={heroFadeStyle("var(--color-gray-bg)")}
+      >
+        <div className="mx-auto max-w-7xl px-6 pt-8 lg:pt-10">
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-16">
+            <div className="flex flex-col gap-6">
+              <h1 className="font-heading text-3xl font-bold lg:text-5xl">
+                {caseStudiesListingHero.heading}
+              </h1>
+              <p className="text-lg leading-relaxed opacity-90">
+                {caseStudiesListingHero.description}
+              </p>
+            </div>
+            <Image
+              src={caseStudiesListingHero.trustImage}
+              alt="Trusted partner since 2015"
+              width={384}
+              height={60}
+              className="h-auto w-full max-w-sm"
+              unoptimized
+            />
+          </div>
+        </div>
+      </section>
 
       <Breadcrumbs items={[
         { label: "Home", href: "/" },

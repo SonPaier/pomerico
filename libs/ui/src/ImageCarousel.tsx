@@ -40,33 +40,35 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
   return (
     <section className="py-4">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="-ml-2 flex">
-            {images.map((img, i) => (
-              <div
-                key={i}
-                className="min-w-0 shrink-0 basis-1/2 pl-2 sm:basis-1/3 lg:basis-1/5"
-              >
-                <div className="flex items-center justify-center py-2">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={220}
-                    height={130}
-                    sizes="180px"
-                    className="max-w-[180px] object-contain"
-                  />
+        {/* Track with side arrows (same semi-transparent style as the About Us team carousel) */}
+        <div className="relative">
+          {/* On mobile the track is inset so the two logos sit closer together, clear of the side arrows */}
+          <div className="mx-7 overflow-hidden sm:mx-0" ref={emblaRef}>
+            <div className="-ml-2 flex">
+              {images.map((img, i) => (
+                <div
+                  key={i}
+                  className="min-w-0 shrink-0 basis-1/2 pl-2 sm:basis-1/3 lg:basis-1/5"
+                >
+                  <div className="flex items-center justify-center py-2">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={220}
+                      height={130}
+                      sizes="180px"
+                      className="max-w-[130px] object-contain sm:max-w-[180px]"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Navigation */}
-        <div className="mt-4 flex items-center justify-center gap-4">
           <button
+            type="button"
             onClick={scrollPrev}
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100"
+            className="absolute top-1/2 z-10 -translate-y-1/2 -left-[22px] inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-gray-300/60 bg-white/50 p-2 text-dark backdrop-blur-sm transition-colors hover:bg-white/80"
             aria-label="Previous"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -74,8 +76,9 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
             </svg>
           </button>
           <button
+            type="button"
             onClick={scrollNext}
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100"
+            className="absolute top-1/2 z-10 -translate-y-1/2 -right-[22px] inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-gray-300/60 bg-white/50 p-2 text-dark backdrop-blur-sm transition-colors hover:bg-white/80"
             aria-label="Next"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
