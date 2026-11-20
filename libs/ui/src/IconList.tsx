@@ -14,7 +14,8 @@ export function IconList({ items, variant = "light" }: IconListProps) {
     <ul className="flex flex-col gap-4">
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3">
-          <CheckmarkIcon className="mt-1 shrink-0" />
+          {/* 30px icon on a 24px line: pull up 3px so it centres on the first line */}
+          <CheckmarkIcon className="-mt-[3px] shrink-0" />
           <span className={textColor}>
             {item.bold && <strong>{item.bold} </strong>}
             {item.text}

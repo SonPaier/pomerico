@@ -6,6 +6,7 @@ import {
   ContentSection,
   CTASection,
   FaqJsonLd,
+  heroFadeStyle,
   IconList,
   ProcessSection,
   SectionHeader,
@@ -70,8 +71,9 @@ export default function AiTransformationPage() {
       />
 
       {/* Hero */}
-      <section className="bg-primary-blue text-white">
-        <div className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
+      {/* Fades into the light grey breadcrumb bar below */}
+      <section className="pb-44 text-white" style={heroFadeStyle("var(--color-gray-bg)")}>
+        <div className="mx-auto max-w-7xl px-6 pt-12 lg:pt-16">
           <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <h1 className="font-heading text-3xl font-bold lg:text-5xl">

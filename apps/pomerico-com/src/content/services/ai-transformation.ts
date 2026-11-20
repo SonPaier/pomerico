@@ -10,7 +10,7 @@ export const metaDescription =
 export const hero = {
   heading: "AI Transformation for Companies: From Process Map to Working AI Tools",
   description:
-    "We map your processes, find the bottlenecks, estimate what AI can realistically deliver and implement tools your people actually use – on your own environment and within your security rules. We did it in our own company first.",
+    "We map your processes, find the bottlenecks, estimate what AI can realistically deliver and implement tools your people actually use – on your own environment and within your security rules. We did it in our own company first. We run business processes ourselves. Since 2015 we have delivered finance, HR and recruitment services, so we know these processes as operators, not only as consultants.",
   trustImage: "/images/pomerico-trusted-partner-badges.svg",
   // "See how we use AI at Pomerico" – add once /case-studies/ai-at-pomerico is published (#11056).
 };
@@ -147,10 +147,6 @@ export const whereAiDeliversFirst: IconListItem[] = [
 ];
 
 export const whyPomerico: IconListItem[] = [
-  {
-    bold: "We run business processes ourselves.",
-    text: "Since 2015 we have delivered finance, HR and recruitment services, so we know these processes as operators, not only as consultants.",
-  },
   {
     bold: "AI runs our own company.",
     text: "Our marketing, sales pipeline and analytics already work on AI, built by our business team without a large IT department.",
