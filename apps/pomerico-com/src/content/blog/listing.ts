@@ -4,6 +4,17 @@ export type { BlogPostCard };
 
 export const blogPosts: BlogPostCard[] = [
   {
+    slug: "ai-act-in-hr-and-recruitment",
+    title:
+      "AI Act in HR and Recruitment: What Is Allowed Today and What Is Not",
+    description:
+      "AI Act in HR: emotion recognition is already prohibited, CV screening becomes high-risk from 2 December 2027, and the GDPR applies now. Where to start.",
+    image: "/images/ai-act-in-hr-and-recruitment.webp",
+    date: "23/11/2026",
+    author: "Sebastian Kunc & Olga Zabieglik",
+    category: "HR Outsourcing, Recruitment, Compliance",
+  },
+  {
     slug: "pay-transparency-before-the-act-enters-into-force",
     title:
       "Pay transparency: the act is not here yet, but the obligations already are. What do you need to do before it enters into force?",
