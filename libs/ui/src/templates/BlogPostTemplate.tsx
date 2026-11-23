@@ -157,6 +157,9 @@ export function BlogPostTemplate({
             // Largest Contentful Paint of every post: load it first, not lazily.
             loading="eager"
             fetchPriority="high"
+            // 90 instead of the default 75: the source is already a compressed WebP, so a
+            // second pass at 75 visibly softens detail. 90 is allowed in next.config `qualities`.
+            quality={90}
             sizes="(min-width: 896px) 848px, calc(100vw - 48px)"
             className="w-full rounded-lg"
           />
@@ -234,6 +237,7 @@ export function BlogPostTemplate({
                     src={p.image}
                     alt={p.title}
                     fill
+                    quality={90}
                     sizes="(min-width: 1280px) 600px, (min-width: 640px) calc(50vw - 40px), calc(100vw - 48px)"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />

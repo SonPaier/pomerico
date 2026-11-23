@@ -9,6 +9,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 Every new image on the site follows these rules:
 
 - **Format and weight:** WebP, under 200 KB, no wider than about 2× its largest on-screen width (photos: max ~1200–1400 px). Files go in `apps/pomerico-com/public/images/`.
+- **Blog featured images (exception to the width above):** shown at 848 px, so export them ~1700 px wide (never upscale a smaller original), WebP quality 85–90, made from the original PNG/JPG – never re-compress an already compressed WebP/JPG. `next/image` re-encodes them for the browser, so blog images use `quality={90}` (allowed in `next.config.ts` `qualities`).
 - **Always `next/image`**, with `width`/`height` or `fill`, plus a `sizes` attribute matching the real width in the layout (e.g. `sizes="144px"` for a 144 px avatar, not the default `100vw`). Do not use `unoptimized` for photos (only for SVG).
 - **Priority only for the image visible straight away** (the LCP image: page hero, blog featured image): `loading="eager"` + `fetchPriority="high"`. `priority` is deprecated in Next.js 16. Everything else stays lazy (the default).
 - **Descriptive `alt` in English**: what the photo shows, with the topic phrase used naturally. Not the post title, not keyword stuffing. Purely decorative backgrounds use `alt=""`.

@@ -58,6 +58,7 @@ export default function BlogPage() {
                     src={post.image}
                     alt={post.title}
                     fill
+                    quality={90}
                     sizes="(min-width: 1280px) 600px, (min-width: 640px) calc(50vw - 40px), calc(100vw - 48px)"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />

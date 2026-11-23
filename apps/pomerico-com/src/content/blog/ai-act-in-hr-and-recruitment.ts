@@ -18,7 +18,7 @@ export const aiActInHrAndRecruitment = {
       email: "consult@pomerico.com",
     },
   ],
-  featuredImage: "/images/ai-act-in-hr-and-recruitment.webp",
+  featuredImage: "/images/ai-act-in-hr-and-recruitment-featured.webp",
   featuredImageAlt:
     "AI in HR and recruitment: a central panel with a group of people, surrounded by tiles showing an AI chip, a CV with a magnifying glass, a green tick and a red cross",
   content: `<h2>Key points in 30 seconds</h2>

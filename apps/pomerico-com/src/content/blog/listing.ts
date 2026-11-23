@@ -9,7 +9,7 @@ export const blogPosts: BlogPostCard[] = [
       "AI Act in HR and Recruitment: What Is Allowed Today and What Is Not",
     description:
       "AI Act in HR: emotion recognition is already prohibited, CV screening becomes high-risk from 2 December 2027, and the GDPR applies now. Where to start.",
-    image: "/images/ai-act-in-hr-and-recruitment.webp",
+    image: "/images/ai-act-in-hr-and-recruitment-featured.webp",
     date: "23/11/2026",
     author: "Sebastian Kunc & Olga Zabieglik",
     category: "HR Outsourcing, Recruitment, Compliance",
