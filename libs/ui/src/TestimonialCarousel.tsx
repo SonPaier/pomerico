@@ -55,7 +55,7 @@ export function TestimonialCarousel({
   return (
     <section className="py-16">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-center font-heading text-3xl font-bold text-primary-blue">
+        <h2 className="mb-10 text-center font-heading text-3xl font-bold text-primary-red">
           {heading}
         </h2>
 

@@ -21,6 +21,7 @@ export const data: CaseStudyPageData = {
     author: "Micha\u0142 Karpowicz",
     role: "COO",
     company: "Babord VAP",
+    companyLogo: "/images/babord-logo-trimmed.webp",
   },
 
   goal: `<p>Babord VAP, a fish processing company, entrusted us with conducting an extensive recruitment process for <b>60 employees</b> to support the launch of a new production line.<br />(As part of our long-term partnership with this client, we have so far recruited over <b>100 employees </b>– not only for production roles but also for administrative, HR, and managerial positions.)</p>

@@ -73,6 +73,7 @@ export const data: ServicePageData & {
       author: "Micha\u0142 Karopowicz",
       role: "COO",
       company: "Babord VAP",
+      companyLogo: "/images/babord-logo-trimmed.webp",
     },
   ],
   caseStudySlugs: [

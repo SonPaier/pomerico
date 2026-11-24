@@ -52,6 +52,7 @@ export const data: IndustryPageData = {
       author: "Micha\u0142 Karpowicz",
       role: "COO",
       company: "Babord VAP",
+      companyLogo: "/images/babord-logo-trimmed.webp",
     },
   ],
   trustedLogos: [

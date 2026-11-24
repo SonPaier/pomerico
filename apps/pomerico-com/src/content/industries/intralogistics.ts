@@ -43,6 +43,7 @@ export const data: IndustryPageData = {
       author: "Tadeusz K\u0119sik",
       role: "Head of CSS Department",
       company: "SSI Sch\u00e4fer",
+      companyLogo: "/images/ssi-schaefer-logo-trimmed.webp",
     },
   ],
   trustedLogos: [

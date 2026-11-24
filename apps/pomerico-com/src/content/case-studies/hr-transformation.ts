@@ -22,6 +22,7 @@ export const data: CaseStudyPageData = {
     author: "Julia Kasparek-Guzik",
     role: "Director of Operations",
     company: "Datumo",
+    companyLogo: "/images/datumo-logo-trimmed.webp",
   },
 
   goal: `<p><strong>Duration:</strong> Over 12 months<br /><strong>Scope:</strong> HR -- recruitment, employer branding, organizational structures, management, motivation</p>
