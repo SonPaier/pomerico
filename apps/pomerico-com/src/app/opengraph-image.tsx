@@ -8,7 +8,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const logoData = await readFile(
-    join(process.cwd(), "public/images/pomerico-group-logo.png")
+    join(process.cwd(), "public/images/pomerico-group-logo-brand-colors.png")
   );
   const logoSrc = `data:image/png;base64,${logoData.toString("base64")}`;
 
@@ -26,13 +26,25 @@ export default async function Image() {
           padding: "80px",
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={logoSrc}
-          width={280}
-          height={70}
-          style={{ objectFit: "contain", marginBottom: "40px" }}
-        />
+        {/* White badge keeps the brand-blue logo readable on the navy background */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            background: "white",
+            borderRadius: "16px",
+            padding: "22px 32px",
+            marginBottom: "44px",
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={logoSrc}
+            width={287}
+            height={60}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
         <div
           style={{
             fontSize: 60,
@@ -51,7 +63,7 @@ export default async function Image() {
             color: "rgba(255,255,255,0.7)",
           }}
         >
-          BPO · HR Outsourcing · EOR · Recruitment · Business Consulting
+          BPO · Finance Outsourcing · EOR · HR Outsourcing · Business Consulting
         </div>
       </div>
     ),

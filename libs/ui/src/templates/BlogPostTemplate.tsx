@@ -80,7 +80,7 @@ export function BlogPostTemplate({
       name: "Pomerico Group",
       logo: {
         "@type": "ImageObject",
-        url: "https://pomerico.com/images/pomerico-group-logo.png",
+        url: "https://pomerico.com/images/pomerico-group-logo-brand-colors.png",
       },
     },
     mainEntityOfPage: {

@@ -115,7 +115,7 @@ export default function RootLayout({
                   url: "https://pomerico.com",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://pomerico.com/images/pomerico-group-logo.png",
+                    url: "https://pomerico.com/images/pomerico-group-logo-brand-colors.png",
                   },
                   description:
                     "Pomerico Group is a BPO and finance outsourcing partner based in Gdańsk, Poland. Since 2015 we provide finance teams, recruitment, EOR and HR outsourcing for international companies operating in Poland.",
