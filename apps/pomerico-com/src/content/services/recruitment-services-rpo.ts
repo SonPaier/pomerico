@@ -67,6 +67,7 @@ export const data: ServicePageData = {
       author: "Jakub Glinkowski",
       role: "CEO",
       company: "Apex-Thermo King Sp. z o.o.",
+      companyLogo: "/images/thermo-king-logo-trimmed.webp",
     },
   ],
   caseStudySlugs: [

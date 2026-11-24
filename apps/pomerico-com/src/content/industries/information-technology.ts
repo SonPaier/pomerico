@@ -47,6 +47,7 @@ export const data: IndustryPageData = {
       author: "Julia Kasparek-Guzik",
       role: "Director of Operations",
       company: "Datumo",
+      companyLogo: "/images/datumo-logo-trimmed.webp",
     },
   ],
 };

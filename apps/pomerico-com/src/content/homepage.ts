@@ -123,6 +123,7 @@ export const homepageTestimonials: Testimonial[] = [
     author: "Julia Kasparek-Guzik",
     role: "Director of Operations",
     company: "Datumo",
+    companyLogo: "/images/datumo-logo-trimmed.webp",
   },
   {
     quote:
@@ -130,6 +131,7 @@ export const homepageTestimonials: Testimonial[] = [
     author: "Michał Nowak",
     role: "Regional Service Manager",
     company: "Vanderlande",
+    companyLogo: "/images/vanderlande-logo-trimmed.webp",
   },
   {
     quote:
@@ -144,6 +146,7 @@ export const homepageTestimonials: Testimonial[] = [
     author: "Michał Karpowicz",
     role: "COO",
     company: "Babord",
+    companyLogo: "/images/babord-logo-trimmed.webp",
   },
 ];
 

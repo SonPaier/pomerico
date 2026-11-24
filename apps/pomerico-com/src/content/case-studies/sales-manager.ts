@@ -22,6 +22,7 @@ export const data: CaseStudyPageData = {
     author: "Bartosz Jankowski",
     role: "CEO",
     company: "Kardex",
+    companyLogo: "/images/kardex-logo-trimmed.webp",
   },
 
   goal: `<p>Kardex, one of the world's leading providers of warehouse automation solutions, approached us with a strategically critical assignment – to recruit a Country Sales Manager.</p>
