@@ -76,4 +76,4 @@ export const clientLogos: ClientLogo[] = [
 
 // ── Logo ─────────────────────────────────────────────────
 
-export const pomericoLogo = "/images/pomerico-group-logo.png";
+export const pomericoLogo = "/images/pomerico-group-logo-brand-colors.png";
