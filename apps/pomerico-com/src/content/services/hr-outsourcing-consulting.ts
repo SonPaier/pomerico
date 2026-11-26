@@ -47,8 +47,9 @@ export const data: ServicePageData = {
       },
       {
         icon: "/images/icon-brain-knowledge-expertise.png",
-        heading: "AI readiness in HR",
-        description: "AI policy, AI literacy training and a review of HR tools under the EU AI Act.",
+        heading: "AI in HR",
+        description: "Help with an AI policy and a review of the HR tools you use, with the EU AI Act in mind.",
+        link: { label: "AI Act in HR and Recruitment", href: "/blog/ai-act-in-hr-and-recruitment" },
       },
     ],
   },

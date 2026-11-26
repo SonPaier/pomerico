@@ -23,9 +23,9 @@ import {
 } from "@/content/homepage";
 import { allCaseStudyCards } from "@/content/case-studies/listing";
 
-const homeTitle = "BPO & AI Transformation Partner in Poland | Pomerico";
+const homeTitle = "BPO & Finance Outsourcing in Poland | Pomerico";
 const homeDescription =
-  "BPO, finance outsourcing and AI transformation in Poland: finance teams, recruitment, EOR and HR outsourcing for international companies. Based in Gdańsk.";
+  "BPO and finance outsourcing in Poland: finance teams, recruitment, Employer of Record and HR outsourcing for international companies. Based in Gdańsk. We also help teams use AI in finance, HR and recruitment.";
 
 export const metadata: Metadata = withOgImage({
   title: { absolute: homeTitle },
@@ -238,7 +238,7 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
           </div>
-          <Accordion items={[homepageAiFaqItem, ...faqItems.slice(0, 6)]} defaultOpen={0} />
+          <Accordion items={[homepageAiFaqItem, ...faqItems.slice(0, 7)]} defaultOpen={0} />
           <div className="mt-8 text-center">
             <Link
               href="/faq"

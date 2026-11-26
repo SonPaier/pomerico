@@ -21,9 +21,7 @@ export const metadata: Metadata = withOgImage({
       "Answers about BPO, finance outsourcing, recruitment, EOR and HR outsourcing in Poland: costs, billing models, compliance and how fast cooperation starts.",
   },
 });
-import Link from "next/link";
 import { ImageCarousel } from "@pomerico/ui/client";
-import { ArrowRightIcon } from "@pomerico/ui";
 import { clientLogos } from "@/content/shared";
 import { faqHero, faqItems, aiTransformationFaqCategory } from "@/content/faq";
 
@@ -79,13 +77,6 @@ export default function FAQPage() {
             AI Transformation
           </h2>
           <Accordion items={aiTransformationFaqCategory} />
-          <Link
-            href="/services/ai-transformation"
-            className="mt-8 inline-flex items-center gap-2 font-ui text-sm font-semibold text-primary-blue hover:underline"
-          >
-            See AI Transformation
-            <ArrowRightIcon />
-          </Link>
         </div>
       </section>
 

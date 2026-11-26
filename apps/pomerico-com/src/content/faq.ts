@@ -105,10 +105,10 @@ export const faqItems: FAQItem[] = [
 
 // Homepage FAQ: first question, ahead of the general items.
 export const homepageAiFaqItem: FAQItem = {
-  question: "Do you help companies implement AI?",
+  question: "Do you help companies use AI?",
   answer:
-    "Yes. We run AI readiness audits, map processes, estimate the business case and implement AI tools in finance, HR, recruitment and back office – the same way we did it in our own company.",
+    "Yes, in finance, HR and recruitment. We review the process, agree one way of working and run an AI pilot on your systems. We use Claude and ChatGPT in our own work too.",
 };
 
-// /faq category "AI Transformation": the first 5 questions from /services/ai-transformation.
+// /faq category "AI Transformation": the first 5 questions from /services/ai-transformation, worded identically.
 export const aiTransformationFaqCategory: FAQItem[] = aiTransformationFaqItems.slice(0, 5);

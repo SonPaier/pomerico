@@ -54,7 +54,11 @@ export interface ServiceCard {
   icon: string;
   heading: string;
   description: string;
+  /** Optional HTML version of the description (e.g. with inline links); used instead of description when set. Only for cards without href. */
+  descriptionHtml?: string;
   href?: string;
+  /** Optional text link shown at the end of the card (used when the card has no href) */
+  link?: { label: string; href: string };
 }
 
 /** Icon names available in ServiceDetailCard */
@@ -111,6 +115,8 @@ export interface ServicePageData {
   metaDescription: string;
   hero: HeroSection;
   benefits: ServiceCard[];
+  /** Subtitle next to the "Benefits for Your Business" heading (default: "Measurable results across every engagement.") */
+  benefitsSubtitle?: string;
   /** Service cards shown directly below Benefits */
   services?: {
     heading: string;
@@ -129,25 +135,31 @@ export interface ServicePageData {
   /** Numbered cooperation process steps */
   process?: {
     heading?: string;
+    /** Optional paragraph shown above the steps */
+    intro?: string;
+    /** Optional link shown under the intro paragraph */
+    link?: { label: string; href: string };
     steps: ProcessStep[];
   };
   /** "How it works" / "What do we do" detail cards */
   details?: {
     heading: string;
     subheading?: string;
+    /** Short subtitle next to the heading (same style as the Benefits subtitle) */
+    subtitle?: string;
     cards: ServiceCard[];
   };
   /** Testimonials shown on this page */
   testimonials?: Testimonial[];
   /** Featured case study slugs */
   caseStudySlugs?: string[];
-  /** Extra free-text sections shown after Benefits / Services */
-  extraSections?: ContentSectionData[];
   /** Optional tagline between sections */
   tagline?: {
     preheading?: string;
     heading: string;
     description?: string;
+    /** Optional button */
+    cta?: { label: string; href: string };
   };
 }
 

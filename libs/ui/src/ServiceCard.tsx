@@ -20,9 +20,25 @@ export function ServiceCard({ data }: ServiceCardProps) {
       <h3 className="font-heading mb-2 text-base font-bold text-dark">
         {data.heading}
       </h3>
-      <p className="flex-1 text-sm leading-relaxed text-dark/70">
-        {data.description}
-      </p>
+      {data.descriptionHtml && !data.href ? (
+        <p
+          className="flex-1 text-sm leading-relaxed text-dark/70 [&_a]:font-semibold [&_a]:text-primary-blue [&_a]:underline"
+          dangerouslySetInnerHTML={{ __html: data.descriptionHtml }}
+        />
+      ) : (
+        <p className="flex-1 text-sm leading-relaxed text-dark/70">
+          {data.description}
+        </p>
+      )}
+      {!data.href && data.link && (
+        <Link
+          href={data.link.href}
+          className="mt-4 inline-flex items-center gap-1 font-ui text-sm font-semibold text-primary-blue hover:underline"
+        >
+          {data.link.label}
+          <ArrowRightIcon />
+        </Link>
+      )}
       {data.href && (
         <span className="mt-4 inline-flex items-center gap-1 font-ui text-sm font-semibold text-primary-blue">
           Learn More

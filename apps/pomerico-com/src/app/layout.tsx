@@ -152,7 +152,6 @@ export default function RootLayout({
                     "AI transformation",
                     "business process mapping",
                     "AI readiness assessment",
-                    "RPA",
                     "EU AI Act compliance",
                     "shared services",
                     "BPO",

@@ -13,7 +13,6 @@ import { TaglineSection } from "../TaglineSection";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { Accordion } from "../Accordion";
 import { FaqJsonLd } from "../FaqJsonLd";
-import { ContentSection } from "../ContentSection";
 import type { CaseStudyCard } from "@pomerico/content";
 
 function TargetAudienceSection({
@@ -99,7 +98,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
           <div className="mx-auto max-w-7xl px-6">
             <SectionHeader
               heading="Benefits for Your Business"
-              subtitle="Measurable results across every engagement."
+              subtitle={data.benefitsSubtitle ?? "Measurable results across every engagement."}
             />
             <ServiceCardGrid cards={data.benefits} />
           </div>
@@ -129,11 +128,6 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
           </div>
         </section>
       )}
-
-      {/* Extra text sections */}
-      {data.extraSections?.map((section) => (
-        <ContentSection key={section.heading} data={section} />
-      ))}
 
       {/* Target Audience */}
       {data.targetAudience && (
@@ -186,8 +180,11 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
         <>
           {data.tagline && (
             <TaglineSection
+              preheading={data.tagline.preheading}
               heading={data.tagline.heading}
               description={data.tagline.description}
+              ctaLabel={data.tagline.cta?.label}
+              ctaHref={data.tagline.cta?.href}
             />
           )}
           {data.testimonials && data.testimonials.length > 0 && (
@@ -200,6 +197,8 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
       {data.process && (
         <ProcessSection
           heading={data.process.heading ?? "Cooperation Process"}
+          intro={data.process.intro}
+          link={data.process.link}
           steps={data.process.steps}
         />
       )}
@@ -208,7 +207,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
       {data.details && (
         <section className="bg-gray-bg py-20">
           <div className="mx-auto max-w-7xl px-6">
-            <SectionHeader heading={data.details.heading} />
+            <SectionHeader heading={data.details.heading} subtitle={data.details.subtitle} />
             <ServiceCardGrid cards={data.details.cards} />
           </div>
         </section>

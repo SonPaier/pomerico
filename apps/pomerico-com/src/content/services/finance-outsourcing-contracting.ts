@@ -28,7 +28,7 @@ export const data: ServicePageData = {
       { icon: "/images/icon-checklist-task-management.png", heading: "AP / AR / RTR", description: "Accounts Payable within Procure-to-Pay (PTP / P2P), Accounts Receivable within Order-to-Cash (OTC / O2C), and Record-to-Report (RTR / R2R). Support includes invoices, reconciliations, payment runs, collections, intercompany accounting and period-end close." },
       { icon: "/images/icon-gears-system-integration.png", heading: "SAP and SSC transitions", description: "SAP FI/CO and S/4HANA migration support, knowledge transfer, process takeover and post-migration operational setup. Experience includes AP/RTR harmonisation following mergers and testing Coupa, Ariba and OCR workflows." },
       { icon: "/images/icon-chart-growth-scalability.png", heading: "Controlling and IFRS", description: "Budgeting, forecasting, variance analysis, cost allocation models and reporting under IFRS and local GAAP." },
-      { icon: "/images/icon-workflow-process-automation.png", heading: "AI and finance automation", description: "Support for finance and controlling improvements using AI, Python, SQL, RPA, Power Query, VBA, R and Power BI." },
+      { icon: "/images/icon-workflow-process-automation.png", heading: "AI and finance automation", description: "Support for finance and controlling improvements using AI, Python, SQL, RPA, Power Query, VBA, R and Power BI.", link: { label: "See AI Transformation", href: "/services/ai-transformation" } },
       { icon: "/images/icon-shield-compliance-protection.png", heading: "Specialist insurance reporting", description: "Solvency II and Quantitative Reporting Templates (QRT), IFRS 9 and expected credit losses (ECL), investment portfolio control and intra-group reporting, and insurance premium tax (IPT) reporting across European countries." },
     ],
     itemsHeading: "Financial Consultants in Poland",
@@ -99,22 +99,6 @@ export const data: ServicePageData = {
       },
     ],
   },
-  extraSections: [
-    {
-      heading: "Systems we work with",
-      paragraphs: [
-        "Our consultants work in your systems from day one.",
-        "<b>ERP:</b> SAP (ERP, S/4HANA, FICO), Oracle, IFS, NetSuite, Microsoft Dynamics.<br/><b>Nordic accounting:</b> e-conomic, Dinero, Uniconta.<br/><b>P2P and T&amp;E:</b> Coupa, Ariba, Concur, OCR.<br/><b>Close and controls:</b> Blackline, ServiceNow.<br/><b>Insurance reporting:</b> Solvency II (QRT) and IFRS 9.<br/><b>Automation and analytics:</b> Power BI, Power Query, VBA, Python, SQL, R, RPA, and AI tools such as Claude, ChatGPT and Microsoft 365 Copilot.",
-      ],
-    },
-    {
-      heading: "Automation and RPA in finance",
-      paragraphs: [
-        "Many finance tasks follow fixed rules: moving data between systems, posting standard documents, reconciling balances, sending recurring reports. Our consultants automate them with RPA, Power Query, VBA and Python, and add AI where documents or judgement are involved. The result is shorter close and reporting cycles and fewer manual errors.",
-      ],
-      link: { label: "See AI Transformation", href: "/services/ai-transformation" },
-    },
-  ],
   targetAudience: {
     heading: "Who Is Finance Outsourcing & Contracting For?",
     description: "For companies that need accuracy, speed, expert support and predictable financial operations - without hiring internally. Finance Outsourcing & Contracting from Pomerico is designed for organizations that want to strengthen or scale their financial capabilities while keeping costs, risks and complexity low.",

@@ -34,7 +34,7 @@ export const data: IndustryPageData = {
     {
       heading: "AI transformation for shared service centres",
       paragraphs: [
-        "Most SSCs already pay for AI licences, but work looks the same. We map your processes, measure where time is lost, estimate the benefit of each AI use case and run a pilot on your environment. If the change needs extra hands, we staff the process while your team adapts.",
+        "If your centre already has AI tools but daily work in AP, AR or reporting looks the same, we start with the process: we describe it, agree one way of working, estimate where AI helps and run a pilot on your systems. If the change needs extra hands, we can staff the process while your team adapts.",
       ],
       link: { label: "See AI Transformation", href: "/services/ai-transformation" },
     },

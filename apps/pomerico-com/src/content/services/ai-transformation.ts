@@ -1,236 +1,210 @@
-import type { FAQItem, IconListItem, ProcessStep, ServiceCard } from "@pomerico/content";
+import type { FAQItem, ServiceCard, ServicePageData } from "@pomerico/content";
 
 export const slug = "ai-transformation";
 export const path = `/services/${slug}`;
 
-export const metaTitle = "AI Transformation Consulting | Pomerico Group";
+export const metaTitle = "AI Transformation for Finance, HR & Recruitment | Pomerico";
 export const metaDescription =
-  "We map your processes, measure bottlenecks, estimate the business case and implement AI in finance, HR and recruitment – within your compliance rules.";
+  "AI transformation for finance, HR and recruitment teams: we review your processes, standardise them and run an AI pilot on your own systems. Book a call.";
 
-export const hero = {
-  heading: "AI Transformation for Companies: From Process Map to Working AI Tools",
-  description:
-    "We map your processes, find the bottlenecks, estimate what AI can realistically deliver and implement tools your people actually use – on your own environment and within your security rules. We did it in our own company first. We run business processes ourselves. Since 2015 we have delivered finance, HR and recruitment services, so we know these processes as operators, not only as consultants.",
-  trustImage: "/images/pomerico-trusted-partner-badges.svg",
-  // "See how we use AI at Pomerico" – add once /case-studies/ai-at-pomerico is published (#11056).
-};
+const linkClass = "font-semibold text-primary-blue underline";
 
-export const whoItIsFor: ServiceCard[] = [
-  {
-    icon: "/images/icon-gears-operations-management.png",
-    heading: "Shared service centres and GBS",
+export const data: ServicePageData = {
+  slug,
+  title: "AI Transformation",
+  metaDescription,
+  hero: {
+    heading: "AI Transformation",
     description:
-      "Finance, HR and procurement processes at scale, where headquarters' IT and compliance must approve every tool.",
+      "<p><b>Reduce repetitive work. Build AI into the way your teams already work.</b></p><p>Pomerico provides AI transformation services for finance, HR and recruitment teams in international companies and shared service centres (SSCs). We map and standardise your processes, identify the steps where AI can take over repetitive work, and run AI pilots on your own systems and under your security rules.</p><p>We know these processes from the inside: Pomerico runs finance, HR and recruitment work for international clients, and our own team uses AI tools such as Claude and ChatGPT every day. When a project needs technical skills your team does not have, we recruit AI engineers for your project.</p>",
+    iconList: [
+      { bold: "Optimized processes –", text: "Pomerico maps and standardises your finance, HR and recruitment processes before any automation, so AI works on one agreed way of working." },
+      { bold: "Faster routine work –", text: "AI takes over repetitive steps, so your team spends more time on exceptions and quality." },
+      { bold: "Reliable and compliant AI use –", text: "AI runs on your systems and under your security policies, with GDPR and the EU AI Act in mind, and people make every decision that affects people." },
+    ],
+    trustImage: "/images/pomerico-trusted-partner-badges.svg",
   },
-  {
-    icon: "/images/icon-chart-growth-scalability.png",
-    heading: "Mid-size companies",
-    description:
-      "Growing teams that want AI to take over repetitive work before they hire more people.",
-  },
-  {
-    icon: "/images/icon-folders-document-management.png",
-    heading: "Service and back office teams",
-    description:
-      "Finance, HR, recruitment, customer service, sales support and administration in any industry.",
-  },
-];
-
-export const whyProjectsStall = {
-  heading: "Why most AI projects stall",
-  description:
-    "Most organisations already pay for AI licences, yet daily work looks the same. The reasons are rarely technical: processes are not mapped, nobody measured where time is lost, compliance or IT blocks pilots, and teams were never shown how AI fits their tasks. We start with the process and the people, then choose the tool.",
-};
-
-export const whatWeDo: ServiceCard[] = [
-  {
-    icon: "/images/icon-checklist-compliance-audit.png",
-    heading: "AI readiness audit",
-    description:
-      "A fixed-scope, fixed-price audit (3–4 weeks): we assess processes, data, systems, skills and governance, and show where AI is possible today and where it is not.",
-  },
-  {
-    icon: "/images/icon-workflow-process-automation.png",
-    heading: "Process mapping and bottleneck analysis",
-    description:
-      "We map how work really runs, measure volumes, handling times and rework, and find the steps that cost the most.",
-  },
-  {
-    icon: "/images/icon-cost-reduction-optimization.png",
-    heading: "Business case and benefit estimate",
-    description:
-      "For each use case we estimate time saved (in hours and FTE), quality gains, risk and cost, and rank them by value and effort.",
-  },
-  {
-    icon: "/images/icon-checklist-task-management.png",
-    heading: "Standardisation before automation",
-    description:
-      "First we agree one way of working: templates, rules, approval paths and clear ownership. We do not automate a messy process.",
-  },
-  {
-    icon: "/images/icon-brain-knowledge-expertise.png",
-    heading: "Organisational readiness",
-    description: "AI policy, roles, AI literacy training and change management.",
-  },
-  {
-    icon: "/images/icon-gears-system-integration.png",
-    heading: "Implementation of AI tools, agents and RPA",
-    description:
-      "AI assistants, agents, RPA bots and automations in finance, HR, recruitment, sales and procurement, integrated with tools you already use (e.g. Microsoft 365, SAP, your CRM).",
-  },
-  {
-    icon: "/images/icon-brain-it-expertise.png",
-    heading: "AI engineers for your project",
-    description:
-      "AI engineers employed by Pomerico join your team for the implementation. They build and maintain AI assistants, agents and automations on your environment, work with your IT and process owners, and hand the solution over to your people. You direct the work; we handle employment, payroll and administration.",
-  },
-  {
-    icon: "/images/icon-magnifier-quality-assurance.png",
-    heading: "Measurement and continuous improvement",
-    description: "We compare results with the baseline and expand what works.",
-  },
-];
-
-export const tools = {
-  heading: "Tools we work with",
-  paragraphs: [
-    "We are not tied to one vendor. We start from the tools you already have, often Microsoft 365 Copilot and SAP, and add others where they deliver more. Our team works daily with Claude and ChatGPT, automates processes with Python, SQL, VBA, Power Query and RPA, and builds reporting in Power BI. For clients we have automated controlling reporting, built cost allocation models and implemented P2P tools such as Coupa and Ariba, and we run our own marketing and sales on AI.",
+  benefitsSubtitle: "What changes when AI is built into the process.",
+  benefits: [
+    {
+      icon: "/images/icon-cost-reduction-optimization.png",
+      heading: "Less Time on Repetitive Tasks",
+      description:
+        "AI takes over routine tasks, so your team spends more time on exceptions and quality.",
+    },
+    {
+      icon: "/images/icon-folders-document-management.png",
+      heading: "A Process That Is Written Down",
+      description:
+        "Before any AI work, we write the process down and agree it with your team. New people and handovers then work from the same description.",
+    },
+    {
+      icon: "/images/icon-shield-compliance-protection.png",
+      heading: "Fits Your HQ and IT Rules",
+      description:
+        "We work on your systems and under your security policies, with GDPR and the EU AI Act considered from the start.",
+    },
+    {
+      icon: "/images/icon-puzzle-team-integration.png",
+      heading: "Extra Hands During the Change",
+      description:
+        "If a process needs more people while it changes, we can staff it through body leasing or BPO.",
+      descriptionHtml:
+        'If a process needs more people while it changes, we can staff it through <a href="/services/body-leasing-staff-augmentation">body leasing</a> or <a href="/services/bpo-business-process-outsourcing">BPO</a>.',
+    },
   ],
+  services: {
+    heading: "What we deliver",
+    cards: [
+      {
+        icon: "/images/icon-checklist-compliance-audit.png",
+        heading: "AI Readiness Review",
+        description:
+          "We look at one process or team: how the work runs, which systems and data it uses, and where AI can help today. Scope and price are agreed after the first call.",
+      },
+      {
+        icon: "/images/icon-workflow-process-automation.png",
+        heading: "Process Mapping & Standardisation",
+        description:
+          "We describe how the work really runs, step by step, find where time is lost and agree one way of working: templates, rules, approval paths and clear owners.",
+      },
+      {
+        icon: "/images/icon-chart-growth-scalability.png",
+        heading: "Use Cases & Business Case",
+        description:
+          "For each idea we estimate the time it could save, the risk and the effort, so you can decide where to start.",
+      },
+      {
+        icon: "/images/icon-gears-system-integration.png",
+        heading: "AI Pilot on Your Systems",
+        description:
+          "We set up AI assistants or automations for one process on your accounts, then compare the result with how the process ran before.",
+      },
+      {
+        icon: "/images/icon-brain-it-expertise.png",
+        heading: "AI Engineers for Your Project",
+        description:
+          "When a project needs technical skills your team does not have, we recruit AI engineers for your project.",
+      },
+    ],
+  },
+  targetAudience: {
+    heading: "Who Is AI Transformation For?",
+    // The "We work with companies that" intro is the handwritten doodle shown under the heading (same as other service pages).
+    description: "",
+    items: [
+      { bold: "Run finance teams or shared service centres –", text: "AP, AR, record-to-report, controlling and reporting with high volumes." },
+      { bold: "Have busy HR and recruitment teams –", text: "onboarding, HR documentation, recurring employee questions and recruitment administration." },
+      { bold: "Already have AI tools –", text: "but their teams still do most of the daily work the same way as before." },
+      { bold: "Work under rules set by headquarters –", text: "group IT and compliance must approve every new tool and pilot. Pomerico works on your systems and under your security policies, which makes that approval easier." },
+      { bold: "Want to grow without more manual work –", text: "and would rather free up capacity than hire for repetitive tasks." },
+    ],
+  },
+  tagline: {
+    preheading: "EU AI Act",
+    heading: "AI in HR and Recruitment: What Is Allowed Today",
+    description:
+      "AI systems used to screen or evaluate candidates are classified as high-risk, and the requirements for them apply from 2 December 2027. GDPR applies now. Our Legal Partner and our CEO explain what this means for HR teams.",
+    cta: { label: "Read the article", href: "/blog/ai-act-in-hr-and-recruitment" },
+  },
+  process: {
+    heading: "Cooperation Process",
+    intro:
+      "An AI tool repeats whatever process it is given. If invoices arrive in five formats, approvals depend on who is on duty and nobody has written the steps down, the tool will repeat those problems faster. That is why every project starts with the process.",
+    link: {
+      label: "Read more: Accounts Payable Process Documentation",
+      href: "/blog/accounts-payable-process-documentation",
+    },
+    steps: [
+      { number: "01.", heading: "First Call", description: "Your goals, the process you want to change and your constraints. Free of charge." },
+      { number: "02.", heading: "AI Readiness Review", description: "We look at the process, systems and data. Scope and price are agreed after the first call." },
+      { number: "03.", heading: "Standardise the Process", description: "We agree one way of working before any automation." },
+      { number: "04.", heading: "Pilot on One Process", description: "On your systems, measured against how the process ran before. Its length is agreed with you." },
+      { number: "05.", heading: "Rollout & Handover", description: "We extend what worked, write the documentation and hand the solution over to your team." },
+    ],
+  },
+  details: {
+    heading: "Where AI Helps First",
+    subtitle: "Good places to start with AI in back-office work.",
+    cards: [
+      {
+        icon: "/images/icon-checklist-task-management.png",
+        heading: "Finance & Accounting",
+        description:
+          "Invoice intake and coding, reconciliations, reporting, month-end checklists and process documentation.",
+      },
+      {
+        icon: "/images/icon-id-card-employee-documentation.png",
+        heading: "HR Operations",
+        description: "Onboarding, HR helpdesk, documentation, policies.",
+      },
+      {
+        icon: "/images/icon-recruitment-talent-search.png",
+        heading: "Recruitment",
+        description:
+          "Sourcing, job ads, candidate communication – hiring decisions made by people.",
+      },
+    ],
+  },
 };
-
-export const howItWorks: ProcessStep[] = [
-  {
-    number: "01.",
-    heading: "Discovery call",
-    description: "Goals, scope and constraints (1 hour, free of charge).",
-  },
-  {
-    number: "02.",
-    heading: "AI readiness audit",
-    description:
-      "Fixed scope, fixed price, 3–4 weeks. Week 1: workshops and data on volumes, people and systems. Week 2: process map with time spent per process and bottlenecks. Week 3: prioritised improvements – standardisation, existing tools, RPA, AI. Week 4: business case and roadmap – savings in hours and FTE, implementation plan and a short presentation for management.",
-  },
-  {
-    number: "03.",
-    heading: "Standardise the process",
-    description:
-      "One way of working before automation: templates, rules, approval paths, clear ownership.",
-  },
-  {
-    number: "04.",
-    heading: "Pilot on one process",
-    description:
-      "Built on your environment, measured against the baseline; its length depends on the process and is agreed with you.",
-  },
-  {
-    number: "05.",
-    heading: "Scale and handover",
-    description: "Rollout, training, documentation, ongoing support.",
-  },
-];
-
-export const whereAiDeliversFirst: IconListItem[] = [
-  {
-    bold: "Finance & accounting:",
-    text: "invoice intake and coding, reconciliations, reporting, month-end checklists.",
-  },
-  { bold: "HR operations:", text: "onboarding, HR helpdesk, documentation, policies." },
-  {
-    bold: "Recruitment:",
-    text: "sourcing, job ads, candidate communication – hiring decisions made by people.",
-  },
-  { bold: "Sales and marketing:", text: "meeting notes, content, research, tender monitoring." },
-  {
-    bold: "Procurement and back office:",
-    text: "document handling, data enrichment, request routing.",
-  },
-];
-
-export const whyPomerico: IconListItem[] = [
-  {
-    bold: "AI runs our own company.",
-    text: "Our marketing, sales pipeline and analytics already work on AI, built by our business team without a large IT department.",
-  },
-  {
-    bold: "Your environment, your rules.",
-    text: "We deliver on your accounts and under your security policies, which makes approval by headquarters and IT easier.",
-  },
-  {
-    bold: "People plus technology.",
-    text: "If the transformation needs extra hands, we staff the process through leasing or BPO, and provide AI engineers for the implementation.",
-  },
-  {
-    bold: "Human in the loop and EU AI Act-aware.",
-    text: "People make the decisions that affect people.",
-  },
-];
 
 export const faqItems: FAQItem[] = [
   {
-    question: "What is AI transformation?",
+    question: "What is AI transformation and how does Pomerico deliver it?",
     answer:
-      "The redesign of business processes so that AI takes over repetitive work and supports decisions, while people keep control. It starts with mapping processes and measuring where time is lost, not with buying a tool.",
+      "AI transformation means changing business processes so that AI takes over repetitive work and supports decisions, while people keep control. At Pomerico we start by describing the process and measuring where time is lost, agree one way of working, and then pilot AI on your own systems.",
   },
   {
-    question: "How long does an AI readiness audit take?",
+    question: "What does an AI readiness review include and how much does it cost?",
     answer:
-      "3–4 weeks for one function, such as finance or HR, with a fixed scope and a fixed price. You get a process map with time spent per process, a prioritised list of improvements, a benefit estimate in hours and FTE, an implementation plan and a short presentation for management.",
+      "We look at one process or team: how the work runs, which systems and data it uses and where AI can help. You get a description of the process, a list of AI use cases with estimated effort and benefit, and a recommended first pilot. Scope and price are agreed after the first call.",
   },
   {
-    question: "Do we need to map processes before implementing AI?",
+    question: "Do we need to describe our processes before using AI?",
     answer:
-      "Yes. Without a map and a baseline you cannot tell which steps are worth automating or prove the result.",
+      "Yes. Without a written process and a starting point to compare against, you cannot tell which steps are worth automating or show what the pilot changed.",
   },
   {
-    question: "Can you work with Microsoft Copilot and SAP?",
+    question: "Which AI tools do you use?",
     answer:
-      "Yes. We start from the tools you already have and add others only where they deliver more.",
+      "In our own work we use Claude and ChatGPT. In client projects we start from the tools you already have and choose new ones together with your IT team.",
   },
   {
-    question: "Do you also implement RPA?",
+    question: "Do you work with SAP?",
     answer:
-      "Yes. RPA handles rule-based, high-volume steps, such as moving data between systems. AI handles emails, documents and steps that need judgement. In most processes we combine both.",
+      "Yes. Our finance consultants work with SAP FI/CO and S/4HANA, including migration projects and shared service centre transitions.",
   },
   {
-    question: "How do you handle data security and compliance?",
+    question: "How do you handle data security?",
     answer:
-      "We work on your environment and under your security policies, follow GDPR and the EU AI Act, and keep a human in the loop for decisions about people.",
+      "We work on your systems and under your security policies, follow GDPR, and keep a person in charge of every decision that affects people.",
   },
   {
     question: "Is AI in recruitment allowed under the EU AI Act?",
-    answer:
-      "Yes, with conditions. Emotion recognition at work is banned, and systems that screen or rank candidates will be high-risk from 2 December 2027.",
+    answer: `Yes, with conditions. Emotion recognition at work is banned. Systems that screen or evaluate candidates are high-risk, and the requirements for them apply from 2 December 2027. Read more in our article <a href="/blog/ai-act-in-hr-and-recruitment" class="${linkClass}">AI Act in HR and Recruitment</a>.`,
   },
   {
     question: "Will AI replace our team?",
     answer:
-      "Our goal is capacity, not headcount cuts: your team spends less time on repetitive steps and more on exceptions and quality.",
+      "Our goal is to give your team more capacity. People spend less time on repetitive steps and more on exceptions and quality, and decisions that affect people stay with people.",
   },
   {
-    question: "How do you measure ROI?",
+    question: "How do you measure the results?",
     answer:
-      "We measure the baseline before the pilot (volumes, handling time, errors, rework) and compare it after the pilot. We report the result in hours and FTE freed and, in finance, in days cut from the month-end close.",
+      "Before the pilot we record how the process runs: volumes, handling time, errors and rework. After the pilot we compare the same figures, so you can see what changed.",
   },
   {
-    question: "Can we hire an AI engineer from you?",
+    question: "Can you provide AI engineers for our project?",
     answer:
-      "Yes, as part of an AI transformation project. An AI engineer employed by Pomerico works in your team for the implementation, on your environment and under your security rules. The length of the assignment is agreed with you.",
+      "Yes. When a project needs technical skills your team does not have, we recruit AI engineers for your project. The length of the assignment is agreed with you.",
   },
 ];
-
-export const finalCta = {
-  heading: "Not sure where AI fits in your processes?",
-  description:
-    "Book a 30-minute call. We will tell you honestly where AI makes sense in your team – and where it does not.",
-  ctaLabel: "Book a 30-minute call",
-  ctaHref: "/contact#book-consultation",
-};
 
 /** Shared card used on the homepage and /services listing. */
 export const aiTransformationCard: ServiceCard = {
   icon: "/images/icon-workflow-process-automation.png",
   heading: "AI Transformation",
   description:
-    "Process mapping, AI readiness audit and implementation of AI tools in finance, HR and recruitment.",
+    "Process review before automation, AI pilots on your own systems, people in charge of decisions.",
   href: path,
 };

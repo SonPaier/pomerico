@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
+import { ArrowRightIcon } from "./ArrowRightIcon";
 
 interface ProcessStep {
   number: string;
@@ -8,17 +10,39 @@ interface ProcessStep {
 
 interface ProcessSectionProps {
   heading?: string;
+  /** Optional paragraph shown above the steps */
+  intro?: string;
+  /** Optional link shown under the intro paragraph */
+  link?: { label: string; href: string };
   steps: ProcessStep[];
 }
 
 export function ProcessSection({
   heading,
+  intro,
+  link,
   steps,
 }: ProcessSectionProps) {
   return (
     <section className="bg-gray-bg py-20">
       <div className="mx-auto max-w-7xl px-6">
         {heading && <SectionHeader heading={heading} />}
+        {(intro || link) && (
+          <div className="-mt-6 mb-12 max-w-4xl">
+            {intro && (
+              <p className="text-base leading-relaxed text-dark/80">{intro}</p>
+            )}
+            {link && (
+              <Link
+                href={link.href}
+                className="mt-4 inline-flex items-center gap-2 font-ui text-sm font-semibold text-primary-blue hover:underline"
+              >
+                {link.label}
+                <ArrowRightIcon />
+              </Link>
+            )}
+          </div>
+        )}
         <div className="grid gap-6 sm:grid-cols-2">
           {steps.map((step) => (
             <div
