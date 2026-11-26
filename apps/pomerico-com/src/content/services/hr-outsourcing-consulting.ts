@@ -23,7 +23,7 @@ export const data: ServicePageData = {
     { icon: "/images/icon-talent-acquisition-search.png", heading: "Access to Expert Support & Know-How", description: "Access to experienced HR Directors and HR Business Partners who can quickly deploy optimal HR solutions - we deliver specialists who bring structure, clarity and maturity into your HR operations." },
   ],
   details: {
-    heading: "What we deliver",
+    heading: "What We Deliver",
     cards: [
       {
         icon: "/images/icon-person-growth-performance.png",
