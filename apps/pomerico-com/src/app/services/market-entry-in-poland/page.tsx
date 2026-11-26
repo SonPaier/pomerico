@@ -160,10 +160,11 @@ export default function Page() {
                 )}
               </div>
               <div className="rounded-lg bg-white p-8">
-                <div className="mb-4 text-4xl font-bold text-primary-red">&ldquo;&rdquo;</div>
+                <div aria-hidden="true" className="mb-2 font-heading text-5xl font-bold leading-none text-primary-red">&ldquo;</div>
                 <p className="text-sm italic leading-relaxed text-dark/70">
                   {data.testimonials[0].quote}
                 </p>
+                <div aria-hidden="true" className="mt-2 text-right font-heading text-5xl font-bold leading-none text-primary-red">&rdquo;</div>
                 <div className="mt-6 border-t border-dark/10 pt-4">
                   <p className="font-heading text-sm font-bold text-primary-red">
                     {data.testimonials[0].author}
