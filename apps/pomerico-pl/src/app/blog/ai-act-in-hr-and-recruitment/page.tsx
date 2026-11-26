@@ -6,9 +6,9 @@ import { plBlogPostLabels, plLocale, plSiteUrl } from "@/content/ui-labels";
 import { BlogPostTemplate } from "@pomerico/ui";
 
 const SLUG = "ai-act-in-hr-and-recruitment";
-const TITLE = "AI Act w HR i rekrutacji: co wolno już dziś | Pomerico";
+const TITLE = "AI Act w HR i rekrutacji: co wolno w 2026 r. | Pomerico";
 const DESCRIPTION =
-  "AI Act w HR: rozpoznawanie emocji jest już zakazane, selekcja CV to wysokie ryzyko od 2 grudnia 2027 r., a RODO obowiązuje już teraz. Od czego zacząć.";
+  "Co AI Act zakazuje w HR już dziś, co wolno i co zmieni się 2.12.2027. Daty po Digital Omnibus, obowiązki pracodawcy, przykłady i plan.";
 
 export const metadata: Metadata = withOgImage({
   title: { absolute: TITLE },

@@ -25,11 +25,11 @@ export const hiringInPoland = {
   featuredImage: "/images/hiring-in-poland.webp",
   featuredImageAlt: "Biznesowy uścisk dłoni – zatrudnienie pracownika w Polsce",
   content: `<p>Znalazłeś świetnego specjalistę w Polsce. CV jest mocne, rozmowa poszła dobrze, obie strony chcą współpracować. Zostało tylko podpisać umowę – i właśnie tu zaczynają się pytania, na które większość zagranicznych firm nie jest przygotowana.</p>
-<p>Jaką formę zatrudnienia wybrać? Czy trzeba rejestrować spółkę w Polsce? Kto płaci składki ZUS? Jakie deklaracje podatkowe trzeba składać, kiedy i do jakich urzędów? Czy wystarczy jedna umowa B2B z polskim kontraktorem?</p>
+<p>Jaką formę zatrudnienia wybrać? Czy trzeba rejestrować spółkę w Polsce? Kto płaci składki ZUS? Jakie deklaracje podatkowe trzeba składać, kiedy i do jakich urzędów? Czy wystarczy jedna umowa B2B z polskim kontrahentem?</p>
 <p>Na żadne z tych pytań nie ma prostej odpowiedzi. Polska ma własny, szczegółowy system prawny i podatkowy, który wymaga od zagranicznego pracodawcy konkretnych działań – niezależnie od tego, czy zamierza otworzyć tu oddział, założyć spółkę, czy zatrudniać bezpośrednio z zagranicy.</p>
 <p>Ten artykuł rozkłada temat na czynniki pierwsze.</p>
 
-<h2>Trzy drogi na rynek. Każda z własnym zestawem obowiązków.</h2>
+<h2>Trzy drogi wejścia na rynek. Każda z innym bagażem obowiązków.</h2>
 <p>Zagraniczna firma, która chce zatrudnić pracownika w Polsce, ma do wyboru trzy ścieżki:</p>
 <p><strong>Spółka z ograniczoną odpowiedzialnością – sp. z o.o. (spółka zależna)</strong> – pełnoprawna polska spółka z kapitałem zakładowym od 5 000 zł. Ma osobowość prawną, własny zarząd, numer NIP, rachunek bankowy i obowiązki sprawozdawcze. Idealna, gdy firma planuje <a href="/services/market-entry-in-poland">długoterminową, aktywną działalność handlową w Polsce</a>. Wymaga aktu notarialnego, wpisu do Krajowego Rejestru Sądowego (KRS) oraz zgłoszenia do Centralnego Rejestru Beneficjentów Rzeczywistych (CRBR) w ciągu 14 dni roboczych.</p>
 <p><strong>Oddział przedsiębiorcy zagranicznego</strong> – nie ma osobowości prawnej, ale jest formalnie wpisany do KRS. Może działać wyłącznie w zakresie przedmiotu działalności zagranicznej firmy. Wymaga ustanowienia przedstawiciela w Polsce i prowadzenia odrębnej księgowości w języku polskim. Oddział to nie to samo co zakład podatkowy – choć oba mogą istnieć jednocześnie.</p>
@@ -46,7 +46,7 @@ export const hiringInPoland = {
 
 <h2>Pułapka B2B: dlaczego „po prostu wystawiajmy sobie faktury” to nie jest plan</h2>
 <p>Wiele firm z Europy Zachodniej i Skandynawii zaczyna od umowy B2B z polskim freelancerem lub przedsiębiorcą. Prosto, elastycznie, bez biurokratycznego bólu głowy.</p>
-<p>Problem w tym, że polskie organy podatkowe mogą uznać, że stały kontraktor B2B reprezentuje zagraniczną firmę w Polsce – i na tej podstawie stwierdzić, że firma ma w Polsce zakład podatkowy. Konsekwencja: obowiązek zapłaty CIT w Polsce od działalności związanej z tym kontraktorem.</p>
+<p>Problem w tym, że polskie organy podatkowe mogą uznać, że stały współpracownik B2B reprezentuje zagraniczną firmę w Polsce – i na tej podstawie stwierdzić, że firma ma w Polsce zakład podatkowy. Konsekwencja: obowiązek zapłaty CIT w Polsce od działalności związanej z tym współpracownikiem.</p>
 <p>To nie jest scenariusz teoretyczny. Wystarczy jedna długoterminowa współpraca B2B z osobą, która faktycznie działa w imieniu firmy, a nie jako niezależny podmiot, by otworzyć tę dyskusję z urzędem skarbowym. A ta dyskusja zwykle nie jest tania.</p>
 
 <h2>Co ma sens, jeśli nie planujesz budować infrastruktury w Polsce</h2>
@@ -73,9 +73,9 @@ export const hiringInPoland = {
       },
       {
         question:
-          "Czy umowa B2B z polskim kontraktorem to bezpieczna alternatywa dla zatrudnienia?",
+          "Czy umowa B2B z polskim kontrahentem to bezpieczna alternatywa dla zatrudnienia?",
         answer:
-          "Nie zawsze. Jeśli długoterminowy kontraktor B2B w praktyce działa w imieniu zagranicznej firmy, polskie organy podatkowe mogą uznać, że firma ma w Polsce zakład podatkowy. Powstaje wtedy obowiązek zapłaty CIT w Polsce od działalności związanej z tym kontraktorem.",
+          "Nie zawsze. Jeśli długoterminowy współpracownik B2B w praktyce działa w imieniu zagranicznej firmy, polskie organy podatkowe mogą uznać, że firma ma w Polsce zakład podatkowy. Powstaje wtedy obowiązek zapłaty CIT w Polsce od działalności związanej z tym współpracownikiem.",
       },
       {
         question: "Kiedy w Polsce opłaca się Employer of Record?",
