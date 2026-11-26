@@ -4,29 +4,37 @@ import type { CaseStudyCard } from "@pomerico/content";
 import { SectionHeader } from "./SectionHeader";
 import { ArrowRightIcon } from "./ArrowRightIcon";
 
-interface CaseStudyGridProps {
+export interface CaseStudyGridProps {
   cards: CaseStudyCard[];
   heading?: string;
+  subtitle?: string;
+  viewLabel?: string;
+  tagline?: string;
+  exploreLabel?: string;
+  /** Tag shown when a card has no industry */
+  defaultTag?: string;
 }
 
 export function CaseStudyGrid({
   cards,
   heading = "Case Studies —\nReal Results for Our Clients",
+  subtitle = "Strategic excellence across international markets.",
+  viewLabel = "View Case Study",
+  tagline = "High-precision solutions for the modern corporate landscape.",
+  exploreLabel = "Explore All Insights",
+  defaultTag = "CASE STUDY",
 }: CaseStudyGridProps) {
   return (
     <section className="bg-gray-bg py-20">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header row */}
-        <SectionHeader
-          heading={heading}
-          subtitle="Strategic excellence across international markets."
-        />
+        <SectionHeader heading={heading} subtitle={subtitle} />
 
         {/* Cards grid — masonry-like with varying sizes */}
         <div className="grid gap-6 sm:grid-cols-2">
           {cards.map((cs, i) => {
             const tag =
-              cs.industry?.split("/")[0].trim().toUpperCase() ?? "CASE STUDY";
+              cs.industry?.split("/")[0].trim().toUpperCase() ?? defaultTag;
             const isLarge = i === 0 || i === 3;
             // Last card alone in its row — keep column width, center it
             const isOrphan = cards.length % 2 === 1 && i === cards.length - 1;
@@ -65,7 +73,7 @@ export function CaseStudyGrid({
                   )}
                 </div>
                 <span className="mt-6 inline-flex items-center gap-2 font-ui text-sm font-semibold uppercase tracking-wider text-primary-red">
-                  View Case Study
+                  {viewLabel}
                   <ArrowRightIcon />
                 </span>
               </Link>
@@ -76,13 +84,13 @@ export function CaseStudyGrid({
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-start gap-6 border-t border-dark/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm italic text-dark/50">
-            High-precision solutions for the modern corporate landscape.
+            {tagline}
           </p>
           <Link
             href="/case-studies"
             className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-8 py-3.5 font-ui text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-primary-blue/90"
           >
-            Explore All Insights
+            {exploreLabel}
             <ArrowRightIcon stroke="white" />
           </Link>
         </div>

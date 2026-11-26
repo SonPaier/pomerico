@@ -8,9 +8,11 @@ import type { ClientLogo } from "@pomerico/content";
 
 interface ImageCarouselProps {
   images: ClientLogo[];
+  /** Overrides for screen-reader labels (defaults: English) */
+  ariaLabels?: { previous?: string; next?: string };
 }
 
-export function ImageCarousel({ images }: ImageCarouselProps) {
+export function ImageCarousel({ images, ariaLabels }: ImageCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       align: "start",
@@ -69,7 +71,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
             type="button"
             onClick={scrollPrev}
             className="absolute top-1/2 z-10 -translate-y-1/2 -left-[22px] inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-gray-300/60 bg-white/50 p-2 text-dark backdrop-blur-sm transition-colors hover:bg-white/80"
-            aria-label="Previous"
+            aria-label={ariaLabels?.previous ?? "Previous"}
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -79,7 +81,7 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
             type="button"
             onClick={scrollNext}
             className="absolute top-1/2 z-10 -translate-y-1/2 -right-[22px] inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-gray-300/60 bg-white/50 p-2 text-dark backdrop-blur-sm transition-colors hover:bg-white/80"
-            aria-label="Next"
+            aria-label={ariaLabels?.next ?? "Next"}
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

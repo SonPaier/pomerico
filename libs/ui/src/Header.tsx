@@ -114,9 +114,11 @@ function DesktopNavItem({ item }: { item: NavItem }) {
 function MobileNavItem({
   item,
   onClose,
+  submenuToggleLabel,
 }: {
   item: NavItem;
   onClose: () => void;
+  submenuToggleLabel?: string;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -134,7 +136,7 @@ function MobileNavItem({
           <button
             onClick={() => setOpen(!open)}
             className="p-3"
-            aria-label={`Toggle ${item.label} submenu`}
+            aria-label={(submenuToggleLabel ?? "Toggle {label} submenu").replace("{label}", item.label)}
           >
             <ChevronDown
               className={`transition-transform ${open ? "rotate-180" : ""}`}
@@ -202,9 +204,12 @@ export interface HeaderProps {
   ctaHref: string;
   topBarPhones?: { label: string; number: string }[];
   topBarEmail?: string;
+  /** Overrides for screen-reader labels (defaults: English) */
+  /** `submenuToggle` may contain `{label}`, replaced with the menu item label */
+  ariaLabels?: { menuToggle?: string; mainNav?: string; mobileNav?: string; submenuToggle?: string };
 }
 
-export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, topBarPhones, topBarEmail }: HeaderProps) {
+export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, topBarPhones, topBarEmail, ariaLabels }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -226,7 +231,7 @@ export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, to
           />
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label={ariaLabels?.mainNav ?? "Main"}>
           {navigation.map((item) => (
             <DesktopNavItem key={item.label} item={item} />
           ))}
@@ -250,7 +255,7 @@ export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, to
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2"
-            aria-label="Menu Toggle"
+            aria-label={ariaLabels?.menuToggle ?? "Menu Toggle"}
             aria-expanded={mobileOpen}
           >
             {mobileOpen ? (
@@ -269,13 +274,14 @@ export function Header({ logo, navigation, ctaLabel, ctaLabelMobile, ctaHref, to
       {mobileOpen && (
         <nav
           className="border-t border-gray-100 bg-white px-6 pb-6 lg:hidden"
-          aria-label="Mobile menu"
+          aria-label={ariaLabels?.mobileNav ?? "Mobile menu"}
         >
           {navigation.map((item) => (
             <MobileNavItem
               key={item.label}
               item={item}
               onClose={() => setMobileOpen(false)}
+              submenuToggleLabel={ariaLabels?.submenuToggle}
             />
           ))}
         </nav>

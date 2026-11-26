@@ -14,17 +14,36 @@ import { Breadcrumbs } from "../Breadcrumbs";
 import { Accordion } from "../Accordion";
 import { FaqJsonLd } from "../FaqJsonLd";
 import type { CaseStudyCard } from "@pomerico/content";
+import { PAGE_TEMPLATE_COMMON_LABELS_EN, type PageTemplateCommonLabels } from "./labels";
+
+export interface ServicePageTemplateLabels extends PageTemplateCommonLabels {
+  breadcrumbServices: string;
+  /** Small red label above the target-audience heading */
+  targetAudiencePreheading: string;
+  clutchBadgeAlt: string;
+  clutchDoodleAlt: string;
+}
+
+export const SERVICE_PAGE_TEMPLATE_LABELS_EN: ServicePageTemplateLabels = {
+  ...PAGE_TEMPLATE_COMMON_LABELS_EN,
+  breadcrumbServices: "Services",
+  targetAudiencePreheading: "POMERICO GROUP",
+  clutchBadgeAlt: "Clutch verified partner – Top HR Outsourcing Company, Poland 2023",
+  clutchDoodleAlt: "We work with companies that",
+};
 
 function TargetAudienceSection({
   heading,
   description,
   items,
   clutchBadge,
+  labels,
 }: {
   heading: string;
   description: string;
   items?: { bold?: string; text: string }[];
   clutchBadge: string;
+  labels: Pick<ServicePageTemplateLabels, "targetAudiencePreheading" | "clutchBadgeAlt" | "clutchDoodleAlt">;
 }) {
   return (
     <section className="py-20">
@@ -32,7 +51,7 @@ function TargetAudienceSection({
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-red">
-              POMERICO GROUP
+              {labels.targetAudiencePreheading}
             </p>
             <h2 className="font-heading mt-2 text-3xl font-bold text-dark lg:text-4xl">
               {heading}
@@ -44,14 +63,14 @@ function TargetAudienceSection({
             <div className="mt-8 flex items-center justify-between max-w-sm">
               <Image
                 src={clutchBadge}
-                alt="Clutch verified partner – Top HR Outsourcing Company, Poland 2023"
+                alt={labels.clutchBadgeAlt}
                 width={80}
                 height={87}
                 className="max-w-[80px] shrink-0"
               />
               <Image
                 src="/images/clutch-doodle.svg"
-                alt="We work with companies that"
+                alt={labels.clutchDoodleAlt}
                 width={180}
                 height={87}
                 className="max-w-[180px]"
@@ -76,31 +95,40 @@ interface ServicePageTemplateProps {
   clutchBadge: string;
   submitAction: (formData: FormData) => Promise<{ success: boolean; error?: string }>;
   faqItems?: { question: string; answer: string }[];
+  /** Overrides for built-in texts (defaults: English, see SERVICE_PAGE_TEMPLATE_LABELS_EN) */
+  labels?: Partial<ServicePageTemplateLabels>;
+  /** Absolute origin for JSON-LD (default https://pomerico.com) */
+  siteUrl?: string;
 }
 
-export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, submitAction, faqItems }: ServicePageTemplateProps) {
+export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, submitAction, faqItems, labels, siteUrl }: ServicePageTemplateProps) {
+  const l = { ...SERVICE_PAGE_TEMPLATE_LABELS_EN, ...labels };
   const slugs = data.caseStudySlugs;
 
   return (
     <>
       {/* Hero */}
-      <HeroSection data={data.hero} />
+      <HeroSection data={data.hero} trustImageAlt={l.heroTrustImageAlt} />
 
-      <Breadcrumbs items={[
-        { label: "Home", href: "/" },
-        { label: "Services", href: "/services" },
-        { label: data.title },
-      ]} />
+      <Breadcrumbs
+        items={[
+          { label: l.breadcrumbHome, href: "/" },
+          { label: l.breadcrumbServices, href: "/services" },
+          { label: data.title },
+        ]}
+        siteUrl={siteUrl}
+        ariaLabel={l.breadcrumbAria}
+      />
 
       {/* Benefits */}
       {data.benefits.length > 0 && (
         <section className="bg-gray-bg py-20">
           <div className="mx-auto max-w-7xl px-6">
             <SectionHeader
-              heading="Benefits for Your Business"
-              subtitle="Measurable results across every engagement."
+              heading={l.benefitsHeading}
+              subtitle={l.benefitsSubtitle}
             />
-            <ServiceCardGrid cards={data.benefits} />
+            <ServiceCardGrid cards={data.benefits} linkLabel={l.cardLinkLabel} />
           </div>
         </section>
       )}
@@ -110,7 +138,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
         <section className="bg-gray-bg py-20">
           <div className="mx-auto max-w-7xl px-6">
             <SectionHeader heading={data.services.heading} />
-            <ServiceCardGrid cards={data.services.cards} />
+            <ServiceCardGrid cards={data.services.cards} linkLabel={l.cardLinkLabel} />
             {data.services.items && data.services.items.length > 0 && (
               <>
                 {data.services.itemsHeading && (
@@ -136,6 +164,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
           description={data.targetAudience.description}
           items={data.targetAudience.items}
           clutchBadge={clutchBadge}
+          labels={l}
         />
       )}
 
@@ -185,7 +214,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
             />
           )}
           {data.testimonials && data.testimonials.length > 0 && (
-            <TestimonialCarousel testimonials={data.testimonials} />
+            <TestimonialCarousel testimonials={data.testimonials} {...l.testimonials} />
           )}
         </>
       )}
@@ -193,7 +222,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
       {/* Cooperation Process */}
       {data.process && (
         <ProcessSection
-          heading={data.process.heading ?? "Cooperation Process"}
+          heading={data.process.heading ?? l.processHeading}
           steps={data.process.steps}
         />
       )}
@@ -203,7 +232,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
         <section className="bg-gray-bg py-20">
           <div className="mx-auto max-w-7xl px-6">
             <SectionHeader heading={data.details.heading} />
-            <ServiceCardGrid cards={data.details.cards} />
+            <ServiceCardGrid cards={data.details.cards} linkLabel={l.cardLinkLabel} />
           </div>
         </section>
       )}
@@ -212,6 +241,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
       {slugs && slugs.length > 0 && (
         <CaseStudyGrid
           cards={allCaseStudyCards.filter((c) => slugs.includes(c.slug))}
+          {...l.caseStudies}
         />
       )}
 
@@ -221,10 +251,10 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
           <div className="mx-auto max-w-4xl px-6">
             <div className="mb-12 text-center">
               <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-red">
-                Got Questions?
+                {l.faqPreheading}
               </p>
               <h2 className="font-heading mt-3 text-3xl font-bold text-dark lg:text-4xl">
-                Frequently Asked Questions
+                {l.faqHeading}
               </h2>
             </div>
             <FaqJsonLd items={faqItems} />
@@ -234,7 +264,7 @@ export function ServicePageTemplate({ data, allCaseStudyCards, clutchBadge, subm
       )}
 
       {/* Bottom CTA */}
-      <CTASection submitAction={submitAction} />
+      <CTASection submitAction={submitAction} labels={l.cta} />
     </>
   );
 }

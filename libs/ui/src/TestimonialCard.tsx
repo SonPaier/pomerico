@@ -1,16 +1,21 @@
+import Image from "next/image";
 import type { Testimonial } from "@pomerico/content";
+
+export interface TestimonialCardLabels {
+  /** Alt text of the client logo; `{company}` is replaced with the company name */
+  logoAlt?: string;
+  /** Used for `{company}` when the testimonial has no company */
+  defaultCompany?: string;
+}
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
+  labels?: TestimonialCardLabels;
 }
 
-export function TestimonialCard({ testimonial: t }: TestimonialCardProps) {
+export function TestimonialCard({ testimonial: t, labels }: TestimonialCardProps) {
   return (
-    <blockquote className="relative rounded-lg bg-gray-bg px-10 pb-8 pt-12">
-      <span className="absolute left-8 top-6 font-heading text-6xl leading-none text-dark/10">
-        &ldquo;&rdquo;
-      </span>
-
+    <blockquote className="relative rounded-lg bg-gray-bg px-10 pb-8 pt-8">
       <p className="relative text-lg italic leading-relaxed text-dark/80">
         &ldquo;{t.quote}&rdquo;
       </p>
@@ -42,7 +47,21 @@ export function TestimonialCard({ testimonial: t }: TestimonialCardProps) {
             )}
           </cite>
         </div>
-        {t.company && (
+        {t.companyLogo ? (
+          <span className="hidden shrink-0 rounded bg-white px-4 py-2 sm:flex">
+            <Image
+              src={t.companyLogo}
+              alt={(labels?.logoAlt ?? "{company} logo").replace(
+                "{company}",
+                t.company ?? labels?.defaultCompany ?? "Client",
+              )}
+              width={160}
+              height={48}
+              sizes="140px"
+              className="h-10 w-auto max-w-[140px] object-contain"
+            />
+          </span>
+        ) : t.company && (
           <span className="hidden rounded border border-dark/10 px-4 py-1.5 font-ui text-xs font-semibold uppercase tracking-wider text-dark/60 sm:block">
             {t.company}
           </span>

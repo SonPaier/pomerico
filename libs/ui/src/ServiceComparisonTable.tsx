@@ -6,7 +6,7 @@ import { SectionHeader } from "./SectionHeader";
 
 type CellType = "yes" | "no" | "partial" | "txt";
 
-interface Cell {
+export interface ServiceComparisonCell {
   type: CellType;
   label: string;
 }
@@ -15,7 +15,8 @@ interface DataRow {
   kind: "data";
   feature: string;
   tags: string[];
-  cells: Cell[];
+  /** One cell per column, in column order */
+  cells: ServiceComparisonCell[];
 }
 
 interface CategoryRow {
@@ -23,9 +24,39 @@ interface CategoryRow {
   label: string;
 }
 
-type Row = DataRow | CategoryRow;
+export type ServiceComparisonRow = DataRow | CategoryRow;
+type Row = ServiceComparisonRow;
+type Cell = ServiceComparisonCell;
 
-const columns = [
+export interface ServiceComparisonColumn {
+  badge: string;
+  name: string;
+  desc: string;
+  href: string;
+  /** Matches a filter `value` */
+  group: string;
+}
+
+/** Every user-visible text of the table, including its data (columns, rows, "best for" texts). */
+export interface ServiceComparisonLabels {
+  heading: string;
+  subtitle: string;
+  /** Filter tabs; `value` "all" shows every column, other values match `column.group` */
+  filters: { label: string; value: string }[];
+  columns: ServiceComparisonColumn[];
+  rows: ServiceComparisonRow[];
+  /** One text per column, in column order */
+  bestFor: string[];
+  learnMoreLink: string;
+  bestForLabel: string;
+  notSureLabel: string;
+  learnMoreButton: string;
+  legendYes: string;
+  legendPartial: string;
+  legendNo: string;
+}
+
+const columns: ServiceComparisonColumn[] = [
   {
     badge: "Employment",
     name: "EOR",
@@ -201,7 +232,7 @@ const rows: Row[] = [
   ]},
 ];
 
-const bestFor = [
+const bestFor: string[] = [
   "International companies hiring in Poland without opening an entity. Fast market entry.",
   "Companies needing EOR plus active onsite presence, coordination and daily team management in Poland.",
   "Companies wanting HR admin offloaded while retaining employer status and full operational control.",
@@ -250,7 +281,31 @@ function CellDisplay({ cell }: { cell: Cell }) {
   );
 }
 
-export function ServiceComparisonTable() {
+export const SERVICE_COMPARISON_LABELS_EN: ServiceComparisonLabels = {
+  heading: "Which Cooperation Model\nIs Right for You?",
+  subtitle:
+    "Compare our employment and outsourcing models side-by-side to find the setup that best matches your business goals.",
+  filters,
+  columns,
+  rows,
+  bestFor,
+  learnMoreLink: "Learn more",
+  bestForLabel: "Best for",
+  notSureLabel: "Not sure which fits?",
+  learnMoreButton: "Learn More",
+  legendYes: "Yes / Fully included",
+  legendPartial: "Partially / on request",
+  legendNo: "No / Not applicable",
+};
+
+export function ServiceComparisonTable({
+  labels,
+}: {
+  /** Overrides for built-in texts and data (defaults: English, see SERVICE_COMPARISON_LABELS_EN) */
+  labels?: Partial<ServiceComparisonLabels>;
+} = {}) {
+  const l = { ...SERVICE_COMPARISON_LABELS_EN, ...labels };
+  const { columns, rows, bestFor, filters } = l;
   const [activeFilter, setActiveFilter] = useState("all");
 
   const visibleColumns = activeFilter === "all"
@@ -265,8 +320,8 @@ export function ServiceComparisonTable() {
     <section className="bg-gray-bg py-20">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          heading={"Which Cooperation Model\nIs Right for You?"}
-          subtitle="Compare our employment and outsourcing models side-by-side to find the setup that best matches your business goals."
+          heading={l.heading}
+          subtitle={l.subtitle}
         />
 
         {/* Filter tabs */}
@@ -304,7 +359,7 @@ export function ServiceComparisonTable() {
                         href={col.href}
                         className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-semibold text-primary-red hover:underline"
                       >
-                        Learn more
+                        {l.learnMoreLink}
                         <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                           <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
@@ -344,7 +399,7 @@ export function ServiceComparisonTable() {
                 {/* Best for row */}
                 <tr className="border-t border-dark/10 bg-primary-blue/5">
                   <td className="px-4 py-3.5 text-xs font-bold uppercase tracking-widest text-primary-blue">
-                    Best for
+                    {l.bestForLabel}
                   </td>
                   {visibleColumnIndices.map((i) => (
                     <td key={i} className="border-l border-dark/5 px-4 py-3.5 align-top text-xs leading-relaxed text-dark/60">
@@ -356,7 +411,7 @@ export function ServiceComparisonTable() {
                 {/* CTA row */}
                 <tr className="border-t border-dark/10 bg-gray-bg">
                   <td className="px-4 py-4 text-sm text-dark/50">
-                    Not sure which fits?
+                    {l.notSureLabel}
                   </td>
                   {visibleColumns.map((col) => (
                     <td key={col.name} className="border-l border-dark/5 px-4 py-4 text-center">
@@ -364,7 +419,7 @@ export function ServiceComparisonTable() {
                         href={col.href}
                         className="inline-block rounded bg-primary-red px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-white transition-colors hover:bg-primary-red/90"
                       >
-                        Learn More
+                        {l.learnMoreButton}
                       </Link>
                     </td>
                   ))}
@@ -377,13 +432,13 @@ export function ServiceComparisonTable() {
         {/* Legend */}
         <div className="mt-4 flex flex-wrap justify-center gap-5 text-xs text-dark/50">
           <span className="flex items-center gap-1.5">
-            <span className="inline-block h-2 w-2 rounded-full bg-primary-blue" /> Yes / Fully included
+            <span className="inline-block h-2 w-2 rounded-full bg-primary-blue" /> {l.legendYes}
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="inline-block h-2 w-2 rounded-full bg-dark/40" /> Partially / on request
+            <span className="inline-block h-2 w-2 rounded-full bg-dark/40" /> {l.legendPartial}
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="inline-block h-2 w-2 rounded-full bg-dark/30" /> No / Not applicable
+            <span className="inline-block h-2 w-2 rounded-full bg-dark/30" /> {l.legendNo}
           </span>
         </div>
       </div>

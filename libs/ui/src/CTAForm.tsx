@@ -19,15 +19,80 @@ const DEFAULT_TOPICS = [
   "Other",
 ] as const;
 
+/** Every user-visible text of the form. Plain strings only (passed from server to client). */
+export interface CTAFormLabels {
+  heading: string;
+  subheading: string;
+  nameLabel: string;
+  namePlaceholder: string;
+  emailLabel: string;
+  emailPlaceholder: string;
+  phoneLabel: string;
+  phonePlaceholder: string;
+  topicLabel: string;
+  /** Options of the topic select; the first one is the "choose" placeholder */
+  topics: readonly string[];
+  briefLabel: string;
+  briefPlaceholder: string;
+  uploadLabel: string;
+  uploadHint: string;
+  /** Screen-reader label of the remove-file button; `{name}` is replaced with the file name */
+  removeFile: string;
+  /** Consent sentence: `consentBefore` + link(`consentLink` → `privacyHref`) + `consentAfter` */
+  consentBefore: string;
+  consentLink: string;
+  consentAfter: string;
+  privacyHref: string;
+  submit: string;
+  submitting: string;
+  successTitle: string;
+  successText: string;
+  /** Shown when the action fails without its own message */
+  genericError: string;
+  /** Shown when the action throws */
+  unexpectedError: string;
+}
+
+export const CTA_FORM_LABELS_EN: CTAFormLabels = {
+  heading: "Book your free consultation",
+  subheading: "No commitment · Reply within 24h",
+  nameLabel: "Full Name",
+  namePlaceholder: "Name",
+  emailLabel: "Email Address",
+  emailPlaceholder: "Email",
+  phoneLabel: "Phone Number",
+  phonePlaceholder: "Phone number (+xx)",
+  topicLabel: "Topic of Interest",
+  topics: DEFAULT_TOPICS,
+  briefLabel: "Project Brief",
+  briefPlaceholder: "Tell us about your situation - what are you looking to achieve?",
+  uploadLabel: "Upload RFP or Specs",
+  uploadHint: "PDF, DOC, XLS, PNG, JPG (max 10MB / file)",
+  removeFile: "Remove {name}",
+  consentBefore: "I agree to the processing of my personal data in accordance with the ",
+  consentLink: "Privacy Policy",
+  consentAfter: ".",
+  privacyHref: "/privacy-policy",
+  submit: "Send a message",
+  submitting: "Sending…",
+  successTitle: "Thank you for reaching out!",
+  successText: "We'll get back to you within 24 hours.",
+  genericError: "Something went wrong. Please try again.",
+  unexpectedError: "An unexpected error occurred. Please try again later.",
+};
+
 export interface CTAFormProps {
   submitAction: (
     formData: FormData,
   ) => Promise<{ success: boolean; error?: string; code?: string }>;
   topics?: readonly string[];
+  /** Overrides for built-in texts (defaults: English, see CTA_FORM_LABELS_EN) */
+  labels?: Partial<CTAFormLabels>;
 }
 
-export function CTAForm({ submitAction, topics }: CTAFormProps) {
-  const formTopics = topics ?? DEFAULT_TOPICS;
+export function CTAForm({ submitAction, topics, labels }: CTAFormProps) {
+  const l = { ...CTA_FORM_LABELS_EN, ...labels };
+  const formTopics = topics ?? l.topics;
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -74,11 +139,11 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
           ...trackingPayload,
           error_code: result.code ?? "unknown",
         });
-        setError(result.error ?? "Something went wrong. Please try again.");
+        setError(result.error ?? l.genericError);
       }
     } catch {
       pushDataLayer({ event: "form_submit_error", ...trackingPayload, error_code: "exception" });
-      setError("An unexpected error occurred. Please try again later.");
+      setError(l.unexpectedError);
     } finally {
       setSubmitting(false);
     }
@@ -88,10 +153,10 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
     return (
       <div className="rounded-lg bg-white p-10 text-center">
         <p className="font-heading text-xl font-bold text-dark">
-          Thank you for reaching out!
+          {l.successTitle}
         </p>
         <p className="mt-2 text-dark/70">
-          We&apos;ll get back to you within 24 hours.
+          {l.successText}
         </p>
       </div>
     );
@@ -106,10 +171,10 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
       className="rounded-lg bg-white p-8 lg:p-10"
     >
       <h3 className="font-heading text-2xl font-bold text-primary-blue">
-        Book your free consultation
+        {l.heading}
       </h3>
       <p className="mt-1 text-sm text-dark/70">
-        No commitment &middot; Reply within 24h
+        {l.subheading}
       </p>
 
       {error && (
@@ -123,26 +188,26 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="ctaform-name" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
-              Full Name
+              {l.nameLabel}
             </label>
             <input
               id="ctaform-name"
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder={l.namePlaceholder}
               required
               className={inputClass}
             />
           </div>
           <div>
             <label htmlFor="ctaform-email" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
-              Email Address
+              {l.emailLabel}
             </label>
             <input
               id="ctaform-email"
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder={l.emailPlaceholder}
               required
               className={inputClass}
             />
@@ -153,13 +218,13 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="ctaform-phone" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
-              Phone Number
+              {l.phoneLabel}
             </label>
             <input
               id="ctaform-phone"
               type="tel"
               name="phone"
-              placeholder="Phone number (+xx)"
+              placeholder={l.phonePlaceholder}
               required
               pattern="[0-9()#&+*\-=. ]+"
               className={inputClass}
@@ -167,7 +232,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
           </div>
           <div>
             <label htmlFor="ctaform-topic" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
-              Topic of Interest
+              {l.topicLabel}
             </label>
             <select id="ctaform-topic" name="topic" className={inputClass}>
               {formTopics.map((t) => (
@@ -182,12 +247,12 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
         {/* Row 3: Message */}
         <div>
           <label htmlFor="ctaform-brief" className="mb-1.5 block font-ui text-[11px] font-semibold uppercase tracking-wider text-dark/70">
-            Project Brief
+            {l.briefLabel}
           </label>
           <textarea
             id="ctaform-brief"
             name="message"
-            placeholder="Tell us about your situation - what are you looking to achieve?"
+            placeholder={l.briefPlaceholder}
             rows={4}
             className={inputClass}
           />
@@ -200,8 +265,8 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
               <path d="M17.5 12.5V15.83a1.67 1.67 0 01-1.67 1.67H4.17a1.67 1.67 0 01-1.67-1.67V12.5M14.17 6.67L10 2.5M10 2.5L5.83 6.67M10 2.5v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <span>
-              <strong className="text-dark/70">Upload RFP or Specs</strong>
-              <span className="ml-2 text-xs">PDF, DOC, XLS, PNG, JPG (max 10MB / file)</span>
+              <strong className="text-dark/70">{l.uploadLabel}</strong>
+              <span className="ml-2 text-xs">{l.uploadHint}</span>
             </span>
             <input
               ref={fileInputRef}
@@ -224,7 +289,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
                   <button
                     type="button"
                     onClick={() => removeFile(i)}
-                    aria-label={`Remove ${f.name}`}
+                    aria-label={l.removeFile.replace("{name}", f.name)}
                     className="shrink-0 text-dark/50 transition hover:text-primary-red"
                   >
                     <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" clipRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" /></svg>
@@ -245,12 +310,11 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
             className="mt-0.5 shrink-0"
           />
           <span>
-            I agree to the processing of my personal data in accordance with
-            the{" "}
-            <Link href="/privacy-policy" className="text-primary-blue underline">
-              Privacy Policy
+            {l.consentBefore}
+            <Link href={l.privacyHref} className="text-primary-blue underline">
+              {l.consentLink}
             </Link>
-            .
+            {l.consentAfter}
           </span>
         </label>
 
@@ -260,7 +324,7 @@ export function CTAForm({ submitAction, topics }: CTAFormProps) {
           disabled={submitting}
           className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-red px-6 py-4 font-ui text-sm font-semibold text-white transition-colors hover:bg-primary-red/90 disabled:opacity-60"
         >
-          {submitting ? "Sending…" : "Send a message"}
+          {submitting ? l.submitting : l.submit}
           {!submitting && <ArrowRightIcon stroke="white" />}
         </button>
       </div>

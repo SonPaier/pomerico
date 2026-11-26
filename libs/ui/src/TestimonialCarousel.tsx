@@ -4,16 +4,21 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import type { Testimonial } from "@pomerico/content";
-import { TestimonialCard } from "./TestimonialCard";
+import { TestimonialCard, type TestimonialCardLabels } from "./TestimonialCard";
 
 interface TestimonialCarouselProps {
   testimonials: Testimonial[];
   heading?: string;
+  /** Overrides for screen-reader labels (defaults: English) */
+  ariaLabels?: { previous?: string; next?: string; goTo?: string };
+  cardLabels?: TestimonialCardLabels;
 }
 
 export function TestimonialCarousel({
   testimonials,
   heading = "Executive Voices",
+  ariaLabels,
+  cardLabels,
 }: TestimonialCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "center", loop: true },
@@ -55,14 +60,14 @@ export function TestimonialCarousel({
   return (
     <section className="py-16">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-center font-heading text-3xl font-bold text-primary-blue">
+        <h2 className="mb-10 text-center font-heading text-3xl font-bold text-primary-red">
           {heading}
         </h2>
 
         <div className="relative">
           <button
             onClick={scrollPrev}
-            aria-label="Previous testimonial"
+            aria-label={ariaLabels?.previous ?? "Previous testimonial"}
             className="absolute -left-12 top-1/2 hidden -translate-y-1/2 text-dark/30 transition-colors hover:text-primary-blue md:flex"
           >
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -74,7 +79,7 @@ export function TestimonialCarousel({
             <div className="flex">
               {testimonials.map((t, i) => (
                 <div key={i} className="min-w-0 shrink-0 basis-full px-4">
-                  <TestimonialCard testimonial={t} />
+                  <TestimonialCard testimonial={t} labels={cardLabels} />
                 </div>
               ))}
             </div>
@@ -82,7 +87,7 @@ export function TestimonialCarousel({
 
           <button
             onClick={scrollNext}
-            aria-label="Next testimonial"
+            aria-label={ariaLabels?.next ?? "Next testimonial"}
             className="absolute -right-12 top-1/2 hidden -translate-y-1/2 text-dark/30 transition-colors hover:text-primary-blue md:flex"
           >
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -99,7 +104,7 @@ export function TestimonialCarousel({
                 key={i}
                 onClick={() => scrollTo(i)}
                 className="flex h-6 w-6 items-center justify-center"
-                aria-label={`Go to testimonial ${i + 1}`}
+                aria-label={`${ariaLabels?.goTo ?? "Go to testimonial"} ${i + 1}`}
               >
                 <span
                   className={`block rounded-full transition-all ${

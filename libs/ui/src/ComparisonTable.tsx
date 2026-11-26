@@ -24,6 +24,8 @@ export interface ComparisonTableProps {
   ctaSecondaryLabel?: string;
   ctaSecondaryHref?: string;
   footnote?: string;
+  /** Label next to the CTA buttons */
+  notSureLabel?: string;
 }
 
 function CellValue({
@@ -47,6 +49,7 @@ export function ComparisonTable({
   ctaSecondaryLabel,
   ctaSecondaryHref,
   footnote,
+  notSureLabel = "Not sure which fits?",
 }: ComparisonTableProps) {
   const totalCols = columns.length + 1; // +1 for label column
 
@@ -136,7 +139,7 @@ export function ComparisonTable({
                 {ctaLabel && ctaHref && (
                   <tr className="border-t border-dark/10 bg-gray-bg">
                     <td className="px-4 py-5 text-sm font-normal text-dark/60">
-                      Not sure which fits?
+                      {notSureLabel}
                     </td>
                     <td
                       colSpan={columns.length}

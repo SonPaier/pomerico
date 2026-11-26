@@ -45,6 +45,14 @@ export interface FooterProps {
     services?: string;
     industry?: string;
   };
+  /** Overrides for built-in texts (defaults: English) */
+  labels?: {
+    contactUs?: string;
+    bookConsultation?: string;
+    consentPreferences?: string;
+    linkedinAria?: string;
+    clutchAlt?: string;
+  };
 }
 
 export function Footer({
@@ -56,6 +64,7 @@ export function Footer({
   serviceLinks,
   industryLinks,
   columnTitles,
+  labels,
 }: FooterProps) {
   return (
     <footer className="bg-gray-bg border-t border-dark/10">
@@ -65,7 +74,7 @@ export function Footer({
             <FooterColumn title={columnTitles?.company ?? "Company"} links={companyLinks} />
             <Image
               src={clutchBadge}
-              alt="Clutch top company"
+              alt={labels?.clutchAlt ?? "Clutch top company"}
               width={120}
               height={130}
               className="mt-6 w-24"
@@ -74,7 +83,11 @@ export function Footer({
 
           <FooterColumn title={columnTitles?.services ?? "Services"} links={serviceLinks} />
           <FooterColumn title={columnTitles?.industry ?? "Industry"} links={industryLinks} />
-          <ContactInfo person={contactPerson} />
+          <ContactInfo
+            person={contactPerson}
+            label={labels?.contactUs}
+            ctaLabel={labels?.bookConsultation}
+          />
         </div>
       </div>
 
@@ -90,12 +103,12 @@ export function Footer({
             />
           </Link>
           <div className="flex items-center gap-6">
-            <ConsentPreferencesButton />
+            <ConsentPreferencesButton label={labels?.consentPreferences} />
             <a
               href={linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Pomerico on LinkedIn"
+              aria-label={labels?.linkedinAria ?? "Pomerico on LinkedIn"}
               className="text-dark/60 transition-colors hover:text-dark"
             >
             <svg

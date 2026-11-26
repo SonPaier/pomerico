@@ -47,11 +47,55 @@ function toIsoDate(date: string | undefined): string | undefined {
   return `${yyyy}-${mm}-${dd}`;
 }
 
+/** Formats a "DD/MM/YYYY" date for display in `locale`; returns the input unchanged if it is malformed. */
+function formatDisplayDate(date: string, locale: string): string {
+  const iso = toIsoDate(date);
+  if (!iso) return date;
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString(locale, {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+export interface BlogPostTemplateLabels {
+  breadcrumbHome: string;
+  breadcrumbBlog: string;
+  breadcrumbAria: string;
+  writtenBy: string;
+  linkedin: string;
+  /** Joins several author names in the header */
+  authorsSeparator: string;
+  moreArticles: string;
+  readMore: string;
+  /** Organisation name in the Article JSON-LD */
+  publisherName: string;
+}
+
+export const BLOG_POST_TEMPLATE_LABELS_EN: BlogPostTemplateLabels = {
+  breadcrumbHome: "Home",
+  breadcrumbBlog: "Blog",
+  breadcrumbAria: "Breadcrumb",
+  writtenBy: "Written by",
+  linkedin: "LinkedIn",
+  authorsSeparator: " & ",
+  moreArticles: "More Articles",
+  readMore: "Read More",
+  publisherName: "Pomerico Group",
+};
+
 interface BlogPostTemplateProps {
   post: BlogPostData;
   slug: string;
   category: string;
   relatedPosts: BlogPostCard[];
+  /** Overrides for built-in texts (defaults: English, see BLOG_POST_TEMPLATE_LABELS_EN) */
+  labels?: Partial<BlogPostTemplateLabels>;
+  /** Locale of the displayed publication date (en-GB keeps "DD/MM/YYYY"; pl-PL gives "DD.MM.YYYY") */
+  locale?: string;
+  /** Absolute origin for JSON-LD (default https://pomerico.com) */
+  siteUrl?: string;
 }
 
 export function BlogPostTemplate({
@@ -59,7 +103,11 @@ export function BlogPostTemplate({
   slug,
   category,
   relatedPosts,
+  labels,
+  locale = "en-GB",
+  siteUrl = "https://pomerico.com",
 }: BlogPostTemplateProps) {
+  const l = { ...BLOG_POST_TEMPLATE_LABELS_EN, ...labels };
   const authors = Array.isArray(post.author) ? post.author : [post.author];
   const authorsJsonLd = authors.map((a) => ({
     "@type": "Person",
@@ -71,21 +119,21 @@ export function BlogPostTemplate({
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    image: `https://pomerico.com${post.featuredImage}`,
+    image: `${siteUrl}${post.featuredImage}`,
     datePublished: toIsoDate(post.date),
     dateModified: toIsoDate(post.dateModified ?? post.date),
     author: authorsJsonLd.length === 1 ? authorsJsonLd[0] : authorsJsonLd,
     publisher: {
       "@type": "Organization",
-      name: "Pomerico Group",
+      name: l.publisherName,
       logo: {
         "@type": "ImageObject",
-        url: "https://pomerico.com/images/pomerico-group-logo.png",
+        url: `${siteUrl}/images/pomerico-group-logo.png`,
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://pomerico.com/blog/${slug}`,
+      "@id": `${siteUrl}/blog/${slug}`,
     },
   };
 
@@ -98,10 +146,12 @@ export function BlogPostTemplate({
 
       <Breadcrumbs
         items={[
-          { label: "Home", href: "/" },
-          { label: "Blog", href: "/blog" },
+          { label: l.breadcrumbHome, href: "/" },
+          { label: l.breadcrumbBlog, href: "/blog" },
           { label: post.title },
         ]}
+        siteUrl={siteUrl}
+        ariaLabel={l.breadcrumbAria}
       />
 
       {/* Header */}
@@ -138,9 +188,9 @@ export function BlogPostTemplate({
             )}
             <div>
               <p className="text-sm font-semibold text-dark">
-                {authors.map((a) => a.name).join(" & ")}
+                {authors.map((a) => a.name).join(l.authorsSeparator)}
               </p>
-              <p className="text-xs text-dark/70">{post.date}</p>
+              <p className="text-xs text-dark/70">{formatDisplayDate(post.date, locale)}</p>
             </div>
           </div>
         </div>
@@ -196,7 +246,7 @@ export function BlogPostTemplate({
               />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-dark/70">
-                  Written by
+                  {l.writtenBy}
                 </p>
                 <p className="mt-1 font-heading text-lg font-bold text-dark">
                   {a.name}
@@ -210,7 +260,7 @@ export function BlogPostTemplate({
                       rel="noopener noreferrer"
                       className="text-primary-blue hover:underline"
                     >
-                      LinkedIn
+                      {l.linkedin}
                     </a>
                   )}
                   <span>{a.email}</span>
@@ -224,7 +274,7 @@ export function BlogPostTemplate({
       {/* Related posts */}
       <section className="bg-gray-bg py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <SectionHeader heading="More Articles" />
+          <SectionHeader heading={l.moreArticles} />
           <div className="grid gap-8 sm:grid-cols-2">
             {relatedPosts.map((p) => (
               <Link
@@ -251,7 +301,7 @@ export function BlogPostTemplate({
                   </h3>
                   <p className="mt-1 text-xs text-dark/70">{p.description}</p>
                   <span className="mt-3 inline-flex items-center gap-1 font-ui text-xs font-semibold text-primary-red">
-                    Read More <ArrowRightIcon />
+                    {l.readMore} <ArrowRightIcon />
                   </span>
                 </div>
               </Link>

@@ -6,11 +6,52 @@ import { TestimonialBlock } from "./TestimonialBlock";
 import { TaglineSection } from "./TaglineSection";
 import { Breadcrumbs } from "./Breadcrumbs";
 import type { CaseStudyCard } from "@pomerico/content";
+import type { CaseStudyGridProps } from "./CaseStudyGrid";
+import type { CTASectionLabels } from "./CTASection";
+import type { TestimonialCardLabels } from "./TestimonialCard";
+
+export interface CaseStudyLayoutLabels {
+  heroImageAlt: string;
+  clientSpotlight: string;
+  client: string;
+  industry: string;
+  projectGoal: string;
+  challenge: string;
+  viewAllServices: string;
+  approach: string;
+  results: string;
+  breadcrumbHome: string;
+  breadcrumbCaseStudies: string;
+  breadcrumbAria: string;
+  testimonialHeading?: string;
+  testimonialCardLabels?: TestimonialCardLabels;
+  caseStudies?: Omit<CaseStudyGridProps, "cards">;
+  cta?: Partial<CTASectionLabels>;
+}
+
+export const CASE_STUDY_LAYOUT_LABELS_EN: CaseStudyLayoutLabels = {
+  heroImageAlt: "Glass facade of a modern office building against a blue sky",
+  clientSpotlight: "Client Spotlight",
+  client: "Client",
+  industry: "Industry",
+  projectGoal: "Project Goal",
+  challenge: "The Challenge",
+  viewAllServices: "VIEW ALL SERVICES",
+  approach: "Our Approach",
+  results: "Results & Outcomes",
+  breadcrumbHome: "Home",
+  breadcrumbCaseStudies: "Case Studies",
+  breadcrumbAria: "Breadcrumb",
+};
 
 interface CaseStudyLayoutProps {
   data: CaseStudyPageData;
   allCaseStudyCards: CaseStudyCard[];
   submitAction: (formData: FormData) => Promise<{ success: boolean; error?: string }>;
+  /** Overrides for built-in texts (defaults: English, see CASE_STUDY_LAYOUT_LABELS_EN) */
+  labels?: Partial<CaseStudyLayoutLabels>;
+  /** Absolute origin for JSON-LD (default https://pomerico.com) */
+  siteUrl?: string;
 }
 
 function ContentSection({
@@ -60,7 +101,8 @@ function ContentSection({
   );
 }
 
-export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseStudyLayoutProps) {
+export function CaseStudyLayout({ data, allCaseStudyCards, submitAction, labels, siteUrl }: CaseStudyLayoutProps) {
+  const l = { ...CASE_STUDY_LAYOUT_LABELS_EN, ...labels };
   const otherCaseStudies = allCaseStudyCards
     .filter((c) => c.slug !== data.slug)
     .slice(0, 4);
@@ -73,7 +115,7 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/case-study-hero-building.jpg"
-            alt="Glass facade of a modern office building against a blue sky"
+            alt={l.heroImageAlt}
             fill
             sizes="100vw"
             className="object-cover"
@@ -90,7 +132,7 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
             {data.client && (
               <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md">
                 <span className="font-ui text-xs font-bold uppercase tracking-widest text-white">
-                  Client Spotlight
+                  {l.clientSpotlight}
                 </span>
                 <div className="h-4 w-px bg-white/30" />
                 <span className="text-sm font-semibold text-white">
@@ -134,7 +176,7 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
               <>
                 <div className="space-y-1">
                   <span className="font-ui text-xs font-bold uppercase tracking-widest text-primary-red">
-                    Client
+                    {l.client}
                   </span>
                   <p className="font-heading text-xl font-bold text-primary-blue">
                     {data.client}
@@ -145,7 +187,7 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
             )}
             <div className="space-y-1">
               <span className="font-ui text-xs font-bold uppercase tracking-widest text-primary-red">
-                Industry
+                {l.industry}
               </span>
               <p className="font-heading text-xl font-bold text-primary-blue">
                 {data.industry}
@@ -156,11 +198,11 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
       </section>
 
       {/* Project Goal */}
-      <ContentSection heading="Project Goal" html={data.goal} variant="split" />
+      <ContentSection heading={l.projectGoal} html={data.goal} variant="split" />
 
       {/* Challenges */}
       <div className="bg-gray-bg">
-        <ContentSection heading="The Challenge" html={data.challenges} variant="split" />
+        <ContentSection heading={l.challenge} html={data.challenges} variant="split" />
       </div>
 
       {/* Tagline */}
@@ -168,40 +210,48 @@ export function CaseStudyLayout({ data, allCaseStudyCards, submitAction }: CaseS
         <TaglineSection
           heading={data.tagline.heading}
           description={data.tagline.description}
-          ctaLabel="VIEW ALL SERVICES"
+          ctaLabel={l.viewAllServices}
           ctaHref="/services"
         />
       )}
 
       {/* Testimonial */}
       {data.testimonial && (
-        <TestimonialBlock testimonial={data.testimonial} />
+        <TestimonialBlock
+          testimonial={data.testimonial}
+          heading={l.testimonialHeading}
+          cardLabels={l.testimonialCardLabels}
+        />
       )}
 
       {/* Our Approach */}
-      <ContentSection heading="Our Approach" html={data.approach} variant="split" />
+      <ContentSection heading={l.approach} html={data.approach} variant="split" />
 
       {/* Results */}
       <div className="bg-gray-bg">
         <ContentSection
-          heading="Results & Outcomes"
+          heading={l.results}
           html={data.results}
           variant="split"
         />
       </div>
 
       {/* Breadcrumbs */}
-      <Breadcrumbs items={[
-        { label: "Home", href: "/" },
-        { label: "Case Studies", href: "/case-studies" },
-        { label: data.title },
-      ]} />
+      <Breadcrumbs
+        items={[
+          { label: l.breadcrumbHome, href: "/" },
+          { label: l.breadcrumbCaseStudies, href: "/case-studies" },
+          { label: data.title },
+        ]}
+        siteUrl={siteUrl}
+        ariaLabel={l.breadcrumbAria}
+      />
 
       {/* More Case Studies */}
-      <CaseStudyGrid cards={otherCaseStudies} />
+      <CaseStudyGrid cards={otherCaseStudies} {...l.caseStudies} />
 
       {/* Bottom CTA */}
-      <CTASection submitAction={submitAction} />
+      <CTASection submitAction={submitAction} labels={l.cta} />
     </article>
   );
 }

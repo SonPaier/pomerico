@@ -32,3 +32,17 @@ export { Footer } from "./Footer";
 export { BlogPostTemplate } from "./templates/BlogPostTemplate";
 export { IndustryPageTemplate } from "./templates/IndustryPageTemplate";
 export { ServicePageTemplate } from "./templates/ServicePageTemplate";
+
+// Localisation: label types and English defaults (pass Partial<…Labels> via `labels` props)
+export type { BreadcrumbsProps } from "./Breadcrumbs";
+export type { CaseStudyGridProps } from "./CaseStudyGrid";
+export { CASE_STUDY_LAYOUT_LABELS_EN, type CaseStudyLayoutLabels } from "./CaseStudyLayout";
+export { CTA_SECTION_LABELS_EN, type CTASectionLabels } from "./CTASection";
+// CTAForm and ServiceComparisonTable are client modules: only their types are re-exported here
+export type { CTAFormLabels } from "./CTAForm";
+export type { ServiceComparisonLabels, ServiceComparisonColumn, ServiceComparisonRow, ServiceComparisonCell } from "./ServiceComparisonTable";
+export type { TestimonialCardLabels } from "./TestimonialCard";
+export { PAGE_TEMPLATE_COMMON_LABELS_EN, type PageTemplateCommonLabels } from "./templates/labels";
+export { SERVICE_PAGE_TEMPLATE_LABELS_EN, type ServicePageTemplateLabels } from "./templates/ServicePageTemplate";
+export { INDUSTRY_PAGE_TEMPLATE_LABELS_EN, type IndustryPageTemplateLabels } from "./templates/IndustryPageTemplate";
+export { BLOG_POST_TEMPLATE_LABELS_EN, type BlogPostTemplateLabels } from "./templates/BlogPostTemplate";

@@ -1,0 +1,159 @@
+"use server";
+
+import nodemailer from "nodemailer";
+
+/** Stable, PII-free error code — safe to send to analytics (the `error` text may contain file names). */
+type ContactErrorCode =
+  | "missing_required"
+  | "invalid_email"
+  | "gdpr_not_accepted"
+  | "file_too_large"
+  | "file_type_not_allowed"
+  | "total_size_exceeded"
+  | "not_configured"
+  | "send_failed";
+
+type ContactResult = { success: boolean; error?: string; code?: ContactErrorCode };
+
+/** Topic placeholders (first select option) – not a real topic, so left out of the email. */
+const TOPIC_PLACEHOLDERS = new Set(["Choose a topic", "Wybierz temat"]);
+
+const REQUIRED_ENV = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "MAIL_TO"] as const;
+
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB per file
+const MAX_TOTAL_SIZE = 25 * 1024 * 1024; // 25 MB total
+const ALLOWED_TYPES = new Set([
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "application/vnd.ms-excel",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "image/png",
+  "image/jpeg",
+  "image/webp",
+  "text/plain",
+]);
+
+function escapeHtml(input: string) {
+  return input
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+export async function submitContactForm(formData: FormData): Promise<ContactResult> {
+  const name = (formData.get("name") as string | null)?.trim() ?? "";
+  const email = (formData.get("email") as string | null)?.trim() ?? "";
+  const phone = (formData.get("phone") as string | null)?.trim() ?? "";
+  const topic = (formData.get("topic") as string | null)?.trim() ?? "";
+  const message = (formData.get("message") as string | null)?.trim() ?? "";
+  const source = (formData.get("source") as string | null)?.trim() ?? "";
+  const gdpr = formData.get("gdpr");
+
+  if (!name || !email) {
+    return { success: false, error: "Imię i nazwisko oraz adres e-mail są wymagane.", code: "missing_required" };
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return { success: false, error: "Podaj prawidłowy adres e-mail.", code: "invalid_email" };
+  }
+
+  if (!gdpr) {
+    return { success: false, error: "Aby kontynuować, zaakceptuj politykę prywatności.", code: "gdpr_not_accepted" };
+  }
+
+  const rawFiles = formData.getAll("file");
+  const incomingFiles: File[] = rawFiles.filter((f): f is File => f instanceof File && f.size > 0);
+
+  let totalSize = 0;
+  for (const f of incomingFiles) {
+    if (f.size > MAX_FILE_SIZE) {
+      return { success: false, error: `Plik "${f.name}" przekracza limit 10 MB.`, code: "file_too_large" };
+    }
+    if (f.type && !ALLOWED_TYPES.has(f.type)) {
+      return { success: false, error: `Niedozwolony typ pliku: ${f.name}. Użyj formatu PDF, DOC/DOCX, XLS/XLSX, PNG, JPG lub TXT.`, code: "file_type_not_allowed" };
+    }
+    totalSize += f.size;
+  }
+  if (totalSize > MAX_TOTAL_SIZE) {
+    return { success: false, error: "Łączny rozmiar załączników przekracza 25 MB. Większe pliki wyślij osobno.", code: "total_size_exceeded" };
+  }
+
+  const attachments = await Promise.all(
+    incomingFiles.map(async (f) => ({
+      filename: f.name,
+      content: Buffer.from(await f.arrayBuffer()),
+      contentType: f.type || "application/octet-stream",
+    })),
+  );
+
+  const missing = REQUIRED_ENV.filter((k) => !process.env[k]);
+  if (missing.length) {
+    console.error("Contact form misconfigured, missing env:", missing.join(", "));
+    return { success: false, error: "Wysyłka wiadomości jest chwilowo niedostępna. Napisz bezpośrednio na office@pomerico.com.", code: "not_configured" };
+  }
+
+  const port = Number(process.env.SMTP_PORT);
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port,
+    secure: port === 465,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  const subject = `New website inquiry — ${name}${topic && !TOPIC_PLACEHOLDERS.has(topic) ? ` (${topic})` : ""}${source ? ` [${source}]` : ""}`;
+
+  const text = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    phone ? `Phone: ${phone}` : null,
+    topic && !TOPIC_PLACEHOLDERS.has(topic) ? `Topic: ${topic}` : null,
+    source ? `Submitted from: ${source}` : null,
+    attachments.length ? `Attachments: ${attachments.map((a) => a.filename).join(", ")}` : null,
+    "",
+    "Message:",
+    message || "(no message)",
+  ]
+    .filter((line) => line !== null)
+    .join("\n");
+
+  const html = `
+    <div style="font-family:Helvetica,Arial,sans-serif;color:#1a1a1a;font-size:14px;line-height:1.5;">
+      <h2 style="margin:0 0 12px;color:#183B6E;">New website inquiry</h2>
+      <table cellpadding="6" cellspacing="0" style="border-collapse:collapse;">
+        <tr><td style="font-weight:600;">Name</td><td>${escapeHtml(name)}</td></tr>
+        <tr><td style="font-weight:600;">Email</td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
+        ${phone ? `<tr><td style="font-weight:600;">Phone</td><td>${escapeHtml(phone)}</td></tr>` : ""}
+        ${topic && !TOPIC_PLACEHOLDERS.has(topic) ? `<tr><td style="font-weight:600;">Topic</td><td>${escapeHtml(topic)}</td></tr>` : ""}
+        ${source ? `<tr><td style="font-weight:600;">Page</td><td><code>${escapeHtml(source)}</code></td></tr>` : ""}
+        ${attachments.length ? `<tr><td style="font-weight:600;">Attachments</td><td>${attachments.map((a) => escapeHtml(a.filename)).join(", ")}</td></tr>` : ""}
+      </table>
+      <h3 style="margin:20px 0 8px;color:#183B6E;">Message</h3>
+      <div style="white-space:pre-wrap;background:#f5f5f5;padding:12px;border-radius:6px;">${escapeHtml(message || "(no message)")}</div>
+      <p style="margin-top:24px;color:#666;font-size:12px;">Sent from pomerico.pl contact form</p>
+    </div>
+  `;
+
+  try {
+    await transporter.sendMail({
+      from: `"Pomerico Website" <${process.env.SMTP_USER}>`,
+      to: process.env.MAIL_TO,
+      replyTo: `"${name}" <${email}>`,
+      subject,
+      text,
+      html,
+      attachments: attachments.length ? attachments : undefined,
+    });
+  } catch (err) {
+    console.error("SMTP send failed:", err);
+    return { success: false, error: "Nie udało się teraz wysłać wiadomości. Spróbuj ponownie lub napisz na office@pomerico.com.", code: "send_failed" };
+  }
+
+  return { success: true };
+}

@@ -5,16 +5,20 @@ import type { ContactPerson } from "@pomerico/content";
 interface ContactInfoProps {
   person: ContactPerson;
   contextMessage?: string;
+  label?: string;
+  ctaLabel?: string;
 }
 
 export function ContactInfo({
   person,
   contextMessage,
+  label = "Contact us",
+  ctaLabel = "Book a Free Consultation",
 }: ContactInfoProps) {
   return (
     <div className="min-w-[320px] rounded-lg border border-dark/5 bg-white p-8">
       <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/60">
-        Contact us
+        {label}
       </p>
 
       {contextMessage && (
@@ -81,7 +85,7 @@ export function ContactInfo({
         href="/contact#book-consultation"
         className="mt-5 block w-full rounded bg-primary-red px-4 py-2.5 text-center font-ui text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-primary-red/90"
       >
-        Book a Free Consultation
+        {ctaLabel}
       </Link>
     </div>
   );

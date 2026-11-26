@@ -6,9 +6,13 @@ import { heroFadeStyle } from "./heroFade";
 
 interface HeroSectionProps {
   data: HeroSectionData;
+  trustImageAlt?: string;
 }
 
-export function HeroSection({ data }: HeroSectionProps) {
+export function HeroSection({
+  data,
+  trustImageAlt = "Trusted partner since 2015",
+}: HeroSectionProps) {
   return (
     // Fades into the light grey breadcrumb bar that follows every hero.
     <section className="pb-44 text-white" style={heroFadeStyle("var(--color-gray-bg)")}>
@@ -25,7 +29,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             {data.trustImage && (
               <Image
                 src={data.trustImage}
-                alt="Trusted partner since 2015"
+                alt={trustImageAlt}
                 width={384}
                 height={60}
                 className="mt-2 h-auto w-full max-w-sm"

@@ -20,10 +20,10 @@ export function AccordionIcon({
           fill="none"
           aria-hidden="true"
         >
-          <rect width="30.4175" height="30.4175" rx="8" fill={variant === "dark" ? "#ffffff" : "#1E4D86"} />
+          <rect width="30.4175" height="30.4175" rx="8" fill={variant === "dark" ? "#ffffff" : "#294893"} />
           <path
             d="M9.209 14.902H21.209"
-            stroke={variant === "dark" ? "#1E4D86" : "white"}
+            stroke={variant === "dark" ? "#294893" : "white"}
             strokeWidth="1.333"
             strokeLinecap="round"
           />

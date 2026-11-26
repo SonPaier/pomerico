@@ -5,11 +5,18 @@ export interface BreadcrumbItem {
   href?: string;
 }
 
-interface BreadcrumbsProps {
+export interface BreadcrumbsProps {
   items: BreadcrumbItem[];
+  /** Absolute origin used in the BreadcrumbList JSON-LD (no trailing slash) */
+  siteUrl?: string;
+  ariaLabel?: string;
 }
 
-export function Breadcrumbs({ items }: BreadcrumbsProps) {
+export function Breadcrumbs({
+  items,
+  siteUrl = "https://pomerico.com",
+  ariaLabel = "Breadcrumb",
+}: BreadcrumbsProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -17,7 +24,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       position: i + 1,
       name: item.label,
-      ...(item.href ? { item: `https://pomerico.com${item.href}` } : {}),
+      ...(item.href ? { item: `${siteUrl}${item.href}` } : {}),
     })),
   };
 
@@ -28,7 +35,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <nav
-        aria-label="Breadcrumb"
+        aria-label={ariaLabel}
         className="bg-gray-bg"
       >
         <div className="mx-auto max-w-7xl px-6 py-3"

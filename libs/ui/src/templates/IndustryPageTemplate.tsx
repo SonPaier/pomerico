@@ -11,15 +11,35 @@ import { TaglineSection } from "../TaglineSection";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { Accordion } from "../Accordion";
 import type { CaseStudyCard } from "@pomerico/content";
+import { PAGE_TEMPLATE_COMMON_LABELS_EN, type PageTemplateCommonLabels } from "./labels";
+
+export interface IndustryPageTemplateLabels extends PageTemplateCommonLabels {
+  breadcrumbIndustries: string;
+  trustedBy: string;
+  /** Used when the page data has no `servicesHeading` */
+  servicesHeading: string;
+}
+
+export const INDUSTRY_PAGE_TEMPLATE_LABELS_EN: IndustryPageTemplateLabels = {
+  ...PAGE_TEMPLATE_COMMON_LABELS_EN,
+  breadcrumbIndustries: "Industries",
+  trustedBy: "Trusted by industry leaders",
+  servicesHeading: "Our Services",
+};
 
 interface IndustryPageTemplateProps {
   data: IndustryPageData;
   allCaseStudyCards: CaseStudyCard[];
   submitAction: (formData: FormData) => Promise<{ success: boolean; error?: string }>;
   faqItems?: { question: string; answer: string }[];
+  /** Overrides for built-in texts (defaults: English, see INDUSTRY_PAGE_TEMPLATE_LABELS_EN) */
+  labels?: Partial<IndustryPageTemplateLabels>;
+  /** Absolute origin for JSON-LD (default https://pomerico.com) */
+  siteUrl?: string;
 }
 
-export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, faqItems }: IndustryPageTemplateProps) {
+export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, faqItems, labels, siteUrl }: IndustryPageTemplateProps) {
+  const l = { ...INDUSTRY_PAGE_TEMPLATE_LABELS_EN, ...labels };
   const caseStudyCards = allCaseStudyCards.filter((c) =>
     c.industries?.includes(data.slug),
   );
@@ -27,20 +47,24 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
   return (
     <>
       {/* Hero */}
-      <HeroSection data={data.hero} />
+      <HeroSection data={data.hero} trustImageAlt={l.heroTrustImageAlt} />
 
-      <Breadcrumbs items={[
-        { label: "Home", href: "/" },
-        { label: "Industries", href: "/industries" },
-        { label: data.title },
-      ]} />
+      <Breadcrumbs
+        items={[
+          { label: l.breadcrumbHome, href: "/" },
+          { label: l.breadcrumbIndustries, href: "/industries" },
+          { label: data.title },
+        ]}
+        siteUrl={siteUrl}
+        ariaLabel={l.breadcrumbAria}
+      />
 
       {/* Trusted client logos */}
       {data.trustedLogos && data.trustedLogos.length > 0 && (
         <section className="py-12">
           <div className="mx-auto max-w-7xl px-6">
             <p className="mb-6 text-center font-ui text-xs font-semibold uppercase tracking-[0.2em] text-dark/50">
-              Trusted by industry leaders
+              {l.trustedBy}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
               {data.trustedLogos.map((logo) => (
@@ -62,8 +86,8 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
       {data.services.length > 0 && (
         <section className="bg-gray-bg py-20">
           <div className="mx-auto max-w-7xl px-6">
-            <SectionHeader heading={data.servicesHeading ?? "Our Services"} />
-            <ServiceCardGrid cards={data.services} columns={2} />
+            <SectionHeader heading={data.servicesHeading ?? l.servicesHeading} />
+            <ServiceCardGrid cards={data.services} columns={2} linkLabel={l.cardLinkLabel} />
           </div>
         </section>
       )}
@@ -73,10 +97,10 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
         <section className="bg-gray-bg py-20">
           <div className="mx-auto max-w-7xl px-6">
             <SectionHeader
-              heading="Benefits for Your Business"
-              subtitle="Measurable results across every engagement."
+              heading={l.benefitsHeading}
+              subtitle={l.benefitsSubtitle}
             />
-            <ServiceCardGrid cards={data.benefits} />
+            <ServiceCardGrid cards={data.benefits} linkLabel={l.cardLinkLabel} />
           </div>
         </section>
       )}
@@ -122,7 +146,7 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
             />
           )}
           {data.testimonials && data.testimonials.length > 0 && (
-            <TestimonialCarousel testimonials={data.testimonials} />
+            <TestimonialCarousel testimonials={data.testimonials} {...l.testimonials} />
           )}
         </>
       )}
@@ -130,14 +154,14 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
       {/* Cooperation Process */}
       {data.process && (
         <ProcessSection
-          heading={data.process.heading ?? "Cooperation Process"}
+          heading={data.process.heading ?? l.processHeading}
           steps={data.process.steps}
         />
       )}
 
       {/* Case Studies */}
       {caseStudyCards.length > 0 && (
-        <CaseStudyGrid cards={caseStudyCards} />
+        <CaseStudyGrid cards={caseStudyCards} {...l.caseStudies} />
       )}
 
       {/* FAQ */}
@@ -146,10 +170,10 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
           <div className="mx-auto max-w-4xl px-6">
             <div className="mb-12 text-center">
               <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-primary-red">
-                Got Questions?
+                {l.faqPreheading}
               </p>
               <h2 className="font-heading mt-3 text-3xl font-bold text-dark lg:text-4xl">
-                Frequently Asked Questions
+                {l.faqHeading}
               </h2>
             </div>
             <Accordion items={faqItems} defaultOpen={0} />
@@ -158,7 +182,7 @@ export function IndustryPageTemplate({ data, allCaseStudyCards, submitAction, fa
       )}
 
       {/* Bottom CTA */}
-      <CTASection submitAction={submitAction} />
+      <CTASection submitAction={submitAction} labels={l.cta} />
     </>
   );
 }

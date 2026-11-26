@@ -5,9 +5,10 @@ import { ArrowRightIcon } from "./ArrowRightIcon";
 
 interface ServiceCardProps {
   data: ServiceCardData;
+  linkLabel?: string;
 }
 
-export function ServiceCard({ data }: ServiceCardProps) {
+export function ServiceCard({ data, linkLabel = "Learn More" }: ServiceCardProps) {
   const card = (
     <div className="flex h-full flex-col rounded-lg border border-dark/5 bg-white p-6">
       <Image
@@ -25,7 +26,7 @@ export function ServiceCard({ data }: ServiceCardProps) {
       </p>
       {data.href && (
         <span className="mt-4 inline-flex items-center gap-1 font-ui text-sm font-semibold text-primary-blue">
-          Learn More
+          {linkLabel}
           <ArrowRightIcon />
         </span>
       )}

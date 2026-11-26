@@ -36,6 +36,8 @@ export interface Testimonial {
   author: string;
   role?: string;
   company?: string;
+  /** Client logo shown in the card corner instead of the company name */
+  companyLogo?: string;
 }
 
 // ── Section types ────────────────────────────────────────

@@ -1,0 +1,90 @@
+/* About Us – zdjęcie zespołu w hero i karuzela zespołu (TeamCarousel). Skopiowane z globals.css pomerico.com. */
+.about-hero-team {
+  position: relative;
+  display: block;
+  width: calc(100% + 3rem);
+  margin: -1.5rem -1.5rem -4rem;
+  aspect-ratio: 2576 / 2000;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.1) 3.5%, rgb(0 0 0 / 0.36) 7%, rgb(0 0 0 / 0.7) 10.5%, rgb(0 0 0 / 0.92) 13%, #000 14.5%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.1) 3.5%, rgb(0 0 0 / 0.36) 7%, rgb(0 0 0 / 0.7) 10.5%, rgb(0 0 0 / 0.92) 13%, #000 14.5%);
+}
+@media (min-width: 1024px) {
+  .about-hero-team {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: min(100%, calc((50vw + 16px) / 1.173));
+    margin: 0;
+    aspect-ratio: 2576 / 2060;
+    -webkit-mask-image: linear-gradient(to right, transparent 2%, rgb(0 0 0 / 0.08) 6.2%, rgb(0 0 0 / 0.3) 11.5%, rgb(0 0 0 / 0.62) 17.2%, rgb(0 0 0 / 0.88) 22%, #000 24.5%);
+    mask-image: linear-gradient(to right, transparent 2%, rgb(0 0 0 / 0.08) 6.2%, rgb(0 0 0 / 0.3) 11.5%, rgb(0 0 0 / 0.62) 17.2%, rgb(0 0 0 / 0.88) 22%, #000 24.5%);
+  }
+}
+
+/*
+ * About Us team carousels (TeamCarousel.tsx): "Meet our Management Team"
+ * and "Meet Our Experts". Native horizontal scroll with snap, always within
+ * the container edges (symmetric margins) and only whole cards visible –
+ * the next card never peeks in.
+ * Mobile (<768): 1 card, full container width.
+ * 768+: 3 cards of (container - 2 gaps) / 3 – identical to the former
+ * `grid gap-8 md:grid-cols-3` layout. With exactly 3 members (management)
+ * nothing scrolls, so it looks and behaves like that grid.
+ */
+.team-carousel {
+  container-type: inline-size;
+  position: relative;
+}
+/* Side arrows: centred on the square photo (photo height = card width) and
+ * straddling the outer card edges, so they fit the 24px mobile margin too. */
+.team-nav {
+  --card: 100cqw;
+  position: absolute;
+  top: calc(var(--card) / 2);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.team-nav--prev {
+  left: -22px;
+}
+.team-nav--next {
+  right: -22px;
+}
+@media (min-width: 768px) {
+  .team-nav {
+    --card: calc((100cqw - 4rem) / 3);
+  }
+}
+.team-track {
+  --gap: 2rem;
+  --card: 100cqw;
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.team-track::-webkit-scrollbar {
+  display: none;
+}
+.team-track > * {
+  flex: 0 0 var(--card);
+  scroll-snap-align: start;
+}
+.team-track:focus-visible {
+  outline: 2px solid var(--color-primary-blue);
+  outline-offset: 4px;
+}
+@media (min-width: 768px) {
+  .team-track {
+    --card: calc((100cqw - 4rem) / 3);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-track {
+    scroll-behavior: auto;
+  }
+}

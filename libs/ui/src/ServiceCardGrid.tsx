@@ -4,9 +4,10 @@ import { ServiceCard } from "./ServiceCard";
 interface ServiceCardGridProps {
   cards: ServiceCardData[];
   columns?: 2 | 3 | 4;
+  linkLabel?: string;
 }
 
-export function ServiceCardGrid({ cards, columns = 3 }: ServiceCardGridProps) {
+export function ServiceCardGrid({ cards, columns = 3, linkLabel }: ServiceCardGridProps) {
   const gridCols =
     columns === 2
       ? "grid gap-8 sm:grid-cols-2"
@@ -17,7 +18,7 @@ export function ServiceCardGrid({ cards, columns = 3 }: ServiceCardGridProps) {
   return (
     <div className={gridCols}>
       {cards.map((card, i) => (
-        <ServiceCard key={i} data={card} />
+        <ServiceCard key={i} data={card} linkLabel={linkLabel} />
       ))}
     </div>
   );
