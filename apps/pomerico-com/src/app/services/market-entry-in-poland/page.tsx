@@ -146,7 +146,7 @@ export default function Page() {
 
       {/* Tagline + Testimonial — split view */}
       {data.tagline && data.testimonials && data.testimonials.length > 0 && (
-        <section className="bg-primary-blue py-20 text-white">
+        <section className="bg-primary-blue py-14 text-white">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
