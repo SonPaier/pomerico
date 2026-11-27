@@ -6,7 +6,7 @@ export const data: CaseStudyPageData = {
   slug: "building-a-multidisciplinary-maintenance-team-for-automated-warehousing",
   title: "Budowa interdyscyplinarnego zespołu utrzymania ruchu dla zautomatyzowanego magazynu",
   metaDescription:
-    "Jak Pomerico zbudowało od zera 35-osobowy zespół utrzymania ruchu dla zautomatyzowanego magazynu SSI Schäfer w 3 miesiące – w połowie planowanego czasu.",
+    "Jak Pomerico zbudowało od zera 35-osobowy zespół utrzymania ruchu dla zautomatyzowanego magazynu SSI Schäfer w 3 miesiące – w czasie o połowę krótszym od planowanego.",
   industry: "Intralogistyka / magazynowanie",
   client: "SSI Schäfer",
   image: "/images/ssi-schaefer-case-study-logo.png",
@@ -28,7 +28,7 @@ export const data: CaseStudyPageData = {
 <li>Zorganizowaliśmy <b>rozmowy rekrutacyjne na miejscu w Bolesławcu</b>, koordynując je bezpośrednio z przedstawicielami SSI Schäfer.</li>
 <li>Przeprowadziliśmy <b>finalną selekcję kandydatów wspólnie z klientem</b>.</li>
 </ul>
-<p>Cały proces rekrutacji zamknęliśmy w <b>3 miesiące</b> – w połowie zaplanowanego czasu. Ostatecznie zespół rozrósł się do <b>35 osób</b>.</p>`,
+<p>Cały proces rekrutacji zamknęliśmy w <b>3 miesiące</b> – w czasie o połowę krótszym od planowanego. Ostatecznie zespół rozrósł się do <b>35 osób</b>.</p>`,
 
   results: `<ul>
 <li>Udało się zatrudnić zespół o pełnym spektrum kompetencji technicznych – od klasycznych specjalistów utrzymania ruchu po ekspertów integrujących urządzenia fizyczne z warstwą IT i automatyki.</li>

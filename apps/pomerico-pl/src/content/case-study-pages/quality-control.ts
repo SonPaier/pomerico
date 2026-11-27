@@ -29,7 +29,7 @@ export const data: CaseStudyPageData = {
 </ul>
 <p><b>Targetowana kampania online:</b></p>
 <ul>
-<li>Uruchomiliśmy <b>kampanię rekrutacyjną w mediach społecznościowych</b>, skierowaną wyłącznie do specjalistów od instalacji sanitarnych.</li>
+<li>Uruchomiliśmy <b>kampanię rekrutacyjną w mediach społecznościowych</b>, skierowaną konkretnie do specjalistów od instalacji sanitarnych.</li>
 <li>Reklamy trafiały na <b>urządzenia mobilne</b> kandydatów, w oparciu o kryteria zawodowe i lokalizacyjne.</li>
 <li>Kampania wspierała też <b>employer branding</b>, budując rozpoznawalność marki klienta w tej niszowej grupie zawodowej.</li>
 </ul>

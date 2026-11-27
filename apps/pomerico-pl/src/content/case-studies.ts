@@ -62,7 +62,7 @@ export const allCaseStudyCards: CaseStudyCard[] = [
     industry: "Intralogistyka / magazynowanie",
     industries: ["intralogistics"],
     summary:
-      "SSI Schaefer powierzył Pomerico zbudowanie od zera 35-osobowego zespołu utrzymania ruchu w zaledwie 3 miesiące – o połowę szybciej, niż planowano.",
+      "SSI Schaefer powierzył Pomerico zbudowanie od zera 35-osobowego zespołu utrzymania ruchu w zaledwie 3 miesiące – w czasie o połowę krótszym od planowanego.",
     image: "/images/ssi-schaefer-case-study-logo.png",
   },
   {

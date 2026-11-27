@@ -18,7 +18,7 @@ export const homepageServiceCards: ServiceCard[] = [
   {
     icon: "/images/icon-id-card-employer-of-record.png",
     heading: "Employer of Record (EOR)",
-    description: "Zgodność z lokalnymi przepisami, bezpieczne zatrudnianie za granicą, obsługa płac i umów.",
+    description: "Zgodność z lokalnymi przepisami, zatrudnianie międzynarodowe bez ryzyka, obsługa płac i umów.",
     href: "/services/eor-employer-of-record",
   },
   {

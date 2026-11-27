@@ -169,7 +169,7 @@ export const data: ServicePageData = {
     iconList: [
       { bold: "Prostsze wejście na rynek –", text: "Pomerico zajmuje się wszystkimi aspektami uruchomienia działalności w Polsce, w tym kwestiami prawnymi, podatkowymi, kadrowymi i płacowymi, dzięki czemu wchodzisz na rynek bez operacyjnych problemów." },
       { bold: "Szybki start operacyjny –", text: "Uporządkowane procesy i lokalna ekspertyza pozwalają szybko rozpocząć i skalować działalność, bez opóźnień i ryzyk na etapie uruchamiania." },
-      { bold: "Zgodność z przepisami i kontrola ryzyka –", text: "Dzięki kompleksowemu wsparciu prawnemu, podatkowemu i operacyjnemu Twoja firma działa w pełni zgodnie z przepisami, minimalizując ryzyko regulacyjne." },
+      { bold: "Zgodność z przepisami i kontrola ryzyka –", text: "Dzięki kompleksowemu wsparciu prawnemu, podatkowemu i operacyjnemu Twoja firma działa w pełni zgodnie z przepisami, minimalizując ryzyko regulacyjne i zapewniając płynność działania." },
     ],
     trustImage: "/images/pomerico-trusted-partner-badges.svg",
   },

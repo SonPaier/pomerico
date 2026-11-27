@@ -7,7 +7,7 @@ export const data: CaseStudyPageData = {
   title:
     "Jak Pomerico zapewniło udaną sukcesję i zatrudniło idealnego lidera sieci serwisowej",
   metaDescription:
-    "Jak Pomerico zrekrutowało Service Network Managera dla Apex Thermo King w procesie executive search, umożliwiając płynną sukcesję na Service Directora.",
+    "Jak Pomerico zrekrutowało Service Network Managera dla Apex Thermo King w wieloetapowym procesie executive search, umożliwiając płynną sukcesję na stanowisko Service Directora w ciągu 6 miesięcy.",
   industry: "Chłodnictwo transportowe / motoryzacja",
   client: "Apex Thermo King",
   image: "/images/thermo-king-case-study-logo.png",

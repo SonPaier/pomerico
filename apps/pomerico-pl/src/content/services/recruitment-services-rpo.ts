@@ -104,6 +104,6 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: "Czy Pomerico może skompletować zespół dla nowego zakładu (greenfield) w Polsce?",
-    answer: "Tak. W projektach greenfield – nowych fabrykach, magazynach czy zakładach produkcyjnych – rekrutujemy cały zespół od zera przed startem, w tym stanowiska techniczne, kierownicze i wspierające. Dla SSI Schäfer zbudowaliśmy zespół utrzymania ruchu dla nowego, zautomatyzowanego centrum dystrybucyjnego na Dolnym Śląsku: trzon zespołu zatrudniliśmy w 3 miesiące, o połowę szybciej niż planowano, a zespół rozrósł się do 35 osób."
+    answer: "Tak. W projektach greenfield – nowych fabrykach, magazynach czy zakładach produkcyjnych – rekrutujemy cały zespół od zera przed startem, w tym stanowiska techniczne, kierownicze i wspierające. Dla SSI Schäfer zbudowaliśmy zespół utrzymania ruchu dla nowego, zautomatyzowanego centrum dystrybucyjnego na Dolnym Śląsku: trzon zespołu zatrudniliśmy w 3 miesiące – w czasie o połowę krótszym od planowanego – a zespół rozrósł się do 35 osób."
   },
 ];
